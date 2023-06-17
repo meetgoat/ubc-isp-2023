@@ -1,0 +1,23 @@
+div [class*="wp-block"].isp-overlap-image {
+    grid-template-columns:  repeat(12, 1fr);
+    display: grid;
+    gap: 20px;
+
+    > div {
+        grid-column: 6 / span 7;
+        grid-row-start: 1;
+        
+        &:first-child{
+            grid-column: 1 / span 9;
+        }
+    }
+
+    & img { 
+        border-radius: 16px 16px 192px 16px;
+    }
+
+    .wp-block-group{
+        padding: 64px;
+        border-radius: 16px 160px 16px 16px;
+    }
+}

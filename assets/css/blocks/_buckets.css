@@ -1,0 +1,38 @@
+[class*="wp-block"].wp-buckets{
+    padding: 0;
+    gap: 10px;
+
+    .wp-block-column{
+        padding: 0;
+
+        > a {
+            display: block;
+            position: relative;
+            z-index: 1;
+            padding: 24px;
+            box-shadow: none;
+            border-radius: 16px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            text-decoration: none;
+
+            &:hover{
+                box-shadow: 0px 50px 80px rgba(0, 0, 0, 0.07), 
+                0px 36.3672px 53.9219px rgba(0, 0, 0, 0.0566562), 
+                0px 25.3125px 34.875px rgba(0, 0, 0, 0.04725),
+                0px 16.6016px 21.6406px rgba(0, 0, 0, 0.0404687), 
+                0px 10px 13px rgba(0, 0, 0, 0.035), 
+                0px 5.27344px 7.73438px rgba(0, 0, 0, 0.0295312), 
+                0px 2.1875px 4.625px rgba(0, 0, 0, 0.02275), 
+                0px 0.507812px 2.45312px rgba(0, 0, 0, 0.0133437);
+                background: white;
+            }
+        }
+
+        .wp-block-heading{
+            margin-top: 0;
+        }
+    }
+}
+
+

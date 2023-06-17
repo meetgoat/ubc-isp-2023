@@ -1,0 +1,31 @@
+
+
+/* =full-width-container
+-------------------------------------------------------------- */
+
+
+.full-width .full-width-container {
+	margin: 50px 0 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.page-title{
+	display: none;
+	content-visibility: hidden;
+}
+
+#container,
+.content{
+	background: transparent;
+}
+.wp-block-group > [class*="wp-block"],
+.entry-content > [class*="wp-block"] {
+	margin: 0 auto;
+	padding: 0 24px;
+	max-width: 1288px;
+}
+.entry-content > .wp-block-group {
+	max-width: 100%;
+	padding: 0;
+}

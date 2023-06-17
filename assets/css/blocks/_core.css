@@ -1,0 +1,21 @@
+/*
+*   Separator Block
+*/
+
+.wp-block-separator{
+    margin: 0 0 32px;
+    border: solid 1px var(--sand-1);
+}
+
+
+/* Image Block */
+
+.is-style-single-radius-right {
+    border-radius: 16px 0 0 1000px;
+    width: 50vw;
+    overflow: hidden;
+    
+    :is(img) {
+        width: 100%;
+    }
+}
