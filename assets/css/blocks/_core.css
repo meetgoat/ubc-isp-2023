@@ -3,13 +3,34 @@
 */
 
 .wp-block-separator{
-    margin: 0 0 32px;
+    margin-top: 0;
+    margin-bottom: 32px;
     border: solid 1px var(--sand-1);
 }
 
+.wp-block-separator.is-style-squiggle,
+.wp-block-separator.is-style-squiggle-brown{
+    border: none;
+    width: 55px;
+    height: 6px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background: url(../../images/squiggle.svg) no-repeat center center;
+}
+
+
+.wp-block-separator.is-style-squiggle-grey{
+    border: none;
+    width: 55px;
+    height: 6px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background: url(../../images/squiggle-blue.svg) no-repeat center center;
+}
+
+
 
 /* Image Block */
-
 .is-style-single-radius-right {
     border-radius: 16px 0 0 1000px;
     width: 50vw;
@@ -17,5 +38,35 @@
     
     :is(img) {
         width: 100%;
+        max-width: 800px;
     }
+}
+
+
+
+
+
+
+/*  Column Gap */
+:where(.wp-block-columns) {
+    gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    :where(.wp-block-columns) {
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+/*  Headings  */
+
+.wp-block-heading.is-style-sub-heading{
+    letter-spacing: 0.15em;
 }

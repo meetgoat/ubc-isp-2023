@@ -7,7 +7,10 @@
   \***************************/
 /***/ (() => {
 
-
+jQuery('.isp-accordion--header').on('click', function () {
+  jQuery(this).toggleClass('isp-accordion--active');
+  jQuery(this).siblings('.isp-accordion--body').slideToggle();
+});
 
 /***/ }),
 
@@ -124,8 +127,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/main": 0,
-/******/ 			"css/editor": 0,
-/******/ 			"css/main": 0
+/******/ 			"css/main": 0,
+/******/ 			"css/editor": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -175,9 +178,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/editor","css/main"], () => (__webpack_require__("./assets/js/main.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/editor","css/main"], () => (__webpack_require__("./assets/css/main.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/editor","css/main"], () => (__webpack_require__("./assets/css/editor.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/editor"], () => (__webpack_require__("./assets/js/main.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/editor"], () => (__webpack_require__("./assets/css/main.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main","css/editor"], () => (__webpack_require__("./assets/css/editor.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

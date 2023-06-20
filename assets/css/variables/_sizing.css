@@ -1,0 +1,10 @@
+:root {
+	--scale-xxs: 8px;
+	--scale-xs: 16px;
+	--scale-sm: 24px;
+	--scale: 32px;
+	--scale-lg: 48px;
+	--scale-xl: 64px;
+	--scale-xxl: 80px;
+}
+

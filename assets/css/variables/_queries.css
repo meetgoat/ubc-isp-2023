@@ -10,5 +10,3 @@
 @custom-media --query-mx-md (max-width: 899px);
 @custom-media --query-mx-lg (max-width: 1099px);
 @custom-media --query-mx-xl (max-width: 1299px);
-
-

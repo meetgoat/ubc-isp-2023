@@ -3,11 +3,17 @@
 /* =full-width-container
 -------------------------------------------------------------- */
 
-
 .full-width .full-width-container {
-	margin: 50px 0 0;
+	margin: 0;
 	padding: 0;
 	overflow: hidden;
+}
+
+.full-width .full-width-container .expand {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .page-title{
@@ -18,14 +24,25 @@
 #container,
 .content{
 	background: transparent;
+	padding-top: 0;
 }
 .wp-block-group > [class*="wp-block"],
 .entry-content > [class*="wp-block"] {
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 0 24px;
 	max-width: 1288px;
+	width: 100%;
 }
 .entry-content > .wp-block-group {
 	max-width: 100%;
 	padding: 0;
+}
+
+
+
+
+.isp-block-margin{
+	margin-top: 32px;
+	margin-bottom: 32px;
 }
