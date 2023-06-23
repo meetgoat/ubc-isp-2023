@@ -111,3 +111,22 @@
         display: block;
     }
 }
+
+
+
+
+
+/*  Mobile / Desktop Only */
+
+.isp-mobile-only{
+    display: block;
+    @media (--query-sm) {
+        display: none;
+    }
+}
+.isp-desktop-only{
+    display: none;
+    @media (--query-sm) {
+        display: block;
+    }
+}

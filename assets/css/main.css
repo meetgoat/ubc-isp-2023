@@ -10,6 +10,8 @@
 @import "./components/_buttons.css";
 @import "./components/_breadcrumbs.css";
 
+@import "./cards/_tool.css";
+
 @import "./blocks/_core.css";
 @import "./blocks/_header.css";
 @import "./blocks/_header-small.css";
