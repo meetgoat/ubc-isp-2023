@@ -17,11 +17,13 @@ class ThemeFunctions
     }
 
     private function themeHooks()
-    {
+    {   
+        
         add_action('after_setup_theme', array($this, 'themeSetup'), 20 , 2 );
         add_action('wp_enqueue_scripts', array($this, 'themeScripts'));
         add_action('enqueue_block_editor_assets', array($this, 'editorScripts'));
         add_action('before_footer', array($this, 'footerCTA'));
+    
     }
 
     /**
@@ -56,15 +58,10 @@ class ThemeFunctions
         // Temporary, will remove if I find the setting.
         \UBC_Collab_CLF::$full_width = true;
         
-        // \Carbon_Fields\Carbon_Fields::boot();
-
+        remove_theme_support( 'core-block-patterns' );
+   
         // // Image Sizes
         // add_image_size( 'landing',      1440,   900, array('center', 'center'));
-        // add_image_size( 'header',       1920,   600, array('center', 'center'));
-        // add_image_size( 'circle',       600,    600, array('center', 'center'));
-        // add_image_size( 'circle-small', 450,    450, array('center', 'center'));
-        // add_image_size( 'goal-tall',    500,    900, array('center', 'center'));
-        // add_image_size( 'goal-wide',    900,    500, array('center', 'center'));
 
         $theme_color_palette = array(
             array(

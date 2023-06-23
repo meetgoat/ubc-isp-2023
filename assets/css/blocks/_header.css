@@ -1,0 +1,42 @@
+div [class*="wp-block"].isp-header {
+
+}
+
+.isp-header--content{
+    max-width: 580px;
+    padding-bottom: 30px;
+
+
+
+    > .wp-block-group__inner-container{
+        padding: 0;
+    }
+}
+.isp-header--image-col{
+    position: relative;
+}
+.isp-header--image{
+    position: relative;
+
+    & img{
+        position: absolute;
+        margin: 0;
+        width: 350px;
+        height: 460px;
+        object-fit: cover;
+        max-width: none;
+        border-radius: 16px 0px 0px 240px;
+    }
+}
+
+
+.isp-header--squiggle{
+    position: absolute;
+    z-index: 20;
+    top: 30px;
+    left: -20px;
+
+    .wp-block-separator{
+        margin: 2px 0;
+    }
+}

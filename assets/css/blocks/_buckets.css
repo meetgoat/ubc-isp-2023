@@ -9,7 +9,7 @@
             display: block;
             position: relative;
             z-index: 1;
-            padding: 24px;
+            padding: 24px 24px 6px;
             box-shadow: none;
             border-radius: 16px;
             transition: all 0.3s ease-in-out;
@@ -33,6 +33,117 @@
             margin-top: 0;
         }
     }
+
 }
 
 
+
+
+
+[class*="wp-block"].isp-text-bucket {
+    position: relative;
+
+
+    .wp-block-group__inner-container{
+        padding: 0;
+    }
+    .wp-block-group {
+        position: relative;
+        z-index: 2;
+    }
+    & a {
+        text-decoration: none;
+        
+        .wp-block-heading{
+            transition: var(--transition);
+        }
+        &:hover, &:focus{
+            .wp-block-heading{
+                color: var(--calcite);
+            }
+            .button-tertiary{
+                --button-color: var(--button-color--hover);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+[class*="wp-block"].isp-icon-bucket {
+    position: relative;
+    height: 100%;
+
+    & a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 8px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: var(--shadow-1);
+        transition: var(--transition);
+        height: 100%;
+
+        &:hover,
+        &:focus,
+        &:focus-within{
+            box-shadow: var(--shadow-2);
+            .isp-icon-bucket--inner{
+                background: var(--sand-2);
+            }
+        }
+    }
+
+    .wp-block-group__inner-container{
+        padding: 0;
+        height: 100%;
+    }
+    .wp-block-group {
+        position: relative;
+        z-index: 2;
+    }
+    .isp-icon-bucket--inner{
+        padding: 24px;
+        background: transparent;
+        transition: var(--transition);
+        border-radius: 8px 8px 56px 8px;
+
+        & h1, h2, h3, h4, h5, h6 {
+            margin: 16px 0 8px;
+        }
+
+        & p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        & figure, img {
+            margin: 0;
+        }
+    }
+    .isp-icon-bucket--button{
+        margin: 16px 24px 24px;
+    }
+    .isp-icon-buckets--link{
+
+        .wp-block-heading{
+            transition: var(--transition);
+        }
+        &:hover, &:focus{
+            .wp-block-heading{
+                color: var(--calcite);
+            }
+            .wp-block-button__link{
+                --button-color: var(--button-color--hover);
+            }
+        }
+    }
+}

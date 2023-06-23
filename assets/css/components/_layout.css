@@ -20,6 +20,18 @@
 	display: none;
 	content-visibility: hidden;
 }
+@media screen and (max-width: 979px) {
+	.full-width .full-width-container {
+		margin: 0 -20px;
+	}
+}
+
+
+#container{
+	*{
+		box-sizing: border-box;
+	}
+}
 
 #container,
 .content{

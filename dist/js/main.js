@@ -1,16 +1,85 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./assets/js/blocks/accordions.js":
+/*!****************************************!*\
+  !*** ./assets/js/blocks/accordions.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initializeAccordions: () => (/* binding */ initializeAccordions)
+/* harmony export */ });
+/**
+ * Initializes accordion functionality for elements with the class 'isp-accordion--header'.
+ *
+ * Clicking on a header toggles the 'isp-accordion--active' class on the clicked element.
+ *
+ * @summary Initializes accordions for the specified elements.
+ *
+ * @since 1.0.0
+ *
+ * @module accordions
+ *
+ * @example
+ *
+ *     // Initialize accordions
+ *     initializeAccordions();
+ */
+
+/**
+ * Initializes the accordions by attaching event listeners to the headers.
+ */
+function initializeAccordions() {
+  // Select all elements with class 'isp-accordion--header'
+  var headers = document.querySelectorAll('.isp-accordion--header');
+  if (headers.length === 0) {
+    return null;
+  }
+  // Attach click event listener to each header element
+  headers.forEach(function (header) {
+    header.addEventListener('click', toggleAccordion);
+  });
+}
+
+// Function to toggle the 'isp-accordion--active' class
+function toggleAccordion() {
+  this.classList.toggle('isp-accordion--active');
+  jQuery(this.nextElementSibling).slideToggle();
+}
+function closeSiblings(node) {
+  // Get the parent element with class .isp-accordion
+  var parent = node.closest('.isp-accordion');
+  // Get all elements with class .isp-accordion--header
+  var headers = parent.querySelectorAll('.isp-accordion--header');
+  // If there are no headers, return null
+  if (headers.length === 0) {
+    return null;
+  }
+  // Remove the 'isp-accordion--active' class from all headers
+  headers.forEach(function (header) {
+    header.classList.remove('isp-accordion--active');
+    jQuery(header.nextElementSibling).slideUp();
+  });
+}
+
+/***/ }),
 
 /***/ "./assets/js/main.js":
 /*!***************************!*\
   !*** ./assets/js/main.js ***!
   \***************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-jQuery('.isp-accordion--header').on('click', function () {
-  jQuery(this).toggleClass('isp-accordion--active');
-  jQuery(this).siblings('.isp-accordion--body').slideToggle();
-});
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _blocks_accordions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/accordions.js */ "./assets/js/blocks/accordions.js");
+// Import the initializeAccordions function from the accordions module
+
+
+// Call the initializeAccordions function to initialize the accordions
+(0,_blocks_accordions_js__WEBPACK_IMPORTED_MODULE_0__.initializeAccordions)();
 
 /***/ }),
 
@@ -20,7 +89,6 @@ jQuery('.isp-accordion--header').on('click', function () {
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -33,7 +101,6 @@ __webpack_require__.r(__webpack_exports__);
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -102,6 +169,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -127,8 +206,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/main": 0,
-/******/ 			"css/main": 0,
-/******/ 			"css/editor": 0
+/******/ 			"css/editor": 0,
+/******/ 			"css/main": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -178,9 +257,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/editor"], () => (__webpack_require__("./assets/js/main.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/editor"], () => (__webpack_require__("./assets/css/main.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main","css/editor"], () => (__webpack_require__("./assets/css/editor.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/editor","css/main"], () => (__webpack_require__("./assets/js/main.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/editor","css/main"], () => (__webpack_require__("./assets/css/main.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/editor","css/main"], () => (__webpack_require__("./assets/css/editor.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

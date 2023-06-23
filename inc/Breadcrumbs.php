@@ -7,23 +7,36 @@ class Breadcrumbs
 {
     public function __construct()
     {
-        $this->hooks();
+        add_action('template_redirect', function() {
+            if( ! is_page_template('page-no-breadcrumbs.php')){
+                $this->addBreadcrumbs();
+            }else{
+                $this->removeBreadcrumbs();
+            }
+        }, 7);
     }
 
-    private function hooks()
+    private function addBreadcrumbs()
     {
         // TODO: Potentially should be using hybrid_get_prefix() to get the prefix instead of hardcoding it. 
         add_action('wp-hybrid-clf_before_container', array($this, 'openContainer'), 7);
         add_action('wp-hybrid-clf_before_container', array($this, 'sharePage'), 9);
         add_action('wp-hybrid-clf_before_container', array($this, 'closeContainer'), 9);
-        
+    }   
+
+    private function removeBreadcrumbs()
+    {
+        remove_action('wp-hybrid-clf_before_container', [ 'UBC_Collab_Navigation', 'breadcrumb'], 8);
     }
 
     public function openContainer()
     {
-        echo '<div class="isp-breadcrumbs"><div class="isp-breadcrumbs--container">';
+		if( ! is_front_page()  ) {
+            echo '<div class="isp-breadcrumbs"><div class="isp-breadcrumbs--container">';
+        }
     }
     public function sharePage() {
+		if( ! is_front_page()  ) {
         echo '<button class="isp-sharepage">
             <span class="isp-sharepage--text">Share</span>
             <span class="isp-sharepage--icon">
@@ -32,9 +45,12 @@ class Breadcrumbs
                 </svg>
             </span>
         </button>';
+        }
     }
     public function closeContainer()
     {
-        echo '</div></div>';
+		if( ! is_front_page()  ) {
+            echo '</div></div>';
+        }
     }
 }

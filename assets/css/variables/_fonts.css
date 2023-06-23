@@ -27,7 +27,7 @@
     --font-size-blog-date: 12px;
 
     
-    @media screen and (min-width: 768px) {
+    @media (--query-sm) {
         --font-size-h1: 48px;
         --font-size-h2: 39px;
         --font-size-h3: 32px;

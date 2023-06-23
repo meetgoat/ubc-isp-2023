@@ -2,15 +2,12 @@
 
 body {
 	background: #ffffff;
-
+    scroll-behavior: smooth;
     /* &.home {
         background: var(--sand-3);
     } */
 }
 
-*{
-    box-sizing: border-box;
-}
 
 /*  Headings */
 

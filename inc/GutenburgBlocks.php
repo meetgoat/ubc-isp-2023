@@ -12,6 +12,38 @@ class GutenburgBlocks
     private function themeHooks()
     {
         add_action( 'init', [$this, 'blockStyles']);
+        add_action( 'init', [$this, 'patternCategories']);
+    }
+
+    function patternCategories() {
+        register_block_pattern_category(
+            'ubc',
+            array( 'label' => __( 'UBC ISP', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
+            'ubc-headers',
+            array( 'label' => __( 'UBC ISP - Headers', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
+            'ubc-content',
+            array( 'label' => __( 'UBC ISP - Content', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
+            'ubc-callouts',
+            array( 'label' => __( 'UBC ISP - Callouts', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
+            'ubc-photo-grid',
+            array( 'label' => __( 'UBC ISP - Photo Grid', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
+            'ubc-buckets',
+            array( 'label' => __( 'UBC ISP - Buckets', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
+            'ubc-cards',
+            array( 'label' => __( 'UBC ISP - Cards', 'ubc_collab' ) )
+        );
     }
 
     function blockStyles()

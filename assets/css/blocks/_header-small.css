@@ -1,0 +1,21 @@
+div [class*="wp-block"].isp-header--small {
+    padding: 80px 0 90px;
+
+    .wp-block-heading{
+        margin: 0;
+    }
+
+    .wp-block-separator{
+        margin: 16px auto;
+    }
+}
+
+.isp-header--small--content {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+
+    & p:last-of-type{
+        margin: 0;
+    }
+}

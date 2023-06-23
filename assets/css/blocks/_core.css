@@ -4,7 +4,7 @@
 
 .wp-block-separator{
     margin-top: 0;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     border: solid 1px var(--sand-1);
 }
 
@@ -45,6 +45,18 @@
 
 
 
+.isp-callout-bar{
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 30px;
+
+    .wp-block-heading{
+        margin: 0;
+    }
+}
+
 
 
 /*  Column Gap */
@@ -52,7 +64,8 @@
     gap: 16px;
 }
 
-@media screen and (min-width: 768px) {
+
+@media (--query-sm) {
     :where(.wp-block-columns) {
         gap: 20px;
     }
@@ -69,4 +82,32 @@
 
 .wp-block-heading.is-style-sub-heading{
     letter-spacing: 0.15em;
+}
+
+
+
+
+
+/*  Spacer Block shift */
+
+.isp-block-shift {
+    margin-bottom: -32px;
+}
+
+
+
+
+
+/* Videos */
+.isp-video {
+    border-radius: 16px;
+    overflow: hidden;
+    .wp-block-group__inner-container{
+        padding: 0;
+    }
+
+    & figure, video{
+        margin: 0;
+        display: block;
+    }
 }

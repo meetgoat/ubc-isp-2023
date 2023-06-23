@@ -1,6 +1,5 @@
+// Import the initializeAccordions function from the accordions module
+import { initializeAccordions } from './blocks/accordions.js';
 
-
-jQuery('.isp-accordion--header').on('click', function () {
-    jQuery(this).toggleClass('isp-accordion--active');
-    jQuery(this).siblings('.isp-accordion--body').slideToggle();
-});
+// Call the initializeAccordions function to initialize the accordions
+initializeAccordions();

@@ -6,7 +6,7 @@
 --button-border
 */
 
-
+.button-tertiary,
 .wp-block-button >.wp-block-button__link{
     padding: 7px 24px !important;
     border-radius: 6px;
@@ -89,7 +89,7 @@
 
     & > svg, 
     & > img{
-        margin-right: var(--scale-xs);
+        margin-left: var(--scale-xs);
         max-width: var(--scale);
         max-height: var(--scale);
     }
@@ -110,6 +110,7 @@
     --button-color--active: white;
 }
 
+.button-tertiary[class],
 .wp-block-button.is-style-tertiary > .wp-block-button__link{
     --button-color: var(--ubc-primary);
     --button-color--hover: var(--ubc-blue-2);
@@ -136,6 +137,16 @@
             bottom: -4px;
         }
     }
+}
+
+.button-tertiary {
+    margin: 0;
+    font-size: 14px !important;
+    font-family: var(--opensans);
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
 }
 
 .has-ubc-blue-background-color,

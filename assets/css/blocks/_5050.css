@@ -1,0 +1,22 @@
+div [class*="wp-block"].isp-5050 {
+    padding: 8px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    .wp-block-columns{
+        margin: 0;
+    }
+
+    .wp-block-group__inner-container{
+        padding: 0;
+    }
+
+    .isp-5050--content{
+        padding-left: 50px;
+    }
+
+    & figure, img{
+        margin: 0;
+        border-radius: 8px 8px 8px 240px;
+    }
+}
