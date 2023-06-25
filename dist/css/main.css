@@ -1179,6 +1179,220 @@ p {
         }
 	}
 
+
+    .isp-key-date a {
+        -webkit-text-decoration: none;
+        text-decoration: none;
+    }
+
+.isp-key-date a:hover .isp-upcoming-event__title,.isp-key-date a:focus .isp-upcoming-event__title{
+                color: var(--calcite);
+            }
+
+.isp-key-date .isp-upcoming-event__title{
+        transition: var(--transition);
+    }
+
+.isp-key-date__inner {
+    position: relative;
+    border-radius: 8px;
+    padding: 4px;
+    box-shadow: var(--shadow-0);
+    transition: var(--transition);
+}
+
+.isp-key-date__inner .wp-block-group__inner-container{ 
+        padding: 0;
+    }
+
+.isp-key-date__inner .wp-block-columns{
+        margin: 0;
+    }
+
+.isp-key-date__inner figure, .isp-key-date__inner img {
+        margin: 0;
+    }
+
+.isp-key-date__inner:hover{
+        box-shadow: var(--shadow-2);
+    }
+
+.isp-key-date__date{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px 0 0 8px;
+}
+
+.isp-key-date__date .wp-block-heading{
+        margin: 0;
+    }
+
+.isp-key-date__date .wp-block-columns{
+        justify-content: center;
+        gap: 0;
+    }
+
+.isp-key-date__date .wp-block-columns .wp-block-column{
+            width: auto;
+            flex: 0 0 auto;
+        }
+
+@media (min-width: 782px) {
+
+.isp-key-date__date .wp-block-columns{
+            gap: 4px;
+    }
+        }
+
+@media (max-width: 781px) {
+        .isp-key-date__date .wp-block-heading{
+            font-size: 14px !important;
+        }
+    }
+
+.isp-key-date__details{
+    padding: 8px 24px;
+    padding-left: 0px;
+}
+
+.isp-key-date__details .wp-block-heading, .isp-key-date__details p {
+        margin: 0;
+    }
+
+.isp-key-date__details .wp-block-button{
+        text-align: right;
+        display: block;
+        width: 100%;
+    }
+
+@media (min-width: 782px) {
+
+.isp-key-date__details{
+        padding: 22px 24px;
+        padding-left: 8px;
+}
+
+
+        .isp-key-date__details .isp-key-date__date-column{
+            flex-basis: 135px !important;
+        }
+    }
+.isp-upcoming-events__button-column{
+    text-align: right;
+}
+
+@media (max-width: 781px) {
+
+    .isp-key-date__date-column{
+        flex-basis: 55px !important;
+    }
+
+    .isp-key-date__details .wp-block-buttons .wp-block-button__link {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 0;
+        opacity: 0;
+    }
+}
+
+
+
+    .isp-upcoming-events .wp-block-columns {
+        margin: 0;
+    }
+
+.isp-upcoming-events a {
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        display: block;
+    }
+
+.isp-upcoming-events a:hover .isp-upcoming-events__event, .isp-upcoming-events a:focus .isp-upcoming-events__event {
+                box-shadow: var(--shadow-2);
+            }
+
+.isp-upcoming-events__inner {
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 24px 18px;
+}
+
+.isp-upcoming-events__inner .wp-block-group__inner-container{
+        padding: 0;
+    }
+
+@media (min-width: 782px) {
+
+.isp-upcoming-events__inner {
+        padding: 48px;
+}
+    }
+
+.isp-upcoming-events__inner .isp-upcoming-events__header{
+        margin-bottom: 24px;
+    }
+
+.isp-upcoming-events__inner .isp-upcoming-events__header .wp-block-heading {
+            margin: 0 0 8px;
+        }
+
+@media (min-width: 782px) {
+
+.isp-upcoming-events__inner .isp-upcoming-events__header{
+            margin-bottom: 32px;
+    }
+        }
+
+.isp-upcoming-events__inner .isp-upcoming-events__list{
+        gap: 8px;
+    }
+
+@media (min-width: 782px) {
+
+.isp-upcoming-events__inner .isp-upcoming-events__list{
+            gap: 16px;
+    }
+        }
+
+.isp-upcoming-events__inner .isp-upcoming-events__single {
+        padding: 0;
+        border-radius: 16px;
+    }
+
+.isp-upcoming-events__inner .isp-upcoming-events__event {
+        padding: 4px;
+        overflow: hidden;
+        border-radius: 16px;
+        transition: var(--transition);
+        box-shadow: var(--shadow-0);
+    }
+
+.isp-upcoming-events__inner .isp-upcoming-events__event .wp-block-heading{
+            margin: 0;
+        }
+
+.isp-upcoming-events__inner .isp-upcoming-events__date{
+        padding: 8px;
+        min-height: 54px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px 0 0 8px;
+    }
+
+.isp-upcoming-events__inner .isp-upcoming-events__date .wp-block-heading {
+            margin: 0;
+        }
+
+.isp-upcoming-events__inner .isp-upcoming-events__details p{
+            margin: 0;
+        }
 /*
 *   Separator Block
 */
