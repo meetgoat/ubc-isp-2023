@@ -348,7 +348,7 @@ h6 {
 p {
 	color: var(--bistre);
     font-size: var(--font-size-p);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 /* 
@@ -685,6 +685,17 @@ p {
     margin-top: 24px;
     margin-bottom: 24px;
     background: url(/wp-content/themes/ubc-isp/dist/images/squiggle.svg?372404bdc25c7aef97a18a5e5af267a9) no-repeat center center;
+}
+
+
+.wp-block-separator.is-style-squiggle--small,
+.wp-block-separator.is-style-squiggle-brown--small{
+    border: none;
+    width: 30px;
+    height: 4px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background: url(/wp-content/themes/ubc-isp/dist/images/squiggle-small.svg?8610455a191a1af2c561be1870ee4c05) no-repeat center center;
 }
 
 

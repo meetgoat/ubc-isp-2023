@@ -9,8 +9,10 @@
 @import "./components/_elements.css";
 @import "./components/_buttons.css";
 @import "./components/_breadcrumbs.css";
+@import "./components/_scrollbar.css";
 
 @import "./cards/_tool.css";
+@import "./cards/_team.css";
 
 @import "./blocks/_core.css";
 @import "./blocks/_header.css";

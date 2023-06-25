@@ -3194,6 +3194,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash-es@npm:^4.17.6":
+  version: 4.17.7
+  resolution: "@types/lodash-es@npm:4.17.7"
+  dependencies:
+    "@types/lodash": "npm:*"
+  checksum: 4dfde517db4cfc7b25b5a20a0851244c0ca4aebbdae272eebe77a3f3388eae6a4f47d7850cca712e0256c033a30bfebd366948b4286743e20e2c862c7c3830ad
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.14.195
+  resolution: "@types/lodash@npm:4.14.195"
+  checksum: a503fc2cef87abc17ec6f388009a787e609b799b8fcb69c47f9b91d5a47e564b5c00fd121f691acf2b2bb43b788e28ca22781de1ac561b2c35bea380c6446f79
+  languageName: node
+  linkType: hard
+
 "@types/mdast@npm:^3.0.0":
   version: 3.0.11
   resolution: "@types/mdast@npm:3.0.11"
@@ -5930,6 +5946,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"can-use-dom@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "can-use-dom@npm:0.1.0"
+  checksum: a4e2f995b6e9095d6ef75c06590a0aef7e8179332fe0ed12c01a49ab5c3cd644a3fc0e1712b672518f0d5af321a46d825005d86c544f232001ecfbb58e91d65a
+  languageName: node
+  linkType: hard
+
 "caniuse-api@npm:^3.0.0":
   version: 3.0.0
   resolution: "caniuse-api@npm:3.0.0"
@@ -7624,9 +7647,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.431":
-  version: 1.4.439
-  resolution: "electron-to-chromium@npm:1.4.439"
-  checksum: 775576322abe5c9934fb93ecf972f2331a9f86f23e7fa30d71bd7bbddefe466f9250a41cf1be84306ea99dbae4916fe1b89791485ce580e0be61213f073ea1e5
+  version: 1.4.440
+  resolution: "electron-to-chromium@npm:1.4.440"
+  checksum: 55b60dd161a1b37e8143e3d15f42e2fcd1feaa71dc98565e294cfba123ceab8847fc6984a9a13d3dc9349e3fa8a68d2d23cd1ec5ae5a3b2c36ad23232fa25e77
   languageName: node
   linkType: hard
 
@@ -11807,6 +11830,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash-es@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "lodash-es@npm:4.17.21"
+  checksum: d1c3ee94118daeeee47c630ab5f91e94cc4e41ebe2452d837edbe599e853eb2d4be7edf82b4fe62f9fc74f27a8ed7f82fdbd9d301d0acef88f00941db64c4843
+  languageName: node
+  linkType: hard
+
 "lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
@@ -12428,11 +12458,11 @@ __metadata:
   linkType: hard
 
 "minimatch@npm:^9.0.1":
-  version: 9.0.1
-  resolution: "minimatch@npm:9.0.1"
+  version: 9.0.2
+  resolution: "minimatch@npm:9.0.2"
   dependencies:
     brace-expansion: "npm:^2.0.1"
-  checksum: 6648745fd9fc8d5870d59d4fde5defd9d4cb3d44cbb6831e97e103c43f1d9bf5fcc24cea54e9e3bf09eac7e002cce200cc295e30c84180198970a0bed369f037
+  checksum: 104c2050e7efd8f351f0ed08ec97d230d52f39b513c2521a30598da45337eeaf71101b5777938a61cd5d412c6570b6bb9ea99baddaf58cb2963f609c81ef140b
   languageName: node
   linkType: hard
 
@@ -16258,6 +16288,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"simplebar-core@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "simplebar-core@npm:1.2.4"
+  dependencies:
+    "@types/lodash-es": "npm:^4.17.6"
+    can-use-dom: "npm:^0.1.0"
+    lodash: "npm:^4.17.21"
+    lodash-es: "npm:^4.17.21"
+  checksum: 2f73ea75986e12cc2f476057eece6025c64676022018ebbabbf77a02e74a6b5c71ccc430892e552527ce53138a94df062edcd1b98fab244b99eb75d10765ca2d
+  languageName: node
+  linkType: hard
+
+"simplebar@npm:^6.2.5":
+  version: 6.2.5
+  resolution: "simplebar@npm:6.2.5"
+  dependencies:
+    can-use-dom: "npm:^0.1.0"
+    simplebar-core: "npm:^1.2.4"
+  checksum: abfdc73d062080ea8cb8138ebac73534a5a1a567e93ec958443ac85c825f82bf5b55f482ba60bf0c9717bb5f941593e02046dd090022a1045bd60a77614978a5
+  languageName: node
+  linkType: hard
+
 "sirv@npm:^1.0.7":
   version: 1.0.19
   resolution: "sirv@npm:1.0.19"
@@ -17627,6 +17679,7 @@ __metadata:
     postcss: "npm:^8.4.24"
     postcss-custom-media: "npm:^9.1.5"
     postcss-preset-env: "npm:^8.4.2"
+    simplebar: "npm:^6.2.5"
     webpack: "npm:^5.85.1"
   languageName: unknown
   linkType: soft

@@ -75,6 +75,15 @@ class GutenburgBlocks
                 // 'inline_style' => '.is-style-single-radius-right { border-radius: 16px 0 0 1000px; }'
             ),
         );
+        register_block_style(
+            'core/separator',
+            array(
+                'name'         => 'squiggle-brown--small',
+                'label'        => __( 'Small Squiggle Brown', 'ubc_collab' ),
+                'is_default'   => false,
+                // 'inline_style' => '.is-style-single-radius-right { border-radius: 16px 0 0 1000px; }'
+            ),
+        );
 
         register_block_style(
             'core/separator',

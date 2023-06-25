@@ -1,19 +1,19 @@
 .isp-card--tool {
-    .isp-card--tool__inner{
+    .isp-card__inner{
         border-radius: 16px;
 
         .wp-block-group__inner-container {
             padding: 0;
         }
     }
-    .wp-block-group__inner-container{
+    /* .wp-block-group__inner-container{
         max-width: 1032px;
-    }
+    } */
     .wp-block-columns {
         padding: 0;
     }
 
-    .isp-card--tool__content{
+    .isp-card__content{
         padding: 80px 24px 80px 35px;
 
         .wp-block-group__inner-container{
@@ -32,7 +32,7 @@
         }
     }
 
-    .isp-card--tool__image{
+    .isp-card__image{
         padding: 32px;
         padding-left: 0;
         text-align: right;
@@ -50,7 +50,7 @@
             left: 42px;
             right: 0;
             background: var(--sand-1);
-            border-radius: 0px 0px 0px 127.5px;
+            border-radius: 0px 16px 16px 127.5px;
             z-index: 1;
         }
     }
@@ -75,7 +75,7 @@
 
 
     @media (--query-mx-sm) {
-        .isp-card--tool__inner {
+        .isp-card__inner {
             padding: 32px 24px 24px;
             display: grid;
             grid-template-columns: 1fr clamp(100px, 150px, 40%);
@@ -87,20 +87,20 @@
                 margin: 0 0 16px;
             }
 
-            .isp-card--tool__content,
+            .isp-card__content,
             .wp-block-group__inner-container,
             .wp-block-column {
                 display: contents;
             }
 
-            .isp-card--tool__title {
+            .isp-card__title {
                 grid-area: title;
                 align-self: end;
             }
             .wp-block-heading{
                 margin: 0;
             }
-            .isp-card--tool__image{
+            .isp-card__image{
                 grid-area: image;
                 padding: 0;
                 position: relative;
@@ -112,7 +112,7 @@
                     display: none;
                 }
             }
-            .isp-card--tool__text {
+            .isp-card__text {
                 grid-area: content;
             }
 

@@ -19,6 +19,17 @@
 }
 
 
+.wp-block-separator.is-style-squiggle--small,
+.wp-block-separator.is-style-squiggle-brown--small{
+    border: none;
+    width: 30px;
+    height: 4px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background: url(../../images/squiggle-small.svg) no-repeat center center;
+}
+
+
 .wp-block-separator.is-style-squiggle-grey{
     border: none;
     width: 55px;
