@@ -75,7 +75,7 @@
                             <!-- /wp:column -->
 
                             <!-- wp:column {"verticalAlignment":"center","width":"100px","className":"isp-upcoming-events__button-column"} -->
-                            <div class="wp-block-column is-vertically-aligned-center isp-upcoming-events__button-column" style="flex-basis:100px"><!-- wp:heading {"level":5,"style":{"typography":{"textTransform":"uppercase"}},"textColor":"ubc-blue","className":"button-tertiary","fontSize":"small"} -->
+                            <div class="wp-block-column is-vertically-aligned-center isp-upcoming-events__button-column isp-desktop-only" style="flex-basis:100px"><!-- wp:heading {"level":5,"style":{"typography":{"textTransform":"uppercase"}},"textColor":"ubc-blue","className":"button-tertiary","fontSize":"small"} -->
                                 <h5 class="wp-block-heading button-tertiary has-ubc-blue-color has-text-color has-small-font-size" style="text-transform:uppercase">Register</h5>
                                 <!-- /wp:heading -->
                             </div>

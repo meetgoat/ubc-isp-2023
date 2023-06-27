@@ -33,16 +33,32 @@ class GutenburgBlocks
             array( 'label' => __( 'UBC ISP - Callouts', 'ubc_collab' ) )
         );
         register_block_pattern_category(
-            'ubc-photo-grid',
-            array( 'label' => __( 'UBC ISP - Photo Grid', 'ubc_collab' ) )
-        );
-        register_block_pattern_category(
             'ubc-buckets',
             array( 'label' => __( 'UBC ISP - Buckets', 'ubc_collab' ) )
         );
         register_block_pattern_category(
+            'ubc-layouts',
+            array( 'label' => __( 'UBC ISP - Layouts', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
+            'ubc-card-layouts',
+            array( 'label' => __( 'UBC ISP - Card Layouts', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
+            'ubc-cta-layouts',
+            array( 'label' => __( 'UBC ISP - CTA Layouts', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
+            'ubc-photo-grid',
+            array( 'label' => __( 'UBC ISP - Photo Grid', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
             'ubc-cards',
             array( 'label' => __( 'UBC ISP - Cards', 'ubc_collab' ) )
+        );
+        register_block_pattern_category(
+            'ubc-ctas',
+            array( 'label' => __( 'UBC ISP - CTAs', 'ubc_collab' ) )
         );
     }
 

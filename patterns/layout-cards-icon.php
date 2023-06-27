@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Icon Buckets 
- * Slug: meetgoat/icon-buckets
+ * Title: Cards with Icons Layou
+ * Slug: meetgoat/layout-cards-icon
  * Categories: ubc-buckets
  * Viewport Width: 1280
  * Block Types: core/template-part/UBC Content

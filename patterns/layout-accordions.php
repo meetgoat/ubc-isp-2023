@@ -1,10 +1,9 @@
 <?php
  /**
- * Title: Accordions
- * Slug: meetgoat/accordions
- * Categories: ubc-callouts
+ * Title: Accordions Layout
+ * Slug: meetgoat/layout-accordions
+ * Categories: ubc-layouts
  * Viewport Width: 1280
- * Block Types: core/template-part/UBC Callout
  * Inserter: yes
  */
 ?>

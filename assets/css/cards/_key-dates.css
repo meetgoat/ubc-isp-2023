@@ -115,3 +115,24 @@
     }
 }
 
+
+
+
+.isp-key-date-alt {
+    .isp-key-date__inner{
+        padding: 0;
+    }
+    .wp-block-separator{
+        margin: 0;
+    }
+    .isp-key-date__inner{
+        &:hover, &:focus {
+            box-shadow: var(--shadow-0);
+        }
+    }
+    & a {
+        padding: 12px 32px;
+        display: block;
+
+    }
+}

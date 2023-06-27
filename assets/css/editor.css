@@ -10,6 +10,14 @@
 @import "./components/_buttons.css";
 @import "./components/_breadcrumbs.css";
 
+
+@import "./cards/_tool.css";
+@import "./cards/_team.css";
+@import "./cards/_key-dates.css";
+@import "./cards/_upcoming-events.css";
+@import "./cards/_testimonial.css";
+@import "./cards/_cta.css";
+
 @import "./blocks/_core.css";
 @import "./blocks/_header.css";
 @import "./blocks/_header-small.css";
@@ -24,10 +32,20 @@
 
 
 
-
 div .editor-styles-wrapper {
     --wp--preset--font-size--small: var(--font-size-p) !important;
     --wp--preset--font-size--medium:  var(--font-size-p-sm) !important;
     --wp--preset--font-size--large:  var(--font-size-p-lg) !important;
     --wp--preset--font-size--x-large:  var(--font-size-p-xl) !important;
+}
+
+
+
+
+/*  Editor Block Specific */
+
+.isp-desktop-only,
+.isp-mobile-only,
+.isp-accordion--body{
+    display: block !important;
 }

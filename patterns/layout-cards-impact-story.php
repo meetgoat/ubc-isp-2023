@@ -1,8 +1,8 @@
 <?php
  /**
- * Title: Impact Stories
- * Slug: meetgoat/impact-stories
- * Categories: ubc-callouts
+ * Title: Impact Stories Layout
+ * Slug: meetgoat/layout-cards-impact-story
+ * Categories: ubc-card-layouts
  * Viewport Width: 1280
  * Block Types: core/template-part/UBC Callout
  * Inserter: yes

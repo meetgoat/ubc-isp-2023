@@ -43,7 +43,7 @@
 
 /* Image Block */
 .is-style-single-radius-right {
-    border-radius: 16px 0 0 1000px;
+    border-radius: 16px 0px 0px 400px;
     width: 50vw;
     overflow: hidden;
     

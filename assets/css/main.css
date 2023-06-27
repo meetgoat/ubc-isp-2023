@@ -10,11 +10,15 @@
 @import "./components/_buttons.css";
 @import "./components/_breadcrumbs.css";
 @import "./components/_scrollbar.css";
+@import "./components/_footer.css";
 
 @import "./cards/_tool.css";
 @import "./cards/_team.css";
 @import "./cards/_key-dates.css";
 @import "./cards/_upcoming-events.css";
+@import "./cards/_testimonial.css";
+@import "./cards/_cta.css";
+@import "./cards/_bucket.css";
 
 @import "./blocks/_core.css";
 @import "./blocks/_header.css";

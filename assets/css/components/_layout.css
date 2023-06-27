@@ -46,13 +46,16 @@
 	max-width: 1288px;
 	width: 100%;
 }
-.entry-content > .wp-block-group {
+.entry-content > .wp-block-group,
+.entry-content > .wp-block-separator {
 	max-width: 100%;
 	padding: 0;
 }
 
 
-
+.wp-block-group__inner-container .wp-block-group__inner-container {
+	padding: 0;
+}
 
 .isp-block-margin{
 	margin-top: 32px;
