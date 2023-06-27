@@ -17,6 +17,12 @@
         margin: 0;
         display: block;
     }
+    & img {
+        width: 100%;
+        aspect-ratio: 1.34;
+        max-height: 300px;
+        object-fit: cover;
+    }
     .isp-story-card--details{
         padding: 24px;
         flex: auto;

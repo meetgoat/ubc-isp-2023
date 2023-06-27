@@ -150,6 +150,7 @@
     line-height: 100%;
     letter-spacing: 1.4px;
     text-transform: uppercase;
+    justify-content: flex-start;
 }
 
 .has-ubc-blue-background-color,

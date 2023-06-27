@@ -77,6 +77,7 @@
 
 
 
+[class*="wp-block"].isp-card--step,
 [class*="wp-block"].isp-icon-bucket {
     position: relative;
     height: 100%;
@@ -143,6 +144,82 @@
             }
             .wp-block-button__link{
                 --button-color: var(--button-color--hover);
+            }
+        }
+    }
+
+}
+
+
+
+[class*="wp-block"].isp-card--step {
+    & a {
+        padding: 32px;
+        position: relative;
+    }
+    .isp-icon-bucket--button,{
+        margin: 0;
+    }
+    .wp-block-heading{
+        margin-top: 4px;
+    }
+    .isp-card__number{
+        padding: 0;
+        border-radius: 50%;
+        align-self: flex-start;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 16px;
+
+
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+
+    }
+
+
+
+}
+
+
+
+[class*="wp-block"].isp-card--step-arrow {
+    & a {
+        padding: 32px;
+        position: relative;
+
+        &:after{
+            content: '';
+            position: absolute;
+            display: block;
+            pointer-events: none;
+            z-index: 20;
+
+            background: url(../../images/step-arrow-mobile.svg) no-repeat center center;
+            background-size: contain; 
+            
+            height: 72px;
+            width: 18px;
+            right: 16px;
+            bottom: -40px;
+
+            @media (--query-sm) {
+                background: url(../../images/step-arrow.svg) no-repeat center center;
+                background-size: contain; 
+                top: 24px;
+                left: 66px;
+                width: calc( 100% - 25px);
+                aspect-ratio: 8.3;
+                height: auto;
+                bottom: auto;
+                right: auto;
             }
         }
     }

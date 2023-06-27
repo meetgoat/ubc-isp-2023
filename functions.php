@@ -11,7 +11,7 @@ use UBC\Collab\Child\ThemeFunctions;
  * @package UBC_IAP
  * @since 1.0.0
  */
- require_once('vendor/autoload.php');
+ require_once('inc/ThemeFunctions.php');
 
  define( 'CHILD_THEME_VERSION', '1.0.0' );
 

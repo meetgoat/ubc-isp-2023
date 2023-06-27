@@ -48,7 +48,7 @@
                 <!-- wp:column -->
                 <div class="wp-block-column"><!-- wp:group {"className":"isp-cta__images","layout":{"type":"constrained"}} -->
                     <div class="wp-block-group isp-cta__images"><!-- wp:image {"id":595,"sizeSlug":"full","linkDestination":"none","className":"is-style-default isp-cta__image\u002d\u002dbackground"} -->
-                        <figure class="wp-block-image size-full is-style-default isp-cta__image--background"><img src="http://ubcisp.local/wp-content/uploads/2023/06/Rectangle-88.png" alt="" class="wp-image-595" /></figure>
+                        <figure class="wp-block-image size-full is-style-default isp-cta__image--background"><img src="<?php echo get_stylesheet_directory_uri(); ?>/pattern-placeholder.png" alt="" class="wp-image-595" /></figure>
                         <!-- /wp:image -->
                     </div>
                     <!-- /wp:group -->

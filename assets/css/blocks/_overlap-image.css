@@ -14,6 +14,10 @@ div [class*="wp-block"].isp-overlap-image {
 
     & img { 
         border-radius: 16px 16px 192px 16px;
+        aspect-ratio: 1.54;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
     }
 
     .wp-block-group{

@@ -135,8 +135,8 @@
         <!-- /wp:column -->
 
         <!-- wp:column -->
-        <div class="wp-block-column"><!-- wp:image {"id":72,"sizeSlug":"full","linkDestination":"none","className":"is-style-single-radius-right"} -->
-            <figure class="wp-block-image size-full is-style-single-radius-right"><img src="http://ubcisp.local/wp-content/uploads/2023/06/image-15.png" alt="" class="wp-image-72" /></figure>
+        <div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"is-style-single-radius-right"} -->
+            <figure class="wp-block-image size-full is-style-single-radius-right"><img src="<?php echo get_stylesheet_directory_uri(); ?>/pattern-placeholder.png" alt="" class="wp-image-72" /></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:column -->

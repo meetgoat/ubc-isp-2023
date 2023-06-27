@@ -2,8 +2,8 @@
 
 namespace UBC\Collab\Child;
 
-use UBC\Collab\Child\Breadcrumbs;
-use UBC\Collab\Child\GutenburgBlocks;
+require_once('GutenburgBlocks.php');
+require_once('Breadcrumbs.php');
 
 class ThemeFunctions
 {

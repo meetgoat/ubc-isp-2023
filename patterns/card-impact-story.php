@@ -14,7 +14,7 @@
 
 <!-- wp:group {"className":"isp-story-card","layout":{"type":"constrained"}} -->
 <div class="wp-block-group isp-story-card"><!-- wp:image {"id":96,"sizeSlug":"full","linkDestination":"none"} -->
-    <figure class="wp-block-image size-full"><img src="http://ubcisp.local/wp-content/uploads/2023/06/image-16.png" alt="" class="wp-image-96" /></figure>
+    <figure class="wp-block-image size-full"><img src="http://ubcisp.local/wp-content/themes/ubc-isp/pattern-placeholder.png" alt="" class="wp-image-96" /></figure>
     <!-- /wp:image -->
 
     <!-- wp:group {"className":"isp-story-card\u002d\u002ddetails","layout":{"type":"constrained"}} -->

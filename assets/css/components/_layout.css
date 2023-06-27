@@ -61,3 +61,20 @@
 	margin-top: 32px;
 	margin-bottom: 32px;
 }
+
+
+/*  Rounded COrners */
+
+.is-style-rounded{
+	border-radius: 16px;
+}
+.is-style-rounded-sm{
+	border-radius: 8px;
+}
+
+
+.wp-block-group {
+	.wp-block-columns  {
+		margin-bottom: 0;
+	}
+}

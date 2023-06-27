@@ -68,6 +68,8 @@ class GutenburgBlocks
         $this->SeparatorBlockStyles();
         $this->HeadingBlockStyles();
         $this->ButtonBlockStyles();
+        $this->GroupBlockStyles();
+        $this->SpacerBlockStyles();
     }
 
     function ImageBlockStyles() {
@@ -122,12 +124,56 @@ class GutenburgBlocks
             )
         );
     }
+    function GroupBlockStyles() {
+        register_block_style(
+            'core/group',
+            array(
+                'name'         => 'square',
+                'label'        => __( 'Square', 'ubc_collab' ),
+                'is_default'   => true,
+            )
+        );
+        register_block_style(
+            'core/group',
+            array(
+                'name'         => 'rounded',
+                'label'        => __( 'Rounded', 'ubc_collab' ),
+                'is_default'   => false,
+            )
+        );
+        register_block_style(
+            'core/group',
+            array(
+                'name'         => 'rounded-sm',
+                'label'        => __( 'Rounded Small', 'ubc_collab' ),
+                'is_default'   => false,
+            )
+        );
+    }
     function ButtonBlockStyles() {
         register_block_style(
             'core/button',
             array(
                 'name'         => 'tertiary',
                 'label'        => __( 'Tertiary', 'ubc_collab' ),
+                'is_default'   => false,
+            )
+        );
+    }
+    function SpacerBlockStyles() {
+        register_block_style(
+            'core/spacer',
+            array(
+                'name'         => 'pull-up-background',
+                'label'        => __( 'Pull Up Background', 'ubc_collab' ),
+                'is_default'   => false,
+            ),
+        );
+        register_block_style(
+            'core/spacer',
+            array(
+                'name'         => 'pull-up-next',
+                'label'        => __( 'Pull Up Next Element', 'ubc_collab' ),
                 'is_default'   => false,
             )
         );

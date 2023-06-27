@@ -1,0 +1,10 @@
+.wp-block-spacer.is-style-pull-up-background{
+    margin-bottom: -32px;
+    height: 0 !important;
+
+    + [class*="wp-block"] {
+        position: relative;
+        top: 32px;
+        margin-bottom: 32px;
+    }
+}
