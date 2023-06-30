@@ -1,41 +1,38 @@
 <?php
 
-namespace UBC\Collab\Child;
-
-
-class Breadcrumbs
+class UBC_ISP_Breadcrumbs
 {
-    public function __construct()
+    public static function init()
     {
         add_action('template_redirect', function() {
             if( ! is_page_template('page-no-breadcrumbs.php')){
-                $this->addBreadcrumbs();
+                self::addBreadcrumbs();
             }else{
-                $this->removeBreadcrumbs();
+                self::removeBreadcrumbs();
             }
         }, 7);
     }
 
-    private function addBreadcrumbs()
+    public static function addBreadcrumbs()
     {
         // TODO: Potentially should be using hybrid_get_prefix() to get the prefix instead of hardcoding it. 
-        add_action('wp-hybrid-clf_before_container', array($this, 'openContainer'), 7);
-        add_action('wp-hybrid-clf_before_container', array($this, 'sharePage'), 9);
-        add_action('wp-hybrid-clf_before_container', array($this, 'closeContainer'), 9);
+        add_action('wp-hybrid-clf_before_container', array( 'UBC_ISP_Breadcrumbs', 'openContainer'), 7);
+        add_action('wp-hybrid-clf_before_container', array( 'UBC_ISP_Breadcrumbs', 'sharePage'), 9);
+        add_action('wp-hybrid-clf_before_container', array( 'UBC_ISP_Breadcrumbs', 'closeContainer'), 9);
     }   
 
-    private function removeBreadcrumbs()
+    public static function removeBreadcrumbs()
     {
         remove_action('wp-hybrid-clf_before_container', [ 'UBC_Collab_Navigation', 'breadcrumb'], 8);
     }
 
-    public function openContainer()
+    public static function openContainer()
     {
 		if( ! is_front_page()  ) {
             echo '<div class="isp-breadcrumbs"><div class="isp-breadcrumbs--container">';
         }
     }
-    public function sharePage() {
+    public static function sharePage() {
 		if( ! is_front_page()  ) {
         echo '<button class="isp-sharepage">
             <span class="isp-sharepage--text">Share</span>
@@ -47,10 +44,12 @@ class Breadcrumbs
         </button>';
         }
     }
-    public function closeContainer()
+    public static function closeContainer()
     {
 		if( ! is_front_page()  ) {
             echo '</div></div>';
         }
     }
 }
+
+UBC_ISP_Breadcrumbs::init();

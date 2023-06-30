@@ -9,8 +9,8 @@
  */
 ?>
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:columns -->
+<!-- wp:group {className:"isp-mobile-edge","layout":{"type":"constrained"}} -->
+<div class="wp-block-group isp-mobile-edge"><!-- wp:columns -->
     <div class="wp-block-columns"><!-- wp:column -->
         <div class="wp-block-column"><!-- wp:group {"className":"isp-icon-bucket","layout":{"type":"constrained"}} -->
             <div class="wp-block-group isp-icon-bucket"><!-- wp:html -->

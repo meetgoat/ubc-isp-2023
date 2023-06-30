@@ -287,12 +287,10 @@ h6,
 	display: none;
 	content-visibility: hidden;
 }
-@media screen and (max-width: 979px) {
-	.full-width .full-width-container {
-		margin: 0 -20px;
-	}
-}
 
+#body-container{
+	overflow: hidden;
+}
 
 #container *{
 		box-sizing: border-box;
@@ -303,18 +301,18 @@ h6,
 	background: transparent;
 	padding-top: 0;
 }
-.wp-block-group > [class*="wp-block"],
+/* .wp-block-group > [class*="wp-block"],
 .entry-content > [class*="wp-block"] {
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0 24px;
+	padding: 0 24px; 
 	max-width: 1288px;
 	width: 100%;
-}
+} */
 .entry-content > .wp-block-group,
 .entry-content > .wp-block-separator {
 	max-width: 100%;
-	padding: 0;
+	padding: 0 24px;
 }
 
 
@@ -332,14 +330,23 @@ h6,
 
 .is-style-rounded{
 	border-radius: 16px;
+	padding: 24px;
 }
 .is-style-rounded-sm{
 	border-radius: 8px;
+	padding: 24px;
 }
 
 
 .wp-block-group .wp-block-columns  {
 		margin-bottom: 0;
+	}
+
+
+@media (max-width: 781px) {
+		.wp-block-group.isp-mobile-edge > .wp-block-group__inner-container {
+			padding: 0 !important;
+		}
 	}
 
 
@@ -970,6 +977,252 @@ p {
 	max-width: 900px; 
 	margin: 0 auto;
 }
+.wp-block-post-template{
+	margin: 0;
+}
+
+
+	.wp-block-table table {
+		margin: 25px 0;
+		display: block;
+	}
+.wp-block-table th {
+		color: var(--ubc-primary);
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 130%;
+		padding: 24px;
+	}
+.wp-block-table td { 
+		color: var(--bistre);
+		font-size: 14px;
+		line-height: 140%;
+		padding: 16px 24px;
+	}
+.wp-block-table.is-style-stripes tbody tr:nth-of-type(odd) {
+		background-color: white;
+	}
+.wp-block-table.is-style-stripes tbody tr:nth-of-type(even) {
+		background-color: #FDFCFB;
+	}
+
+
+
+	#container .gfield_label {
+		color: #000;
+		font-size: 16px;
+		font-family: var(--opensans);
+		font-weight: 600;
+		line-height: 100%;
+		margin-bottom: 8px;
+	}
+
+
+#container .gform_wrapper input[type="color"],
+		#container .gform_wrapper input[type="date"],
+		#container .gform_wrapper input[type="datetime-local"],
+		#container .gform_wrapper input[type="datetime"],
+		#container .gform_wrapper input[type="email"],
+		#container .gform_wrapper input[type="month"],
+		#container .gform_wrapper input[type="number"],
+		#container .gform_wrapper input[type="password"],
+		#container .gform_wrapper input[type="search"],
+		#container .gform_wrapper input[type="tel"],
+		#container .gform_wrapper input[type="text"],
+		#container .gform_wrapper input[type="time"],
+		#container .gform_wrapper input[type="url"],
+		#container .gform_wrapper input[type="week"],
+		#container .gform_wrapper select,
+		#container .gform_wrapper textarea {
+            color: #4E5862;
+            font-size: 16px;
+            font-family: var(--opensans);
+			line-height: 24px;
+            border-radius: 4px;
+            border: 1px solid #C3D0DB;
+            border: 1px solid var(--ubc-grey-4, #C3D0DB);
+            background: #FFF;
+            background: var(--ubc-white, #FFF);
+            padding: 8px 12px;
+            display: block;
+            height: auto;
+		}
+
+
+#container .gform_wrapper select {
+			-webkit-appearance: none;
+			   -moz-appearance: none;
+			        appearance: none;
+			background: white url(/wp-content/themes/ubc-isp/dist/images/select-arrow.svg?02ba9bda1cf7c18b2d6a5462ca05ff1a) no-repeat right 8px center;
+		}
+
+
+div .gform_wrapper.gravity-theme .gfield_description {
+	color: #909090;
+}
+
+.gform_confirmation_message{
+	padding: 100px 15px 50px;
+	text-align: center;
+
+}
+
+div .gform_wrapper.gravity-theme .gfield_validation_message,
+div .gform_wrapper.gravity-theme .validation_message {
+	margin: 0;
+	border: none;
+	padding: 2px;
+	background: none;
+}
+
+
+.gfield input[type="checkbox"],
+	.gfield input[type="radio"] {
+		-webkit-appearance: none;
+		   -moz-appearance: none;
+		        appearance: none;
+		margin: 0 12px 0 0;
+		transition: var(--transition);
+		width: 18px;
+		height: 18px;
+		border: 3px solid white;
+		background: white;
+		outline: 1px solid #98B2C3;
+		outline: 1px solid var(--ubc-grey-3, #98B2C3);
+		outline-offset: 0px;
+	}
+
+
+.gfield input[type="checkbox"]:focus, .gfield input[type="radio"]:focus {
+			box-shadow: 0px 0px 0px 3px var(--ubc-grey-4);
+			/* border: 3px solid var(--ubc-grey-4, #C3D0DB); */
+		}
+
+
+.gfield input[type="checkbox"]:checked, .gfield input[type="radio"]:checked {
+			background: var(--ubc-blue-1);
+		}
+
+
+.gfield input[type="radio"] {
+		border-radius: 50%;
+	}
+
+
+.gfield .gchoice {
+	margin-bottom: 8px;
+}
+
+
+/* Toggle Checkbox */
+.gf_toggle .gchoice{
+		position: relative;
+	}
+.gf_toggle input[type=checkbox]{
+		-webkit-appearance: none;
+		   -moz-appearance: none;
+		        appearance: none;
+		width: 48px;
+		height: 28px;
+		border-radius: 20px;
+		display: block;
+		cursor: pointer;
+		background: var(--ubc-primary);		
+		border: none;
+		outline: none;
+	}
+.gf_toggle label:before,
+		.gf_toggle label:after {
+			content:'';
+			display: block;
+			cursor: pointer;
+			height: 22px;
+			width: 22px;
+			border-radius: 50%;
+			transition: var(--transition);
+
+			content: '';
+			position: absolute;
+			top: 3px;
+			left: 3px;
+		}
+.gf_toggle label:before {
+			background: #fff url(/wp-content/themes/ubc-isp/dist/images/toggle-off.svg?24dda89d6dc50f047519b51f1745b0a3) no-repeat center center;
+		}
+.gf_toggle label:after {
+			background: #fff url(/wp-content/themes/ubc-isp/dist/images/toggle-on.svg?8797aa62b9211a96f0bdb675c874ec55) no-repeat center center;
+			opacity: 0;
+			transition: var(--transition);
+		}
+.gf_toggle input[type=checkbox]:checked {
+		background: var(--success);
+	}
+.gf_toggle input[type=checkbox]:checked + label:before,
+	.gf_toggle input[type=checkbox]:checked + label:after {
+		left: 23px;
+		opacity: 1;
+	}
+
+
+
+/*  Date Pickers */
+
+.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-header[class] .ui-datepicker-next, 
+		.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-header[class] .ui-datepicker-prev {
+			background: var(--sand-1) !important;
+		}
+
+.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-header[class] .ui-datepicker-next, 
+		.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-header[class] .ui-datepicker-prev {
+			color: var(--calcite);
+		}
+
+.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-header[class] .ui-datepicker-title select {
+			color: var(--ubc-primary);
+			text-align: center;
+			font-size: 14px;
+			font-weight: 700;
+			letter-spacing: 0.42px;
+		}
+
+.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-calendar[class] td  {
+			padding: 5px;
+			width: 42px;
+			height: 42px;
+		}
+
+.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-calendar[class] td .ui-state-default{
+				font-size: 13px;
+				height: 30px;
+				width: 30px;
+				text-align: center;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 21px;
+			}
+
+.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-calendar[class] td .ui-state-hover{
+				border: solid 1px var(--calcite);
+				background: var(--calcite);
+				color: white;
+			}
+
+.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-calendar[class] td.ui-state-disable .ui-state-default {
+					background: var(--ubc-grey-2);
+					opacity: 0.5;
+					pointer-events: none;
+				}
+
+.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-calendar[class] td .ui-state-active {
+				background: var(--calcite);
+				color: white;
+				border: none;
+				text-align: center;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 21px;
+			} 
+
 
     .isp-card--tool .isp-card__inner{
         border-radius: 16px;
@@ -1601,10 +1854,11 @@ p {
 }
 
 .isp-cta {
-    height: 100%;
+    height: 100%; 
+    border-radius: 46px;
 }
 
-.isp-cta a {
+.isp-cta > a {
         position: relative;
         z-index: 100;
         -webkit-backdrop-filter: blur(10px);
@@ -1627,6 +1881,11 @@ p {
 .isp-cta .wp-block-separator.isp-cta__separator {
 		margin: 0 0 16px;
 	}
+
+.isp-cta figure > a{
+            height: 100%;
+            display: block;
+        }
 
 .isp-cta__title {
 	margin: 0 0 16px;
@@ -1733,19 +1992,19 @@ p {
 		margin: 0;
 	}
 
-.isp-cta-d a, .isp-cta-e a, .isp-cta-f a {
+.isp-cta-d > a, .isp-cta-e > a, .isp-cta-f > a {
 		background: var(--sand-2);
 		border-radius: 16px;
 		display: block;
 		padding: 0;
 	}
 
-.isp-cta-d a:hover,
-		.isp-cta-e a:hover,
-		.isp-cta-f a:hover,
-		.isp-cta-d a:focus,
-		.isp-cta-e a:focus,
-		.isp-cta-f a:focus {
+.isp-cta-d > a:hover,
+		.isp-cta-e > a:hover,
+		.isp-cta-f > a:hover,
+		.isp-cta-d > a:focus,
+		.isp-cta-e > a:focus,
+		.isp-cta-f > a:focus {
 			box-shadow: var(--shadow-2);
 		}
 
@@ -1831,6 +2090,12 @@ p {
 					border-radius: 0 16px 16px 160px;
 			}
 				}
+
+.wp-block-post .isp-cta-d,
+    .wp-block-post .isp-cta-e,
+    .wp-block-post .isp-cta-f {
+        box-shadow: var(--shadow-2);
+    }
 
 .isp-cta-e .isp-cta__image--background img {
 			border-radius: 16px 16px 0px 80px;
@@ -2502,8 +2767,20 @@ div .isp-header--small[class*="wp-block"] .wp-block-separator{
 
 
 
+.isp-card--step[class*="wp-block"] a:hover .isp-card__title, .isp-card--step[class*="wp-block"] a:focus .isp-card__title {
+                color: var(--calcite);
+            }
+
+
+
 .isp-card--step[class*="wp-block"] .isp-icon-bucket--button,.isp-card--step[class*="wp-block"]{
         margin: 0;
+    }
+
+
+
+.isp-card--step[class*="wp-block"] .isp-card__title {
+        transition: var(--transition);
     }
 
 

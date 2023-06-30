@@ -129,6 +129,9 @@ __webpack_require__.r(__webpack_exports__);
 // Call the initializeAccordions function to initialize the accordions
 (0,_blocks_accordions_js__WEBPACK_IMPORTED_MODULE_0__.initializeAccordions)();
 (0,_blocks_teamMember_js__WEBPACK_IMPORTED_MODULE_1__.initializeTeamMembers)();
+jQuery(document).ready(function ($) {
+  var table = new DataTable('.wp-block-table table');
+});
 
 /***/ }),
 

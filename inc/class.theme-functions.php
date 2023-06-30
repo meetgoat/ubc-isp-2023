@@ -1,45 +1,37 @@
 <?php
 
-namespace UBC\Collab\Child;
-
-require_once('GutenburgBlocks.php');
-require_once('Breadcrumbs.php');
-
-class ThemeFunctions
+class UBC_ISP_ThemeFunctions
 {
-    public function __construct()
+    public function init()
     {
-        $this->themeHooks();
-
-        // Setup Gutenburg Blocks
-        new GutenburgBlocks();
-        new Breadcrumbs();
+        self::themeHooks();
     }
 
-    private function themeHooks()
+    static function themeHooks()
     {   
-        
-        add_action('after_setup_theme', array($this, 'themeSetup'), 20 , 2 );
-        add_action('wp_enqueue_scripts', array($this, 'themeScripts'));
-        add_action('enqueue_block_editor_assets', array($this, 'editorScripts'));
-        add_action('before_footer', array($this, 'footerCTA'));
-    
+        add_action( 'after_setup_theme', array( 'UBC_ISP_ThemeFunctions', 'themeSetup'), 20 , 2 );
+
+        add_action( 'wp_enqueue_scripts', array( 'UBC_ISP_ThemeFunctions', 'themeScripts'));
+        add_action( 'enqueue_block_editor_assets', array( 'UBC_ISP_ThemeFunctions', 'editorScripts'));
     }
 
     /**
      * Enqueue scripts and styles.
      */
-    function themeScripts()
+    static function themeScripts()
     {
         $theme        = wp_get_theme();
         wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), $theme->parent()->get( 'Version' ) );
-        wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/dist/css/main.css', array(), CHILD_THEME_VERSION);
+       
+        wp_enqueue_style('dataTable-style', '//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css', array(), CHILD_THEME_VERSION);
+        wp_enqueue_script('dataTable-js', '//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js', array('jquery'), CHILD_THEME_VERSION, true);
 
-        wp_enqueue_script('child-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array('jquery'), CHILD_THEME_VERSION, true);
+        wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/dist/css/main.css', array(), CHILD_THEME_VERSION);
+        wp_enqueue_script('child-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array('jquery', 'dataTable-js' ), CHILD_THEME_VERSION, true);
 
     }
 
-    function editorScripts() {
+    static function editorScripts() {
         // wp_register_script( 'editor', 
         //     get_stylesheet_directory_uri() . '/dist/js/editor.js', 
         //     [ 'wp-blocks', 'wp-dom', 'wp-dom-ready', 'wp-edit-post' ], 
@@ -51,7 +43,7 @@ class ThemeFunctions
     /**
      * Loads carbon fields and sets up additional theme options.
      */
-    function themeSetup()
+    static function themeSetup()
     {
         global $content_width;
         
@@ -169,17 +161,5 @@ class ThemeFunctions
 
     }
 
-    /**
-     * Loads the Footer CTA blocks.
-     */
-    function footerCTA()    {
-        echo `
-            <div class="wp-block-group is-layout-constrained">
-                <div class="wp-block-group__inner-container">
-                    <p class="has-text-align-center has-ubc-blue-color has-text-color">We honour, celebrate and thank the xʷməθkʷəy̓ əm (Musqueam) and Syilx Okanagan peoples on whose territories the main campuses of the University of British Columbia have the privilege to be situated.</p>
-                    <p class="has-text-align-center"><a href="#">READ MORE</a></p>
-                </div>
-            </div>
-        `;
-    }
 }
+UBC_ISP_ThemeFunctions::init();

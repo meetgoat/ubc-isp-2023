@@ -3,9 +3,10 @@
 }
 
 .isp-cta {
-    height: 100%;
+    height: 100%; 
+    border-radius: 46px;
 
-	& a {
+	& > a {
         position: relative;
         z-index: 100;
         backdrop-filter: blur(10px);
@@ -24,6 +25,13 @@
 	.wp-block-separator.isp-cta__separator {
 		margin: 0 0 16px;
 	}
+
+    & figure {
+        > a{
+            height: 100%;
+            display: block;
+        }
+    }
 }
 
 .isp-cta__title {
@@ -146,7 +154,7 @@
 		margin: 0;
 	}
 
-	& a {
+	& > a {
 		background: var(--sand-2);
 		border-radius: 16px;
 		display: block;
@@ -230,6 +238,15 @@
 			}
 		}
 	}
+}
+
+.wp-block-post{
+
+    .isp-cta-d,
+    .isp-cta-e,
+    .isp-cta-f {
+        box-shadow: var(--shadow-2);
+    }
 }
 
 .isp-cta-e {

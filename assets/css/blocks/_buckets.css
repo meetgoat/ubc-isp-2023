@@ -156,9 +156,18 @@
     & a {
         padding: 32px;
         position: relative;
+
+        &:hover, &:focus {
+            .isp-card__title {
+                color: var(--calcite);
+            }
+        }
     }
     .isp-icon-bucket--button,{
         margin: 0;
+    }
+    .isp-card__title {
+        transition: var(--transition);
     }
     .wp-block-heading{
         margin-top: 4px;

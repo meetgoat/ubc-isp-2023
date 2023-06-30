@@ -1,0 +1,29 @@
+.wp-block-table {
+
+	& table {
+		margin: 25px 0;
+		display: block;
+	}
+
+	& th {
+		color: var(--ubc-primary);
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 130%;
+		padding: 24px;
+	}
+
+	& td { 
+		color: var(--bistre);
+		font-size: 14px;
+		line-height: 140%;
+		padding: 16px 24px;
+	}
+
+	&.is-style-stripes tbody tr:nth-of-type(odd) {
+		background-color: white;
+	}
+	&.is-style-stripes tbody tr:nth-of-type(even) {
+		background-color: #FDFCFB;
+	}
+}

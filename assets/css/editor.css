@@ -38,8 +38,12 @@ div .editor-styles-wrapper {
     --wp--preset--font-size--large:  var(--font-size-p-lg) !important;
     --wp--preset--font-size--x-large:  var(--font-size-p-xl) !important;
 }
-
-
+/* 
+.block-editor-block-list__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
 
 
 /*  Editor Block Specific */

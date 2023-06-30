@@ -1,21 +1,19 @@
 <?php
 
-namespace UBC\Collab\Child;
-
-class GutenburgBlocks
+class UBC_ISP_GutenburgBlocks
 {
-    public function __construct()
+    public static function init()
     {
-        $this->themeHooks();
+        self::themeHooks();
     }
 
-    private function themeHooks()
+    public static function themeHooks()
     {
-        add_action( 'init', [$this, 'blockStyles']);
-        add_action( 'init', [$this, 'patternCategories']);
+        add_action( 'init', ['UBC_ISP_GutenburgBlocks', 'blockStyles']);
+        add_action( 'init', ['UBC_ISP_GutenburgBlocks', 'patternCategories']);
     }
 
-    function patternCategories() {
+    static function patternCategories() {
         register_block_pattern_category(
             'ubc',
             array( 'label' => __( 'UBC ISP', 'ubc_collab' ) )
@@ -62,17 +60,17 @@ class GutenburgBlocks
         );
     }
 
-    function blockStyles()
+    static function blockStyles()
     {
-        $this->ImageBlockStyles();
-        $this->SeparatorBlockStyles();
-        $this->HeadingBlockStyles();
-        $this->ButtonBlockStyles();
-        $this->GroupBlockStyles();
-        $this->SpacerBlockStyles();
+        self::ImageBlockStyles();
+        self::SeparatorBlockStyles();
+        self::HeadingBlockStyles();
+        self::ButtonBlockStyles();
+        self::GroupBlockStyles();
+        self::SpacerBlockStyles();
     }
 
-    function ImageBlockStyles() {
+    static function ImageBlockStyles() {
         register_block_style(
             'core/image',
             array(
@@ -83,7 +81,7 @@ class GutenburgBlocks
             )
         );
     }
-    function SeparatorBlockStyles() {
+    static function SeparatorBlockStyles() {
         register_block_style(
             'core/separator',
             array(
@@ -114,7 +112,7 @@ class GutenburgBlocks
         );
 
     }
-    function HeadingBlockStyles() {
+    static function HeadingBlockStyles() {
         register_block_style(
             'core/heading',
             array(
@@ -124,7 +122,7 @@ class GutenburgBlocks
             )
         );
     }
-    function GroupBlockStyles() {
+    static function GroupBlockStyles() {
         register_block_style(
             'core/group',
             array(
@@ -150,7 +148,7 @@ class GutenburgBlocks
             )
         );
     }
-    function ButtonBlockStyles() {
+    static function ButtonBlockStyles() {
         register_block_style(
             'core/button',
             array(
@@ -160,7 +158,7 @@ class GutenburgBlocks
             )
         );
     }
-    function SpacerBlockStyles() {
+    static function SpacerBlockStyles() {
         register_block_style(
             'core/spacer',
             array(
@@ -181,3 +179,4 @@ class GutenburgBlocks
 
     
 }
+UBC_ISP_GutenburgBlocks::init();
