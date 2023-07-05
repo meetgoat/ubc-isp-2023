@@ -2,6 +2,11 @@
 
 /* =full-width-container
 -------------------------------------------------------------- */
+@media( --query-mx-md ){
+	.isp-header-wrap{
+		padding: 0 20px;
+	}
+}
 
 .full-width .full-width-container {
 	margin: 0;
@@ -47,7 +52,7 @@
 .entry-content > .wp-block-group,
 .entry-content > .wp-block-separator {
 	max-width: 100%;
-	padding: 0 24px;
+	padding: 0 16px;
 }
 
 

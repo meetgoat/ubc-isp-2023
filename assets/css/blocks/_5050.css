@@ -12,11 +12,14 @@ div [class*="wp-block"].isp-5050 {
     }
 
     .isp-5050--content{
+        padding: 24px 0;
         padding-left: 50px;
     }
 
     & figure, img{
         margin: 0;
+        height: 100%;
+        object-fit: cover;
         border-radius: 8px 8px 8px 240px;
     }
 }

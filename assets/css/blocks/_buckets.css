@@ -53,13 +53,14 @@
     }
     & a {
         text-decoration: none;
+        display: block;
         
         .wp-block-heading{
             transition: var(--transition);
         }
         &:hover, &:focus{
-            .wp-block-heading{
-                color: var(--calcite);
+            .isp-title{
+                color: var(--calcite) !important;
             }
             .button-tertiary{
                 --button-color: var(--button-color--hover);

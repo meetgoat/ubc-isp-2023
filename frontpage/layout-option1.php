@@ -8,9 +8,7 @@
 **/
 
 get_header(); // Loads the header.php template.
-
-//Since this is the first frontpage layout option, the span will be 8 and 4
- ?>
+?>
 </div>
 <div class="row-fluid expand">
     

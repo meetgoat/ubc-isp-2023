@@ -18,9 +18,10 @@ require_once('inc/class.theme-functions.php');
 require_once('inc/class.gutenburg-blocks.php');
 
 // Functions related to the breadcrumbs & header
-require_once('inc/class.breadcrumbs.php');
-
+require_once('inc/class.page-header.php');
 
 // Functions related to gravity forms
 require_once('inc/class.gravity-forms.php');
 
+// Functions related to gravity forms
+require_once('inc/class.third-tier-walker-nav-menu.php');

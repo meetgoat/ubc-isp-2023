@@ -14,7 +14,6 @@ get_header(); // Loads the header.php template.
 $content_class = ( isset( $content_class ) ) ? $content_class : '';
 
 ?>
-
 	<div id="content" class="hfeed content <?php echo apply_filters('ubc_collab_content_class', $content_class, 'archive' ); ?>">
 
 		<?php do_atomic( 'before_content' ); // hybrid_before_content ?>

@@ -112,6 +112,28 @@ var TeamMember = {
 
 /***/ }),
 
+/***/ "./assets/js/components/menu.js":
+/*!**************************************!*\
+  !*** ./assets/js/components/menu.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initializeSubMenu: () => (/* binding */ initializeSubMenu)
+/* harmony export */ });
+function initializeSubMenu() {
+  // Select all elements with class 'isp-accordion--header'
+  jQuery("#ubc-isp-nav__menu").on("click", ".sub-menu__toggle", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    jQuery(this).closest('.menu-item').toggleClass('menu-item--open').children('.sub-menu').slideToggle();
+  });
+}
+
+/***/ }),
+
 /***/ "./assets/js/main.js":
 /*!***************************!*\
   !*** ./assets/js/main.js ***!
@@ -122,13 +144,16 @@ var TeamMember = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_accordions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/accordions.js */ "./assets/js/blocks/accordions.js");
 /* harmony import */ var _blocks_teamMember_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/teamMember.js */ "./assets/js/blocks/teamMember.js");
+/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/menu.js */ "./assets/js/components/menu.js");
 // Import the initializeAccordions function from the accordions module
+
 
 
 
 // Call the initializeAccordions function to initialize the accordions
 (0,_blocks_accordions_js__WEBPACK_IMPORTED_MODULE_0__.initializeAccordions)();
 (0,_blocks_teamMember_js__WEBPACK_IMPORTED_MODULE_1__.initializeTeamMembers)();
+(0,_components_menu_js__WEBPACK_IMPORTED_MODULE_2__.initializeSubMenu)();
 jQuery(document).ready(function ($) {
   var table = new DataTable('.wp-block-table table');
 });
