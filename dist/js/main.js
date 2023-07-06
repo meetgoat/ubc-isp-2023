@@ -112,6 +112,115 @@ var TeamMember = {
 
 /***/ }),
 
+/***/ "./assets/js/blocks/timeline.js":
+/*!**************************************!*\
+  !*** ./assets/js/blocks/timeline.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initializeTimelines: () => (/* binding */ initializeTimelines)
+/* harmony export */ });
+function initializeTimelines() {
+  document.addEventListener("DOMContentLoaded", function () {
+    jQuery(".isp-timeline").each(function () {
+      Timeline.init(jQuery(this));
+    });
+  });
+}
+var Timeline = {
+  timeline: null,
+  decades: null,
+  buttons: null,
+  init: function init(timlineElement) {
+    this.timeline = timlineElement;
+    this.decades = this.timeline.find(".isp-timeline__decade");
+    this.createButtons();
+    this.setupObserver();
+  },
+  createButtons: function createButtons() {
+    var _this = this;
+    this.buttons = this.decades.map(function (index, element) {
+      return jQuery("<button/>", {
+        "class": "isp-timeline__button",
+        "data-decade": index,
+        text: jQuery(element).find(".isp-timeline__decade__title").text(),
+        click: _this.handleButtonClick
+      })[0];
+    });
+    var buttonsWrap = jQuery("<div/>", {
+      "class": "isp-timeline__buttons alignfull"
+    });
+    var buttonsContainer = jQuery("<div/>", {
+      "class": "isp-timeline__button__container"
+    });
+    this.buttons.prependTo(buttonsContainer.prependTo(buttonsWrap.prependTo(this.timeline)));
+  },
+  handleButtonClick: function handleButtonClick(event) {
+    var button = jQuery(event.target);
+    Timeline.scrollToButton(button);
+    Timeline.scrollToDecade(button);
+  },
+  scrollToButton: function scrollToButton(button) {
+    jQuery(".isp-timeline__button").removeClass("is-active");
+    button.addClass("is-active");
+    var buttonOffset = button.position().left;
+    var buttonContainer = button.parent();
+    buttonContainer.css({
+      left: -buttonOffset - button.width() / 2 - 7
+    });
+  },
+  scrollToDecade: function scrollToDecade(button) {
+    var decade = button.data("decade");
+    var decadeElement = jQuery(Timeline.decades[decade]);
+    var offset = jQuery(decadeElement).offset().top;
+    jQuery("html, body").animate({
+      scrollTop: offset - 80
+    }, 500);
+  },
+  setupObserver: function setupObserver() {
+    var options = {
+      rootMargin: "-81px 0px 0px 0px ",
+      threshold: 1.0
+    };
+    var downCallback = function downCallback(entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.boundingClientRect.top < 81) {
+          if (entry.isIntersecting) {
+            console.log('test');
+          } else {
+            var timelineButton = jQuery('.isp-timeline__button[data-decade=' + jQuery(entry.target).index() + ']');
+            Timeline.scrollToButton(timelineButton);
+          }
+        }
+      });
+    };
+    var upCallback = function upCallback(entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.boundingClientRect.top > 81 && entry.boundingClientRect.top < 500) {
+          if (entry.isIntersecting) {
+            var decade = jQuery(entry.target).closest('.isp-timeline__decade');
+            var timelineButton = jQuery('.isp-timeline__button[data-decade=' + decade.index() + ']');
+            Timeline.scrollToButton(timelineButton);
+          }
+        }
+      });
+    };
+    var downObserver = new IntersectionObserver(downCallback, options);
+    var upObserver = new IntersectionObserver(upCallback, options);
+    this.decades.each(function (index, element) {
+      downObserver.observe(element);
+    });
+    jQuery('.isp-timeline__year:last-child').each(function (index, element) {
+      upObserver.observe(element);
+    });
+  }
+};
+
+/***/ }),
+
 /***/ "./assets/js/components/menu.js":
 /*!**************************************!*\
   !*** ./assets/js/components/menu.js ***!
@@ -144,8 +253,10 @@ function initializeSubMenu() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_accordions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/accordions.js */ "./assets/js/blocks/accordions.js");
 /* harmony import */ var _blocks_teamMember_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/teamMember.js */ "./assets/js/blocks/teamMember.js");
-/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/menu.js */ "./assets/js/components/menu.js");
+/* harmony import */ var _blocks_timeline_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/timeline.js */ "./assets/js/blocks/timeline.js");
+/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu.js */ "./assets/js/components/menu.js");
 // Import the initializeAccordions function from the accordions module
+
 
 
 
@@ -153,7 +264,8 @@ __webpack_require__.r(__webpack_exports__);
 // Call the initializeAccordions function to initialize the accordions
 (0,_blocks_accordions_js__WEBPACK_IMPORTED_MODULE_0__.initializeAccordions)();
 (0,_blocks_teamMember_js__WEBPACK_IMPORTED_MODULE_1__.initializeTeamMembers)();
-(0,_components_menu_js__WEBPACK_IMPORTED_MODULE_2__.initializeSubMenu)();
+(0,_components_menu_js__WEBPACK_IMPORTED_MODULE_3__.initializeSubMenu)();
+(0,_blocks_timeline_js__WEBPACK_IMPORTED_MODULE_2__.initializeTimelines)();
 jQuery(document).ready(function ($) {
   var table = new DataTable('.wp-block-table table');
 });

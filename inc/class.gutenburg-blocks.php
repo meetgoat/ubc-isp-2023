@@ -58,6 +58,10 @@ class UBC_ISP_GutenburgBlocks
             'ubc-ctas',
             array( 'label' => __( 'UBC ISP - CTAs', 'ubc_collab' ) )
         );
+        register_block_pattern_category(
+            'ubc-timeline',
+            array( 'label' => __( 'UBC ISP - Timeline', 'ubc_collab' ) )
+        );
     }
 
     static function blockStyles()
