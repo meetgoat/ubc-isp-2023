@@ -26,6 +26,7 @@
 @import "./cards/_testimonial.css";
 @import "./cards/_cta.css";
 @import "./cards/_bucket.css";
+@import "./cards/_goal.css";
 
 @import "./blocks/_core.css";
 @import "./blocks/_spacer.css";

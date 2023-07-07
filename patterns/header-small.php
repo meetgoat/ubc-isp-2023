@@ -4,7 +4,7 @@
  * Slug: meetgoat/header-small
  * Categories: ubc-headers
  * Viewport Width: 1280
- * Block Types: core/template-part/UBC Headers
+ * Block Types: core/post-content 
  * Inserter: yes
  */
 ?>

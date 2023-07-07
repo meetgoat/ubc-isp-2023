@@ -5,7 +5,7 @@
  * Slug: meetgoat/layout-step-arrows
  * Categories: ubc-card-layouts
  * Viewport Width: 1280
- * Block Types: core/template-part/UBC Callout
+  * Block Types: core/post-content
  * Inserter: yes
  */
 ?>

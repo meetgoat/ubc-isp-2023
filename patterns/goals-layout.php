@@ -5,7 +5,7 @@
  * Slug: meetgoat/goals-layout
  * Categories: ubc-goals
  * Viewport Width: 1280
- * Block Types: core/template-part/UBC Content
+  * Block Types: core/post-content
  * Inserter: yes
  */
 ?>

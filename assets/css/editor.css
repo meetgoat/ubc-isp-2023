@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
 @import "./variables/_colors.css";
 @import "./variables/_shadows.css";
 @import "./variables/_sizing.css";
@@ -5,10 +8,16 @@
 @import "./variables/_queries.css";
 @import "./common/_typography.css";
 
+
+
 @import "./components/_layout.css";
 @import "./components/_elements.css";
 @import "./components/_buttons.css";
 @import "./components/_breadcrumbs.css";
+
+@import "./components/_scrollbar.css";
+@import "./components/_table.css";
+@import "./components/_forms.css";
 
 
 @import "./cards/_tool.css";
@@ -17,8 +26,11 @@
 @import "./cards/_upcoming-events.css";
 @import "./cards/_testimonial.css";
 @import "./cards/_cta.css";
+@import "./cards/_bucket.css";
+@import "./cards/_goal.css";
 
 @import "./blocks/_core.css";
+@import "./blocks/_spacer.css";
 @import "./blocks/_header.css";
 @import "./blocks/_header-small.css";
 @import "./blocks/_buckets.css";
@@ -28,7 +40,12 @@
 @import "./blocks/_cards.css";
 @import "./blocks/_5050.css";
 @import "./blocks/_photo-grid.css";
+@import "./blocks/_timeline.css";
 @import "./blocks/_horizontal-carousel.css";
+
+
+
+
 
 
 
