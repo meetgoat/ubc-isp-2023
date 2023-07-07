@@ -5,7 +5,7 @@ class Third_Tier_Walker_Nav_Menu extends Walker_Nav_Menu
 {    
     // Override start_lvl method to add description text at the top of sub-menu
  
-    function start_el(&$output, $item, $depth, $args) {
+    function start_el(&$output, $item, $depth = 0, $args = NULL, $current_object_id = 0) {
         global $wp_query;
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
          
