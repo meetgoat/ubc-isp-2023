@@ -2651,6 +2651,15 @@ div .gform_wrapper.gravity-theme .validation_message {
         display: none;
 }
     }
+
+
+
+
+
+
+[class*="wp-block"] {
+    position: relative;
+}
 .wp-block-spacer.is-style-pull-up-background{
     height: 0 !important;
 }
