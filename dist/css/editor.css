@@ -1978,6 +1978,7 @@ div [class*="wp-block"].isp-header {
         margin: 0;
         max-width: none;
         top: 100px;
+        z-index: 1;
     }
         
         .isp-header__featured-img img{

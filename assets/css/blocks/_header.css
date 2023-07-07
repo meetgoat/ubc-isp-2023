@@ -74,6 +74,7 @@ div [class*="wp-block"].isp-header {
         margin: 0;
         max-width: none;
         top: 100px;
+        z-index: 1;
         
         & img{
             width: 350px;
