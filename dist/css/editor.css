@@ -3208,7 +3208,7 @@ div .isp-5050[class*="wp-block"] figure, div .isp-5050[class*="wp-block"] img{
         
         }
         /* Before active slide */
-        .isp-goals__container .isp-goals__slide:has(~ .is-active) {
+        .isp-goals__container .isp-goals__slide {
             transform: translateY(-100%);
             opacity: 0;
         }

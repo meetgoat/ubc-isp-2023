@@ -263,7 +263,7 @@
         
         }
         /* Before active slide */
-        .isp-goals__slide:has(~ .is-active) {
+        .isp-goals__slide {
             transform: translateY(-100%);
             opacity: 0;
         }
