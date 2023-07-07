@@ -1,5 +1,6 @@
 import $ from "jquery";
 
+
 export function initializeGoals() {
 	const goalsElements = document.querySelectorAll(".isp-goals");
 	if (goalsElements) {
@@ -22,11 +23,14 @@ const Goals = {
 		this.carousel = containerElement.querySelector(".isp-goals__slides");
 		this.slides = containerElement.querySelectorAll(".isp-goals__slide");
 
+		this.getOnLoadSlide();
+
 		this.setupButtons();
 
 		this.buttons = this.buttonGroup.querySelectorAll(".isp-goals__button");
 
 		this.setupContainer();
+
 		this.setupAccordionToggle();
 
 		this.setCurrentSlide();
@@ -40,6 +44,21 @@ const Goals = {
 				this.setCurrentSlide();
 			}
 		});
+	},
+
+	getOnLoadSlide() {
+		const loadHash = window.location.hash;
+		if (loadHash) {
+			for (let i = 0; i < this.slides.length; i++) {
+				const slide = this.slides[i];
+				const slideHash = "#" + slide.getAttribute("id");
+				if (slideHash === loadHash) {
+					this.currentSlide = i;
+
+					$("html, body").animate( { scrollTop: $(this.wrapper).offset().top - 80 }, 500 );
+				}
+			}
+		}
 	},
 
 	setupContainer() {
@@ -105,6 +124,7 @@ const Goals = {
 				button.classList.remove("is-active");
 			}
 		}
+		// window.location.hash = this.slides[this.currentSlide].getAttribute("id");
 	},
 
 	setupAccordionToggle() {

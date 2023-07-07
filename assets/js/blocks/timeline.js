@@ -61,12 +61,7 @@ const Timeline = {
 		const decadeElement = jQuery(Timeline.decades[decade]);
 		const offset = jQuery(decadeElement).offset().top;
 
-		jQuery("html, body").animate(
-			{
-				scrollTop: offset - 80,
-			},
-			500
-		);
+		jQuery("html, body").animate( { scrollTop: offset - 80 }, 500 );
 	},
 
 	setupObserver() {

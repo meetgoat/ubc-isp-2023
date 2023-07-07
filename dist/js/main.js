@@ -101,6 +101,7 @@ var Goals = {
     this.wrapper = containerElement;
     this.carousel = containerElement.querySelector(".isp-goals__slides");
     this.slides = containerElement.querySelectorAll(".isp-goals__slide");
+    this.getOnLoadSlide();
     this.setupButtons();
     this.buttons = this.buttonGroup.querySelectorAll(".isp-goals__button");
     this.setupContainer();
@@ -115,6 +116,21 @@ var Goals = {
         _this.setCurrentSlide();
       }
     });
+  },
+  getOnLoadSlide: function getOnLoadSlide() {
+    var loadHash = window.location.hash;
+    if (loadHash) {
+      for (var i = 0; i < this.slides.length; i++) {
+        var slide = this.slides[i];
+        var slideHash = "#" + slide.getAttribute("id");
+        if (slideHash === loadHash) {
+          this.currentSlide = i;
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()("html, body").animate({
+            scrollTop: jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.wrapper).offset().top - 80
+          }, 500);
+        }
+      }
+    }
   },
   setupContainer: function setupContainer() {
     this.container = document.createElement("div");
@@ -167,6 +183,7 @@ var Goals = {
         button.classList.remove("is-active");
       }
     }
+    // window.location.hash = this.slides[this.currentSlide].getAttribute("id");
   },
   setupAccordionToggle: function setupAccordionToggle() {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.container).find(".isp-goals__header").append('<button class="isp-goals__toggle"></button>');
