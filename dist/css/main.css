@@ -2662,6 +2662,12 @@ div .gform_wrapper.gravity-theme .validation_message {
         top: 32px;
         margin-bottom: 32px;
     }
+.wp-block-spacer.is-style-pull-up-next{
+    height: 0 !important;
+}
+.wp-block-spacer.is-style-pull-up-next{
+    margin-bottom: -32px;
+}
 
 div [class*="wp-block"].isp-header {
 
