@@ -32,7 +32,9 @@ class Third_Tier_Walker_Nav_Menu extends Walker_Nav_Menu
 
         $item_output .= $args->after;
 
-		$args->walker->lvl_description = $item->description;
+        if($args){
+            $args->walker->lvl_description = $item->description ?? false;
+        }
  
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     }
