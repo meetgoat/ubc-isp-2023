@@ -9,6 +9,11 @@
     }
 }
 .wp-block-spacer.is-style-pull-up-next{
-    margin-bottom: -32px;
     height: 0 !important;
+}
+
+.wp-block-spacer.is-style-pull-up-next + *{
+    margin:  0 0 -32px;
+    position: relative;
+    top: -32px;
 }

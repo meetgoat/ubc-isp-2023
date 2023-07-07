@@ -41,19 +41,6 @@
 
 
 
-/* Image Block */
-.is-style-single-radius-right {
-    border-radius: 16px 0px 0px 400px;
-    width: 50vw;
-    overflow: hidden;
-    
-    :is(img) {
-        width: 100%;
-        max-width: 800px;
-    }
-}
-
-
 
 
 .isp-callout-bar{

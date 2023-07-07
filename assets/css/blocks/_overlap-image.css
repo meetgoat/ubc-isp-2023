@@ -23,5 +23,7 @@ div [class*="wp-block"].isp-overlap-image {
     .wp-block-group{
         padding: 64px;
         border-radius: 16px 160px 16px 16px;
+        background: rgba(251, 249, 246, 0.80) !important;
+        backdrop-filter: blur(20px);
     }
 }

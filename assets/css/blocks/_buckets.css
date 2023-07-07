@@ -43,29 +43,18 @@
 [class*="wp-block"].isp-text-bucket {
     position: relative;
 
+    .isp-text-bucket__title {
+        margin: 0 0 8px;
+    }
+    .isp-text-bucket__text {
+        margin: 0 0 16px;
+    }
+    .isp-text-bucket__links {
+        margin: 16px 0 0;
+    }
 
-    .wp-block-group__inner-container{
-        padding: 0;
-    }
-    .wp-block-group {
-        position: relative;
-        z-index: 2;
-    }
-    & a {
-        text-decoration: none;
-        display: block;
-        
-        .wp-block-heading{
-            transition: var(--transition);
-        }
-        &:hover, &:focus{
-            .isp-title{
-                color: var(--calcite) !important;
-            }
-            .button-tertiary{
-                --button-color: var(--button-color--hover);
-            }
-        }
+    @media (--query-sm) {
+        margin-bottom: 32px;
     }
 }
 
