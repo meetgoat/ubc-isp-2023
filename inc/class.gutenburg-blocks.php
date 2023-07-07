@@ -62,6 +62,10 @@ class UBC_ISP_GutenburgBlocks
             'ubc-timeline',
             array( 'label' => __( 'UBC ISP - Timeline', 'ubc_collab' ) )
         );
+        register_block_pattern_category(
+            'ubc-goals',
+            array( 'label' => __( 'UBC ISP - Goals', 'ubc_collab' ) )
+        );
     }
 
     static function blockStyles()
