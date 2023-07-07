@@ -32,7 +32,7 @@ class Third_Tier_Walker_Nav_Menu extends Walker_Nav_Menu
 
         $item_output .= $args->after;
 
-        if($args){
+        if($args && is_object($args) && is_object($args->walker) ){
             $args->walker->lvl_description = $item->description ?? false;
         }
  
