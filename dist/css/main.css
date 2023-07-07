@@ -4148,7 +4148,10 @@ div .isp-5050[class*="wp-block"] figure, div .isp-5050[class*="wp-block"] img{
         margin-top: 12px;
     }
 
-
+.isp-goals__slide.block-editor-block-list__layout {
+    border: solid 2px black;
+    padding: 25px;
+}
 
 @media (max-width: 979px) {
     .isp-goals__slide {

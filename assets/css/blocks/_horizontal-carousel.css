@@ -181,7 +181,10 @@
     }
 }
 
-
+.isp-goals__slide.block-editor-block-list__layout {
+    border: solid 2px black;
+    padding: 25px;
+}
 
 @media (--query-mx-md) {
     .isp-goals__slide {
