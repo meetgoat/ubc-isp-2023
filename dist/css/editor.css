@@ -3436,6 +3436,8 @@ div .isp-5050[class*="wp-block"] figure, div .isp-5050[class*="wp-block"] img{
 [class*="isp-photogrid"] img {
         -o-object-fit: cover;
            object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 
 
