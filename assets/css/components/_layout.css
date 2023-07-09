@@ -3,7 +3,8 @@
 /* =full-width-container
 -------------------------------------------------------------- */
 @media( --query-mx-md ){
-	.isp-header-wrap{
+	.isp-header-wrap,
+	.isp-footer-wrap{
 		padding: 0 20px;
 	}
 }

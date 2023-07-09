@@ -118,15 +118,22 @@
 
 .isp-mobile-only{
     @media (--query-sm) {
-        display: none;
+        display: none !important;
     }
 }
 .isp-desktop-only{
     @media (--query-mx-sm) {
-        display: none;
+        display: none !important;
     }
 }
 
+.isp-mobile--no-break{
+    @media (--query-mx-md) {
+        & br{
+            display: none !important;
+        }
+    }
+}
 
 
 

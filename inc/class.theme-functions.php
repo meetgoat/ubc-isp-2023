@@ -17,6 +17,9 @@ class UBC_ISP_ThemeFunctions
         add_action( 'wp-hybrid-clf_before_header', array( 'UBC_ISP_ThemeFunctions', 'openHeaderWrap') );
         add_action( 'wp-hybrid-clf_after_header', array( 'UBC_ISP_ThemeFunctions', 'closeHeaderWrap') );
 
+        add_action( 'wp-hybrid-clf_before_footer', array( 'UBC_ISP_ThemeFunctions', 'openFooterrWrap') );
+        add_action( 'wp-hybrid-clf_after_footer', array( 'UBC_ISP_ThemeFunctions', 'closeFooterWrap') );
+
     }
 
     /**
@@ -177,6 +180,13 @@ class UBC_ISP_ThemeFunctions
     }
 
     static function closeHeaderWrap() {
+        echo '</div>';
+    }  
+    static function openFooterWrap() {
+        echo '<div class="isp-footer-wrap">';
+    }
+
+    static function closeFooterWrap() {
         echo '</div>';
     }
 }
