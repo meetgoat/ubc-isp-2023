@@ -2431,6 +2431,10 @@ div .gform_wrapper.gravity-theme .validation_message {
 			}
 	}
 
+.isp-cta-f .isp-cta__inner {
+		padding: 8px;
+	}
+
 .isp-cta-f .isp-cta__image--background img {
 			border-radius: 8px 8px 80px 8px;
 		}
@@ -2654,6 +2658,25 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 .isp-callout-bar .wp-block-heading{
         margin: 0;
+    }
+
+
+
+
+
+@media (max-width: 979px) {
+
+
+
+
+
+.isp-callout-bar{
+        text-align: center;
+}
+
+        .isp-callout-bar .wp-block-buttons{
+            justify-content: center;
+        }
     }
 
 

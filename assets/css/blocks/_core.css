@@ -53,6 +53,14 @@
     .wp-block-heading{
         margin: 0;
     }
+
+    @media (--query-mx-md) {
+        text-align: center;
+
+        .wp-block-buttons{
+            justify-content: center;
+        }
+    }
 }
 
 
