@@ -66,6 +66,7 @@
 				box-shadow: var(--shadow-2);
 				width: 348px;
 				padding: 32px 20px 24px;
+				z-index: 20;
 			}
 
 			&.menu-item-has-children {
