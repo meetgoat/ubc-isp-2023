@@ -35,10 +35,42 @@
 	.isp-team__toggle {
 		display: flex;
 		align-items: center;
+		transition: var(--transition);
 		margin-left: auto;
+
+		.isp-team__toggle__text {
+			display: grid;
+
+			& span {
+				grid-row: 1/1;
+				text-align: right;
+				grid-column: 1/1;
+				transition: var(--transition);
+			}
+		}
+
+		.isp-team__toggle--close {
+			opacity: 0; 
+		}
+		.isp-team__toggle--open {
+			opacity: 1;
+		}
+		&.is_active {
+			& svg{ 
+				rotate: 45deg;
+			}
+			.isp-team__toggle--close {
+				opacity: 1;
+			}
+			.isp-team__toggle--open {
+				opacity: 0;
+			}
+		}
 
 		> svg {
 			margin-left: 8px;
+			transition: var(--transition);
+
 		}
 	}
 	.isp-team__header__content,
@@ -83,7 +115,7 @@
         }
 		.simplebar-content {
 			padding-left: 32px !important;
-			
+
 			& *:first-child {
 				margin-top: 0;
 			}

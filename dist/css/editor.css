@@ -1451,13 +1451,61 @@ div .gform_wrapper.gravity-theme .validation_message {
 .isp-team .isp-team__toggle {
 		display: flex;
 		align-items: center;
+		transition: var(--transition);
 		margin-left: auto;
 	}
 
 
 
+.isp-team .isp-team__toggle .isp-team__toggle__text {
+			display: grid;
+		}
+
+
+
+.isp-team .isp-team__toggle .isp-team__toggle__text span {
+				grid-row: 1/1;
+				text-align: right;
+				grid-column: 1/1;
+				transition: var(--transition);
+			}
+
+
+
+.isp-team .isp-team__toggle .isp-team__toggle--close {
+			opacity: 0; 
+		}
+
+
+
+.isp-team .isp-team__toggle .isp-team__toggle--open {
+			opacity: 1;
+		}
+
+
+
+.isp-team .isp-team__toggle.is_active svg{ 
+				rotate: 45deg;
+			}
+
+
+
+.isp-team .isp-team__toggle.is_active .isp-team__toggle--close {
+				opacity: 1;
+			}
+
+
+
+.isp-team .isp-team__toggle.is_active .isp-team__toggle--open {
+				opacity: 0;
+			}
+
+
+
 .isp-team .isp-team__toggle > svg {
 			margin-left: 8px;
+			transition: var(--transition);
+
 		}
 
 
