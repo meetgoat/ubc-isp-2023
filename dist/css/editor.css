@@ -1405,50 +1405,91 @@ div .gform_wrapper.gravity-theme .validation_message {
 		overflow: hidden;
 		position: relative;
 	}
+
+
+
 .isp-team .isp-team__inner .wp-block-group__inner-container {
 			padding: 0;
 		}
+
+
+
 .isp-team .isp-team__columns {
 		gap: 32px;
 		padding-right: 64px;
 	}
+
+
+
 .isp-team .wp-block-columns,
 	.isp-team .wp-block-image {
 		margin: 0;
 	}
+
+
+
 .isp-team .isp-team__header .wp-block-heading {
 			margin: 0 0 16px;
 		}
+
+
+
 .isp-team .isp-team__header a {
 			font-size: 18px;
 			font-weight: 600;
 			line-height: 120%;
 		}
+
+
+
 .isp-team .isp-team__header p:last-of-type {
 			margin: 0;
 		}
+
+
+
 .isp-team .isp-team__toggle {
 		display: flex;
 		align-items: center;
 		margin-left: auto;
 	}
+
+
+
 .isp-team .isp-team__toggle > svg {
 			margin-left: 8px;
 		}
+
+
+
 .isp-team .isp-team__header__content,
 	.isp-team .isp-team__body-content > .wp-block-group__inner-container {
 		padding-left: 32px;
 	}
-/* display: none; */
+
+
+
+.isp-team .isp-team__body {
+		display: none;
+	}
+
+
+
 .isp-team .isp-team__body .wp-block-heading {
 			margin-bottom: 32px;
 		}
+
+
+
 .isp-team .isp-team__body-content {
 		border-top: solid 1px var(--sand-1);
 		padding-top: 53px;
 		padding-bottom: 24px;
 		position: relative;
 	}
+
+
+
 .isp-team .isp-team__body-content:after {
 			content: "";
 			width: 100%;
@@ -1466,13 +1507,22 @@ div .gform_wrapper.gravity-theme .validation_message {
 			z-index: 10;
 
         }
+
+
+
 .isp-team .isp-team__body-content > .wp-block-group__inner-container {
             max-height: 400px;
             padding-bottom: 50px;
         }
+
+
+
 .isp-team .isp-team__body-content .simplebar-content *:first-child {
 				margin-top: 0;
 			}
+
+
+
 @media (max-width: 781px) {
         .isp-team .isp-team__inner{
             overflow: visible;
@@ -1555,6 +1605,11 @@ div .gform_wrapper.gravity-theme .validation_message {
         }
 	}
 
+
+
+.block-editor-block-list__block .isp-team__body {
+		display: none;
+	}
 
     .isp-key-date a {
         -webkit-text-decoration: none;
