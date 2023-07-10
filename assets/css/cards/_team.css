@@ -82,6 +82,7 @@
             padding-bottom: 50px;
         }
 		.simplebar-content {
+			padding-left: 24px !important;
 			& *:first-child {
 				margin-top: 0;
 			}

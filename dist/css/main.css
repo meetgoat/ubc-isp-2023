@@ -1781,6 +1781,12 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
 
+.isp-team .isp-team__body-content .simplebar-content {
+			padding-left: 24px !important;
+		}
+
+
+
 .isp-team .isp-team__body-content .simplebar-content *:first-child {
 				margin-top: 0;
 			}
