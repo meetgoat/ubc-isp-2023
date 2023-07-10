@@ -23,7 +23,7 @@ const TeamMember = {
 		const toggle = teamElement.querySelector( '.isp-team__toggle' );
 		const body = teamElement.querySelector( '.isp-team__body' );
 		const bodyScroll = teamElement.querySelector( '.isp-team__body__inner' );
-		new SimpleBar( bodyScroll, { scrollbarMaxSize : 80 } );
+		new SimpleBar( bodyScroll, { scrollbarMaxSize: 80 } );
 		toggle.addEventListener( 'click', ( event ) => {
 			event.target.classList.toggle( 'is_active' );
 			jQuery( body ).slideToggle();

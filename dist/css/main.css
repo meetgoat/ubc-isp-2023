@@ -1666,7 +1666,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
 
-.isp-team .isp-team__inner .wp-block-group__inner-container {
+.isp-team .isp-team__inner .isp-team__body__inner {
 			padding: 0;
 		}
 
@@ -1721,7 +1721,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
 .isp-team .isp-team__header__content,
-	.isp-team .isp-team__body-content > .wp-block-group__inner-container {
+	.isp-team .isp-team__body__inner {
 		padding-left: 32px;
 	}
 
@@ -1774,7 +1774,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
 
-.isp-team .isp-team__body-content > .wp-block-group__inner-container {
+.isp-team .isp-team__body-content > .isp-team__body__inner {
             max-height: 400px;
             padding-bottom: 50px;
         }
@@ -1828,7 +1828,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 			padding: 24px 24px 0;
 		}
 
-			.isp-team .isp-team__header__text .wp-block-group__inner-container {
+			.isp-team .isp-team__header__text .isp-team__body__inner {
 				display: grid;
 			}
 			.isp-team .isp-team__header__text .wp-block-separator {
@@ -1854,7 +1854,7 @@ div .gform_wrapper.gravity-theme .validation_message {
             overflow: hidden;
 		}
 
-			.isp-team .isp-team__body-content > .wp-block-group__inner-container {
+			.isp-team .isp-team__body-content > .isp-team__body__inner {
 				max-height: none;
 				overflow: auto;
 				padding-bottom: 0;
