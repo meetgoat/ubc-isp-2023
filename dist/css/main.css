@@ -1128,9 +1128,10 @@ div .gform_wrapper.gravity-theme .gfield_description {
 }
 
 .gform_confirmation_message{
-	padding: 100px 15px 50px;
+	padding: 50px 15px 50px;
+	font-size: 20px;
+	font-weigth: 600;
 	text-align: center;
-
 }
 
 div .gform_wrapper.gravity-theme .gfield_validation_message,
