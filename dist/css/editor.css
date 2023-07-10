@@ -1572,7 +1572,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
 .isp-team .isp-team__body-content .simplebar-content {
-			padding-left: 32px !important;
+			padding-left: 32px;
 		}
 
 
@@ -1637,7 +1637,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 				order: 2;
 			}
 		.isp-team .isp-team__button-column {
-			padding: 24px;
+			padding: 8px 24px 24px;
 			text-align: left;
 		}
 		.isp-team .isp-team__toggle {
