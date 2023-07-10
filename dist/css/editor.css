@@ -1473,13 +1473,13 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
 .isp-team .isp-team__toggle .isp-team__toggle--close {
-			opacity: 0; 
+			display: none;
 		}
 
 
 
 .isp-team .isp-team__toggle .isp-team__toggle--open {
-			opacity: 1;
+			display: block;
 		}
 
 
@@ -1491,13 +1491,13 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
 .isp-team .isp-team__toggle.is_active .isp-team__toggle--close {
-				opacity: 1;
+				display: block;
 			}
 
 
 
 .isp-team .isp-team__toggle.is_active .isp-team__toggle--open {
-				opacity: 0;
+				display: none;
 			}
 
 
@@ -1596,8 +1596,9 @@ div .gform_wrapper.gravity-theme .validation_message {
 			position: absolute;
 			right: 24px;
 			top: -12px;
-			z-index: 10;
+			z-index: 1;
 		}
+
 			.isp-team .isp-team__image img {
 				border-radius: 8px;
 				width: 100px;

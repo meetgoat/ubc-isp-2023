@@ -50,20 +50,20 @@
 		}
 
 		.isp-team__toggle--close {
-			opacity: 0; 
+			display: none;
 		}
 		.isp-team__toggle--open {
-			opacity: 1;
+			display: block;
 		}
 		&.is_active {
 			& svg{ 
 				rotate: 45deg;
 			}
 			.isp-team__toggle--close {
-				opacity: 1;
+				display: block;
 			}
 			.isp-team__toggle--open {
-				opacity: 0;
+				display: none;
 			}
 		}
 
@@ -135,7 +135,8 @@
 			position: absolute;
 			right: 24px;
 			top: -12px;
-			z-index: 10;
+			z-index: 1;
+
 			& img {
 				border-radius: 8px;
 				width: 100px;
