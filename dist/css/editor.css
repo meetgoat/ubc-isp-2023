@@ -1470,6 +1470,12 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
 .isp-team .isp-team__body {
+		margin: 0 !important;
+	}
+
+
+
+.isp-team .isp-team__body {
 		display: none;
 	}
 
@@ -1608,7 +1614,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
 .block-editor-block-list__block .isp-team__body {
-		display: none;
+		display: block;
 	}
 
     .isp-key-date a {

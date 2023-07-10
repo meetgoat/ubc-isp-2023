@@ -46,6 +46,7 @@
 		padding-left: 32px;
 	}
 	.isp-team__body {
+		margin: 0 !important;
 		display: none;
 
 		.wp-block-heading {
@@ -173,6 +174,6 @@
 
 .block-editor-block-list__block {
 	.isp-team__body {
-		display: none;
+		display: block;
 	}
 }
