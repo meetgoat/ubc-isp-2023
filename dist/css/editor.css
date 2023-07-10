@@ -1596,15 +1596,17 @@ div .gform_wrapper.gravity-theme .validation_message {
 			position: absolute;
 			right: 24px;
 			top: -12px;
+            z-index: 10;
 		}
 
-			.isp-team .isp-team__image img {
-				border-radius: 8px;
-				width: 100px;
-				height: 116px;
-				-o-object-fit: cover;
-				   object-fit: cover;
-			}
+        .isp-team .isp-team__image img {
+            border-radius: 8px;
+            width: 100px;
+            height: 116px;
+            -o-object-fit: cover;
+                object-fit: cover;
+        }
+
 		.isp-team .isp-team__header__content {
 			padding-left: 0;
 		}
