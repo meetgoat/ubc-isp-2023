@@ -1439,9 +1439,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 	.isp-team .isp-team__body-content > .wp-block-group__inner-container {
 		padding-left: 32px;
 	}
-.isp-team .isp-team__body {
-		display: none;
-	}
+/* display: none; */
 .isp-team .isp-team__body .wp-block-heading {
 			margin-bottom: 32px;
 		}

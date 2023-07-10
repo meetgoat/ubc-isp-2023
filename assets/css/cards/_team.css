@@ -46,7 +46,7 @@
 		padding-left: 32px;
 	}
 	.isp-team__body {
-		display: none;
+		/* display: none; */
 
 		.wp-block-heading {
 			margin-bottom: 32px;
