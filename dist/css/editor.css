@@ -1076,10 +1076,6 @@ p {
 }
 
 .dataTables_wrapper {
-	border-left: solid 1px var(--sand-1) !important;
-	border-right: solid 1px var(--sand-1) !important;
-}
-.dataTables_wrapper {
 	border-radius: 16px;
 	overflow: hidden;
 }

@@ -1,7 +1,5 @@
 .dataTables_wrapper {
 	border-radius: 16px;
-	border-left: solid 1px var(--sand-1) !important;
-	border-right: solid 1px var(--sand-1) !important;
 	overflow: hidden;
 
 	&:last-child{
