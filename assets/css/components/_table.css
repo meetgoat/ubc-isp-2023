@@ -106,6 +106,13 @@
 		width: 100%;
 		margin: 0;
 
+		span{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 4px;
+			margin: 0 16px;
+		}
 
 		.paginate_button{
 			width: 24px;

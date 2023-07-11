@@ -1059,14 +1059,17 @@ p {
 	border-left: solid 1px var(--sand-1) !important;
 	border-right: solid 1px var(--sand-1) !important;
 }
+
 .dataTables_wrapper {
 	border-radius: 16px;
 	overflow: hidden;
 }
+
 .dataTables_wrapper .tablepress {
 		border-top: solid 1px var(--sand-1) !important;
 		border-bottom: solid 1px var(--sand-1) !important;
 	}
+
 .dataTables_wrapper .tablepress {
 		margin: 25px 0;
 		display: table;
@@ -1075,21 +1078,26 @@ p {
 		--head-active-bg-color: var(--sand-3);
 		--head-active-text-color: var(--ubc-primary);
 	}
+
 .dataTables_wrapper .tablepress caption{
 			position: absolute;
 			top: 100%;	 
 			left: 0;
 			right: 0;
 		}
+
 .dataTables_wrapper .tablepress thead {
 			border-bottom: solid 1px var(--sand-3);
 		}
+
 .dataTables_wrapper .tablepress thead tr{
 				background: white;
 			}
+
 .dataTables_wrapper .tablepress th {
 			border-bottom: none !important;
 		}
+
 .dataTables_wrapper .tablepress th {
 			color: var(--ubc-primary);
 			font-size: 14px;
@@ -1099,12 +1107,15 @@ p {
 			background: none;
 			transition: var(--transition);
 		}
+
 .dataTables_wrapper .tablepress th + th {
 				border-left: solid 1px var(--sand-1);
 			}
+
 .dataTables_wrapper .tablepress th.sorting{
 				padding-right: 50px;
 			}
+
 .dataTables_wrapper .tablepress th.sorting:before{
 					content: '';
 					width: 5px;
@@ -1114,6 +1125,7 @@ p {
 					rotate: 45deg;
 					right: 24px;
 				}
+
 .dataTables_wrapper .tablepress th.sorting:after{
 					content: '';
 					width: 5px;
@@ -1124,33 +1136,42 @@ p {
 					margin: 0;
 					right: 24px;
 				}
+
 .dataTables_wrapper .tablepress td {
 			color: var(--bistre);
 			font-size: 14px;
 			line-height: 140%;
 			padding: 16px 24px;
 		}
+
 .dataTables_wrapper .tablepress tr{
 			border: none !important;
 		}
+
 .dataTables_wrapper .tablepress tr td{
 				background: none;
 			}
+
 .dataTables_wrapper .tablepress tr.even {
 			background-color: #fdfcfb;
 		}
+
 .dataTables_wrapper .tablepress tr.odd {
 			background-color: var(--sand-3);
 		}
+
 .dataTables_wrapper .tablepress tr:hover {
 			background-color: var(--sand-2);
 		}
+
 .dataTables_wrapper .tablepress tr:hover td{
 				color: var(--bistre) !important;
 			}
+
 .dataTables_wrapper .tablepress tr:hover td{
 				background: none;
 			}
+
 .dataTables_wrapper .dataTables_paginate{
 		background: var(--sand-1);
 		display: flex;
@@ -1159,7 +1180,16 @@ p {
 		padding: 24px;
 		width: 100%;
 		margin: 0;
+
+		span{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 4px;
+			margin: 0 16px;
+		}
 	}
+
 .dataTables_wrapper .dataTables_paginate .paginate_button{
 			width: 24px;
 			height: 24px;
@@ -1170,6 +1200,7 @@ p {
 			color: var(--bistre);
 			transition: var(--transition);
 		}
+
 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
 			.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
 			.dataTables_wrapper .dataTables_paginate .paginate_button:focus {
