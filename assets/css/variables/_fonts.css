@@ -65,7 +65,7 @@ p, li {
 }
 .entry-content{
 
-    & ol, ul{
+    & ol, & ul{
         list-style: outside;
         padding-left: 24px;
     }
