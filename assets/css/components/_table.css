@@ -174,8 +174,8 @@
 				color: transparent;
 				text-indent: -999em;
 				overflow: hidden;
-				margin: 0 20px;
-
+				margin: 0 20px !important;
+				
 				&:before,
 				&:after{
 					content: none;

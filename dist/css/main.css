@@ -1253,6 +1253,10 @@ p {
 			}
 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
 			.dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+				margin: 0 20px !important;
+			}
+.dataTables_wrapper .dataTables_paginate .paginate_button.next,
+			.dataTables_wrapper .dataTables_paginate .paginate_button.previous {
 				background: url(/wp-content/themes/ubc-isp/dist/images/table-arrow.svg?f0d29d6feddedb41e090ad30da7b336e) no-repeat center center;
 				width: 35px;
 				height: 16px;
@@ -1260,7 +1264,6 @@ p {
 				color: transparent;
 				text-indent: -999em;
 				overflow: hidden;
-				margin: 0 20px;
 			}
 .dataTables_wrapper .dataTables_paginate .paginate_button.next:before,
 				.dataTables_wrapper .dataTables_paginate .paginate_button.previous:before,
