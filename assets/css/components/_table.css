@@ -1,34 +1,32 @@
 .dataTables_wrapper {
-
 	.tablepress {
 		margin: 25px 0;
 		display: block;
 
 		--head-active-bg-color: var(--sand-1);
-    	--head-active-text-color: var(--sand-1);
-}
-	}
+		--head-active-text-color: var(--sand-1);
 
-	& th {
-		color: var(--ubc-primary);
-		font-size: 14px;
-		font-weight: 600;
-		line-height: 130%;
-		padding: 24px;
-		background: none;
-	}
+		& th {
+			color: var(--ubc-primary);
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 130%;
+			padding: 24px;
+			background: none;
+		}
 
-	& td { 
-		color: var(--bistre);
-		font-size: 14px;
-		line-height: 140%;
-		padding: 16px 24px;
-	}
+		& td {
+			color: var(--bistre);
+			font-size: 14px;
+			line-height: 140%;
+			padding: 16px 24px;
+		}
 
-	&.is-style-stripes tbody tr:nth-of-type(odd) {
-		background-color: white;
-	}
-	&.is-style-stripes tbody tr:nth-of-type(even) {
-		background-color: #FDFCFB;
+		&.is-style-stripes tbody tr:nth-of-type(odd) {
+			background-color: white;
+		}
+		&.is-style-stripes tbody tr:nth-of-type(even) {
+			background-color: #fdfcfb;
+		}
 	}
 }
