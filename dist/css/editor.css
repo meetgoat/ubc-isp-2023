@@ -1179,6 +1179,24 @@ p {
 		border-radius: 16px;
 		margin-bottom: 24px;
 	}
+.dataTables_wrapper .dataTables_filter label{ 
+			margin: 0;
+			width: 100%;
+		}
+.dataTables_wrapper .dataTables_filter label input {
+				color: #4E5862;
+				font-size: 16px;
+				font-family: var(--opensans);
+				line-height: 24px;
+				border-radius: 4px;
+				border: 1px solid #C3D0DB;
+				border: 1px solid var(--ubc-grey-4, #C3D0DB);
+				background: #FFF;
+				background: var(--ubc-white, #FFF);
+				padding: 8px 12px;
+				display: block;
+				height: auto;
+			}
 .dataTables_wrapper .isp-table__cost{
 		display: flex;
 		justify-content: space-between;

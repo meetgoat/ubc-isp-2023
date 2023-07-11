@@ -108,7 +108,27 @@
 		border: solid 1px var(--sand-1);
 		border-radius: 16px;
 		margin-bottom: 24px;
+
+		& label{ 
+			margin: 0;
+			width: 100%;
+
+
+			& input {
+				color: #4E5862;
+				font-size: 16px;
+				font-family: var(--opensans);
+				line-height: 24px;
+				border-radius: 4px;
+				border: 1px solid var(--ubc-grey-4, #C3D0DB);
+				background: var(--ubc-white, #FFF);
+				padding: 8px 12px;
+				display: block;
+				height: auto;
+			}
+		}
 	}
+	
 
 	.isp-table__cost{
 		display: flex;
