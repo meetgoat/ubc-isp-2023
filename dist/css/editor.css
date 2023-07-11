@@ -1166,14 +1166,14 @@ p {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			color: var(--bistre);
+			color: var(--bistre) ;
 			transition: var(--transition);
 		}
 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
 			.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
 			.dataTables_wrapper .dataTables_paginate .paginate_button:focus {
-				color: white;
-				background: var(--bistre);
+				color: white !important;
+				background: var(--bistre) !important;
 			}
 
 

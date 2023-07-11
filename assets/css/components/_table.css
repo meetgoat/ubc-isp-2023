@@ -121,14 +121,14 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			color: var(--bistre);
+			color: var(--bistre) ;
 			transition: var(--transition);
 
 			&.current,
 			&:hover,
 			&:focus {
-				color: white;
-				background: var(--bistre);
+				color: white !important;
+				background: var(--bistre) !important;
 			}
 		}
 	}
