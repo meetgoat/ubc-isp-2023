@@ -117,6 +117,7 @@
 		.paginate_button{
 			width: 24px;
 			height: 24px;
+			padding: 2px;
 			border-radius: 4px;
 			display: flex;
 			justify-content: center;
@@ -129,6 +130,13 @@
 			&:focus {
 				color: white !important;
 				background: var(--bistre) !important;
+
+
+				&:hover,
+				&:focus {
+					color: white !important;
+					background: var(--bistre) !important;
+				}
 			}
 		}
 	}

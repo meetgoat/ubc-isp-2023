@@ -1162,6 +1162,7 @@ p {
 .dataTables_wrapper .dataTables_paginate .paginate_button{
 			width: 24px;
 			height: 24px;
+			padding: 2px;
 			border-radius: 4px;
 			display: flex;
 			justify-content: center;
@@ -1175,6 +1176,15 @@ p {
 				color: white !important;
 				background: var(--bistre) !important;
 			}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+				.dataTables_wrapper .dataTables_paginate .paginate_button:hover:hover,
+				.dataTables_wrapper .dataTables_paginate .paginate_button:focus:hover,
+				.dataTables_wrapper .dataTables_paginate .paginate_button.current:focus,
+				.dataTables_wrapper .dataTables_paginate .paginate_button:hover:focus,
+				.dataTables_wrapper .dataTables_paginate .paginate_button:focus:focus {
+					color: white !important;
+					background: var(--bistre) !important;
+				}
 
 
 
