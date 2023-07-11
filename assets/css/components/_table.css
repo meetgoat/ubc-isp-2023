@@ -98,7 +98,7 @@
 
 
 	.dataTables_paginate{
-		background: var(--sand-1);
+		background: var(--sand-2);
 		display: flex;
 		justify-content: center;
 		align-items: center;
