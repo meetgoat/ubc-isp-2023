@@ -1182,6 +1182,14 @@ p {
 .dataTables_wrapper .dataTables_filter label{ 
 			margin: 0;
 			width: 100%;
+			text-align: left;
+			text-transform: uppercase;
+
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%;
+			letter-spacing: 0.36px;
 		}
 .dataTables_wrapper .dataTables_filter label input {
 				color: #4E5862;
@@ -1196,6 +1204,8 @@ p {
 				padding: 8px 12px;
 				display: block;
 				height: auto;
+				width: 100%;
+				margin:8px 0 0;
 			}
 .dataTables_wrapper .isp-table__cost{
 		display: flex;
