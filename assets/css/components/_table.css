@@ -4,6 +4,7 @@
 		display: block;
 		border: solid 1px var(--sand-1) !important;
 		border-radius: 16px;
+		overflow: hidden;
 
 		--head-active-bg-color: var(--sand-3);
 		--head-active-text-color: var(--ubc-primary);
@@ -16,7 +17,6 @@
 			padding: 24px;
 			background: none;
 			transition: var(--transition);
-			overflow: hidden;
 
 		    + th {
 				border-left: solid 1px var(--sand-1);

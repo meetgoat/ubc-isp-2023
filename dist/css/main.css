@@ -1063,6 +1063,7 @@ p {
 		margin: 25px 0;
 		display: block;
 		border-radius: 16px;
+		overflow: hidden;
 
 		--head-active-bg-color: var(--sand-3);
 		--head-active-text-color: var(--ubc-primary);
@@ -1075,7 +1076,6 @@ p {
 			padding: 24px;
 			background: none;
 			transition: var(--transition);
-			overflow: hidden;
 		}
 .dataTables_wrapper .tablepress th + th {
 				border-left: solid 1px var(--sand-1);
