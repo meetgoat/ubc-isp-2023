@@ -61,10 +61,20 @@ h6,
 	padding: 3px;
 	aspect-ratio: 1;
 	color: white;
-	font-weight: 600;
+	font-size: 14px;
+	font-weight: 700;
 	width: 24px;
 	height: 24px;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.isp-tag{
+	background: var(--sand-1);
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 12px;
+	padding: 6px;
+	color: var(--bistre);
 }
