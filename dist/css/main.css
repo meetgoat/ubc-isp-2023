@@ -1157,7 +1157,25 @@ p {
 		justify-content: center;
 		align-items: center;
 		padding: 24px;
+		width: 100%;
+		margin: 0;
 	}
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+			width: 24px;
+			height: 24px;
+			border-radius: 4px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: var(--bistre);
+			transition: var(--transition);
+		}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+			.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+			.dataTables_wrapper .dataTables_paginate .paginate_button:focus {
+				color: white;
+				background: var(--bistre);
+			}
 
 
 
