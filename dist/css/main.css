@@ -1080,6 +1080,9 @@ p {
 .dataTables_wrapper .tablepress th + th {
 				border-left: solid 1px var(--sand-1);
 			}
+.dataTables_wrapper .tablepress th.sorting{
+				padding-right: 50px;
+			}
 .dataTables_wrapper .tablepress th.sorting:before{
 					content: '';
 					width: 5px;
@@ -1087,6 +1090,7 @@ p {
 					border-top: solid 2px var(--ubc-primary);
 					border-left: solid 2px var(--ubc-primary);
 					rotate: 45deg;
+					right: 40px;
 				}
 .dataTables_wrapper .tablepress th.sorting:after{
 					content: '';
@@ -1095,6 +1099,8 @@ p {
 					border-bottom: solid 2px var(--ubc-primary);
 					border-right: solid 2px var(--ubc-primary);
 					rotate: 45deg;
+					margin: 0;
+					right: 40px;
 				}
 .dataTables_wrapper .tablepress td {
 			color: var(--bistre);
