@@ -96,6 +96,15 @@
 		}
 	}
 
+
+	.dataTables_filter{
+		width: 100%;
+		padding: 24px;
+		background: #FDFCFB;
+		border: solid 1px var(--sand-1);
+		border-radius: 16px;
+	}
+
 	.isp-table__cost{
 		display: flex;
 		justify-content: space-between;
