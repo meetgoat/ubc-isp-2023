@@ -75,7 +75,9 @@ h6,
 	border-radius: 4px;
 	font-weight: 700;
 	font-size: 12px;
-	padding: 4px 6px;
+	padding: 4px 8px;
 	color: var(--bistre);
 	letter-spacing: 0.36px;
+	display: inline-block;
+	white-space: nowrap;
 }
