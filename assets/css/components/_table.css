@@ -149,7 +149,7 @@
 				height: 16px;
 				opacity: 1;
 				color: transparent;
-				text-indent: 100%;
+				text-indent: -999em;
 				overflow: hidden;
 				
 				&.disabled {
