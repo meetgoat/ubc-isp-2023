@@ -141,11 +141,13 @@
 			}
 
 			&.next,
-			&.prev {
+			&.previous {
 				background: url(../../images/table-arrow.svg) no-repeat center center;
 				width: 35px;
 				height: 16px;
 				opacity: 1;
+				color: transparent;
+				text-indent: 100%;
 				
 				&.disabled {
 					pointer-events: none;
