@@ -163,13 +163,6 @@
 				border: none !important;
 				color: white !important;
 				background: var(--bistre) !important;
-
-
-				&:hover,
-				&:focus {
-					color: white !important;
-					background: var(--bistre) !important;
-				}
 			}
 
 			&.next,
@@ -182,6 +175,12 @@
 				text-indent: -999em;
 				overflow: hidden;
 				margin: 0 20px;
+
+				&:before,
+				&:after{
+					content: none;
+					display: none;
+				}
 				
 				&.disabled {
 					pointer-events: none;

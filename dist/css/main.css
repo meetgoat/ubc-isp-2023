@@ -1251,15 +1251,6 @@ p {
 				color: white !important;
 				background: var(--bistre) !important;
 			}
-.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
-				.dataTables_wrapper .dataTables_paginate .paginate_button:hover:hover,
-				.dataTables_wrapper .dataTables_paginate .paginate_button:focus:hover,
-				.dataTables_wrapper .dataTables_paginate .paginate_button.current:focus,
-				.dataTables_wrapper .dataTables_paginate .paginate_button:hover:focus,
-				.dataTables_wrapper .dataTables_paginate .paginate_button:focus:focus {
-					color: white !important;
-					background: var(--bistre) !important;
-				}
 .dataTables_wrapper .dataTables_paginate .paginate_button.next,
 			.dataTables_wrapper .dataTables_paginate .paginate_button.previous {
 				background: url(/wp-content/themes/ubc-isp/dist/images/table-arrow.svg?f0d29d6feddedb41e090ad30da7b336e) no-repeat center center;
@@ -1271,6 +1262,13 @@ p {
 				overflow: hidden;
 				margin: 0 20px;
 			}
+.dataTables_wrapper .dataTables_paginate .paginate_button.next:before,
+				.dataTables_wrapper .dataTables_paginate .paginate_button.previous:before,
+				.dataTables_wrapper .dataTables_paginate .paginate_button.next:after,
+				.dataTables_wrapper .dataTables_paginate .paginate_button.previous:after{
+					content: none;
+					display: none;
+				}
 .dataTables_wrapper .dataTables_paginate .paginate_button.next.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.previous.disabled {
 					pointer-events: none;
 					opacity: 0.3;
