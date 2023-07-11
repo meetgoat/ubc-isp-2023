@@ -29,11 +29,17 @@
 			padding: 16px 24px;
 		}
 
-		&.is-style-stripes tbody tr:nth-of-type(odd) {
-			background-color: white;
+		&tr{
+			border: none !important;
 		}
-		&.is-style-stripes tbody tr:nth-of-type(even) {
+		& tr.even {
 			background-color: #fdfcfb;
+		}
+		& tr.odd {
+			background-color: var(--sand-3);
+		}
+		& tr:hover {
+			background-color: var(--sand-2);
 		}
 	}
 }

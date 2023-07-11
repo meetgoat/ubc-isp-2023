@@ -1077,11 +1077,17 @@ p {
 			line-height: 140%;
 			padding: 16px 24px;
 		}
-.dataTables_wrapper .tablepress.is-style-stripes tbody tr:nth-of-type(odd) {
-			background-color: white;
+.dataTables_wrapper tr.tablepress{
+			border: none !important;
 		}
-.dataTables_wrapper .tablepress.is-style-stripes tbody tr:nth-of-type(even) {
+.dataTables_wrapper .tablepress tr.even {
 			background-color: #fdfcfb;
+		}
+.dataTables_wrapper .tablepress tr.odd {
+			background-color: var(--sand-3);
+		}
+.dataTables_wrapper .tablepress tr:hover {
+			background-color: var(--sand-2);
 		}
 
 
