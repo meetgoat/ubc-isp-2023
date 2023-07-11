@@ -4,15 +4,21 @@
 	border-right: solid 1px var(--sand-1) !important;
 	overflow: hidden;
 
+	&:last-child{
+		border-radius-bottom: 16px;
+	}
+
 	.tablepress {
 		margin: 25px 0;
 		display: table;
-		border-top: solid 1px var(--sand-1) !important;
-		border-bottom: solid 1px var(--sand-1) !important;
+		border: solid 1px var(--sand-1) !important;
+		border-radius: 16px 16px 0 0;
+		/* border-bottom: solid 1px var(--sand-1) !important; */
 		overflow: hidden;
 		position: relative;
 		--head-active-bg-color: var(--sand-3);
 		--head-active-text-color: var(--ubc-primary);
+
 
 		& caption{
 			position: absolute;

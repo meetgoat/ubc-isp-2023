@@ -1083,13 +1083,17 @@ p {
 	border-radius: 16px;
 	overflow: hidden;
 }
+.dataTables_wrapper:last-child{
+		border-radius-bottom: 16px;
+	}
 .dataTables_wrapper .tablepress {
-		border-top: solid 1px var(--sand-1) !important;
-		border-bottom: solid 1px var(--sand-1) !important;
+		border: solid 1px var(--sand-1) !important;
 	}
 .dataTables_wrapper .tablepress {
 		margin: 25px 0;
 		display: table;
+		border-radius: 16px 16px 0 0;
+		/* border-bottom: solid 1px var(--sand-1) !important; */
 		overflow: hidden;
 		position: relative;
 		--head-active-bg-color: var(--sand-3);
