@@ -29,7 +29,7 @@
 					height: 5px;
 					border-top: solid 2px var(--ubc-primary);
 					border-left: solid 2px var(--ubc-primary);
-					transform: rotate(45deg);
+					rotate: 45deg;
 				}
 				&:after{
 					content: '';
@@ -37,7 +37,7 @@
 					height: 5px;
 					border-bottom: solid 2px var(--ubc-primary);
 					border-right: solid 2px var(--ubc-primary);
-					transform: rotate(45deg);
+					rotate: 45deg;
 				}
 			}
 		}

@@ -1078,7 +1078,7 @@ p {
 					height: 5px;
 					border-top: solid 2px var(--ubc-primary);
 					border-left: solid 2px var(--ubc-primary);
-					transform: rotate(45deg);
+					rotate: 45deg;
 				}
 .dataTables_wrapper .tablepress th.sorting:after{
 					content: '';
@@ -1086,7 +1086,7 @@ p {
 					height: 5px;
 					border-bottom: solid 2px var(--ubc-primary);
 					border-right: solid 2px var(--ubc-primary);
-					transform: rotate(45deg);
+					rotate: 45deg;
 				}
 .dataTables_wrapper .tablepress td {
 			color: var(--bistre);
