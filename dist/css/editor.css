@@ -234,10 +234,11 @@ p, li {
 p, li { 
     color: var(--bistre);
 }
-.entry-content ol, .entry-content ul{
-        list-style: outside;
-        padding-left: 24px;
-    }
+.entry-content ol, 
+.entry-content ul{
+    list-style: outside;
+    padding-left: 24px;
+}
 
 
 

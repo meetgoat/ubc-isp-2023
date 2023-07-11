@@ -63,10 +63,8 @@ p, li {
     --wp--preset--font-size--large:  var(--font-size-p-lg) !important;
     --wp--preset--font-size--x-large:  var(--font-size-p-xl) !important;
 }
-.entry-content{
-
-    & ol, & ul{
-        list-style: outside;
-        padding-left: 24px;
-    }
+.entry-content ol, 
+.entry-content ul{
+    list-style: outside;
+    padding-left: 24px;
 }
