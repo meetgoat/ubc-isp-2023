@@ -1049,9 +1049,11 @@ p {
 
 
 	.dataTables_wrapper .tablepress {
+		border: solid 1px var(--sand-1) !important;
+	}
+.dataTables_wrapper .tablepress {
 		margin: 25px 0;
 		display: block;
-		border: solid 1px var(--sand-1);
 		border-radius: 16px;
 
 		--head-active-bg-color: var(--sand-3);
@@ -1066,6 +1068,9 @@ p {
 			background: none;
 			transition: var(--transition);
 		}
+.dataTables_wrapper .tablepress th + th {
+				border-left: solid 1px var(--sand-1);
+			}
 .dataTables_wrapper .tablepress td {
 			color: var(--bistre);
 			font-size: 14px;
