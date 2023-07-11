@@ -1204,6 +1204,7 @@ p {
 				opacity: 1;
 				color: transparent;
 				text-indent: 100%;
+				overflow: hidden;
 			}
 .dataTables_wrapper .dataTables_paginate .paginate_button.next.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.previous.disabled {
 					pointer-events: none;
@@ -1213,9 +1214,17 @@ p {
 				.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover,
 				.dataTables_wrapper .dataTables_paginate .paginate_button.next:focus,
 				.dataTables_wrapper .dataTables_paginate .paginate_button.previous:focus {
-					opacity: 0.7;
-					background: none;
+					background: none !important;
 				}
+.dataTables_wrapper .dataTables_paginate .paginate_button.next:hover,
+				.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover,
+				.dataTables_wrapper .dataTables_paginate .paginate_button.next:focus,
+				.dataTables_wrapper .dataTables_paginate .paginate_button.previous:focus {
+					opacity: 0.7;
+				}
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous{
+				rotate: 180deg;
+			}
 
 
 
