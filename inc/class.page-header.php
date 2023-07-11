@@ -4,17 +4,20 @@ class UBC_ISP_PageHeader
 {
     public static function init()
     {   
-        add_action('template_redirect', array('UBC_ISP_PageHeader', 'pageHooks'), 10);
+        add_action('template_redirect', [__CLASS__, 'pageHooks'], 10);
     }
 
     public static function pageHooks()
     {
-        add_action('wp-hybrid-clf_before_container', ['UBC_ISP_PageHeader', 'thirdLevelMenu'], 7);
-        add_filter('nav_menu_css_class', ['UBC_ISP_PageHeader', 'menu_depth_class'], 10, 4);
+        add_action('wp-hybrid-clf_before_container', [__CLASS__, 'thirdLevelMenu'], 7);
+        add_filter('nav_menu_css_class', [__CLASS__, 'menu_depth_class'], 10, 4);
 
 
         remove_action('wp-hybrid-clf_before_container', ['UBC_Collab_Navigation', 'breadcrumb'], 8);
-        add_action('wp-hybrid-clf_before_container', ['UBC_ISP_PageHeader', 'pageHeader'], 9);
+        add_action('wp-hybrid-clf_before_container', [__CLASS__, 'pageHeader'], 9);
+
+
+		add_filter( 'breadcrumb_trail_args',  [__CLASS__,  'breadcrumb_trail_args' ] );
     }
 
     public static function headerSize()
@@ -83,6 +86,7 @@ class UBC_ISP_PageHeader
     }
 
 
+
     public static function thirdLevelMenu() {
         wp_nav_menu( [ 
             'theme_location' => 'primary', 
@@ -97,6 +101,12 @@ class UBC_ISP_PageHeader
     public static function menu_depth_class($classes, $item, $args, $depth = 0) {
         $classes[] = 'menu-depth-' . $depth;
         return $classes;
+    }
+
+
+    public static function breadcrumb_trail_args($args){
+        $args['show_home'] = false;
+        return $args;
     }
 }
 
