@@ -1160,6 +1160,7 @@ p {
 			margin: 0 16px;
 		}
 .dataTables_wrapper .dataTables_paginate .paginate_button{
+			border: none !important;
 			margin: 0 !important;
 		}
 .dataTables_wrapper .dataTables_paginate .paginate_button{
@@ -1176,6 +1177,7 @@ p {
 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
 			.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
 			.dataTables_wrapper .dataTables_paginate .paginate_button:focus {
+				border: none !important;
 				color: white !important;
 				background: var(--bistre) !important;
 			}
@@ -1206,7 +1208,7 @@ p {
 				.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover,
 				.dataTables_wrapper .dataTables_paginate .paginate_button.next:focus,
 				.dataTables_wrapper .dataTables_paginate .paginate_button.previous:focus {
-					background: none !important;
+					background: url(/wp-content/themes/ubc-isp/dist/images/table-arrow.svg?f0d29d6feddedb41e090ad30da7b336e) no-repeat center center !important;
 				}
 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover,
 				.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover,
