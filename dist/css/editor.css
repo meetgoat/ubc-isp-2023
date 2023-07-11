@@ -1092,6 +1092,9 @@ p {
 .dataTables_wrapper .tablepress tr:hover {
 			background-color: var(--sand-2);
 		}
+.dataTables_wrapper .tablepress tr:hover td{
+				background: none;
+			}
 
 
 
