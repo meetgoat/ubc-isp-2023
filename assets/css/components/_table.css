@@ -1,13 +1,23 @@
 .dataTables_wrapper {
+	border-radius: 16px;
+	overflow: hidden;
+
 	.tablepress {
 		margin: 25px 0;
 		display: table;
 		border: solid 1px var(--sand-1) !important;
 		border-radius: 16px;
 		overflow: hidden;
-
+		position: relative;
 		--head-active-bg-color: var(--sand-3);
 		--head-active-text-color: var(--ubc-primary);
+
+		& caption{
+			position: absolute;
+			top: 100%;	 
+			left: 0;
+			right: 0;
+		}
 
 		& thead {
 			border-bottom: solid 1px var(--sand-3);

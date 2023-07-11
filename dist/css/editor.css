@@ -1047,8 +1047,11 @@ p {
   -ms-overflow-style: none;
 }
 
-
-	.dataTables_wrapper .tablepress {
+.dataTables_wrapper {
+	border-radius: 16px;
+	overflow: hidden;
+}
+.dataTables_wrapper .tablepress {
 		border: solid 1px var(--sand-1) !important;
 	}
 .dataTables_wrapper .tablepress {
@@ -1056,10 +1059,16 @@ p {
 		display: table;
 		border-radius: 16px;
 		overflow: hidden;
-
+		position: relative;
 		--head-active-bg-color: var(--sand-3);
 		--head-active-text-color: var(--ubc-primary);
 	}
+.dataTables_wrapper .tablepress caption{
+			position: absolute;
+			top: 100%;	 
+			left: 0;
+			right: 0;
+		}
 .dataTables_wrapper .tablepress thead {
 			border-bottom: solid 1px var(--sand-3);
 		}
