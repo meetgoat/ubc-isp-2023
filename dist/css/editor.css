@@ -1053,7 +1053,7 @@ p {
 	}
 .dataTables_wrapper .tablepress {
 		margin: 25px 0;
-		display: block;
+		display: table;
 		border-radius: 16px;
 		overflow: hidden;
 

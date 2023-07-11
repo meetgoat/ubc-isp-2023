@@ -1,7 +1,7 @@
 .dataTables_wrapper {
 	.tablepress {
 		margin: 25px 0;
-		display: block;
+		display: table;
 		border: solid 1px var(--sand-1) !important;
 		border-radius: 16px;
 		overflow: hidden;
