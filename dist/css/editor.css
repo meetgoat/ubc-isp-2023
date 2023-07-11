@@ -1060,6 +1060,9 @@ p {
 		--head-active-bg-color: var(--sand-3);
 		--head-active-text-color: var(--ubc-primary);
 	}
+.dataTables_wrapper .tablepress thead {
+			border-bottom: solid 1px var(--sand-3);
+		}
 .dataTables_wrapper .tablepress th {
 			color: var(--ubc-primary);
 			font-size: 14px;

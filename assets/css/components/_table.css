@@ -9,6 +9,9 @@
 		--head-active-bg-color: var(--sand-3);
 		--head-active-text-color: var(--ubc-primary);
 
+		& thead {
+			border-bottom: solid 1px var(--sand-3);
+		}
 		& th {
 			color: var(--ubc-primary);
 			font-size: 14px;
