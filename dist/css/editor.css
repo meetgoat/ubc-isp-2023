@@ -1051,9 +1051,11 @@ p {
 	.dataTables_wrapper .tablepress {
 		margin: 25px 0;
 		display: block;
+		border: solid 1px var(--sand-1);
+		border-radius: 16px;
 
-		--head-active-bg-color: var(--sand-1);
-		--head-active-text-color: var(--sand-1);
+		--head-active-bg-color: var(--sand-3);
+		--head-active-text-color: var(--ubc-primary);
 	}
 .dataTables_wrapper .tablepress th {
 			color: var(--ubc-primary);
@@ -1062,6 +1064,7 @@ p {
 			line-height: 130%;
 			padding: 24px;
 			background: none;
+			transition: var(--transition);
 		}
 .dataTables_wrapper .tablepress td {
 			color: var(--bistre);
