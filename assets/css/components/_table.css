@@ -31,7 +31,7 @@
 					border-left: solid 2px var(--ubc-primary);
 					transform: rotate(45deg);
 				}
-				&:before{
+				&:after{
 					content: '';
 					width: 5px;
 					height: 5px;

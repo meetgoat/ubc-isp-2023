@@ -1080,7 +1080,7 @@ p {
 					border-left: solid 2px var(--ubc-primary);
 					transform: rotate(45deg);
 				}
-.dataTables_wrapper .tablepress th.sorting:before{
+.dataTables_wrapper .tablepress th.sorting:after{
 					content: '';
 					width: 5px;
 					height: 5px;
