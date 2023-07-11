@@ -128,7 +128,7 @@
 		}
 	}
 	.dataTables_info{
-		border-bottom: solid 1px var(--sand-1);
+		border: solid 1px var(--sand-1);
 		background: var(--sand-2);
 		display: flex;
 		justify-content: center;
@@ -151,6 +151,7 @@
 		padding: 24px !important;
 		width: 100%;
 		margin: 0;
+		border: solid 1px var(--sand-1) !important;
 
 		& span{
 			display: flex;
