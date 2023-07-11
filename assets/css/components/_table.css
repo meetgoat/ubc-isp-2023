@@ -96,6 +96,21 @@
 		}
 	}
 
+	.isp-table__cost{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: var(--bistre);
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 140%;
+
+		&:before{
+			content: '$';
+			opacity: 0.3;
+		}
+	}
 
 	.dataTables_paginate{
 		background: var(--sand-2);

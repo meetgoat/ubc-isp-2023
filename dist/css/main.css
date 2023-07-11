@@ -1179,6 +1179,20 @@ p {
 .dataTables_wrapper .tablepress tr:hover td{
 				background: none;
 			}
+.dataTables_wrapper .isp-table__cost{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: var(--bistre);
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 140%;
+	}
+.dataTables_wrapper .isp-table__cost:before{
+			content: '$';
+			opacity: 0.3;
+		}
 .dataTables_wrapper .dataTables_paginate{
 		background: var(--sand-2);
 		display: flex;
