@@ -124,6 +124,7 @@
 			align-items: center;
 			color: var(--bistre) ;
 			transition: var(--transition);
+			margin: 0 !important;
 
 			&.current,
 			&:hover,
@@ -136,6 +137,25 @@
 				&:focus {
 					color: white !important;
 					background: var(--bistre) !important;
+				}
+			}
+
+			&.next,
+			&.prev {
+				background: url(../../images/table-arrow.svg) no-repeat center center;
+				width: 35px;
+				height: 16px;
+				opacity: 1;
+				
+				&.disabled {
+					pointer-events: none;
+					opacity: 0.3;
+				}
+				
+				&:hover,
+				&:focus {
+					opacity: 0.7;
+					background: none;
 				}
 			}
 		}
