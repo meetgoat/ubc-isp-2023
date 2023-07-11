@@ -112,7 +112,7 @@
 		}
 	}
 	.dataTables_info{
-
+		border-bottom: solid 1px var(--sand-1);
 		background: var(--sand-2);
 		display: flex;
 		justify-content: center;
@@ -120,6 +120,12 @@
 		padding: 24px !important;
 		width: 100%;
 		margin: 0;
+
+		text-align: center;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%;
 	}
 	.dataTables_paginate{
 		background: var(--sand-2);
