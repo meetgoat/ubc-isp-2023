@@ -11,6 +11,7 @@
 		font-weight: 600;
 		line-height: 130%;
 		padding: 24px;
+		background: none;
 	}
 
 	& td { 
