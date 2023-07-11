@@ -1,8 +1,12 @@
 .dataTables_wrapper {
 
-	& table {
+	.tablepress {
 		margin: 25px 0;
 		display: block;
+
+		--head-active-bg-color: var(--sand-1);
+    	--head-active-text-color: var(--sand-1);
+}
 	}
 
 	& th {

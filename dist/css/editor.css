@@ -1049,7 +1049,7 @@ p {
 
 
 
-	.dataTables_wrapper table {
+	.dataTables_wrapper .tablepress {
 		margin: 25px 0;
 		display: block;
 	}
