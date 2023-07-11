@@ -20,6 +20,7 @@
 			padding: 24px;
 			background: none;
 			transition: var(--transition);
+			border-bottom: none !important;
 
 		    + th {
 				border-left: solid 1px var(--sand-1);

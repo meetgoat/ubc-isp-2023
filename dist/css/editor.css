@@ -1064,6 +1064,9 @@ p {
 			border-bottom: solid 1px var(--sand-3);
 		}
 .dataTables_wrapper .tablepress th {
+			border-bottom: none !important;
+		}
+.dataTables_wrapper .tablepress th {
 			color: var(--ubc-primary);
 			font-size: 14px;
 			font-weight: 600;
