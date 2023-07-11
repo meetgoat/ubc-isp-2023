@@ -1,12 +1,14 @@
 .dataTables_wrapper {
 	border-radius: 16px;
+	border-left: solid 1px var(--sand-1) !important;
+	border-right: solid 1px var(--sand-1) !important;
 	overflow: hidden;
 
 	.tablepress {
 		margin: 25px 0;
 		display: table;
-		border: solid 1px var(--sand-1) !important;
-		border-radius: 16px;
+		border-top: solid 1px var(--sand-1) !important;
+		border-bottom: solid 1px var(--sand-1) !important;
 		overflow: hidden;
 		position: relative;
 		--head-active-bg-color: var(--sand-3);
@@ -21,6 +23,10 @@
 
 		& thead {
 			border-bottom: solid 1px var(--sand-3);
+
+			& tr{
+				background: white;
+			}
 		}
 		& th {
 			color: var(--ubc-primary);
@@ -88,5 +94,14 @@
 				color: var(--bistre) !important;
 			}
 		}
+	}
+
+
+	.dataTables_paginate{
+		background: var(--sand-1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 24px;
 	}
 }
