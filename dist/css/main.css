@@ -2727,6 +2727,10 @@ div .gform_wrapper.gravity-theme .validation_message {
     border-style: solid;
 }
 
+.wp-block-separator:not([class*="has-background"]){
+        border-color: var(--sand-1);
+    }
+
 .wp-block-separator.is-style-squiggle,
 .wp-block-separator.is-style-squiggle-brown{
     border: none;

@@ -8,6 +8,10 @@
     /* border: solid 1px var(--sand-1); */
     border-width: 1px;
     border-style: solid;
+
+    &:not([class*="has-background"]){
+        border-color: var(--sand-1);
+    }
 }
 
 .wp-block-separator.is-style-squiggle,
