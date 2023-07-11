@@ -1082,7 +1082,7 @@ p {
 					border-top: solid 2px var(--ubc-primary);
 					border-left: solid 2px var(--ubc-primary);
 					rotate: 45deg;
-					right: 40px;
+					right: 24px;
 				}
 .dataTables_wrapper .tablepress th.sorting:after{
 					content: '';
@@ -1092,7 +1092,7 @@ p {
 					border-right: solid 2px var(--ubc-primary);
 					rotate: 45deg;
 					margin: 0;
-					right: 40px;
+					right: 24px;
 				}
 .dataTables_wrapper .tablepress td {
 			color: var(--bistre);
