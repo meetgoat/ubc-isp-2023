@@ -1049,27 +1049,27 @@ p {
 
 
 
-	.wp-block-table table {
+	.dataTables_wrapper table {
 		margin: 25px 0;
 		display: block;
 	}
-.wp-block-table th {
+.dataTables_wrapper th {
 		color: var(--ubc-primary);
 		font-size: 14px;
 		font-weight: 600;
 		line-height: 130%;
 		padding: 24px;
 	}
-.wp-block-table td { 
+.dataTables_wrapper td { 
 		color: var(--bistre);
 		font-size: 14px;
 		line-height: 140%;
 		padding: 16px 24px;
 	}
-.wp-block-table.is-style-stripes tbody tr:nth-of-type(odd) {
+.dataTables_wrapper.is-style-stripes tbody tr:nth-of-type(odd) {
 		background-color: white;
 	}
-.wp-block-table.is-style-stripes tbody tr:nth-of-type(even) {
+.dataTables_wrapper.is-style-stripes tbody tr:nth-of-type(even) {
 		background-color: #FDFCFB;
 	}
 
