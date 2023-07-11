@@ -111,7 +111,16 @@
 			opacity: 0.3;
 		}
 	}
+	.dataTables_info{
 
+		background: var(--sand-2);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 24px !important;
+		width: 100%;
+		margin: 0;
+	}
 	.dataTables_paginate{
 		background: var(--sand-2);
 		display: flex;
