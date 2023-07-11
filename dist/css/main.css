@@ -3947,7 +3947,7 @@ div .isp-5050[class*="wp-block"] figure, div .isp-5050[class*="wp-block"] img{
             width: 100%;
             height: 220px;
         }
-@media (max-width: 979px){
+@media (max-width: 781px){
         .isp-layout--overflow .isp-layout--overflow__image-column {
             order: 1;
         }

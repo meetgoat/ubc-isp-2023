@@ -28,7 +28,7 @@
         }
     }
 
-    @media (--query-mx-md){
+    @media (--query-mx-sm){
         .isp-layout--overflow__image-column {
             order: 1;
         }
