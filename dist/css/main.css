@@ -1185,6 +1185,7 @@ p {
 		background: #FDFCFB;
 		border: solid 1px var(--sand-1);
 		border-radius: 16px;
+		margin-bottom: 24px;
 	}
 .dataTables_wrapper .isp-table__cost{
 		display: flex;

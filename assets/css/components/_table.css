@@ -103,6 +103,7 @@
 		background: #FDFCFB;
 		border: solid 1px var(--sand-1);
 		border-radius: 16px;
+		margin-bottom: 24px;
 	}
 
 	.isp-table__cost{
