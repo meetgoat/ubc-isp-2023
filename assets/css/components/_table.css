@@ -117,7 +117,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 24px;
+		padding: 24px !important;
 		width: 100%;
 		margin: 0;
 
@@ -166,6 +166,7 @@
 				color: transparent;
 				text-indent: -999em;
 				overflow: hidden;
+				margin: 0 20px;
 				
 				&.disabled {
 					pointer-events: none;
