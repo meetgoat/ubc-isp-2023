@@ -224,11 +224,18 @@ h1,h2,h3,h4,h5,h6 {
     --wp--preset--font-size--x-large:  var(--font-size-subtitle-xl) !important;
 }
 
-p, li { 
+p, li {
     --wp--preset--font-size--small: var(--font-size-p-sm) !important;
     --wp--preset--font-size--medium:  var(--font-size-p) !important;
     --wp--preset--font-size--large:  var(--font-size-p-lg) !important;
     --wp--preset--font-size--x-large:  var(--font-size-p-xl) !important;
+}
+
+p, li { 
+    color: var(--bistre);
+}
+ol, ul{
+    list-style: inside;
 }
 
 
