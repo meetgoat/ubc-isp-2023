@@ -2474,7 +2474,7 @@ div .gform_wrapper.gravity-theme .validation_message {
     margin-top: 0;
     margin-bottom: 16px;
     /* border: solid 1px var(--sand-1); */
-    border-width: 1px;
+    border-width: 1px 1px 0;
     border-style: solid;
 }
 
