@@ -25,6 +25,8 @@ class UBC_ISP_PageHeader
         switch (true) {
             case is_front_page():
                 return 'hidden';
+            case is_search():
+                    return 'hidden';
             case is_page_template('page-level-1.php'):
                 return 'full';
             case is_page_template('page-level-2.php'):
@@ -62,7 +64,7 @@ class UBC_ISP_PageHeader
 
     public static function headerImage()
     {
-        if ( !is_front_page() && has_post_thumbnail()) {
+        if ( !is_front_page() && !$size !== 'full' && has_post_thumbnail()) {
             echo sprintf(
                 '<div class="isp-header__featured-img"><img src="%s">%s</div>',
                 get_the_post_thumbnail_url(),

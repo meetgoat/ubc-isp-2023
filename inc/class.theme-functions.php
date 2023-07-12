@@ -20,6 +20,7 @@ class UBC_ISP_ThemeFunctions
         add_action( 'wp-hybrid-clf_before_footer', array( 'UBC_ISP_ThemeFunctions', 'openFooterWrap') );
         add_action( 'wp-hybrid-clf_after_footer', array( 'UBC_ISP_ThemeFunctions', 'closeFooterWrap') );
 
+        
     }
 
     /**

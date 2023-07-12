@@ -448,7 +448,8 @@ p {
 --button-bg--alt
 --button-border
 */
-
+.wp-block-search__button,
+.wp-element-button,
 .button-standard,
 .button-tertiary,
 .button-outline,
@@ -459,7 +460,8 @@ p {
     background: var(--button-bg, var(--ubc-primary))  !important;
     border: solid 1px var(--button-border, var(--ubc-primary)) !important;
 }
-
+.wp-block-search__button,
+.wp-element-button,
 .button-standard,
 .button-tertiary,
 .button-outline,
@@ -487,13 +489,11 @@ p {
 
     /* Variables */
 }
-
-.button-standard[disabled], .button-tertiary[disabled], .button-outline[disabled], .wp-block-button >.wp-block-button__link[disabled] {
+.wp-block-search__button[disabled], .wp-element-button[disabled], .button-standard[disabled], .button-tertiary[disabled], .button-outline[disabled], .wp-block-button >.wp-block-button__link[disabled] {
         pointer-events: none;
         opacity: 0.5;
     }
-
-.button-standard:after,.button-tertiary:after,.button-outline:after,.wp-block-button >.wp-block-button__link:after{
+.wp-block-search__button:after,.wp-element-button:after,.button-standard:after,.button-tertiary:after,.button-outline:after,.wp-block-button >.wp-block-button__link:after{
         content:'';
         transition: var(--transition);
         position: absolute;
@@ -510,30 +510,25 @@ p {
         /* Variables */
         border: solid 1px var(--button-border, var(--ubc-blue-1));
     }
-
-.button-standard:hover,.button-tertiary:hover,.button-outline:hover,.wp-block-button >.wp-block-button__link:hover{
+.wp-block-search__button:hover,.wp-element-button:hover,.button-standard:hover,.button-tertiary:hover,.button-outline:hover,.wp-block-button >.wp-block-button__link:hover{
         background:  var(--button-bg--hover, var(--button-bg--alt, var(--ubc-primary)))  !important;
         color:  white  !important;
         color:  var(--button-color--hover, var(--button-color--alt, white))  !important;
     }
-
-.button-standard:hover,.button-tertiary:hover,.button-outline:hover,.wp-block-button >.wp-block-button__link:hover{
+.wp-block-search__button:hover,.wp-element-button:hover,.button-standard:hover,.button-tertiary:hover,.button-outline:hover,.wp-block-button >.wp-block-button__link:hover{
         box-shadow: var(--shadow-2);
 
         /* Variables */
     }
-
-.button-standard:focus,.button-tertiary:focus,.button-outline:focus,.wp-block-button >.wp-block-button__link:focus{
+.wp-block-search__button:focus,.wp-element-button:focus,.button-standard:focus,.button-tertiary:focus,.button-outline:focus,.wp-block-button >.wp-block-button__link:focus{
         background: var(--button-color--focus, var(--button-bg--alt, var(--ubc-primary))) !important;
         color:white !important;
         color:var(--button-color--focus,  var(--button-color--alt, white)) !important;
     }
-
-.button-standard:focus,.button-tertiary:focus,.button-outline:focus,.wp-block-button >.wp-block-button__link:focus{
+.wp-block-search__button:focus,.wp-element-button:focus,.button-standard:focus,.button-tertiary:focus,.button-outline:focus,.wp-block-button >.wp-block-button__link:focus{
         /* Variables */
     }
-
-.button-standard:focus:after,.button-tertiary:focus:after,.button-outline:focus:after,.wp-block-button >.wp-block-button__link:focus:after{
+.wp-block-search__button:focus:after,.wp-element-button:focus:after,.button-standard:focus:after,.button-tertiary:focus:after,.button-outline:focus:after,.wp-block-button >.wp-block-button__link:focus:after{
             top: -4px;
             left: -4px;
             right: -4px;
@@ -541,21 +536,22 @@ p {
             opacity: 1;
             border-radius: 10px;
         }
-
-.button-standard:active,.button-tertiary:active,.button-outline:active,.wp-block-button >.wp-block-button__link:active{
+.wp-block-search__button:active,.wp-element-button:active,.button-standard:active,.button-tertiary:active,.button-outline:active,.wp-block-button >.wp-block-button__link:active{
         background: var(--button-bg--active, var(--ubc-grey-1)) !important;
         color: white !important;
         color: var(--button-color--active, white) !important;
     }
-
-.button-standard:active,.button-tertiary:active,.button-outline:active,.wp-block-button >.wp-block-button__link:active{
+.wp-block-search__button:active,.wp-element-button:active,.button-standard:active,.button-tertiary:active,.button-outline:active,.wp-block-button >.wp-block-button__link:active{
         /* Variables */
     }
-
-.button-standard > svg, 
+.wp-block-search__button > svg, 
+    .wp-element-button > svg, 
+    .button-standard > svg, 
     .button-tertiary > svg, 
     .button-outline > svg, 
     .wp-block-button >.wp-block-button__link > svg, 
+    .wp-block-search__button > img, 
+    .wp-element-button > img, 
     .button-standard > img, 
     .button-tertiary > img, 
     .button-outline > img, 
@@ -702,6 +698,13 @@ p {
 .isp-breadcrumbs{
     position: relative;
 }
+.breadcrumb {
+    background: none !important;
+}
+.breadcrumb .divider{
+        color: var(--calcite);
+        margin: 0 6px;
+    }
 .isp-breadcrumbs--row{
     max-width: 1288px;
     position: relative;

@@ -5,7 +5,8 @@
 --button-bg--alt
 --button-border
 */
-
+.wp-block-search__button,
+.wp-element-button,
 .button-standard,
 .button-tertiary,
 .button-outline,

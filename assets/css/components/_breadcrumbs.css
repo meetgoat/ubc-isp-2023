@@ -2,6 +2,14 @@
 .isp-breadcrumbs{
     position: relative;
 }
+.breadcrumb {
+    background: none !important;
+
+    .divider{
+        color: var(--calcite);
+        margin: 0 6px;
+    }
+}
 .isp-breadcrumbs--row{
     max-width: 1288px;
     position: relative;
