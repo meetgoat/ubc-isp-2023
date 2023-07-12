@@ -3011,8 +3011,11 @@ div .isp-header--small[class*="wp-block"] .wp-block-separator{
     }
 
 .isp-header--small--content {
-    max-width: 820px;
-    margin: 0 auto;
+    max-width: 820px !important;
+    margin: 0 auto  !important;
+}
+
+.isp-header--small--content {
     text-align: center;
 }
 

@@ -20,6 +20,7 @@
 @import "./components/_table.css";
 @import "./components/_forms.css";
 @import "./components/_navigation.css";
+@import "./components/_post-list.css";
 
 @import "./cards/_tool.css";
 @import "./cards/_team.css";
