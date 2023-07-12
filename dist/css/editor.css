@@ -2215,10 +2215,13 @@ div .gform_wrapper.gravity-theme .validation_message {
     }
 
 .isp-testimonial__content{
-    max-width: 600px;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+.isp-testimonial__content{
     position: relative;
     padding: 32px 24px;
-    margin: 0 auto;
     z-index: 2;
 }
 
