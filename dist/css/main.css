@@ -2318,7 +2318,6 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 .isp-team {
 	position: relative;
-	background: var(--sand-3);
 }
 
 
@@ -2326,6 +2325,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 .isp-team .isp-team__inner {
 		border-radius: 16px;
 		box-shadow: var(--shadow-1);
+		background: var(--sand-3);
 		overflow: hidden;
 		position: relative;
 	}
