@@ -67,6 +67,297 @@ function closeSiblings(node) {
 
 /***/ }),
 
+/***/ "./assets/js/blocks/faqs.js":
+/*!**********************************!*\
+  !*** ./assets/js/blocks/faqs.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initializeFAQs: () => (/* binding */ initializeFAQs)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+/**
+ * Initializes the accordions by attaching event listeners to the headers.
+ */
+function initializeFAQs() {
+  // Select all elements with class 'isp-accordion--header'
+  var faqs = document.querySelectorAll('.isp-faqs');
+  if (faqs.length === 0) {
+    return null;
+  }
+  // Attach click event listener to each header element
+  faqs.forEach(function (faqContainer) {
+    new advancedFAQs(faqContainer);
+  });
+}
+var advancedFAQs = /*#__PURE__*/function () {
+  function advancedFAQs(faqContainer) {
+    _classCallCheck(this, advancedFAQs);
+    this.searchValue = '';
+    this.filterValue = '';
+
+    /*
+     * Containers and Objects
+     */
+
+    // The faq container
+    this.faqContainer = faqContainer;
+
+    // The search form
+    this.searchForm = this.faqContainer.querySelector('.wp-block-search');
+    this.searchInput = this.searchForm.querySelector('.wp-block-search__input');
+    this.searchInput.removeAttribute('required');
+
+    // The Topic Filters
+    this.filters = this.getFiltersData();
+
+    // Create the mobile filter select box
+    this.filterSelect = this.createFilterSelectBox();
+
+    // The filter results text
+    this.resultsText = this.faqContainer.querySelector('.isp-faq__filter__results');
+
+    // The filter results text
+    this.resultsTextTemplate = this.resultsText.textContent;
+
+    // The faq items
+    this.faqs = this.getFaqsData();
+
+    // Add watchers for the search form and topic filters
+    this.watchSearchSubmit();
+    this.watchTopicClick();
+
+    // add js class to faq container to display filters
+    this.faqContainer.classList.add('isp-faqs--js');
+  }
+
+  /*
+  * Data Setup
+    	*/
+  _createClass(advancedFAQs, [{
+    key: "getFaqsData",
+    value: function getFaqsData() {
+      var _this = this;
+      var faqs = this.faqContainer.querySelectorAll('.isp-accordion--single');
+      return Array.from(faqs).map(function (faq) {
+        var faqFilters = faq.querySelectorAll('.isp-faq__filter');
+        return {
+          dom: faq,
+          normalized: _this.normalizeText(faq.textContent),
+          filters: Array.from(faqFilters).map(function (filter) {
+            return _this.normalizeText(filter.textContent);
+          }),
+          isVisible: true
+        };
+      });
+    }
+  }, {
+    key: "getFiltersData",
+    value: function getFiltersData() {
+      var _this2 = this;
+      var filters = this.faqContainer.querySelectorAll('.isp-faq__filters__buttons .wp-element-button');
+      return Array.from(filters).map(function (filter) {
+        _this2.normalizeText(filter.textContent);
+        return {
+          dom: filter,
+          text: filter.textContent,
+          normalized: _this2.normalizeText(filter.textContent)
+        };
+      });
+    }
+  }, {
+    key: "normalizeText",
+    value: function normalizeText(text) {
+      return text.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
+    }
+
+    /*
+    * DOM CREATION
+       */
+  }, {
+    key: "createFilterSelectBox",
+    value: function createFilterSelectBox() {
+      var selectBox = document.createElement('select');
+      selectBox.classList.add('isp-faq__filters__select');
+      var defaultOption = document.createElement('option');
+      defaultOption.textContent = 'All';
+      defaultOption.value = '';
+      selectBox.appendChild(defaultOption);
+      this.filters.forEach(function (filter, index) {
+        var option = document.createElement('option');
+        option.textContent = filter.text;
+        option.value = index; // using the index as the value for simplicity
+        selectBox.appendChild(option);
+      });
+      this.faqContainer.querySelector('.isp-faq__filters__inner').appendChild(selectBox);
+      return selectBox;
+    }
+
+    /*
+    * Event Watchers
+       */
+  }, {
+    key: "watchSearchSubmit",
+    value: function watchSearchSubmit() {
+      var _this3 = this;
+      this.searchForm.addEventListener('submit', function (e) {
+        // Prevent the form from submitting
+        e.preventDefault();
+        // Filter the faqs
+        _this3.filterFAQ();
+      });
+      this.searchInput.addEventListener('keyup', function () {
+        _this3.filterFAQ();
+      });
+    }
+  }, {
+    key: "watchTopicClick",
+    value: function watchTopicClick() {
+      var _this4 = this;
+      //loop through filterItems and add event listener set filterValue to match the button text
+      this.filters.forEach(function (filter) {
+        filter.dom.addEventListener('click', function (e) {
+          e.preventDefault();
+          // If filter is already active, remove filter.
+          _this4.filterValue = _this4.filterValue !== filter.normalized ? filter.normalized : '';
+          // Set filter states.
+          _this4.setFilterStates();
+          // Filter the list.
+          _this4.filterFAQ();
+        });
+      });
+      this.filterSelect.addEventListener('change', function (e) {
+        var index = e.target.value;
+        _this4.filterValue = index ? _this4.filters[index].normalized : '';
+        _this4.setFilterStates();
+        _this4.filterFAQ();
+      });
+    }
+
+    /*
+    * State Setters
+       */
+  }, {
+    key: "setFilterStates",
+    value: function setFilterStates() {
+      var _this5 = this;
+      this.filters.forEach(function (filter, index) {
+        filter.dom.classList.remove('is-active');
+        if (filter.normalized === _this5.filterValue) {
+          filter.dom.classList.add('is-active');
+          _this5.filterSelect.value = index;
+        }
+      });
+      if (!this.filterValue) {
+        this.filterSelect.value = '';
+      }
+    }
+  }, {
+    key: "setSearchValue",
+    value: function setSearchValue() {
+      // Set the search value
+      this.searchValue = this.normalizeText(this.searchInput.value);
+    }
+
+    /*
+    * Filter Functions
+       */
+  }, {
+    key: "filterFAQ",
+    value: function filterFAQ() {
+      var _this6 = this;
+      this.setSearchValue();
+      this.faqs.forEach(function (faq) {
+        faq.isVisible = _this6.isDisplayed(faq);
+        faq.dom.style.display = faq.isVisible ? 'block' : 'none';
+      });
+      this.updateFaqClasses();
+      this.updateFilterText();
+    }
+  }, {
+    key: "isDisplayed",
+    value: function isDisplayed(faq) {
+      if (!this.isDisplayedSearch(faq)) {
+        return false;
+      }
+      if (!this.isDisplayedFilter(faq)) {
+        return false;
+      }
+      return true;
+    }
+  }, {
+    key: "isDisplayedSearch",
+    value: function isDisplayedSearch(faq) {
+      // If no search value, FAQ is not hidden.
+      if (!this.searchValue) {
+        return true;
+      }
+      // If search value is in FAQ text, FAQ is not hidden.
+      if (faq.normalized.includes(this.searchValue)) {
+        return true;
+      }
+      //  The FAQ is hidden.
+      return false;
+    }
+  }, {
+    key: "isDisplayedFilter",
+    value: function isDisplayedFilter(faq) {
+      var _this7 = this;
+      // If no filter value, FAQ is not hidden.
+      if (!this.filterValue) {
+        return true;
+      }
+      // Check if any of the filters match the filter value.
+      return Array.from(faq.filters).some(function (faqFilter) {
+        return faqFilter === _this7.filterValue;
+      });
+    }
+  }, {
+    key: "updateFaqClasses",
+    value: function updateFaqClasses() {
+      if (this.searchValue) {
+        this.faqContainer.classList.add('isp-faqs--searched');
+      } else {
+        this.faqContainer.classList.remove('isp-faqs--searched');
+      }
+      if (this.filterValue) {
+        this.faqContainer.classList.add('isp-faqs--filtered');
+      } else {
+        this.faqContainer.classList.remove('isp-faqs--filtered');
+      }
+    }
+  }, {
+    key: "updateFilterText",
+    value: function updateFilterText() {
+      var visibleFaqsCount = this.faqs.filter(function (faq) {
+        return faq.isVisible;
+      }).length;
+      var filteredTerm = '';
+      if (this.filterValue) {
+        filteredTerm += "<span>".concat(this.filterValue, "</span>");
+      }
+      if (this.filterValue && this.searchValue) {
+        filteredTerm += " & ";
+      }
+      if (this.searchValue) {
+        filteredTerm += "<span>".concat(this.searchValue, "</span>");
+      }
+      this.resultsText.innerHTML = this.resultsTextTemplate.replace('{{RESULTS}}', "<span>".concat(visibleFaqsCount, "</span>")).replace('{{FILTER}}', filteredTerm);
+    }
+  }]);
+  return advancedFAQs;
+}();
+
+/***/ }),
+
 /***/ "./assets/js/blocks/goals.js":
 /*!***********************************!*\
   !*** ./assets/js/blocks/goals.js ***!
@@ -418,7 +709,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_goals_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/goals.js */ "./assets/js/blocks/goals.js");
 /* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/menu.js */ "./assets/js/components/menu.js");
 /* harmony import */ var _blocks_postSlider_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/postSlider.js */ "./assets/js/blocks/postSlider.js");
+/* harmony import */ var _blocks_faqs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/faqs.js */ "./assets/js/blocks/faqs.js");
 // Import the initializeAccordions function from the accordions module
+
 
 
 
@@ -433,6 +726,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_blocks_timeline_js__WEBPACK_IMPORTED_MODULE_2__.initializeTimelines)();
 (0,_blocks_goals_js__WEBPACK_IMPORTED_MODULE_3__.initializeGoals)();
 (0,_blocks_postSlider_js__WEBPACK_IMPORTED_MODULE_5__.initializePostSliders)();
+(0,_blocks_faqs_js__WEBPACK_IMPORTED_MODULE_6__.initializeFAQs)();
 jQuery(document).ready(function ($) {
   var table = new DataTable('.wp-block-table table');
 });

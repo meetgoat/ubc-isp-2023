@@ -11,7 +11,7 @@
 .isp-accordion--single {
     border-top: solid 1px var(--sand-1);
     border-bottom: solid 1px var(--sand-1);
-    gap: 0;
+    gap: 0 !important;
     margin-top: 0 !important;
     
     + .isp-accordion--single {
@@ -68,6 +68,8 @@
     .isp-accordion--body {
         display: none;
         padding: 0;
+        padding-bottom: 32px;
+        padding-left: 32px;
         padding-right: 50px;
         margin-bottom: 6px;
         max-width: 850px;

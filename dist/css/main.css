@@ -506,18 +506,24 @@ p {
 		transform: translateX(50%);
 		bottom: 50%;
 	}
-
+.wp-block-search__inside-wrapper {
+	padding: 0;
+}
 .wp-block-search__button-inside {
 	margin: 0 !important;
 }
-
 .wp-block-search__button-inside {
 	background: white;
-	padding: 15px 24px;
+	padding: 10px;
 	border: none;
 	border-radius: 16px;
 	box-shadow: var(--shadow-1);
 }
+@media (min-width: 980px) {
+.wp-block-search__button-inside {
+		padding: 16px 24px;
+}
+	}
 .wp-block-search__inside-wrapper {
 	border: none;
 	display: flex;
@@ -530,7 +536,7 @@ p {
 		height: auto;
 		color: var(--bistre);
 		font-family: var(--opensans);
-		font-size: 18px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: 600;
 		line-height: 120%;
@@ -540,6 +546,11 @@ p {
 			box-shadow: none !important;
 			outline: none !important;
 		}
+@media (min-width: 980px) {
+.wp-block-search__inside-wrapper input{
+			font-size: 18px;
+	}
+		}
 
 
 .wp-block-search__button{ 
@@ -547,14 +558,47 @@ p {
 }
 
 
+@media (max-width: 979px) {
+
+
+.isp-faq__filters__buttons{
+		display: none !important;
+}
+	}
+.isp-faq__filters__select {
+	height: auto !important;
+	outline: none !important;
+}
+.isp-faq__filters__select {
+	width: 100%;
+	display: block;
+	padding: 16px 24px;
+	line-height: 1;
+	border: solid 1px var(--sand-1);
+	border-radius: 8px;
+
+
+	font-size: 16px;
+	line-height: 24px;
+	border-radius: 4px;
+	display: block;
+	height: auto;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	background: white url(/wp-content/themes/ubc-isp/dist/images/select-arrow.svg?02ba9bda1cf7c18b2d6a5462ca05ff1a) no-repeat right 8px center;
+}
+@media (min-width: 980px) {
+.isp-faq__filters__select {
+		display: none;
+}
+	}
 
 
 .isp-search-results{
 	max-width: 860px;
 	margin: 50px auto;
 }
-
-
 
 
 .isp-search-results .breadcrumb{
@@ -4131,13 +4175,13 @@ div .isp-overlap-image[class*="wp-block"] .wp-block-group {
 }
 
 .isp-accordion--single {
+    gap: 0 !important;
     margin-top: 0 !important;
 }
 
 .isp-accordion--single {
     border-top: solid 1px var(--sand-1);
     border-bottom: solid 1px var(--sand-1);
-    gap: 0;
 }
 
 .isp-accordion--single + .isp-accordion--single {
@@ -4195,6 +4239,8 @@ div .isp-overlap-image[class*="wp-block"] .wp-block-group {
 .isp-accordion--single .isp-accordion--body {
         display: none;
         padding: 0;
+        padding-bottom: 32px;
+        padding-left: 32px;
         padding-right: 50px;
         margin-bottom: 6px;
         max-width: 850px;
@@ -5205,6 +5251,83 @@ div .isp-5050[class*="wp-block"] figure, div .isp-5050[class*="wp-block"] img{
         }
 }
 
+/*
+*   Accordion Block
+*/
+
+.isp-faqs .isp-faq__filter{
+        display: none;
+    }
+
+.isp-faqs .isp-header{
+        position: relative;
+        overflow: hidden;
+    }
+
+.isp-faqs .isp-header .wp-block-columns {
+            position: relative;
+        }
+
+.isp-faqs .isp-header .wp-block-columns:before{
+                content:'';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 100vw;
+                background: var(--header-gradient);
+                border-bottom-right-radius: 160px;
+            }
+.isp-faq__filters {
+    min-height: 80px;
+}
+.isp-faq__filters__container{
+    display: none;
+}
+.isp-faq__filters__inner{
+    margin: 40px 0 !important;
+}
+@media (min-width: 980px) {
+.isp-faq__filters__inner{
+        margin: 64px 0  84px !important;
+}
+    }
+.isp-faqs--js .isp-faq__filters__container{
+        display: block;
+    }
+.isp-faq__filters__buttons .wp-element-button{
+        border-radius: 4px !important;
+        border: 1px solid var(--bistre) !important;
+        color: var(--bistre) !important;
+        background: white !important;
+        transition: var(--transition) !important;
+        padding: 3px 12px !important;
+        font-size: 16px !important;
+        letter-spacing: 0 !important;
+        text-transform: none !important;
+    }
+.isp-faq__filters__buttons .wp-element-button:hover,
+        .isp-faq__filters__buttons .wp-element-button:focus,
+        .isp-faq__filters__buttons .wp-element-button.is-active{
+            background: var(--bistre) !important;
+            color: white !important;
+        }
+.isp-faq__filter__results{
+    display: none;
+    font-family: var(--opensans);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+.isp-faq__filter__results span{
+        font-weight: 700;
+    }
+
+.isp-faqs--filtered .isp-faq__filter__results,.isp-faqs--searched .isp-faq__filter__results{
+        display: block;
+        
+    }
 
 
 
