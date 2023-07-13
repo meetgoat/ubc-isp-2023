@@ -1660,8 +1660,13 @@ div .gform_wrapper.gravity-theme .validation_message {
                 width: 100%;
             }
     }
+.isp-team {
+	position: relative;
+}
 
-	.isp-team .isp-team__inner {
+
+
+.isp-team .isp-team__inner {
 		border-radius: 16px;
 		box-shadow: var(--shadow-1);
 		overflow: hidden;

@@ -1,4 +1,6 @@
 .isp-team {
+	position: relative;
+	
 	.isp-team__inner {
 		border-radius: 16px;
 		box-shadow: var(--shadow-1);
