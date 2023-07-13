@@ -15,8 +15,13 @@ export function initializeFAQs() {
 
 class advancedFAQs {
 	constructor( faqContainer ) {
-		this.searchValue = '';
-		this.filterValue = '';
+		this.searchValue = {
+			text: '',
+			normalized: ''
+		};
+		
+		this.activeFilter = null;
+		
 
 		/*
 		 * Containers and Objects
@@ -47,8 +52,8 @@ class advancedFAQs {
 		this.faqs = this.getFaqsData();
 
 		// Add watchers for the search form and topic filters
-		this.watchSearchSubmit();
-		this.watchTopicClick();
+		this.watchSearch();
+		this.watchTopic();
 
 		// add js class to faq container to display filters
 		this.faqContainer.classList.add( 'isp-faqs--js' );
@@ -110,7 +115,7 @@ class advancedFAQs {
 	/*
 	* Event Watchers
     */
-	watchSearchSubmit() {
+	watchSearch() {
 		this.searchForm.addEventListener( 'submit', ( e ) => {
 			// Prevent the form from submitting
 			e.preventDefault();
@@ -123,13 +128,13 @@ class advancedFAQs {
 		} );
 	}
 
-	watchTopicClick() {
+	watchTopic() {
 		//loop through filterItems and add event listener set filterValue to match the button text
 		this.filters.forEach( ( filter ) => {
 			filter.dom.addEventListener( 'click', ( e ) => {
 				e.preventDefault();
 				// If filter is already active, remove filter.
-				this.filterValue = this.filterValue !== filter.normalized ? filter.normalized : '';
+				this.activeFilter = this.activeFilter !== filter ? filter : null;
 				// Set filter states.
 				this.setFilterStates();
 				// Filter the list.
@@ -138,8 +143,7 @@ class advancedFAQs {
 		} );
 
 		this.filterSelect.addEventListener( 'change', ( e ) => {
-			const index = e.target.value;
-			this.filterValue = (index) ? this.filters[ index ].normalized : '';
+			this.activeFilter = e.target.value ? this.filters[ e.target.value ] : null;
 			this.setFilterStates();
 			this.filterFAQ();
 		} );
@@ -150,8 +154,8 @@ class advancedFAQs {
     */
 	setFilterStates() {
 		this.filters.forEach( ( filter, index ) => {
-			filter.dom.classList.remove( 'is-active' );
-			if ( filter.normalized === this.filterValue ) {
+			filter.dom.classList.remove('is-active');
+			if ( filter === this.activeFilter ) {
 				filter.dom.classList.add( 'is-active' );
 				this.filterSelect.value = index;
 			}
@@ -161,8 +165,10 @@ class advancedFAQs {
 		}
 	}
 	setSearchValue() {
-		// Set the search value
-		this.searchValue = this.normalizeText( this.searchInput.value );
+		this.searchValue = {
+			text: this.searchInput.value,
+			normalized: this.normalizeText(this.searchInput.value)
+		};
 	}
 
 	/*
@@ -190,11 +196,11 @@ class advancedFAQs {
 
 	isDisplayedSearch( faq ) {
 		// If no search value, FAQ is not hidden.
-		if ( ! this.searchValue ) {
+		if ( ! this.searchValue.normalized ) {
 			return true;
 		}
 		// If search value is in FAQ text, FAQ is not hidden.
-		if ( faq.normalized.includes( this.searchValue ) ) {
+		if ( faq.normalized.includes( this.searchValue.normalized ) ) {
 			return true;
 		}
 		//  The FAQ is hidden.
@@ -203,11 +209,11 @@ class advancedFAQs {
 
 	isDisplayedFilter( faq ) {
 		// If no filter value, FAQ is not hidden.
-		if ( ! this.filterValue ) {
+		if ( ! this.activeFilter ) {
 			return true;
 		}
 		// Check if any of the filters match the filter value.
-		return Array.from( faq.filters ).some( ( faqFilter ) => faqFilter === this.filterValue );
+		return Array.from( faq.filters ).some( ( faqFilter ) => faqFilter === this.activeFilter.normalized );
 	}
 
 	updateFaqClasses() {
@@ -226,17 +232,17 @@ class advancedFAQs {
 	updateFilterText() {
 		const visibleFaqsCount = this.faqs.filter( ( faq ) => faq.isVisible ).length;
 		let filteredTerm = '';
-
-		if ( this.filterValue ) {
-			filteredTerm += `<span>${ this.filterValue }</span>`;
+		console.log(this);
+		if ( this.activeFilter ) {
+			filteredTerm += `<span>${ this.activeFilter.text }</span>`;
 		}
 
-		if ( this.filterValue && this.searchValue ) {
+		if ( this.activeFilter && this.searchValue.text ) {
 			filteredTerm += ` & `;
 		}
 
-		if ( this.searchValue ) {
-			filteredTerm += `<span>${ this.searchValue }</span>`;
+		if ( this.searchValue.text ) {
+			filteredTerm += `<span>${ this.searchValue.text }</span>`;
 		}
 
 		this.resultsText.innerHTML = this.resultsTextTemplate

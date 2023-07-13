@@ -101,8 +101,11 @@ function initializeFAQs() {
 var advancedFAQs = /*#__PURE__*/function () {
   function advancedFAQs(faqContainer) {
     _classCallCheck(this, advancedFAQs);
-    this.searchValue = '';
-    this.filterValue = '';
+    this.searchValue = {
+      text: '',
+      normalized: ''
+    };
+    this.activeFilter = null;
 
     /*
      * Containers and Objects
@@ -132,8 +135,8 @@ var advancedFAQs = /*#__PURE__*/function () {
     this.faqs = this.getFaqsData();
 
     // Add watchers for the search form and topic filters
-    this.watchSearchSubmit();
-    this.watchTopicClick();
+    this.watchSearch();
+    this.watchTopic();
 
     // add js class to faq container to display filters
     this.faqContainer.classList.add('isp-faqs--js');
@@ -205,8 +208,8 @@ var advancedFAQs = /*#__PURE__*/function () {
     * Event Watchers
        */
   }, {
-    key: "watchSearchSubmit",
-    value: function watchSearchSubmit() {
+    key: "watchSearch",
+    value: function watchSearch() {
       var _this3 = this;
       this.searchForm.addEventListener('submit', function (e) {
         // Prevent the form from submitting
@@ -219,15 +222,15 @@ var advancedFAQs = /*#__PURE__*/function () {
       });
     }
   }, {
-    key: "watchTopicClick",
-    value: function watchTopicClick() {
+    key: "watchTopic",
+    value: function watchTopic() {
       var _this4 = this;
       //loop through filterItems and add event listener set filterValue to match the button text
       this.filters.forEach(function (filter) {
         filter.dom.addEventListener('click', function (e) {
           e.preventDefault();
           // If filter is already active, remove filter.
-          _this4.filterValue = _this4.filterValue !== filter.normalized ? filter.normalized : '';
+          _this4.activeFilter = _this4.activeFilter !== filter ? filter : null;
           // Set filter states.
           _this4.setFilterStates();
           // Filter the list.
@@ -235,8 +238,7 @@ var advancedFAQs = /*#__PURE__*/function () {
         });
       });
       this.filterSelect.addEventListener('change', function (e) {
-        var index = e.target.value;
-        _this4.filterValue = index ? _this4.filters[index].normalized : '';
+        _this4.activeFilter = e.target.value ? _this4.filters[e.target.value] : null;
         _this4.setFilterStates();
         _this4.filterFAQ();
       });
@@ -251,7 +253,7 @@ var advancedFAQs = /*#__PURE__*/function () {
       var _this5 = this;
       this.filters.forEach(function (filter, index) {
         filter.dom.classList.remove('is-active');
-        if (filter.normalized === _this5.filterValue) {
+        if (filter === _this5.activeFilter) {
           filter.dom.classList.add('is-active');
           _this5.filterSelect.value = index;
         }
@@ -263,8 +265,10 @@ var advancedFAQs = /*#__PURE__*/function () {
   }, {
     key: "setSearchValue",
     value: function setSearchValue() {
-      // Set the search value
-      this.searchValue = this.normalizeText(this.searchInput.value);
+      this.searchValue = {
+        text: this.searchInput.value,
+        normalized: this.normalizeText(this.searchInput.value)
+      };
     }
 
     /*
@@ -297,11 +301,11 @@ var advancedFAQs = /*#__PURE__*/function () {
     key: "isDisplayedSearch",
     value: function isDisplayedSearch(faq) {
       // If no search value, FAQ is not hidden.
-      if (!this.searchValue) {
+      if (!this.searchValue.normalized) {
         return true;
       }
       // If search value is in FAQ text, FAQ is not hidden.
-      if (faq.normalized.includes(this.searchValue)) {
+      if (faq.normalized.includes(this.searchValue.normalized)) {
         return true;
       }
       //  The FAQ is hidden.
@@ -312,12 +316,12 @@ var advancedFAQs = /*#__PURE__*/function () {
     value: function isDisplayedFilter(faq) {
       var _this7 = this;
       // If no filter value, FAQ is not hidden.
-      if (!this.filterValue) {
+      if (!this.activeFilter) {
         return true;
       }
       // Check if any of the filters match the filter value.
       return Array.from(faq.filters).some(function (faqFilter) {
-        return faqFilter === _this7.filterValue;
+        return faqFilter === _this7.activeFilter.normalized;
       });
     }
   }, {
@@ -341,14 +345,15 @@ var advancedFAQs = /*#__PURE__*/function () {
         return faq.isVisible;
       }).length;
       var filteredTerm = '';
-      if (this.filterValue) {
-        filteredTerm += "<span>".concat(this.filterValue, "</span>");
+      console.log(this);
+      if (this.activeFilter) {
+        filteredTerm += "<span>".concat(this.activeFilter.text, "</span>");
       }
-      if (this.filterValue && this.searchValue) {
+      if (this.activeFilter && this.searchValue.text) {
         filteredTerm += " & ";
       }
-      if (this.searchValue) {
-        filteredTerm += "<span>".concat(this.searchValue, "</span>");
+      if (this.searchValue.text) {
+        filteredTerm += "<span>".concat(this.searchValue.text, "</span>");
       }
       this.resultsText.innerHTML = this.resultsTextTemplate.replace('{{RESULTS}}', "<span>".concat(visibleFaqsCount, "</span>")).replace('{{FILTER}}', filteredTerm);
     }
