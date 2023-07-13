@@ -1198,6 +1198,7 @@ p {
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding-left: 32px;
 }
 
 .simplebar-content-wrapper::-webkit-scrollbar,
