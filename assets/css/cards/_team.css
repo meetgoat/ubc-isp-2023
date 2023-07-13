@@ -1,7 +1,9 @@
 .isp-team {
 	position: relative;
-	margin-top: 16px !important;
-
+	
+	@media (--query-md) {
+		margin-top: 16px !important;
+	}
 
 	.isp-team__inner {
 		border-radius: 16px;

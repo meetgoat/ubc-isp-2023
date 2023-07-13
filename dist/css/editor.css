@@ -1661,14 +1661,19 @@ div .gform_wrapper.gravity-theme .validation_message {
             }
     }
 .isp-team {
-	margin-top: 16px !important;
+	position: relative;
 }
+
+
+
+@media (min-width: 980px) {
 
 
 
 .isp-team {
-	position: relative;
+		margin-top: 16px !important;
 }
+	}
 
 
 
