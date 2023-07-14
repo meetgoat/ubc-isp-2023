@@ -439,7 +439,13 @@ p {
 	color: var(--bistre);
     font-size: var(--font-size-p);
     margin-bottom: 16px;
+    line-height: 150%;
 }
+
+p.has-small-font-size,
+    p.has-medium-font-size {
+        line-height: 140%;
+    }
 
 .isp-search-header{
 	position: relative;
