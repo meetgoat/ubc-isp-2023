@@ -1388,11 +1388,11 @@ p.has-small-font-size,
   overflow: hidden;
 }
 
-.isp-backcground--1 .isp-background__inner{
+.isp-background--1 .isp-background__inner{
       position: relative;
     }
 
-.isp-backcground--1 .isp-background__inner:before{
+.isp-background--1 .isp-background__inner:before{
         content: '';
         pointer-events: none;
         position: absolute;
@@ -1404,7 +1404,7 @@ p.has-small-font-size,
         border-radius: 0 32px 160px 0;
       }
 
-.isp-backcground--1 .isp-background__inner > * {
+.isp-background--1 .isp-background__inner > * {
         position: relative;
         z-index: 2;
       }
