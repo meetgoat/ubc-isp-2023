@@ -798,7 +798,7 @@ p {
 
 .button-tertiary[class],
 .wp-block-button.is-style-tertiary > .wp-block-button__link{
-    --button-color: var(--ubc-primary);
+    --button-color: var(--ubc-blue-1);
     --button-color--hover: var(--ubc-blue-2);
     --button-color--focus: var(--ubc-primary);
     --button-color--active: var(--ubc-primary);
