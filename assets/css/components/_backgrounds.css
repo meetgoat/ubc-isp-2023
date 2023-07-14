@@ -1,0 +1,27 @@
+.isp-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.isp-backcground--1 {
+    .isp-background__inner{
+      position: relative;
+
+      &:before{
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 15%;
+        bottom: 0;
+        width: 100vw;
+        background: var(--sand-1);
+        border-radius: 0 32px 160px 0;
+      }
+
+      > * {
+        position: relative;
+        z-index: 2;
+      }
+    }
+}
