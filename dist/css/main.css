@@ -4972,8 +4972,12 @@ div .isp-5050[class*="wp-block"] figure, div .isp-5050[class*="wp-block"] img{
 
 
 [class*="wp-block"].isp-timeline {
-    position: relative;    
+    position: relative;   
+}
+
+.isp-timeline__innder{ 
     padding-left: 82px;
+
 }
 
 .isp-timeline__container{
