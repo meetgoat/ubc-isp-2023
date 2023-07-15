@@ -27,4 +27,13 @@
             top: -16px;
         }
     }
+
+    @media (--query-mx-md) {
+        text-align: left;
+        padding: 48px 16px;
+        
+        &:before{ 
+            dispaly: none;
+        }
+    }
 }
