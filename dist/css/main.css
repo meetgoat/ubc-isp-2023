@@ -4338,7 +4338,11 @@ div .isp-overlap-image[class*="wp-block"] .wp-block-group {
 }
 
         .isp-callout-block[class*="wp-block"]:before,.isp-callout-block.isp-callout-block--lined[class*="wp-block"]:before{ 
-            dispaly: none;
+            display: none !;
+        }
+
+        .isp-callout-block[class*="wp-block"] *, .isp-callout-block.isp-callout-block--lined[class*="wp-block"] * {
+            text-align: left;
         }
     }
 

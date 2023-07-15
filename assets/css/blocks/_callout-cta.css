@@ -37,7 +37,11 @@
         padding: 48px 16px;
 
         &:before{ 
-            dispaly: none;
+            display: none !;
+        }
+
+        * {
+            text-align: left;
         }
     }
 }
