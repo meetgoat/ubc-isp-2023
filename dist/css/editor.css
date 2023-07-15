@@ -3684,7 +3684,7 @@ div .isp-overlap-image[class*="wp-block"] .wp-block-group {
         display: none;
         padding: 0;
         padding-bottom: 32px;
-        padding-left: 32px;
+        padding-left: 16px;
         padding-right: 50px;
         margin-bottom: 6px;
         max-width: 850px;
@@ -3697,6 +3697,12 @@ div .isp-overlap-image[class*="wp-block"] .wp-block-group {
         .isp-accordion--single .isp-accordion--header {
             padding: 32px;
         }
+        .isp-accordion--single .isp-accordion--body {
+            padding-bottom: 32px;
+            padding-left: 32px;
+            padding-right: 50px;
+        }
+    
     }
 [class*="wp-block"].isp-story-card{
     background: var(--sand-3);
