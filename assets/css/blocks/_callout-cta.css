@@ -33,8 +33,14 @@
 	@media (--query-md) {
 		.wp-block-buttons {
 			margin-top: 48px;
+            justify-content: center;
 		}
 	}
+    @media (--query-mx-md){
+        .wp-block-buttons{
+            justify-content: flex-start;
+        }
+    }
 }
 [class*="wp-block"].isp-callout-block,
 [class*="wp-block"].isp-callout-block.isp-callout-block--lined {
