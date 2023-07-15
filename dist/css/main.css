@@ -3735,6 +3735,9 @@ div [class*="wp-block"].isp-header {
     }
 
 @media (max-width: 781px){
+    .isp-header__featured-img {
+        overflow: hidden;
+    }
     .isp-header__featured-img img {
         width: 100%;
         height: auto;
