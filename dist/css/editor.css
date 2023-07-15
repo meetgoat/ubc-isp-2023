@@ -2154,6 +2154,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 .isp-key-date-alt a {
         padding: 8px 0px;
         display: block;
+        margin: 0;
     }
 
 
@@ -2176,6 +2177,16 @@ div .gform_wrapper.gravity-theme .validation_message {
             gap: 24px;
     }
         }
+
+
+.isp-key-date{
+    margin: 0 !important;
+}
+
+
+.isp-key-date .isp-key-date__inner{
+        margin-top: 0;
+    }
 
     .isp-upcoming-events .wp-block-columns {
         margin: 0;
