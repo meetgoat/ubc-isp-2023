@@ -56,7 +56,7 @@
     .isp-upcoming-events__event {
         padding: 4px;
         overflow: hidden;
-        border-radius: 16px;
+        border-radius: 8px;
         transition: var(--transition);
         box-shadow: var(--shadow-0);
     
