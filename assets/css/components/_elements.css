@@ -35,3 +35,15 @@ p {
 .hentry{
     margin-bottom: 0;
 }
+
+
+
+@media (--query-md-sm){
+
+    .isp-mobile-order--1{
+        order: 1;
+    }
+    .isp-mobile-order--2 {
+        order: 2;
+    }
+}
