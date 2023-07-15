@@ -3546,7 +3546,7 @@ div .isp-overlap-image[class*="wp-block"] .wp-block-group {
 	}
 
 [class*="wp-block"].isp-callout-block {
-    padding: 100px 0;
+    padding: 100px 16px;
 }
 .isp-callout-block[class*="wp-block"] .wp-block-group__inner-container{
         max-width: 760px;
