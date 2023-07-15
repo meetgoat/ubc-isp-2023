@@ -168,9 +168,14 @@
 		}
 
 		.menu-item {
-			position: relative;
 			padding: 0px;
-			margin: 18px;
+
+			width: calc(100% - 32px);
+			margin: 0 auto;
+			position: absolute;
+			z-index: 10;
+			left: 50%;
+			translate: -50%;
 		}
 
 		.sub-menu__toggle {
@@ -201,7 +206,7 @@
 				position: relative;
 				width: 20px;
 				height: 20px;
-        transition: var(--transition);
+        		transition: var(--transition);
 			}
 		}
 
