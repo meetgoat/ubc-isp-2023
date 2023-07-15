@@ -2358,7 +2358,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 		display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         background: rgba(251, 249, 246, 0.80);
 	}
 .isp-cta-a a:hover, .isp-cta-a a:focus{
