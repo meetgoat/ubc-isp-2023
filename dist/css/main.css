@@ -3657,7 +3657,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 /* Videos */
 .isp-video {
     overflow: hidden;
-    margin: 0 -24px;
+    margin: 0 -16px;
 }
 .isp-video .wp-block-group__inner-container{
         padding: 0;

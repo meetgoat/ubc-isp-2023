@@ -113,8 +113,8 @@
 /* Videos */
 .isp-video {
     overflow: hidden;
-    margin: 0 -24px;
-    
+    margin: 0 -16px;
+
     .wp-block-group__inner-container{
         padding: 0;
     }
