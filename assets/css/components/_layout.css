@@ -1,4 +1,18 @@
+#container{
+	@media (--query-mx-md){
+		display: grid;
 
+		.isp-breadcrumbs{
+			order: 1;
+		}
+		.ubc-isp-nav{
+			order: 2;
+		}
+		.expand{
+			order: 3;
+		}
+	}
+}
 
 /* =full-width-container
 -------------------------------------------------------------- */
