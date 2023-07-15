@@ -3761,7 +3761,7 @@ div [class*="wp-block"].isp-header {
     }
         
         .isp-header__featured-img img{
-            /* width: 350px; */
+            min-width: 350px;
             width: calc( 100% + ( 50vw - 656px ) );
             height: 460px;
             max-width: none;
