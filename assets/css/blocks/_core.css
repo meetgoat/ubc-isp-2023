@@ -112,8 +112,9 @@
 
 /* Videos */
 .isp-video {
-    border-radius: 16px;
     overflow: hidden;
+    margin: 0 -24px;
+    
     .wp-block-group__inner-container{
         padding: 0;
     }
@@ -121,6 +122,11 @@
     & figure, video{
         margin: 0;
         display: block;
+    }
+
+    @media (--query-md) {
+        margin: 0;
+        border-radius: 16px;
     }
 }
 

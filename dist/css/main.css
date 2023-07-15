@@ -3656,8 +3656,8 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 /* Videos */
 .isp-video {
-    border-radius: 16px;
     overflow: hidden;
+    margin: 0 -24px;
 }
 .isp-video .wp-block-group__inner-container{
         padding: 0;
@@ -3665,6 +3665,12 @@ div .gform_wrapper.gravity-theme .validation_message {
 .isp-video figure, .isp-video video{
         margin: 0;
         display: block;
+    }
+@media (min-width: 980px) {
+.isp-video {
+        margin: 0;
+        border-radius: 16px;
+}
     }
 
 
