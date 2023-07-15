@@ -2508,6 +2508,12 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 .isp-cta-d .isp-cta__image--overlay, .isp-cta-e .isp-cta__image--overlay, .isp-cta-f .isp-cta__image--overlay {
 		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 	}
 
 .isp-cta-d .isp-cta__image--overlay img, .isp-cta-e .isp-cta__image--overlay img, .isp-cta-f .isp-cta__image--overlay img {
