@@ -46,7 +46,7 @@
 [class*="wp-block"].isp-callout-block.isp-callout-block--lined {
 	@media (--query-mx-md) {
 		text-align: left;
-		padding: 48px 16px;
+		padding: 48px 16px ;
 
 		&:before {
 			display: none;

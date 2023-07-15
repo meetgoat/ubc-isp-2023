@@ -4265,6 +4265,8 @@ div .isp-overlap-image[class*="wp-block"] img {
 		   object-fit: cover;
 		width: 100%;
 		height: 250px;
+		position: relative;
+		left: -16px;
 	}
 
 div .isp-overlap-image[class*="wp-block"] .wp-block-group {
@@ -4272,7 +4274,7 @@ div .isp-overlap-image[class*="wp-block"] .wp-block-group {
 	}
 
 div .isp-overlap-image[class*="wp-block"] .wp-block-group {
-		padding: 12px 16px;
+		padding: 0;
 	}
 
 @media (min-width: 782px) {
@@ -4289,6 +4291,8 @@ div .isp-overlap-image[class*="wp-block"] .wp-block-group {
 			border-radius: 16px 16px 192px 16px;
 			aspect-ratio: 1.54;
 			height: auto;
+			left: auto;
+			position: static;
 		}
 
 		div .isp-overlap-image[class*="wp-block"] .wp-block-group {
@@ -4341,7 +4345,7 @@ div .isp-overlap-image[class*="wp-block"] .wp-block-group {
 [class*="wp-block"].isp-callout-block,
 [class*="wp-block"].isp-callout-block.isp-callout-block--lined {
 		text-align: left;
-		padding: 48px 16px;
+		padding: 48px 16px ;
 }
 
 		.isp-callout-block[class*="wp-block"]:before, .isp-callout-block.isp-callout-block--lined[class*="wp-block"]:before {
