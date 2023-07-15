@@ -9,37 +9,45 @@
 }
 
 .isp-background--1 {
-	.isp-background__inner {
-		position: relative;
-
-		@media (--query-mx-md) {
-			background: var(--sand-3);
-		}
-		@media (--query-md) {
-			&:before {
-				content: "";
-				pointer-events: none;
-				position: absolute;
-				top: 0;
-				right: 15%;
-				bottom: 0;
-				width: 100vw;
-				background: var(--sand-3);
-				border-radius: 0 48px 480px 0;
-			}
-
-			> * {
-				position: relative;
-				z-index: 2;
-			}
-		}
+	@media (--query-mx-md) {
+		background: var(--sand-3);
 	}
-  &.isp-background--white{ 
-    .isp-background__inner {
-      @media (--query-mx-md) {
-        background: white;
+	@media (--query-md) {
+		background: none;
+  } 
+
+  .isp-background__inner {
+    position: relative;
+
+    @media (--query-mx-md) {
+    }
+    @media (--query-md) {
+      &:before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 15%;
+        bottom: 0;
+        width: 100vw;
+        background: var(--sand-3);
+        border-radius: 0 48px 480px 0;
       }
-      @media (--query-md) {
+
+      > * {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+  &.isp-background--white {
+    @media (--query-mx-md) {
+      background: white;
+    }
+    @media (--query-md) {
+      background: none;
+
+      .isp-background__inner {
         &:before {
           background: white;
         }
@@ -99,6 +107,6 @@
 	right: 33px;
 	background: var(--sand-2);
 	width: 100vw;
-  pointer-events: none;
+	pointer-events: none;
 	border-top-right-radius: 160px;
 }

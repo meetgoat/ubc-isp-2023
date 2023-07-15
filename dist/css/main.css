@@ -1416,48 +1416,65 @@ p.has-small-font-size,
 		z-index: 2;
 	}
 
-.isp-background--1 .isp-background__inner {
-		position: relative;
-	}
-
 @media (max-width: 979px) {
 
-.isp-background--1 .isp-background__inner {
-			background: var(--sand-3);
+.isp-background--1 {
+		background: var(--sand-3);
+}
 	}
-		}
 
 @media (min-width: 980px) {
-			.isp-background--1 .isp-background__inner:before {
-				content: "";
-				pointer-events: none;
-				position: absolute;
-				top: 0;
-				right: 15%;
-				bottom: 0;
-				width: 100vw;
-				background: var(--sand-3);
-				border-radius: 0 48px 480px 0;
-			}
 
-			.isp-background--1 .isp-background__inner > * {
-				position: relative;
-				z-index: 2;
-			}
-		}
+.isp-background--1 {
+		background: none;
+}
+  }
+
+.isp-background--1 .isp-background__inner {
+    position: relative;
+  }
 
 @media (max-width: 979px) {
 
-.isp-background--1.isp-background--white .isp-background__inner {
-        background: white;
+.isp-background--1 .isp-background__inner {
+  }
     }
+
+@media (min-width: 980px) {
+      .isp-background--1 .isp-background__inner:before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 15%;
+        bottom: 0;
+        width: 100vw;
+        background: var(--sand-3);
+        border-radius: 0 48px 480px 0;
       }
 
+      .isp-background--1 .isp-background__inner > * {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+@media (max-width: 979px) {
+
+.isp-background--1.isp-background--white {
+      background: white;
+  }
+    }
+
 @media (min-width: 980px) {
+
+.isp-background--1.isp-background--white {
+      background: none;
+  }
         .isp-background--1.isp-background--white .isp-background__inner:before {
           background: white;
         }
-      }
+    }
 
 .isp-background__content {
 	position: relative;
@@ -1509,7 +1526,7 @@ p.has-small-font-size,
 	right: 33px;
 	background: var(--sand-2);
 	width: 100vw;
-  pointer-events: none;
+	pointer-events: none;
 	border-top-right-radius: 160px;
 }
 
