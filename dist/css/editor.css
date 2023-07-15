@@ -453,8 +453,7 @@ p.has-small-font-size,
 
 
 
-@media (--query-md-sm){
-
+@media (max-width: 979px){
     .isp-mobile-order--1{
         order: 1;
     }

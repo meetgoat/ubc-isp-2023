@@ -38,8 +38,7 @@ p {
 
 
 
-@media (--query-md-sm){
-
+@media (--query-mx-md){
     .isp-mobile-order--1{
         order: 1;
     }
