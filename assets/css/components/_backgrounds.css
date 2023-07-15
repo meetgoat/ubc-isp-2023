@@ -1,84 +1,92 @@
 .isp-background {
-  position: relative;
-  overflow: hidden;
+	position: relative;
+	overflow: hidden;
 
-  > * {
-    position: relative;
-    z-index: 2;
-  }
+	> * {
+		position: relative;
+		z-index: 2;
+	}
 }
 
 .isp-background--1 {
-    .isp-background__inner{
-      position: relative;
+	.isp-background__inner {
+		position: relative;
 
-      @media(--query-mx-md) {
-        background: var(--sand-3);
-      }
-      @media (--query-md) {
+		@media (--query-mx-md) {
+			background: var(--sand-3);
+		}
+		@media (--query-md) {
+			&:before {
+				content: "";
+				pointer-events: none;
+				position: absolute;
+				top: 0;
+				right: 15%;
+				bottom: 0;
+				width: 100vw;
+				background: var(--sand-3);
+				border-radius: 0 48px 480px 0;
+			}
 
-        &:before{
-          content: '';
-          pointer-events: none;
-          position: absolute;
-          top: 0;
-          right: 15%;
-          bottom: 0;
-          width: 100vw;
-          background: var(--sand-3);
-          border-radius: 0 48px 480px 0;
-        }
-
-        > * {
-          position: relative;
-          z-index: 2;
-        }
-      }
-    }
+			> * {
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
 }
 
 .isp-background__content {
-  position: relative;
-  z-index: 20;
+	position: relative;
+	z-index: 20;
 }
 
-[class*="isp-circle"]{
-  position: relative;
-/* 
+[class*="isp-circle"] {
+	position: relative;
+	/* 
   > * {
     position: relative;
     z-index: 2;
   } */
 
-  &:before{
-    content:'';
-    position: absolute;
-    pointer-events: none;
-    z-index: 0;
-  }
+	&:before {
+		content: "";
+		position: absolute;
+		pointer-events: none;
+		z-index: 0;
+	}
 }
 
-.isp-circle--left--1{
-
-  &:before{
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-    right: 52%;
-    background: white;
-    border-radius: 0 0px 320px 0;
-  }
+.isp-circle--left--1 {
+	&:before {
+		top: 0;
+		bottom: 0;
+		width: 100vw;
+		right: 52%;
+		background: white;
+		border-radius: 0 0px 320px 0;
+	}
 }
 
+.isp-circle--right-1 {
+	&:before {
+		top: -200px;
+		bottom: -50px;
+		right: -24px;
+		left: 58%;
+		background: white;
+		border-radius: 320px 0 0 0;
+		z-index: 0;
+	}
+}
 
-.isp-circle--right-1{
-  &:before{
-    top: -200px;
-    bottom: -50px;
-    right: -24px;
-    left: 58%;
-    background: white;
-    border-radius: 320px 0 0 0;
-    z-index: 0;
-  }
+.isp-header-circle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	/* left: 0; */
+	right: 33px;
+	background: var(--sand-2);
+	width: 100vw;
+	border-top-right-radius: 160px;
 }
