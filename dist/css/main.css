@@ -334,7 +334,7 @@ h6,
 		#container .isp-breadcrumbs{
 			order: 1;
 		}
-		#container .ubc-isp-nav{
+		#container .ubc-isp-nav__container{
 			order: 2;
 		}
 		#container .expand{
