@@ -1464,12 +1464,16 @@ p.has-small-font-size,
 	}
 
 .isp-header-circle {
-	position: absolute;
+	position: absolute !important;
+}
+
+.isp-header-circle {
 	top: 0;
 	bottom: 0;
 	right: 33px;
 	background: var(--sand-2);
 	width: 100vw;
+  pointer-events: none;
 	border-top-right-radius: 160px;
 }
 
