@@ -176,6 +176,11 @@
 			z-index: 10;
 			left: 50%;
 			translate: -50%;
+
+			.menu-item {
+				position: static;
+			}
+	
 		}
 
 		.sub-menu__toggle {
