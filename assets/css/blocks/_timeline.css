@@ -3,7 +3,8 @@
     position: relative;   
 }
 
-.isp-timeline__innder{ 
+.isp-timeline__inner{ 
+    padding-right: 16px;
     padding-left: 82px;
 
 }
