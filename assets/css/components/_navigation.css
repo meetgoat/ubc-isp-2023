@@ -176,6 +176,7 @@
 			z-index: 10;
 			left: 50%;
 			translate: -50%;
+			background: white;
 
 			.menu-item {
 				position: static;
