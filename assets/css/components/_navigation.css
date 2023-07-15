@@ -179,6 +179,7 @@
 
 			.menu-item {
 				position: static;
+				translate: none;
 			}
 	
 		}

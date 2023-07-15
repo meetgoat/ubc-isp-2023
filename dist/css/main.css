@@ -2189,6 +2189,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 			.ubc-isp-nav .menu-item .menu-item {
 				position: static;
+				translate: none;
 			}
 
 		.ubc-isp-nav .sub-menu__toggle {
