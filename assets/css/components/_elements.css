@@ -50,7 +50,7 @@ p {
 
 .isp-desktop--no-background{
 
-    @media (--query-mx-md){
+    @media (--query-md){
         background: none !important;
     }
 }
