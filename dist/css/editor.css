@@ -4120,6 +4120,11 @@ div .isp-5050[class*="wp-block"] figure, div .isp-5050[class*="wp-block"] img{
     position: relative;   
 }
 
+.isp-timeline__inner{
+    margin-top: 0 !important;
+
+}
+
 .isp-timeline__inner{ 
     padding-right: 16px;
     padding-left: 82px;
@@ -4151,6 +4156,7 @@ div .isp-5050[class*="wp-block"] figure, div .isp-5050[class*="wp-block"] img{
     height: 80px;
     overflow: hidden;
     padding-left: 82px;
+    padding-right: 16px;
 }
 .isp-timeline__buttons:after{
         content: '';

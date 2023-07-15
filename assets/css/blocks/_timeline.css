@@ -5,7 +5,7 @@
 
 .isp-timeline__inner{ 
     padding-right: 16px;
-    margin-top: 0 !important
+    margin-top: 0 !important;
     padding-left: 82px;
 
 }
@@ -32,7 +32,7 @@
     overflow: hidden;
     padding-left: 82px;
     padding-right: 16px;
-    
+
     &:after{
         content: '';
         display: block;
