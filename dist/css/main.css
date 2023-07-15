@@ -2185,6 +2185,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 			left: 50%;
 			translate: -50%;
 			background: white;
+			top: -22px;
 	
 		}
 

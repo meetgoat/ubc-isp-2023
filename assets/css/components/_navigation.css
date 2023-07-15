@@ -177,6 +177,7 @@
 			left: 50%;
 			translate: -50%;
 			background: white;
+			top: -22px;
 
 			.menu-item {
 				position: static;
