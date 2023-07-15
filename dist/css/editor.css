@@ -2152,10 +2152,30 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
 .isp-key-date-alt a {
-        padding: 12px 32px;
+        padding: 8px 0px;
         display: block;
-
     }
+
+
+
+
+.isp-key-date-alt a .wp-block-columns{
+            gap: 16px;
+        }
+
+
+
+
+@media (min-width: 980px) {
+
+
+
+
+.isp-key-date-alt a {
+            padding: 12px 32px;
+            gap: 24px;
+    }
+        }
 
     .isp-upcoming-events .wp-block-columns {
         margin: 0;

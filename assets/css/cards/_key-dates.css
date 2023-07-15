@@ -131,8 +131,16 @@
         }
     }
     & a {
-        padding: 12px 32px;
+        padding: 8px 0px;
         display: block;
 
+        .wp-block-columns{
+            gap: 16px;
+        }
+
+        @media (--query-md) {
+            padding: 12px 32px;
+            gap: 24px;
+        }
     }
 }
