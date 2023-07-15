@@ -180,6 +180,7 @@
 
 			.menu-item {
 				position: static;
+				width: 100%;
 				translate: none;
 			}
 	
