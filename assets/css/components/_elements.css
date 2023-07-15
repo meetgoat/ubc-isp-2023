@@ -46,3 +46,11 @@ p {
         order: 2;
     }
 }
+
+
+.isp-desktop--no-background{
+
+    @media (--query-mx-md){
+        background: none !important;
+    }
+}

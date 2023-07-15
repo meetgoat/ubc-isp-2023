@@ -20,7 +20,7 @@ div [class*="wp-block"].isp-overlap-image {
 	}
 
 	.wp-block-group {
-        background: var(--sand-2) !important;
+        background: none !important;
 		padding: 0;
 	}
 

@@ -461,6 +461,15 @@ p.has-small-font-size,
         order: 2;
     }
 }
+
+
+@media (max-width: 979px){
+
+
+.isp-desktop--no-background{
+        background: none !important;
+}
+    }
 .isp-search-header{
 	position: relative;
 	padding: 24px 24px 0;
@@ -4270,7 +4279,7 @@ div .isp-overlap-image[class*="wp-block"] img {
 	}
 
 div .isp-overlap-image[class*="wp-block"] .wp-block-group {
-        background: var(--sand-2) !important;
+        background: none !important;
 	}
 
 div .isp-overlap-image[class*="wp-block"] .wp-block-group {
