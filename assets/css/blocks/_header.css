@@ -81,7 +81,7 @@ div [class*="wp-block"].isp-header {
         
         & img{
             min-width: 100%;
-            width: calc( 100% + ( 50vw - 656px ) );
+            width: calc( 100% + ( 50vw - 652px ) );
             height: 460px;
             max-width: none;
             object-fit: cover;

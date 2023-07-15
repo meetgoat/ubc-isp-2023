@@ -3031,7 +3031,7 @@ div [class*="wp-block"].isp-header {
         
         .isp-header__featured-img img{
             min-width: 100%;
-            width: calc( 100% + ( 50vw - 656px ) );
+            width: calc( 100% + ( 50vw - 652px ) );
             height: 460px;
             max-width: none;
             -o-object-fit: cover;
