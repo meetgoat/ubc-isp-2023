@@ -1,6 +1,11 @@
 
 .isp-breadcrumbs{
     position: relative;
+    padding-bottom: 32px;
+
+    @media(--query-md){
+        padding-bottom: 0;
+    }
 }
 .breadcrumb {
     background: none !important;

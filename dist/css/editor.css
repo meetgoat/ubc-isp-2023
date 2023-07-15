@@ -742,7 +742,13 @@ p.has-small-font-size,
 
 .isp-breadcrumbs{
     position: relative;
+    padding-bottom: 32px;
 }
+@media(min-width: 980px){
+.isp-breadcrumbs{
+        padding-bottom: 0;
+}
+    }
 .breadcrumb {
     background: none !important;
 }
