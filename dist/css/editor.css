@@ -4149,6 +4149,8 @@ div .isp-5050[class*="wp-block"] figure, div .isp-5050[class*="wp-block"] img{
     top: 0;
     background: white;
     height: 80px;
+    overflow: hidden;
+    padding-left: 82px;
 }
 .isp-timeline__buttons:after{
         content: '';

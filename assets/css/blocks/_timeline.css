@@ -28,6 +28,8 @@
     top: 0;
     background: white;
     height: 80px;
+    overflow: hidden;
+    padding-left: 82px;
 
     &:after{
         content: '';
