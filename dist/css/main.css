@@ -3250,6 +3250,10 @@ div .gform_wrapper.gravity-theme .validation_message {
 			border-radius: 16px 16px 112px 0px;
 		}
 
+.isp-cta-d .isp-cta__image--overlay, .isp-cta-e .isp-cta__image--overlay, .isp-cta-f .isp-cta__image--overlay {
+		height: 100%;
+	}
+
 .isp-cta-d .isp-cta__image--overlay img, .isp-cta-e .isp-cta__image--overlay img, .isp-cta-f .isp-cta__image--overlay img {
 			position: absolute;
 			left: 50%;
