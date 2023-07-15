@@ -1,16 +1,11 @@
 .ubc-isp-nav {
-	/* padding: 0 18px; */
-	padding: 0;
+	padding: 0 18px;
   	margin: 0;
 
 	/*  Hide non active pages */
 	> .menu-depth-0:not(.menu-item-has-children),
 	> .menu-depth-0:not(.current_page_ancestor):not(.current_page_item) {
 		display: none;
-	}
-
-	.menu-item{
-		margin: 18px;
 	}
 
 	/*  Reset styling for ULs and LIs to avoid theme styling overrides */
@@ -154,9 +149,6 @@
 }
 
 @media (--query-mx-md) {
-	.ubc-isp-nav__container {
-		padding: 24px;
-	}
 	.ubc-isp-nav {
 		margin: 0;
 		padding: 0;
@@ -178,6 +170,7 @@
 		.menu-item {
 			position: relative;
 			padding: 0px;
+			margin: 18px;
 		}
 
 		.sub-menu__toggle {

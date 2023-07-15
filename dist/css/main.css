@@ -1960,8 +1960,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 			} 
 
 .ubc-isp-nav {
-	/* padding: 0 18px; */
-	padding: 0;
+	padding: 0 18px;
   	margin: 0;
 
 	/*  Hide non active pages */
@@ -1970,10 +1969,6 @@ div .gform_wrapper.gravity-theme .validation_message {
 .ubc-isp-nav > .menu-depth-0:not(.menu-item-has-children),
 	.ubc-isp-nav > .menu-depth-0:not(.current_page_ancestor):not(.current_page_item) {
 		display: none;
-	}
-
-.ubc-isp-nav .menu-item{
-		margin: 18px;
 	}
 
 /*  Reset styling for ULs and LIs to avoid theme styling overrides */
@@ -2109,9 +2104,6 @@ div .gform_wrapper.gravity-theme .validation_message {
 }
 
 @media (max-width: 979px) {
-	.ubc-isp-nav__container {
-		padding: 24px;
-	}
 	.ubc-isp-nav {
 		margin: 0;
 		padding: 0;
@@ -2134,6 +2126,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 		.ubc-isp-nav .menu-item {
 			position: relative;
 			padding: 0px;
+			margin: 18px;
 		}
 
 		.ubc-isp-nav .sub-menu__toggle {
