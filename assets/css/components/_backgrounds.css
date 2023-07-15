@@ -34,6 +34,18 @@
 			}
 		}
 	}
+  &.isp-background--white{ 
+    .isp-background__inner {
+      @media (--query-mx-md) {
+        background: white;
+      }
+      @media (--query-md) {
+        &:before {
+          background: white;
+        }
+      }
+    }
+  }
 }
 
 .isp-background__content {

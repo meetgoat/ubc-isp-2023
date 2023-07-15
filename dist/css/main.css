@@ -1423,6 +1423,19 @@ p.has-small-font-size,
 			}
 		}
 
+@media (max-width: 979px) {
+
+.isp-background--1.isp-background--white .isp-background__inner {
+        background: white;
+    }
+      }
+
+@media (min-width: 980px) {
+        .isp-background--1.isp-background--white .isp-background__inner:before {
+          background: white;
+        }
+      }
+
 .isp-background__content {
 	position: relative;
 	z-index: 20;
