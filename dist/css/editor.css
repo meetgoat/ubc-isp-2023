@@ -3512,7 +3512,7 @@ div .isp-overlap-image[class*="wp-block"] img {
 	}
 
 div .isp-overlap-image[class*="wp-block"] .wp-block-group {
-        background: none !important;
+        background: var(--sand-2) !important;
 	}
 
 div .isp-overlap-image[class*="wp-block"] .wp-block-group {
