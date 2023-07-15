@@ -1,5 +1,6 @@
 .ubc-isp-nav {
-	padding: 0 18px;
+	/* padding: 0 18px; */
+	padding: 0;
   	margin: 0;
 
 	/*  Hide non active pages */
@@ -7,7 +8,10 @@
 	> .menu-depth-0:not(.current_page_ancestor):not(.current_page_item) {
 		display: none;
 	}
-	
+
+	.menu-item{
+		margin: 18px;
+	}
 
 	/*  Reset styling for ULs and LIs to avoid theme styling overrides */
 	& ul,
@@ -21,7 +25,9 @@
 @media (--query-md) {
 	.ubc-isp-nav {
 		/*  Top Level Styling */
-
+		.menu-item{
+			margin: 0;
+		}
 		.menu-depth-0 {
 			> a {
 				display: none;
