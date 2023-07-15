@@ -447,6 +447,10 @@ p.has-small-font-size,
         line-height: 140%;
     }
 
+.hentry{
+    margin-bottom: 0;
+}
+
 /* 
 --button-color 
 --button-bg 
