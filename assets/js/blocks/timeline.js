@@ -34,12 +34,15 @@ const Timeline = {
 			class: "isp-timeline__buttons alignfull",
 		});
 
+		const buttonsInner = jQuery("<div/>", {
+			class: "isp-timeline__buttons__inner",
+		});
 		const buttonsContainer = jQuery("<div/>", {
 			class: "isp-timeline__button__container",
 		});
 
 		this.buttons.prependTo(
-			buttonsContainer.prependTo(buttonsWrap.prependTo(this.timeline))
+			buttonsContainer.prependTo(buttonsInner.prependTo(buttonsWrap.prependTo(this.timeline)))
 		);
 	},
 

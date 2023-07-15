@@ -610,10 +610,13 @@ var Timeline = {
     var buttonsWrap = jQuery("<div/>", {
       "class": "isp-timeline__buttons alignfull"
     });
+    var buttonsInner = jQuery("<div/>", {
+      "class": "isp-timeline__buttons__inner"
+    });
     var buttonsContainer = jQuery("<div/>", {
       "class": "isp-timeline__button__container"
     });
-    this.buttons.prependTo(buttonsContainer.prependTo(buttonsWrap.prependTo(this.timeline)));
+    this.buttons.prependTo(buttonsContainer.prependTo(buttonsInner.prependTo(buttonsWrap.prependTo(this.timeline))));
   },
   handleButtonClick: function handleButtonClick(event) {
     var button = jQuery(event.target);

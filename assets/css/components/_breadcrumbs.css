@@ -6,6 +6,10 @@
     @media(--query-md){
         padding-bottom: 0;
     }
+
+    @media(--query-mx-md){
+        overflow: hidden;;
+    }
 }
 .breadcrumb {
     background: none !important;
