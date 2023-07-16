@@ -4,6 +4,7 @@
 
 	/*  Hide non active pages */
 	> .menu-depth-0:not(.menu-item-has-children),
+	.wp-block-navigation__container > li:not(.current_page_item):not(.current_page_ancestor):not(.current-page-item):not(.current-page-ancestor),
 	> .menu-depth-0:not(.current_page_ancestor):not(.current_page_item):not(.current-page-ancestor):not(.current-page-item) {
 		display: none;
 	}
