@@ -1,6 +1,6 @@
 div [class*="wp-block"].isp-header {
  
-    @media (--query-mx-md) {
+    @media (--query-mx-sm) {
         padding-top: 48px;
     }
 }

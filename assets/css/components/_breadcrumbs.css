@@ -3,11 +3,11 @@
     position: relative;
     padding-bottom: 32px;
 
-    @media(--query-md){
+    @media(--query-sm){
         padding-bottom: 0;
     }
 
-    @media(--query-mx-md){
+    @media(--query-mx-sm){
         overflow: hidden;;
     }
 }

@@ -954,12 +954,12 @@ p.has-small-font-size,
     position: relative;
     padding-bottom: 32px;
 }
-@media(min-width: 980px){
+@media(min-width: 782px){
 .isp-breadcrumbs{
         padding-bottom: 0;
 }
     }
-@media(max-width: 979px){
+@media(max-width: 781px){
 .isp-breadcrumbs{
         overflow: hidden;
 };
@@ -3831,7 +3831,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 
  
-    @media (max-width: 979px) {
+    @media (max-width: 781px) {
 
 div [class*="wp-block"].isp-header {
         padding-top: 48px;
