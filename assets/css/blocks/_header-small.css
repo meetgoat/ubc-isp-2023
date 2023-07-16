@@ -1,5 +1,5 @@
 div [class*="wp-block"].isp-header--small {
-    padding: 80px 24px 90px;
+    padding: 48px 24px 64px;
 
     .wp-block-heading{
         margin: 0;
@@ -7,6 +7,10 @@ div [class*="wp-block"].isp-header--small {
 
     .wp-block-separator{
         margin: 16px auto;
+    }
+
+    @media (--query-sm) {
+        padding: 80px 24px 90px;
     }
 }
 
