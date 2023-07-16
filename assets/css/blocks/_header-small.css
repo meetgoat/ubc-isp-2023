@@ -1,5 +1,5 @@
 div [class*="wp-block"].isp-header--small {
-    padding: 80px 0 90px;
+    padding: 80px 24px 90px;
 
     .wp-block-heading{
         margin: 0;
