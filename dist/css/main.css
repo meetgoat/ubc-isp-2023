@@ -3829,9 +3829,14 @@ div .gform_wrapper.gravity-theme .validation_message {
     top: -32px;
 }
 
-div [class*="wp-block"].isp-header {
 
+ 
+    @media (max-width: 979px) {
+
+div [class*="wp-block"].isp-header {
+        padding-top: 48px;
 }
+    }
 
 .isp-header--content{
     max-width: 580px;
