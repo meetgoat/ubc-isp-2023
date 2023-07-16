@@ -1,6 +1,6 @@
 #container{
 	@media (--query-mx-md){
-		display: grid;
+		/* display: grid; */
 
 		.isp-breadcrumbs{
 			order: 1;

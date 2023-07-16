@@ -326,10 +326,7 @@ h6,
 }
 
 	@media (max-width: 979px){
-
-#container{
-		display: grid;
-}
+		/* display: grid; */
 
 		#container .isp-breadcrumbs{
 			order: 1;
@@ -5054,15 +5051,16 @@ div .isp-5050[class*="wp-block"] figure, div .isp-5050[class*="wp-block"] img{
     top: 0;
     background: white;
     height: 80px;
-    padding-left: 82px;
-    padding-right: 16px;
 
 }
 
 .isp-timeline__buttons__inner  {
     position: relative;
     top: 8px;
-    overflow: hidden;
+    padding-left: 82px;
+    padding-right: 16px;
+    overflow-x: hidden; /* Add this line */
+    width: 100%; /* Add this line if not present */
 }
 
 .isp-timeline__buttons__inner:after{
