@@ -28,9 +28,9 @@ class UBC_ISP_PageHeader
             case is_search():
                     return 'hidden';
             case is_page_template('page-level-1.php'):
-                return 'full';
-            case is_page_template('page-level-2.php'):
                 return 'hidden';
+            case is_page_template('page-level-2.php'):
+                return 'full';
             case is_page_template('page-level-3.php'):
                 return 'small';
         }
