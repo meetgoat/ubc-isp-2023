@@ -17,7 +17,7 @@
 	}
 }
 
-@media (--query-md) {
+@media (--query-sm) {
 	.ubc-isp-nav {
 		/*  Top Level Styling */
 		.menu-item{
@@ -148,7 +148,7 @@
 	}
 }
 
-@media (--query-mx-md) {
+@media (--query-mx-sm) {
 	.ubc-isp-nav {
 		margin: 0;
 		padding: 0;

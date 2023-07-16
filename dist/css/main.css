@@ -2044,7 +2044,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 		list-style: none;
 	}
 
-@media (min-width: 980px) {
+@media (min-width: 782px) {
 		/*  Top Level Styling */
 		.ubc-isp-nav .menu-item{
 			margin: 0;
@@ -2167,7 +2167,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 				}
 }
 
-@media (max-width: 979px) {
+@media (max-width: 781px) {
 	.ubc-isp-nav {
 		margin: 0;
 		padding: 0;
