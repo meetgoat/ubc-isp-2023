@@ -898,6 +898,15 @@ p.has-small-font-size,
                 z-index: 2;
             }
 }
+
+
+
+
+@media (--query-md-sm) {
+        .page-template-page-level-1 .isp-breadcrumbs{ 
+            display: none;
+        }
+    }
 [data-simplebar] {
   position: relative;
   flex-direction: column;

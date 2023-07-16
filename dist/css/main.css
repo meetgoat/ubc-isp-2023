@@ -1108,6 +1108,15 @@ p.has-small-font-size,
             }
 }
 
+
+
+
+@media (--query-md-sm) {
+        .page-template-page-level-1 .isp-breadcrumbs{ 
+            display: none;
+        }
+    }
+
 .pagination {
     border: none;
 }

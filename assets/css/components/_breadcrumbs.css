@@ -152,3 +152,14 @@
         } 
     }
 }
+
+
+
+
+.page-template-page-level-1{
+    @media (--query-md-sm) {
+        .isp-breadcrumbs{ 
+            display: none;
+        }
+    }
+}
