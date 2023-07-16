@@ -4,7 +4,7 @@
 
 	/*  Hide non active pages */
 	> .menu-depth-0:not(.menu-item-has-children),
-	> .menu-depth-0:not(.current_page_ancestor):not(.current_page_item) {
+	> .menu-depth-0:not(.current_page_ancestor):not(.current_page_item):not(.current-page-ancestor):not(.current-page-item) {
 		display: none;
 	}
 

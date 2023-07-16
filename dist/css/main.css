@@ -2040,7 +2040,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 }
 
 .ubc-isp-nav > .menu-depth-0:not(.menu-item-has-children),
-	.ubc-isp-nav > .menu-depth-0:not(.current_page_ancestor):not(.current_page_item) {
+	.ubc-isp-nav > .menu-depth-0:not(.current_page_ancestor):not(.current_page_item):not(.current-page-ancestor):not(.current-page-item) {
 		display: none;
 	}
 
