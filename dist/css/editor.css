@@ -902,7 +902,7 @@ p.has-small-font-size,
 
 
 
-@media (--query-md-sm) {
+@media (max-width: 781px) {
         .page-template-page-level-1 .ubc-isp-nav__container{ 
             display: none !important;
         }

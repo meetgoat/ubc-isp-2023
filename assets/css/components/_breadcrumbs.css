@@ -157,7 +157,7 @@
 
 
 .page-template-page-level-1{
-    @media (--query-md-sm) {
+    @media (--query-mx-sm) {
         .ubc-isp-nav__container{ 
             display: none !important;
         }
