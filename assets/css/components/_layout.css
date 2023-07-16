@@ -1,6 +1,7 @@
 #container{
 	@media (--query-mx-md){
-		/* display: grid; */
+		display: flex;
+		flex-direction: column;
 
 		.isp-breadcrumbs{
 			order: 1;
