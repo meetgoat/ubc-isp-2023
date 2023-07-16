@@ -903,8 +903,8 @@ p.has-small-font-size,
 
 
 @media (--query-md-sm) {
-        .page-template-page-level-1 .isp-breadcrumbs{ 
-            display: none;
+        .page-template-page-level-1 .ubc-isp-nav__container{ 
+            display: none !important;
         }
     }
 [data-simplebar] {
