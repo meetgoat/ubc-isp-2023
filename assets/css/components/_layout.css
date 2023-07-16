@@ -1,5 +1,5 @@
 #container{
-	@media (--query-mx-md){
+	@media (--query-mx-sm){
 		display: flex;
 		flex-direction: column;
 
