@@ -8,7 +8,7 @@
     }
 
     @media(--query-mx-sm){
-        overflow: hidden;;
+        overflow: hidden;
     }
 }
 .breadcrumb {
