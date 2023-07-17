@@ -18,6 +18,7 @@ class UBC_ISP_Page_Header {
 	 */
 	public static function init() {
 		add_action( 'template_redirect', array( __CLASS__, 'setup_header' ), 10 );
+		add_filter( 'body_class', array( __CLASS__, 'add_body_class' ), 10, 1 );
 	}
 
 	/**
@@ -45,6 +46,17 @@ class UBC_ISP_Page_Header {
 	}
 
 	/**
+	 * Add a class to body
+	 * 
+	 * @param  array $classes The body classes.
+	 */
+	public static function add_body_class( $classes ) {
+		$classes[] = 'isp-header--' . self::header_size();
+		return $classes;
+	}
+
+
+	/**
 	 * Get the header size
 	 */
 	public static function header_size() {
@@ -59,6 +71,20 @@ class UBC_ISP_Page_Header {
 				return 2;
 			case is_page_template( 'pages/level-3.php' ):
 				return 3;
+			default: 
+				return self::page_depth();
+		}
+		return 1;
+	}
+
+	/**
+	 * Get the page depth
+	 */
+	public static function page_depth() {
+		global $post;
+		$ancestors = $post->ancestors;
+		if ( ! empty( $ancestors ) ) {
+			return count( $ancestors ) + 1;
 		}
 		return 1;
 	}
