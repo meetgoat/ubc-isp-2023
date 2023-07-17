@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Goals Layout
+ * Title: Goals  Layout
  * Slug: meetgoat/goals-layout
  * Categories: ubc-goals
  * Viewport Width: 1280

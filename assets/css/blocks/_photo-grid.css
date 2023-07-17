@@ -1,6 +1,7 @@
 [class*="isp-photogrid"] {
+	margin: 48px 0;
 
-	.isp-photogrid--images .wp-block-group__inner-container {
+	.isp-photogrid--images {
 		aspect-ratio: 1.37;
 		display: grid;
 		padding: 0;
@@ -72,7 +73,7 @@
 
 .isp-photogrid-2 {
 
-	.isp-photogrid--images .wp-block-group__inner-container {
+	.isp-photogrid--images {
 		grid-template-columns: 1fr 1fr;
 
 		@media (--query-sm) {
@@ -112,7 +113,7 @@
 
 .isp-photogrid-3 {
 
-	.isp-photogrid--images .wp-block-group__inner-container {
+	.isp-photogrid--images {
 		grid-template-columns: 1fr 1fr;
 		grid-template-areas:
 			"b b"
@@ -153,7 +154,7 @@
 
 	&.isp-photogrid__alt {
 
-		.isp-photogrid--images .wp-block-group__inner-container {
+		.isp-photogrid--images {
 			grid-template-columns: 1fr 1fr;
 			grid-template-areas:
 				"a c"

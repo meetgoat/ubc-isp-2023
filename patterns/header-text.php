@@ -13,12 +13,8 @@
 ?>
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:spacer {"height":"40px","className":"isp-desktop-only","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-	<div style="margin-top:0;margin-bottom:0;height:40px" aria-hidden="true" class="wp-block-spacer isp-desktop-only"></div>
-	<!-- /wp:spacer -->
-
-	<!-- wp:spacer {"height":"24px","className":"isp-mobile-only","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-	<div style="margin-top:0;margin-bottom:0;height:24px" aria-hidden="true" class="wp-block-spacer isp-mobile-only"></div>
+<div class="wp-block-group"><!-- wp:spacer {"height":"50px"} -->
+	<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
 	<!-- /wp:spacer -->
 
 	<!-- wp:columns -->
@@ -27,12 +23,16 @@
 		<!-- /wp:column -->
 
 		<!-- wp:column {"width":"57%"} -->
-		<div class="wp-block-column" style="flex-basis:57%"><!-- wp:heading {"fontSize":"x-large"} -->
-			<h2 class="wp-block-heading has-x-large-font-size">Timeline</h2>
+		<div class="wp-block-column" style="flex-basis:57%">
+			<!-- wp:heading {"level":1,"textColor":"isp-bistre","fontSize":"x-large"} -->
+			<h1 class="wp-block-heading has-isp-bistre-color has-text-color has-x-large-font-size">Process, Timelines
+				&amp; Budgets</h1>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"fontSize":"x-large"} -->
-			<p class="has-x-large-font-size" style="font-style:normal;font-weight:500">The following timeline shows a list of many (but not all) of the steps taken by UBC to advance Indigenous engagement and inclusion.</p>
+			<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"isp-bistre","fontSize":"large"} -->
+			<p class="has-isp-bistre-color has-text-color has-large-font-size"
+				style="font-style:normal;font-weight:500">Lorem ipsum dolor sit amet consectetur. Posuere pulvinar elit
+				at amet tincidunt velit amet volutpat. Amet nullam leo pellentesque massa feugiat adipiscing donec.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -42,13 +42,5 @@
 		<!-- /wp:column -->
 	</div>
 	<!-- /wp:columns -->
-
-	<!-- wp:spacer {"height":"50px","className":"isp-desktop-only","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-	<div style="margin-top:0;margin-bottom:0;height:50px" aria-hidden="true" class="wp-block-spacer isp-desktop-only"></div>
-	<!-- /wp:spacer -->
-
-	<!-- wp:spacer {"height":"8px","className":"isp-mobile-only","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-	<div style="margin-top:0;margin-bottom:0;height:8px" aria-hidden="true" class="wp-block-spacer isp-mobile-only"></div>
-	<!-- /wp:spacer -->
 </div>
 <!-- /wp:group -->

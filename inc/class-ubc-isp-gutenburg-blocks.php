@@ -45,28 +45,24 @@ class UBC_ISP_Gutenburg_Blocks {
 			array( 'label' => __( 'UBC ISP - Layouts', 'ubc_collab' ) )
 		);
 		register_block_pattern_category(
+			'ubc-component',
+			array( 'label' => __( 'UBC ISP - Components', 'ubc_collab' ) )
+		);
+		register_block_pattern_category(
 			'ubc-card-layouts',
 			array( 'label' => __( 'UBC ISP - Card Layouts', 'ubc_collab' ) )
 		);
 		register_block_pattern_category(
-			'ubc-cta-layouts',
-			array( 'label' => __( 'UBC ISP - CTA Layouts', 'ubc_collab' ) )
+			'ubc-callout-layouts',
+			array( 'label' => __( 'UBC ISP - Callout Layouts', 'ubc_collab' ) )
 		);
 		register_block_pattern_category(
 			'ubc-callouts',
 			array( 'label' => __( 'UBC ISP - Callouts', 'ubc_collab' ) )
 		);
 		register_block_pattern_category(
-			'ubc-buckets',
-			array( 'label' => __( 'UBC ISP - Buckets', 'ubc_collab' ) )
-		);
-		register_block_pattern_category(
-			'ubc-cards',
-			array( 'label' => __( 'UBC ISP - Cards', 'ubc_collab' ) )
-		);
-		register_block_pattern_category(
-			'ubc-ctas',
-			array( 'label' => __( 'UBC ISP - CTAs', 'ubc_collab' ) )
+			'ubc-photo-grid',
+			array( 'label' => __( 'UBC ISP - Photo Grid', 'ubc_collab' ) )
 		);
 		register_block_pattern_category(
 			'ubc-timeline',
@@ -75,6 +71,14 @@ class UBC_ISP_Gutenburg_Blocks {
 		register_block_pattern_category(
 			'ubc-goals',
 			array( 'label' => __( 'UBC ISP - Goals', 'ubc_collab' ) )
+		);
+		register_block_pattern_category(
+			'ubc-impact-story',
+			array( 'label' => __( 'UBC ISP - Impact Story', 'ubc_collab' ) )
+		);
+		register_block_pattern_category(
+			'ubc-ctas',
+			array( 'label' => __( 'UBC ISP - Buckets', 'ubc_collab' ) )
 		);
 	}
 

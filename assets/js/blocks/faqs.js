@@ -8,7 +8,7 @@ export function initializeFAQs() {
 		return null;
 	}
 	// Attach click event listener to each header element
-	faqs.forEach( function ( faqContainer ) {
+	faqs.forEach( function( faqContainer ) {
 		new advancedFAQs( faqContainer );
 	} );
 }

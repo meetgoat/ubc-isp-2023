@@ -15,7 +15,7 @@ export function initializeAccordions() {
 		return null;
 	}
 	// Attach click event listener to each header element
-	headers.forEach( function ( header ) {
+	headers.forEach( function( header ) {
 		header.addEventListener( 'click', toggleAccordion );
 	} );
 }

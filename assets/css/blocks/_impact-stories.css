@@ -8,15 +8,19 @@
 	}
 
 	.isp-impact-stories__share {
-		flex-basis: calc(25% - 18px) !important; 
+		flex-basis: calc(25% - 18px) !important;
 	}
+
 	.isp-impact-stories__posts {
 		height: 100%;
 	}
+
 	@media (--query-mx-lg) {
+
 		.isp-impact-stories__share {
-			flex-basis: calc(33%) !important; 
+			flex-basis: calc(33%) !important;
 		}
+
 		.isp-impact-stories__posts {
 			gap: 16px;
 			overflow: auto;
@@ -27,6 +31,7 @@
 			}
 		}
 	}
+
 	@media (--query-mx-sm) {
 		padding: 0 !important;
 
@@ -34,6 +39,6 @@
 		.isp-impact-stories__posts {
 			padding: 0 16px;
 		}
-		
+
 	}
 }

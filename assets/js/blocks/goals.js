@@ -3,7 +3,7 @@ import $ from 'jquery';
 export function initializeGoals() {
 	const goalsElements = document.querySelectorAll( '.isp-goals' );
 	if ( goalsElements ) {
-		goalsElements.forEach( function ( element ) {
+		goalsElements.forEach( function( element ) {
 			Goals.init( element );
 		} );
 	}

@@ -2,7 +2,7 @@
 
 export function initializeTimelines() {
 	document.addEventListener( 'DOMContentLoaded', () => {
-		jQuery( '.isp-timeline' ).each( function () {
+		jQuery( '.isp-timeline' ).each( function() {
 			Timeline.init( jQuery( this ) );
 		} );
 	} );
@@ -61,7 +61,7 @@ const Timeline = {
 		button.addClass( 'is-active' );
 		const buttonOffset = button.position().left;
 		const buttonContainer = button.parent();
-		buttonContainer.css( { left: -buttonOffset - button.width() / 2 - 7 } );
+		buttonContainer.css( { left: -buttonOffset - ( button.width() / 2 ) - 7 } );
 	},
 	scrollToDecade( button ) {
 		const decade = button.data( 'decade' );

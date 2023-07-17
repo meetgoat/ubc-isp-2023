@@ -2,9 +2,9 @@
 /**
  * Title: Cards with Icons Layou
  * Slug: meetgoat/layout-cards-icon
- * Categories: ubc-buckets
+ * Categories: ubc-card-layouts
  * Viewport Width: 1280
- * Block Types: core/template-part/UBC Content
+ * Block Types: core/post-content 
  * Inserter: yes
  *
  * @package UBC Collab ISP Child Theme Pattern Library

@@ -17,6 +17,6 @@ initializeGoals();
 initializePostSliders();
 initializeFAQs();
 
-document.addEventListener( 'DOMContentLoaded', function () {
+document.addEventListener( 'DOMContentLoaded', function() {
 	new DataTable( '.wp-block-table table' );
 } );

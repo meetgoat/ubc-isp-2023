@@ -23,12 +23,13 @@
 	<hr class="wp-block-separator aligncenter has-alpha-channel-opacity is-style-squiggle-brown" />
 	<!-- /wp:separator -->
 
-	<!-- wp:group {"className":"isp-header\u002d\u002dsmall\u002d\u002dcontent","layout":{"type":"constrained"}} -->
+	<!-- wp:group {"className":"isp-header\u002d\u002dsmall\u002d\u002dcontent","layout":{"type":"constrained","contentSize":"820px"}} -->
 	<div class="wp-block-group isp-header--small--content">
 		<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"600","fontSize":"18px"}},"textColor":"isp-bistre"} -->
 		<p class="has-text-align-center has-isp-bistre-color has-text-color"
-			style="font-size:18px;font-style:normal;font-weight:600">Lorem ipsum dolor sit amet consectetur. Posuere pulvinar
-			elit at amet tincidunt velit amet volutpat. Amet nullam leo pellentesque massa feugiat adipiscing donec.</p>
+			style="font-size:18px;font-style:normal;font-weight:600">Lorem ipsum dolor sit amet consectetur. Posuere
+			pulvinar elit at amet tincidunt velit amet volutpat. Amet nullam leo pellentesque massa feugiat adipiscing
+			donec.</p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
