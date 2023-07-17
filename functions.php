@@ -11,17 +11,17 @@
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 // Theme Related functions. Enqueue styles, scripts, etc.
-require_once 'inc/class-ubc-isp-theme-colors.php';
-require_once 'inc/class-ubc-isp-theme-functions.php';
+require_once get_stylesheet_directory() . '/inc/class-ubc-isp-theme-colors.php';
+require_once get_stylesheet_directory() . '/inc/class-ubc-isp-theme-functions.php';
 
 // Functions related to Gutenbug Blocks.
-require_once 'inc/class-ubc-isp-gutenburg-blocks.php';
+require_once get_stylesheet_directory() . '/inc/class-ubc-isp-gutenburg-blocks.php';
 
 // Functions related to the breadcrumbs & header.
-require_once 'inc/class-ubc-isp-page-header.php';
+require_once get_stylesheet_directory() . '/inc/class-ubc-isp-page-header.php';
 
 // Functions related to gravity forms.
-require_once 'inc/class-ubc-isp-gravity-forms.php';
+require_once get_stylesheet_directory() . '/inc/class-ubc-isp-gravity-forms.php';
 
 // Functions related to gravity forms.
-require_once 'inc/class-ubc-isp-sub-menu-walker.php';
+require_once get_stylesheet_directory() . '/inc/class-ubc-isp-sub-menu-walker.php';

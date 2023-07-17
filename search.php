@@ -65,6 +65,7 @@ $content_class = ( isset( $content_class ) ) ? $content_class : '';
 							<?php the_title(); ?>
 						</h5>
 						<?php
+						global $post;
 						$post_obj = $post;
 						$crumbs   = array();
 						?>

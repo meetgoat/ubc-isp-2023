@@ -21,7 +21,7 @@ class UBC_ISP_Gravity_Forms {
 	 * @since 1.0.0
 	 */
 	public static function theme_hooks() {
-		add_filter( 'gform_submit_button', array( 'UBC_ISP_Gravity_Forms', 'form_submit_button' ), 10, 2 );
+		add_filter( 'gform_submit_button', array( 'UBC_ISP_Gravity_Forms', 'form_submit_button' ), 10, 1 );
 	}
 
 	/**
@@ -29,17 +29,15 @@ class UBC_ISP_Gravity_Forms {
 	 * add classes and convert to a button element
 	 *
 	 * @param string $button The button HTML.
-	 * @param array  $form   The form object.
 	 * 
 	 * @return string
 	 */
-	public static function form_submit_button( $button, $form ) {
+	public static function form_submit_button( $button ) {
 
 		// Get Button Element.
 		$dom = new DOMDocument();
 		$dom->loadHTML( '<?xml encoding="utf-8" ?>' . $button );
 		$input = $dom->getElementsByTagName( 'input' )->item( 0 );
-
 
 		// Add button Classes.
 		$classes  = $input->getAttribute( 'class' );

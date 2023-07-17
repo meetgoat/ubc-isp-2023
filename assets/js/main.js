@@ -17,5 +17,5 @@ initializePostSliders();
 initializeFAQs();
 
 jQuery(document).ready(function ($) {
-    let table = new DataTable( '.wp-block-table table' );
+    let table = new DataTable('.wp-block-table table');
 });

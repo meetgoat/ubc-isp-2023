@@ -27,8 +27,6 @@ class UBC_ISP_Theme_Functions {
 
 		add_action( 'wp-hybrid-clf_before_footer', array( 'UBC_ISP_Theme_Functions', 'open_footer_wrap' ) );
 		add_action( 'wp-hybrid-clf_after_footer', array( 'UBC_ISP_Theme_Functions', 'close_footer_wrap' ) );
-
-		
 	}
 
 	/**
@@ -44,11 +42,9 @@ class UBC_ISP_Theme_Functions {
 		
 		wp_enqueue_style( 'slick-style', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css', array(), CHILD_THEME_VERSION );
 		wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
-		
 
 		wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/dist/css/main.css', array(), CHILD_THEME_VERSION );
 		wp_enqueue_script( 'child-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array( 'jquery', 'dataTable-js' ), CHILD_THEME_VERSION, true );
-
 	}
 
 	/**
@@ -61,8 +57,6 @@ class UBC_ISP_Theme_Functions {
 	 * Loads carbon fields and sets up additional theme options.
 	 */
 	public static function theme_setup() {
-		global $content_width;
-
 		// Temporary, will remove if I find the setting.
 		UBC_Collab_CLF::$full_width = true;
 
@@ -76,7 +70,6 @@ class UBC_ISP_Theme_Functions {
 
 		/* Add UBC palette colors for block editor */
 		add_theme_support( 'editor-color-palette', $theme_color_palette );
-
 	}
 
 	/**
