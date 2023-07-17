@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap);
 @import "./variables/_colors.css";
 @import "./variables/_shadows.css";
 @import "./variables/_sizing.css";
 @import "./variables/_fonts.css";
 @import "./variables/_queries.css";
 @import "./common/_typography.css";
-
 @import "./components/_layout.css";
 @import "./components/_elements.css";
 @import "./components/_search.css";
@@ -22,7 +19,6 @@
 @import "./components/_forms.css";
 @import "./components/_navigation.css";
 @import "./components/_post-list.css";
-
 @import "./cards/_tool.css";
 @import "./cards/_team.css";
 @import "./cards/_key-dates.css";
@@ -31,7 +27,6 @@
 @import "./cards/_cta.css";
 @import "./cards/_bucket.css";
 @import "./cards/_goal.css";
-
 @import "./blocks/_core.css";
 @import "./blocks/_spacer.css";
 @import "./blocks/_header.css";
@@ -47,5 +42,3 @@
 @import "./blocks/_timeline.css";
 @import "./blocks/_horizontal-carousel.css";
 @import "./blocks/_faqs.css";
-
-

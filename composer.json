@@ -20,13 +20,11 @@
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "dev-main"
 	},
-	"scripts": {
-	},
+	"scripts": {},
 	"support": {
 		"issues": "https://github.com/Automattic/_s/issues",
 		"source": "https://github.com/Automattic/_s"
 	},
-	"config": {
-	},
+	"config": {},
 	"minimum-stability": "dev"
 }

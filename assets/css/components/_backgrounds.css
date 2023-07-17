@@ -9,51 +9,59 @@
 }
 
 .isp-background--1 {
+
 	@media (--query-mx-md) {
 		background: var(--sand-3);
 	}
+
 	@media (--query-md) {
 		background: none;
-  } 
+	}
 
-  .isp-background__inner {
-    position: relative;
+	.isp-background__inner {
+		position: relative;
 
-    @media (--query-mx-md) {
-    }
-    @media (--query-md) {
-      &:before {
-        content: "";
-        pointer-events: none;
-        position: absolute;
-        top: 0;
-        right: 15%;
-        bottom: 0;
-        width: 100vw;
-        background: var(--sand-3);
-        border-radius: 0 48px 480px 0;
-      }
+		@media (--query-mx-md) {
+		}
 
-      > * {
-        position: relative;
-        z-index: 2;
-      }
-    }
-  }
-  &.isp-background--white {
-    @media (--query-mx-md) {
-      background: white;
-    }
-    @media (--query-md) {
-      background: none;
+		@media (--query-md) {
 
-      .isp-background__inner {
-        &:before {
-          background: white;
-        }
-      }
-    }
-  }
+			&::before {
+				content: "";
+				pointer-events: none;
+				position: absolute;
+				top: 0;
+				right: 15%;
+				bottom: 0;
+				width: 100vw;
+				background: var(--sand-3);
+				border-radius: 0 48px 480px 0;
+			}
+
+			> * {
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
+
+	&.isp-background--white {
+
+		@media (--query-mx-md) {
+			background: #fff;
+		}
+
+		@media (--query-md) {
+			background: none;
+
+			.isp-background__inner {
+
+				&::before {
+					background: #fff;
+				}
+			}
+		}
+	}
 }
 
 .isp-background__content {
@@ -63,13 +71,14 @@
 
 [class*="isp-circle"] {
 	position: relative;
-	/* 
+
+	/*
   > * {
     position: relative;
     z-index: 2;
   } */
 
-	&:before {
+	&::before {
 		content: "";
 		position: absolute;
 		pointer-events: none;
@@ -78,23 +87,25 @@
 }
 
 .isp-circle--left--1 {
-	&:before {
+
+	&::before {
 		top: 0;
 		bottom: 0;
 		width: 100vw;
 		right: 52%;
-		background: white;
-		border-radius: 0 0px 320px 0;
+		background: #fff;
+		border-radius: 0 0 320px 0;
 	}
 }
 
 .isp-circle--right-1 {
-	&:before {
+
+	&::before {
 		top: -200px;
 		bottom: -50px;
 		right: -24px;
 		left: 58%;
-		background: white;
+		background: #fff;
 		border-radius: 320px 0 0 0;
 		z-index: 0;
 	}

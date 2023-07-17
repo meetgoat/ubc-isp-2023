@@ -1,8 +1,6 @@
-import slick from 'slick-carousel';
-
-/**
- * Initializes the accordions by attaching event listeners to the headers.
- */
+/* global jQuery */
 export function initializePostSliders() {
-	jQuery('.isp-post-slider .wp-block-post-template').slick({ fade: true });
+	jQuery( '.isp-post-slider .wp-block-post-template' ).slick( {
+		fade: true,
+	} );
 }

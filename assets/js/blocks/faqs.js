@@ -8,7 +8,7 @@ export function initializeFAQs() {
 		return null;
 	}
 	// Attach click event listener to each header element
-	faqs.forEach( function( faqContainer ) {
+	faqs.forEach( function ( faqContainer ) {
 		new advancedFAQs( faqContainer );
 	} );
 }
@@ -17,11 +17,10 @@ class advancedFAQs {
 	constructor( faqContainer ) {
 		this.searchValue = {
 			text: '',
-			normalized: ''
+			normalized: '',
 		};
-		
+
 		this.activeFilter = null;
-		
 
 		/*
 		 * Containers and Objects
@@ -33,7 +32,9 @@ class advancedFAQs {
 		// The search form
 		this.searchForm = this.faqContainer.querySelector( '.wp-block-search' );
 
-		this.searchInput = this.searchForm.querySelector( '.wp-block-search__input' );
+		this.searchInput = this.searchForm.querySelector(
+			'.wp-block-search__input'
+		);
 		this.searchInput.removeAttribute( 'required' );
 
 		// The Topic Filters
@@ -43,7 +44,9 @@ class advancedFAQs {
 		this.filterSelect = this.createFilterSelectBox();
 
 		// The filter results text
-		this.resultsText = this.faqContainer.querySelector( '.isp-faq__filter__results' );
+		this.resultsText = this.faqContainer.querySelector(
+			'.isp-faq__filter__results'
+		);
 
 		// The filter results text
 		this.resultsTextTemplate = this.resultsText.textContent;
@@ -60,24 +63,30 @@ class advancedFAQs {
 	}
 
 	/*
-	* Data Setup
-   	*/
+	 * Data Setup
+	 */
 	getFaqsData() {
-		const faqs = this.faqContainer.querySelectorAll( '.isp-accordion--single' );
+		const faqs = this.faqContainer.querySelectorAll(
+			'.isp-accordion--single'
+		);
 		return Array.from( faqs ).map( ( faq ) => {
 			const faqFilters = faq.querySelectorAll( '.isp-faq__filter' );
 			return {
 				dom: faq,
 				normalized: this.normalizeText( faq.textContent ),
-				filters: Array.from( faqFilters ).map( ( filter ) => this.normalizeText( filter.textContent ) ),
+				filters: Array.from( faqFilters ).map( ( filter ) =>
+					this.normalizeText( filter.textContent )
+				),
 				isVisible: true,
 			};
 		} );
 	}
 	getFiltersData() {
-		const filters = this.faqContainer.querySelectorAll( '.isp-faq__filters__buttons .wp-element-button' );
+		const filters = this.faqContainer.querySelectorAll(
+			'.isp-faq__filters__buttons .wp-element-button'
+		);
 		return Array.from( filters ).map( ( filter ) => {
-			this.normalizeText(filter.textContent);
+			this.normalizeText( filter.textContent );
 			return {
 				dom: filter,
 				text: filter.textContent,
@@ -90,8 +99,8 @@ class advancedFAQs {
 	}
 
 	/*
-	* DOM CREATION
-    */
+	 * DOM CREATION
+	 */
 	createFilterSelectBox() {
 		const selectBox = document.createElement( 'select' );
 		selectBox.classList.add( 'isp-faq__filters__select' );
@@ -101,20 +110,22 @@ class advancedFAQs {
 		defaultOption.value = '';
 		selectBox.appendChild( defaultOption );
 
-		this.filters.forEach( ( filter, index) => {
+		this.filters.forEach( ( filter, index ) => {
 			const option = document.createElement( 'option' );
 			option.textContent = filter.text;
 			option.value = index; // using the index as the value for simplicity
 			selectBox.appendChild( option );
 		} );
 
-		this.faqContainer.querySelector( '.isp-faq__filters__inner' ).appendChild( selectBox );
+		this.faqContainer
+			.querySelector( '.isp-faq__filters__inner' )
+			.appendChild( selectBox );
 		return selectBox;
 	}
 
 	/*
-	* Event Watchers
-    */
+	 * Event Watchers
+	 */
 	watchSearch() {
 		this.searchForm.addEventListener( 'submit', ( e ) => {
 			// Prevent the form from submitting
@@ -134,7 +145,8 @@ class advancedFAQs {
 			filter.dom.addEventListener( 'click', ( e ) => {
 				e.preventDefault();
 				// If filter is already active, remove filter.
-				this.activeFilter = this.activeFilter !== filter ? filter : null;
+				this.activeFilter =
+					this.activeFilter !== filter ? filter : null;
 				// Set filter states.
 				this.setFilterStates();
 				// Filter the list.
@@ -143,18 +155,20 @@ class advancedFAQs {
 		} );
 
 		this.filterSelect.addEventListener( 'change', ( e ) => {
-			this.activeFilter = e.target.value ? this.filters[ e.target.value ] : null;
+			this.activeFilter = e.target.value
+				? this.filters[ e.target.value ]
+				: null;
 			this.setFilterStates();
 			this.filterFAQ();
 		} );
 	}
 
 	/*
-	* State Setters
-    */
+	 * State Setters
+	 */
 	setFilterStates() {
 		this.filters.forEach( ( filter, index ) => {
-			filter.dom.classList.remove('is-active');
+			filter.dom.classList.remove( 'is-active' );
 			if ( filter === this.activeFilter ) {
 				filter.dom.classList.add( 'is-active' );
 				this.filterSelect.value = index;
@@ -167,13 +181,13 @@ class advancedFAQs {
 	setSearchValue() {
 		this.searchValue = {
 			text: this.searchInput.value,
-			normalized: this.normalizeText(this.searchInput.value)
+			normalized: this.normalizeText( this.searchInput.value ),
 		};
 	}
 
 	/*
-	* Filter Functions
-    */
+	 * Filter Functions
+	 */
 	filterFAQ() {
 		this.setSearchValue();
 		this.faqs.forEach( ( faq ) => {
@@ -213,7 +227,9 @@ class advancedFAQs {
 			return true;
 		}
 		// Check if any of the filters match the filter value.
-		return Array.from( faq.filters ).some( ( faqFilter ) => faqFilter === this.activeFilter.normalized );
+		return Array.from( faq.filters ).some(
+			( faqFilter ) => faqFilter === this.activeFilter.normalized
+		);
 	}
 
 	updateFaqClasses() {
@@ -230,9 +246,10 @@ class advancedFAQs {
 	}
 
 	updateFilterText() {
-		const visibleFaqsCount = this.faqs.filter( ( faq ) => faq.isVisible ).length;
+		const visibleFaqsCount = this.faqs.filter(
+			( faq ) => faq.isVisible
+		).length;
 		let filteredTerm = '';
-		console.log(this);
 		if ( this.activeFilter ) {
 			filteredTerm += `<span>${ this.activeFilter.text }</span>`;
 		}

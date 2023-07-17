@@ -1,13 +1,11 @@
-
-
 body {
-	background: #ffffff;
-    scroll-behavior: smooth;
-    /* &.home {
+	background: #fff;
+	scroll-behavior: smooth;
+
+	/* &.home {
         background: var(--sand-3);
     } */
 }
-
 
 /*  Headings */
 
@@ -22,35 +20,34 @@ h6 {
 
 p {
 	color: var(--bistre);
-    font-size: var(--font-size-p);
-    margin-bottom: 16px;
-    line-height: 150%;
+	font-size: var(--font-size-p);
+	margin-bottom: 16px;
+	line-height: 150%;
 
-    &.has-small-font-size,
-    &.has-medium-font-size {
-        line-height: 140%;
-    }
+	&.has-small-font-size,
+	&.has-medium-font-size {
+		line-height: 140%;
+	}
 }
 
-.hentry{
-    margin-bottom: 0;
+.hentry {
+	margin-bottom: 0;
 }
 
+@media (--query-mx-md) {
 
+	.isp-mobile-order--1 {
+		order: 1;
+	}
 
-@media (--query-mx-md){
-    .isp-mobile-order--1{
-        order: 1;
-    }
-    .isp-mobile-order--2 {
-        order: 2;
-    }
+	.isp-mobile-order--2 {
+		order: 2;
+	}
 }
 
+.isp-desktop--no-background {
 
-.isp-desktop--no-background{
-
-    @media (--query-md){
-        background: none !important;
-    }
+	@media (--query-md) {
+		background: none !important;
+	}
 }
