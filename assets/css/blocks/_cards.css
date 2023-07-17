@@ -13,6 +13,12 @@
 		box-shadow: var(--shadow-1);
 	}
 
+	> a {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
 	& a:not(.button-tertiary):not(.wp-element-button) {
 		text-decoration: none;
 	}
@@ -95,6 +101,8 @@
 		margin-bottom: 24px;
 	}
 
+	.wp-block-heading.button-tertiary,
+	.isp-story-card--link,
 	.isp-story-card__link {
 		margin-top: auto;
 	}
