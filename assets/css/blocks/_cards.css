@@ -4,9 +4,30 @@
 	border-radius: 16px;
 	height: 100%;
 	overflow: hidden;
+	transition: var(--transition);
+	display: flex;
+	flex-direction: column;
 
+	&:hover,
+	&:focus-within {
+		box-shadow: var(--shadow-1);
+	}
+
+	& a:not(.button-tertiary):not(.wp-element-button) {
+		text-decoration: none;
+	}
+
+	& [class*="wp-block"]{
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
 	.isp-story-card--details {
 		margin: 0;
+		flex: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
 	}
 
 	& figure,
@@ -56,6 +77,7 @@
 		}
 	}
 
+	.isp-story-card__tag,
 	.isp-story-card__tag a {
 		color: var(--calcite) !important;
 		text-decoration: none;

@@ -3291,6 +3291,7 @@ div .gform_wrapper.gravity-theme .validation_message {
 		display: flex;
 		flex: 0;
 		padding: 0 20px 20px;
+		width: 100%;
 	}
 .isp-cta-c .isp-cta-c__button .button-standard {
 			width: 100%;
@@ -4364,10 +4365,33 @@ div [class*="wp-block"].isp-header--small {
 	border-radius: 16px;
 	height: 100%;
 	overflow: hidden;
+	transition: var(--transition);
+	display: flex;
+	flex-direction: column;
 }
+
+.isp-story-card[class*="wp-block"]:hover,
+	.isp-story-card[class*="wp-block"]:focus-within {
+		box-shadow: var(--shadow-1);
+	}
+
+.isp-story-card[class*="wp-block"] a:not(.button-tertiary):not(.wp-element-button) {
+		-webkit-text-decoration: none;
+		text-decoration: none;
+	}
+
+.isp-story-card[class*="wp-block"] [class*="wp-block"]{
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
 
 .isp-story-card[class*="wp-block"] .isp-story-card--details {
 		margin: 0;
+		flex: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
 	}
 
 .isp-story-card[class*="wp-block"] figure,
@@ -4418,17 +4442,21 @@ div [class*="wp-block"].isp-header--small {
 			color: var(--ubc-grey-1);
 		}
 
-.isp-story-card[class*="wp-block"] .isp-story-card__tag a {
+.isp-story-card[class*="wp-block"] .isp-story-card__tag,
+	.isp-story-card[class*="wp-block"] .isp-story-card__tag a {
 		color: var(--calcite) !important;
 	}
 
-.isp-story-card[class*="wp-block"] .isp-story-card__tag a {
+.isp-story-card[class*="wp-block"] .isp-story-card__tag,
+	.isp-story-card[class*="wp-block"] .isp-story-card__tag a {
 		-webkit-text-decoration: none;
 		text-decoration: none;
 		font-weight: 700;
 	}
 
-.isp-story-card[class*="wp-block"] .isp-story-card__tag a:hover,
+.isp-story-card[class*="wp-block"] .isp-story-card__tag:hover,
+		.isp-story-card[class*="wp-block"] .isp-story-card__tag a:hover,
+		.isp-story-card[class*="wp-block"] .isp-story-card__tag:focus,
 		.isp-story-card[class*="wp-block"] .isp-story-card__tag a:focus {
 			color: var(--bistre) !important;
 		}
@@ -5341,7 +5369,7 @@ div [class*="wp-block"].isp-5050 {
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 100;
+	line-height: 100%;
 }
 
 .isp-faq__filter__results span {

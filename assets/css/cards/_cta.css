@@ -146,6 +146,7 @@
 		display: flex;
 		flex: 0;
 		padding: 0 20px 20px;
+		width: 100%;
 
 		.button-standard {
 			width: 100%;
