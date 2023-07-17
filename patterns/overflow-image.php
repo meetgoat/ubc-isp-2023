@@ -137,7 +137,7 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"is-style-single-radius-right"} -->
-			<figure class="wp-block-image size-full is-style-single-radius-right"><img src="/wp-content/themes/ubc-isp/patterns/placeholders/placeholder.png" alt="" class="wp-image-72" /></figure>
+			<figure class="wp-block-image size-full is-style-single-radius-right"><img src="/wp-content/themes/ubc-isp/patterns/images/placeholder.png" alt="" class="wp-image-72" /></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

@@ -62,15 +62,17 @@ class UBC_ISP_Page_Header {
 	public static function header_size() {
 		switch ( true ) {
 			case is_front_page():
-				return 0;
+				return 0; // No header/breadcrumbs.
 			case is_search():
-				return 0;
+				return 0; // No Header/breadcrumbs.
+			case is_singular( 'post' ):
+				return 2; // Full header/breadcrumbs.
 			case is_page_template( 'pages/level-1.php' ):
-				return 1;
+				return 1; // Slim header/breadcrumbs.
 			case is_page_template( 'pages/level-2.php' ):
-				return 2;
+				return 2; // Full header/breadcrumbs.
 			case is_page_template( 'pages/level-3.php' ):
-				return 3;
+				return 3; // Small header/breadcrumbs.
 			default: 
 				return self::page_depth();
 		}

@@ -17,15 +17,15 @@
 	<div class="wp-block-columns"><!-- wp:column {"width":"75%"} -->
 		<div class="wp-block-column" style="flex-basis:75%"><!-- wp:group {"className":"isp-photogrid\u002d\u002dimages","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group isp-photogrid--images"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-				<figure class="wp-block-image size-large"><img src="/wp-content/themes/ubc-isp/patterns/placeholders/placeholder.png" alt="" class="wp-image-305" /></figure>
+				<figure class="wp-block-image size-large"><img src="/wp-content/themes/ubc-isp/patterns/images/placeholder.png" alt="" class="wp-image-305" /></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
-				<figure class="wp-block-image size-large is-style-default"><img src="/wp-content/themes/ubc-isp/patterns/placeholders/placeholder.png" alt="" class="wp-image-305" /></figure>
+				<figure class="wp-block-image size-large is-style-default"><img src="/wp-content/themes/ubc-isp/patterns/images/placeholder.png" alt="" class="wp-image-305" /></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
-				<figure class="wp-block-image size-large is-style-default"><img src="/wp-content/themes/ubc-isp/patterns/placeholders/placeholder.png" alt="" class="wp-image-305" /></figure>
+				<figure class="wp-block-image size-large is-style-default"><img src="/wp-content/themes/ubc-isp/patterns/images/placeholder.png" alt="" class="wp-image-305" /></figure>
 				<!-- /wp:image -->
 			</div>
 			<!-- /wp:group -->

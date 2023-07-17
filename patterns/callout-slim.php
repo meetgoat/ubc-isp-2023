@@ -31,7 +31,7 @@
 					<a class="wp-block-button__link wp-element-button">
 						Download the Plan
 						<img class="wp-image-224" style="width: 32px;"
-							src="/wp-content/themes/ubc-isp/patterns/placeholders/pdf.svg" alt="">
+							src="/wp-content/themes/ubc-isp/patterns/images/pdf.svg" alt="">
 					</a>
 				</div>
 				<!-- /wp:button -->

@@ -18,7 +18,7 @@
 <div class="wp-block-group"><!-- wp:columns {"className":"isp-overlap-image"} -->
 	<div class="wp-block-columns isp-overlap-image"><!-- wp:column -->
 		<div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="/wp-content/themes/ubc-isp/patterns/placeholders/placeholder.png" alt="" /></figure>
+			<figure class="wp-block-image size-large"><img src="/wp-content/themes/ubc-isp/patterns/images/placeholder.png" alt="" /></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
