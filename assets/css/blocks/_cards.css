@@ -17,10 +17,11 @@
 		text-decoration: none;
 	}
 
-	& [class*="wp-block"]{
+	& [class*="wp-block"] {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
+
 	.isp-story-card--details {
 		margin: 0;
 		flex: auto;

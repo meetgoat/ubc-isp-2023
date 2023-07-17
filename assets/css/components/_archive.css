@@ -7,18 +7,21 @@ div .wp-block-post-template {
 	container-type: inline-size;
 
 	@container (max-width: 1000px) {
+
 		.type-post {
 			width: calc(33.333% - 0.9375em);
 		}
 	}
-	
+
 	@container (max-width: 800px) {
+
 		.type-post {
 			width: calc(50% - 0.9375em);
 		}
 	}
 
 	@container (max-width: 600px) {
+
 		.type-post {
 			width: calc(100%);
 		}

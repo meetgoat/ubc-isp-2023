@@ -3523,7 +3523,7 @@ div [class*="wp-block"].isp-header--small {
 		text-decoration: none;
 	}
 
-.isp-story-card[class*="wp-block"] [class*="wp-block"]{
+.isp-story-card[class*="wp-block"] [class*="wp-block"] {
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 	}
