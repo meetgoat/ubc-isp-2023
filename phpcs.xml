@@ -102,5 +102,4 @@
         <exclude name="Squiz.Commenting.FileComment.Missing"/>
     </rule>
 
-
 </ruleset>
