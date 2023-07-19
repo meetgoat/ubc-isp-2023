@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Callout Block With Line
- * Slug: meetgoat/callout-line
+ * Slug: meetgoat/layout-callout-line
  * Categories: ubc-callout-layouts
  * Viewport Width: 1280
  * Block Types: core/template-part/UBC Callout

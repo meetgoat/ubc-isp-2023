@@ -5,6 +5,7 @@ import { initializeGoals } from './blocks/goals.js';
 import { initializeSubMenu } from './components/menu.js';
 import { initializePostSliders } from './blocks/postSlider.js';
 import { initializeFAQs } from './blocks/faqs.js';
+import { initializePole } from './blocks/pole.js';
 
 /* global DataTable */
 
@@ -16,6 +17,7 @@ initializeTimelines();
 initializeGoals();
 initializePostSliders();
 initializeFAQs();
+initializePole();
 
 document.addEventListener( 'DOMContentLoaded', function() {
 	new DataTable( '.wp-block-table table' );

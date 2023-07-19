@@ -1,4 +1,4 @@
-import $ from 'jquery';
+/* global jQuery */
 
 export function initializeGoals() {
 	const goalsElements = document.querySelectorAll( '.isp-goals' );
@@ -35,9 +35,9 @@ const Goals = {
 
 		this.setCurrentSlide();
 
-		$( this.container ).on( 'click', '.isp-goals__button', ( e ) => {
+		jQuery( this.container ).on( 'click', '.isp-goals__button', ( e ) => {
 			e.preventDefault();
-			const button = $( e.currentTarget );
+			const button = jQuery( e.currentTarget );
 			const buttonIndex = button.data( 'index' );
 			if ( buttonIndex !== this.currentSlide ) {
 				this.currentSlide = buttonIndex;
@@ -55,8 +55,8 @@ const Goals = {
 				if ( slideHash === loadHash ) {
 					this.currentSlide = i;
 
-					$( 'html, body' ).animate(
-						{ scrollTop: $( this.wrapper ).offset().top - 80 },
+					jQuery( 'html, body' ).animate(
+						{ scrollTop: jQuery( this.wrapper ).offset().top - 80 },
 						500
 					);
 				}
@@ -133,12 +133,12 @@ const Goals = {
 	},
 
 	setupAccordionToggle() {
-		$( this.container )
+		jQuery( this.container )
 			.find( '.isp-goals__header' )
 			.append( '<button class="isp-goals__toggle"></button>' );
 
-		$( this.container ).on( 'click', '.isp-goals__toggle', ( e ) => {
-			$( e.target )
+		jQuery( this.container ).on( 'click', '.isp-goals__toggle', ( e ) => {
+			jQuery( e.target )
 				.closest( '.isp-goals__slide' )
 				.toggleClass( 'is-goal--open' )
 				.find( '.isp-goals__body' )
