@@ -1730,24 +1730,35 @@ div .wp-block-post-template {
 				border-left: solid 1px var(--sand-1);
 			}.dataTables_wrapper .tablepress th.sorting {
 				padding-right: 50px;
-			}.dataTables_wrapper .tablepress th.sorting::before {
+			}.dataTables_wrapper .tablepress th.sorting::before,
+				.dataTables_wrapper .tablepress th.sorting::after {
 					content: "";
 					width: 5px;
 					height: 5px;
+					margin: 0;
+					position: absolute;
+					display: block;
+					opacity: .125;
+					right: 24px;
+					padding: 0;
+				}.dataTables_wrapper .tablepress th.sorting::before {
+					bottom: 50%;
+					rotate: 45deg;
 					border-top: solid 2px var(--ubc-primary);
 					border-left: solid 2px var(--ubc-primary);
-					rotate: 45deg;
-					right: 24px;
 				}.dataTables_wrapper .tablepress th.sorting::after {
-					content: "";
-					width: 5px;
-					height: 5px;
+					top: 50%;
+					rotate: 45deg;
 					border-bottom: solid 2px var(--ubc-primary);
 					border-right: solid 2px var(--ubc-primary);
-					rotate: 45deg;
-					margin: 0;
-					right: 24px;
-				}.dataTables_wrapper .tablepress td {
+				}.dataTables_wrapper .tablepress th.sorting:hover{
+					/* background: var(--sand-2); */
+					background: var(--sand-1);
+				}.dataTables_wrapper .tablepress th.sorting.sorting_asc::after{
+						opacity: 0.6;
+					}.dataTables_wrapper .tablepress th.sorting.sorting_desc::before{
+						opacity: 0.6;
+					}.dataTables_wrapper .tablepress td {
 			color: var(--bistre);
 			font-size: 14px;
 			line-height: 140%;
@@ -1760,11 +1771,11 @@ div .wp-block-post-template {
 			background-color: #fdfcfb;
 		}.dataTables_wrapper .tablepress tr.odd {
 			background-color: var(--sand-3);
-		}.dataTables_wrapper .tablepress tr:hover {
+		}.dataTables_wrapper .tablepress tbody tr:hover {
 			background-color: var(--sand-2);
-		}.dataTables_wrapper .tablepress tr:hover td {
+		}.dataTables_wrapper .tablepress tbody tr:hover td {
 				color: var(--bistre) !important;
-			}.dataTables_wrapper .tablepress tr:hover td {
+			}.dataTables_wrapper .tablepress tbody tr:hover td {
 				background: none;
 			}.dataTables_wrapper .dataTables_filter {
 		width: 100%;
@@ -5869,6 +5880,10 @@ div [class*="wp-block"].isp-5050 {
 	.isp-pole__pagination__item:focus {
 		background: var(--calcite);
 	}
+
+.isp-pole__pagination__item.is-active {
+        width: 32px;
+    }
 
 .isp-pole__pagination__previous,
 .isp-pole__pagination__next {

@@ -38,7 +38,6 @@ class UBC_ISP_Theme_Functions {
 		wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), $theme->parent()->get( 'Version' ) );
 	   
 		wp_enqueue_style( 'dataTable-style', '//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css', array(), CHILD_THEME_VERSION );
-		wp_enqueue_script( 'dataTable-js', '//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 		
 		wp_enqueue_style( 'slick-style', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css', array(), CHILD_THEME_VERSION );
 		wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
