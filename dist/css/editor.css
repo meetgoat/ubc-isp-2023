@@ -2140,6 +2140,11 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 @media (min-width: 782px) {
 
+	.ubc-isp-nav__container {
+		border-bottom: 1px solid #C3D0DB;
+		border-bottom: 1px solid var(--ubc-grey-4, #C3D0DB);
+	}
+
 		/*  Top Level Styling */
 		.ubc-isp-nav .menu-item {
 			margin: 0;
