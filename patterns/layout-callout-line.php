@@ -12,7 +12,7 @@
 
 ?>
 
-<!-- wp:group {"align":"full","backgroundColor":"isp-sand_2","className":"isp-callout-block isp-callout-block\u002d\u002dlined","layout":{"type":"constrained"}} -->
+<!-- wp:group {"align":"full","backgroundColor":"isp-sand_2","className":"isp-callout-block isp-callout-block--lined","layout":{"type":"constrained"}} -->
 <div
 	class="wp-block-group alignfull isp-callout-block isp-callout-block--lined has-isp-sand-2-background-color has-background">
 	<!-- wp:group {"layout":{"type":"constrained","contentSize":"760px"}} -->

@@ -302,7 +302,7 @@
 
 						<!-- wp:group {"className":"isp-pole__points","layout":{"type":"constrained","justifyContent":"right"}} -->
 						<div class="wp-block-group isp-pole__points">
-							<!-- wp:group {"className":"isp-pole__point isp-pole__point\u002d\u002dafter","layout":{"type":"constrained","contentSize":"135px","justifyContent":"right"}} -->
+							<!-- wp:group {"className":"isp-pole__point isp-pole__point--after","layout":{"type":"constrained","contentSize":"135px","justifyContent":"right"}} -->
 							<div class="wp-block-group isp-pole__point isp-pole__point--after">
 								<!-- wp:group {"style":{"spacing":{"blockGap":"0","margin":{"top":"4px"}}},"layout":{"type":"constrained","contentSize":"","justifyContent":"center"}} -->
 								<div class="wp-block-group" style="margin-top:4px">
@@ -315,7 +315,7 @@
 							</div>
 							<!-- /wp:group -->
 
-							<!-- wp:group {"style":{"spacing":{"margin":{"top":"233px"}}},"className":"isp-pole__point isp-pole__point\u002d\u002dduring","layout":{"type":"constrained","contentSize":"120px","justifyContent":"right"}} -->
+							<!-- wp:group {"style":{"spacing":{"margin":{"top":"233px"}}},"className":"isp-pole__point isp-pole__point--during","layout":{"type":"constrained","contentSize":"120px","justifyContent":"right"}} -->
 							<div class="wp-block-group isp-pole__point isp-pole__point--during"
 								style="margin-top:233px"><!-- wp:group {"layout":{"type":"constrained"}} -->
 								<div class="wp-block-group">
@@ -328,7 +328,7 @@
 							</div>
 							<!-- /wp:group -->
 
-							<!-- wp:group {"style":{"spacing":{"margin":{"top":"370px"}}},"className":"isp-pole__point isp-pole__point\u002d\u002dbefore","layout":{"type":"constrained","contentSize":"110px","justifyContent":"right"}} -->
+							<!-- wp:group {"style":{"spacing":{"margin":{"top":"370px"}}},"className":"isp-pole__point isp-pole__point--before","layout":{"type":"constrained","contentSize":"110px","justifyContent":"right"}} -->
 							<div class="wp-block-group isp-pole__point isp-pole__point--before"
 								style="margin-top:370px"><!-- wp:group {"layout":{"type":"constrained"}} -->
 								<div class="wp-block-group">

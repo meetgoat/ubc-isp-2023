@@ -37,7 +37,7 @@
 
 			<!-- wp:group {"className":"isp-pole__layers","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group isp-pole__layers">
-				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer\u002d\u002d1","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer--1","layout":{"type":"constrained"}} -->
 				<div id="level-1" class="wp-block-group isp-pole__layer isp-pole__layer--1">
 					<!-- wp:group {"className":"isp-pole__layer__content","layout":{"type":"constrained"}} -->
 					<div class="wp-block-group isp-pole__layer__content">
@@ -50,7 +50,7 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer\u002d\u002d2","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer--2","layout":{"type":"constrained"}} -->
 				<div id="level-2" class="wp-block-group isp-pole__layer isp-pole__layer--2">
 					<!-- wp:group {"className":"isp-pole__layer__content","layout":{"type":"constrained"}} -->
 					<div class="wp-block-group isp-pole__layer__content">
@@ -64,7 +64,7 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer\u002d\u002d2","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer--2","layout":{"type":"constrained"}} -->
 				<div id="level-3" class="wp-block-group isp-pole__layer isp-pole__layer--2">
 					<!-- wp:group {"className":"isp-pole__layer__content","layout":{"type":"constrained"}} -->
 					<div class="wp-block-group isp-pole__layer__content">
@@ -77,7 +77,7 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer\u002d\u002d1","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer--1","layout":{"type":"constrained"}} -->
 				<div id="level-4" class="wp-block-group isp-pole__layer isp-pole__layer--1">
 					<!-- wp:group {"className":"isp-pole__layer__content","layout":{"type":"constrained"}} -->
 					<div class="wp-block-group isp-pole__layer__content">
@@ -90,7 +90,7 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer\u002d\u002d2","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer--2","layout":{"type":"constrained"}} -->
 				<div id="level-5" class="wp-block-group isp-pole__layer isp-pole__layer--2">
 					<!-- wp:group {"className":"isp-pole__layer__content","layout":{"type":"constrained"}} -->
 					<div class="wp-block-group isp-pole__layer__content">
@@ -104,7 +104,7 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer\u002d\u002d2","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer--2","layout":{"type":"constrained"}} -->
 				<div id="level-6" class="wp-block-group isp-pole__layer isp-pole__layer--2">
 					<!-- wp:group {"className":"isp-pole__layer__content","layout":{"type":"constrained"}} -->
 					<div class="wp-block-group isp-pole__layer__content">
@@ -117,7 +117,7 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer\u002d\u002d2","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer--2","layout":{"type":"constrained"}} -->
 				<div id="level-7" class="wp-block-group isp-pole__layer isp-pole__layer--2">
 					<!-- wp:group {"className":"isp-pole__layer__content","layout":{"type":"constrained"}} -->
 					<div class="wp-block-group isp-pole__layer__content">
@@ -130,7 +130,7 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer\u002d\u002d1","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer--1","layout":{"type":"constrained"}} -->
 				<div id="level-8" class="wp-block-group isp-pole__layer isp-pole__layer--1">
 					<!-- wp:group {"className":"isp-pole__layer__content","layout":{"type":"constrained"}} -->
 					<div class="wp-block-group isp-pole__layer__content">
@@ -143,7 +143,7 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer\u002d\u002d2","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer--2","layout":{"type":"constrained"}} -->
 				<div id="level-9" class="wp-block-group isp-pole__layer isp-pole__layer--2">
 					<!-- wp:group {"className":"isp-pole__layer__content","layout":{"type":"constrained"}} -->
 					<div class="wp-block-group isp-pole__layer__content">
@@ -157,7 +157,7 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer\u002d\u002d2","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-pole__layer isp-pole__layer--2","layout":{"type":"constrained"}} -->
 				<div id="level-10" class="wp-block-group isp-pole__layer isp-pole__layer--2">
 					<!-- wp:group {"className":"isp-pole__layer__content","layout":{"type":"constrained"}} -->
 					<div class="wp-block-group isp-pole__layer__content">

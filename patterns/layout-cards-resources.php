@@ -12,15 +12,15 @@
 
 ?>
 
-<!-- wp:group {"className":"isp-card\u002d\u002dtool","layout":{"type":"constrained"}} -->
+<!-- wp:group {"className":"isp-card--tool","layout":{"type":"constrained"}} -->
 <div class="wp-block-group isp-card--tool">
-	<!-- wp:columns {"backgroundColor":"isp-sand_3","className":"isp-card\u002d\u002dtool__inner"} -->
+	<!-- wp:columns {"backgroundColor":"isp-sand_3","className":"isp-card--tool__inner"} -->
 	<div class="wp-block-columns isp-card__inner has-isp-sand-3-background-color has-background">
 		<!-- wp:column {"width":"66.66%"} -->
 		<div class="wp-block-column" style="flex-basis:66.66%">
-			<!-- wp:group {"className":"isp-card\u002d\u002dtool__content","layout":{"type":"constrained"}} -->
+			<!-- wp:group {"className":"isp-card--tool__content","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group isp-card__content">
-				<!-- wp:group {"className":"isp-card\u002d\u002dtool__title","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-card--tool__title","layout":{"type":"constrained"}} -->
 				<div class="wp-block-group isp-card__title">
 					<!-- wp:separator {"className":"is-style-squiggle-brown isp-mobile-only"} -->
 					<hr class="wp-block-separator has-alpha-channel-opacity is-style-squiggle-brown isp-mobile-only" />
@@ -33,7 +33,7 @@
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:group {"className":"isp-card\u002d\u002dtool__text","layout":{"type":"constrained"}} -->
+				<!-- wp:group {"className":"isp-card--tool__text","layout":{"type":"constrained"}} -->
 				<div class="wp-block-group isp-card__text"><!-- wp:paragraph {"fontSize":"medium"} -->
 					<p class="has-medium-font-size">The Intent to Action Tool provides a structure for units to review
 						the Plan, identify the goals and actions that are relevant to your unit, and assess how you can
@@ -64,7 +64,7 @@
 
 		<!-- wp:column {"width":"33.33%"} -->
 		<div class="wp-block-column" style="flex-basis:33.33%">
-			<!-- wp:group {"className":"isp-card\u002d\u002dtool__image","layout":{"type":"constrained"}} -->
+			<!-- wp:group {"className":"isp-card--tool__image","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group isp-card__image">
 				<!-- wp:image {"id":81,"sizeSlug":"full","linkDestination":"none"} -->
 				<figure class="wp-block-image size-full"><img
