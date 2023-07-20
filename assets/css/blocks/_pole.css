@@ -477,6 +477,9 @@
 	}
 }
 
+.isp-pole__close__mobile {
+    display: none;
+}
 @media (--query-mx-sm) {
 	/*  MOBILE  */
 	.isp-pole {
@@ -485,26 +488,74 @@
 			display: contents;
 		}
 
+        .isp-pole__inner{
+            padding: 0;
+        }
 		.isp-pole__inner > .wp-block-columns {
 			width: 100%;
 			display: grid;
 			gap: 0;
 		}
 
+        .isp-pole__close{
+            display: none;
+        }
+
+        .isp-pole__intro__content{
+            margin-bottom: 26px !important;
+
+            & p{
+                margin-top: 9px !important;
+            }
+        }
 		.isp-pole__intro__button {
 			order: 5;
 			width: 100%;
+            margin: 0;
+            padding: 16px;
+            border-radius: 0 0 16px 16px;
+            background: var(--sand-2);
 
 
-            .isp-pole--open {
-            }
+            .isp-pole__explore{
+                margin: 0 !important;
+             }
         }
 		.isp-pole__background {
 			display: none;
 		}
-		.isp-pole__markers {
-			opacity: 0;
-		}
+        .isp-pole__close__mobile {
+            font-family: var(--opensans);
+            background: none;
+            border: none;
+            outline: none;
+            appearance: none;
+            display: block;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            margin: 0 !important;
+            display: inline-flex;
+            align-items: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 14px */
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            color: var(--primary);
+            opacity: 0;
+            transition: var(--transition);
+            pointer-events: none;
+
+            & svg {
+                margin-left: 4px;
+            }
+
+            &:hover{
+                color: var(--calcite);
+            }
+        }
 		.isp-pole__pole {
 			width: 100%;
 			background: var(--sand-2);
@@ -531,6 +582,8 @@
             z-index: 10;
             padding: 16px;
             border-radius: 0 0 16px 16px;
+            display: none;
+            transition: none;
 		}
 
         .isp-pole__pagination__inner{
@@ -553,22 +606,79 @@
         .isp-pole__level__top{
             display: none;
         }
+        .isp-pole__level {
+            margin: 0 !important
+        }
+    
+        .isp-pole__level__content {
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+            max-width: 100%;
+        }
+    
+    
+        .isp-pole__image{
+            padding: 0;
+            text-align: center !important;
+
+            & img {
+                position: relative;
+                left: 0;
+            }
+        }
+
+        .isp-pole__markers {
+            opacity: 0;
+        }
+        &.isp-pole--js {
+
+            .isp-pole__markers {
+                .isp-pole__marker {
+                    margin: 0 !important;
+                    top: 50%;
+                    left: 0;
+                    opacity: 0;
+    
+                    .wp-block-buttons::after {
+                        position: absolute;
+                        left: 40px;
+                        right: calc( 100% - 40px );
+                        top: 50%;
+                        transition: var(--transition);
+                    }
+                }
+            }
+        }
+
+        &.isp-pole--open {
+
+            .isp-pole__markers {
+                opacity: 1;
+            }
+            
+            .isp-pole__close__mobile { 
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .isp-pole__marker.isp-pole__marker--active {
+                opacity: 1;
+
+                .wp-block-buttons::after {
+                    right: 0;
+                }
+            }
+            
+            .isp-pole__image img{
+                left: 25% !important;
+                top: 70px;
+            }
+
+            .isp-pole__pagination {
+                display: block;
+            }
+        }
     }
 
-    .isp-pole__level {
-        margin: 0 !important
-    }
-
-    .isp-pole__level__content {
-        margin: 0 auto;
-        padding: 0 24px;
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-    .isp-pole__image{
-        padding: 0;
-        text-align: center !important;
-    }
 }

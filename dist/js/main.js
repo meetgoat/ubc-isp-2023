@@ -514,6 +514,7 @@ var TotemPole = /*#__PURE__*/function () {
     // Explore/Open Button.
     this.exploreButton = this.container.querySelector('.isp-pole__explore .wp-element-button');
     // TotemPole Image.
+    this.imageContainer = this.container.querySelector('.isp-pole__pole');
     this.image = this.container.querySelector('.isp-pole__image img');
     // Level Data.
     this.levels = this.gatherLevels();
@@ -532,6 +533,9 @@ var TotemPole = /*#__PURE__*/function () {
 
     // Setup the watchers for the markers and explore button.
     this.watchEvents();
+
+    // add a class to the container to show that the script is loaded.
+    this.container.classList.add('isp-pole--js');
   }
 
   /**
@@ -638,12 +642,14 @@ var TotemPole = /*#__PURE__*/function () {
 
           // add the active class to the current level.
           level.level.classList.add('isp-pole__level--active');
+          level.marker.classList.add('isp-pole__marker--active');
         } else {
           // remove the active class from the current pagination page.
           _this3.pagination.pages[index].classList.remove('is-active');
 
           // remove the active class from the current level.
           level.level.classList.remove('isp-pole__level--active');
+          level.marker.classList.remove('isp-pole__marker--active');
         }
       });
       this.scrollImage();
@@ -692,6 +698,16 @@ var TotemPole = /*#__PURE__*/function () {
         _this4.updateStatus();
       });
       this.container.appendChild(closeButton);
+
+      // Mobile Close Button
+      var mobileCloseButton = document.createElement('button');
+      mobileCloseButton.classList.add('isp-pole__close__mobile');
+      mobileCloseButton.innerHTML = "BACK <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t<path d=\"M11.25 18.375C15.185 18.375 18.375 15.185 18.375 11.25C18.375 7.31497 15.185 4.125 11.25 4.125C7.31497 4.125 4.125 7.31497 4.125 11.25C4.125 15.185 7.31497 18.375 11.25 18.375Z\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t<path d=\"M13.875 11.25H8.625M16.875 16.875L21.375 21.375\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t</svg>";
+      mobileCloseButton.addEventListener('click', function () {
+        _this4.isOpen = false;
+        _this4.updateStatus();
+      });
+      this.imageContainer.appendChild(mobileCloseButton);
     }
 
     // Add pagination for the block and functionality.
