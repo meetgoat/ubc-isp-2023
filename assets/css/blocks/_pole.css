@@ -740,7 +740,7 @@
 				opacity: 1;
 
 				.wp-block-buttons::after {
-					right: 0;
+					right: 30px;
 				}
 			}
 

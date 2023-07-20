@@ -6281,7 +6281,7 @@ div [class*="wp-block"].isp-5050 {
 			}
 
 				.isp-pole.isp-pole--open .isp-pole__marker.isp-pole__marker--active .wp-block-buttons::after {
-					right: 0;
+					right: 30px;
 				}
 
 			.isp-pole.isp-pole--open .isp-pole__image img {
