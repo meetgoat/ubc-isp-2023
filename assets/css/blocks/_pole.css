@@ -82,7 +82,14 @@
 	opacity: 0;
 	pointer-events: none;
 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+
 	&.isp-pole__level--active {
+        position: relative;
 		opacity: 1;
 		pointer-events: all;
 	}
@@ -175,18 +182,21 @@
 		margin: 0 auto !important;
 		display: block;
 		text-align: right !important;
-		padding-right: 70px;
 		pointer-events: none;
+        position: relative;
+        height: 590px;
 
 		& img {
 			height: 590px;
+            position: absolute !important;
 			width: auto;
-			left: 0;
+			right: 70px;
 			margin: 0 auto;
 			position: relative;
 			z-index: 10;
 			transition: var(--transition);
 			transform-origin: center bottom;
+            max-width: none;
 		}
 		.components-resizable-box__container {
 			margin-left: auto;
@@ -460,7 +470,9 @@
         padding: 0 !important;
         
         & img {
-            scale: var(--isp-pole--scale, 3.35);
+            /* scale: var(--isp-pole--scale, 3.35); */
+            height: 1977px;
+            right: -75px;
         }
     }
 
@@ -503,6 +515,7 @@
 
         .isp-pole__intro__content{
             margin-bottom: 26px !important;
+            transition: var(--transition);
 
             & p{
                 margin-top: 9px !important;
@@ -563,14 +576,22 @@
 			border-raidus: 16px;
 			max-width: 100%;
             overflow: hidden;
+
 		}
 		.isp-pole__pole__inner {
 			margin: 0 auto;
             padding: 0;
+            max-width: 230px !important;
 
             > .wp-block-columns {
                 gap: 0;
             }
+
+            .isp-pole__point__inner {
+                margin: 0 !important;
+                text-align: left;
+            }
+
 		}
 
 
@@ -589,6 +610,17 @@
         .isp-pole__pagination__inner{
             justify-content: space-between;
         }
+        .isp-pole__pagination__pages{
+            gap: 8px;
+        }
+        .isp-pole__pagination__item {
+            width: 8px;
+
+            &.is-active{
+                width: 32px;
+            }
+        }
+
 
 		.isp-pole__levels {
 			order: 6;
@@ -617,20 +649,36 @@
             max-width: 100%;
         }
     
-    
         .isp-pole__image{
+            display: flex;
+            justify-content: center;
             padding: 0;
-            text-align: center !important;
+            height: 390px;
 
             & img {
-                position: relative;
-                left: 0;
+                height: 100%;
+                right: auto;
+                left: auto;
             }
         }
 
         .isp-pole__markers {
             opacity: 0;
         }
+
+        .isp-pole__point {
+
+            > .wp-block-group {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding-right: 20px;
+            }
+        }
+
+
+
+
+
         &.isp-pole--js {
 
             .isp-pole__markers {
@@ -651,6 +699,7 @@
             }
         }
 
+
         &.isp-pole--open {
 
             .isp-pole__markers {
@@ -662,6 +711,11 @@
                 pointer-events: all;
             }
 
+            .isp-pole__intro__content {
+                translate: 0 -100%;
+                margin-bottom: -100% !important;
+            }
+
             .isp-pole__marker.isp-pole__marker--active {
                 opacity: 1;
 
@@ -671,8 +725,8 @@
             }
             
             .isp-pole__image img{
-                left: 25% !important;
-                top: 70px;
+                left: 35% !important;
+                height: 839px;
             }
 
             .isp-pole__pagination {

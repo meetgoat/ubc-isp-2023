@@ -534,6 +534,9 @@ var TotemPole = /*#__PURE__*/function () {
     // Setup the watchers for the markers and explore button.
     this.watchEvents();
 
+    // Adjust the positioning of the 'points' on the pole.
+    this.adjustPointPositioning();
+
     // add a class to the container to show that the script is loaded.
     this.container.classList.add('isp-pole--js');
   }
@@ -546,7 +549,6 @@ var TotemPole = /*#__PURE__*/function () {
   _createClass(TotemPole, [{
     key: "gatherLevels",
     value: function gatherLevels() {
-      var _this = this;
       var markers = this.container.querySelectorAll('.isp-pole__marker');
       var levels = this.container.querySelectorAll('.isp-pole__level');
       var levelData = [];
@@ -557,7 +559,7 @@ var TotemPole = /*#__PURE__*/function () {
           level: levels[index],
           position: {
             px: markerItem.offsetTop,
-            percent: markerItem.offsetTop / _this.container.offsetHeight * 100
+            percent: markerItem.offsetTop / 590 * 100
           }
         });
       });
@@ -568,13 +570,13 @@ var TotemPole = /*#__PURE__*/function () {
   }, {
     key: "watchEvents",
     value: function watchEvents() {
-      var _this2 = this;
+      var _this = this;
       // Set the watcher for the explore button.
       if (this.exploreButton) {
         this.exploreButton.addEventListener('click', function (e) {
           e.preventDefault();
           // Open to the first level when using the exploe button.
-          _this2.changeLevel(_this2.levels[0]);
+          _this.changeLevel(_this.levels[0]);
         });
       }
 
@@ -583,7 +585,7 @@ var TotemPole = /*#__PURE__*/function () {
         this.levels.forEach(function (level) {
           level.marker.addEventListener('click', function (e) {
             e.preventDefault();
-            _this2.changeLevel(level);
+            _this.changeLevel(level);
           });
         });
       }
@@ -620,32 +622,32 @@ var TotemPole = /*#__PURE__*/function () {
   }, {
     key: "updateLevel",
     value: function updateLevel() {
-      var _this3 = this;
+      var _this2 = this;
       this.levels.forEach(function (level, index) {
-        if (level === _this3.currentLevel) {
+        if (level === _this2.currentLevel) {
           // disable the previous button if needed.
           if (index === 0) {
-            _this3.pagination.previous.classList.add('is-disabled');
+            _this2.pagination.previous.classList.add('is-disabled');
           } else {
-            _this3.pagination.previous.classList.remove('is-disabled');
+            _this2.pagination.previous.classList.remove('is-disabled');
           }
 
           // disable the next button if needed.
-          if (index === _this3.levels.length - 1) {
-            _this3.pagination.next.classList.add('is-disabled');
+          if (index === _this2.levels.length - 1) {
+            _this2.pagination.next.classList.add('is-disabled');
           } else {
-            _this3.pagination.next.classList.remove('is-disabled');
+            _this2.pagination.next.classList.remove('is-disabled');
           }
 
           // add the active class to the current pagination page.
-          _this3.pagination.pages[index].classList.add('is-active');
+          _this2.pagination.pages[index].classList.add('is-active');
 
           // add the active class to the current level.
           level.level.classList.add('isp-pole__level--active');
           level.marker.classList.add('isp-pole__marker--active');
         } else {
           // remove the active class from the current pagination page.
-          _this3.pagination.pages[index].classList.remove('is-active');
+          _this2.pagination.pages[index].classList.remove('is-active');
 
           // remove the active class from the current level.
           level.level.classList.remove('isp-pole__level--active');
@@ -654,28 +656,15 @@ var TotemPole = /*#__PURE__*/function () {
       });
       this.scrollImage();
     }
-  }, {
-    key: "updateScale",
-    value: function updateScale() {
-      // Set the scaling to use for the pole image.
-      console.log(getComputedStyle(this.container).getPropertyValue('--isp-pole--scale'));
-      this.scale = getComputedStyle(this.container).getPropertyValue('--isp-pole--scale');
-    }
 
     // scroll the pole to the desired spot for the current level.
   }, {
     key: "scrollImage",
     value: function scrollImage() {
-      this.updateScale();
-      console.log('test');
+      console.log(this);
       if (this.isOpen) {
-        var markerOffset = parseInt((this.image.offsetHeight - this.currentLevel.position.px) * this.scale);
-        console.log(this);
-        console.log(this.image.offsetHeight);
-        console.log(this.currentLevel.position.px);
-        console.log(this.scale);
-        console.log(markerOffset);
-        this.image.style.translate = "0 calc( -62% + ".concat(markerOffset, "px)");
+        var markerOffset = parseInt(this.image.offsetHeight * (100 - this.currentLevel.position.percent) / 100);
+        this.image.style.translate = "0 calc( -100% + ".concat(this.imageContainer.offsetHeight / 2, "px + ").concat(markerOffset, "px)");
       } else {
         this.image.style.translate = '0 0';
       }
@@ -685,17 +674,28 @@ var TotemPole = /*#__PURE__*/function () {
      *  DOM Manipulation
      */
 
+    // Adjust the positioning for the points.
+  }, {
+    key: "adjustPointPositioning",
+    value: function adjustPointPositioning() {
+      this.container.querySelectorAll('.isp-pole__point').forEach(function (point) {
+        var percentage = parseInt(point.style.marginTop) / 590 * 100;
+        point.style.marginTop = 0;
+        point.style.top = "".concat(percentage, "%");
+      });
+    }
+
     // Add close button (and close functionality).
   }, {
     key: "addCloseButton",
     value: function addCloseButton() {
-      var _this4 = this;
+      var _this3 = this;
       var closeButton = document.createElement('button');
       closeButton.classList.add('isp-pole__close');
       closeButton.innerHTML = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" fill=\"none\">\n\t\t\t<path d=\"M15 24.5C20.2467 24.5 24.5 20.2467 24.5 15C24.5 9.75329 20.2467 5.5 15 5.5C9.75329 5.5 5.5 9.75329 5.5 15C5.5 20.2467 9.75329 24.5 15 24.5Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t<path d=\"M18.5 15H11.5M22.5 22.5L28.5 28.5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t</svg>\n\t\t";
       closeButton.addEventListener('click', function () {
-        _this4.isOpen = false;
-        _this4.updateStatus();
+        _this3.isOpen = false;
+        _this3.updateStatus();
       });
       this.container.appendChild(closeButton);
 
@@ -704,8 +704,8 @@ var TotemPole = /*#__PURE__*/function () {
       mobileCloseButton.classList.add('isp-pole__close__mobile');
       mobileCloseButton.innerHTML = "BACK <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t<path d=\"M11.25 18.375C15.185 18.375 18.375 15.185 18.375 11.25C18.375 7.31497 15.185 4.125 11.25 4.125C7.31497 4.125 4.125 7.31497 4.125 11.25C4.125 15.185 7.31497 18.375 11.25 18.375Z\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t<path d=\"M13.875 11.25H8.625M16.875 16.875L21.375 21.375\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t</svg>";
       mobileCloseButton.addEventListener('click', function () {
-        _this4.isOpen = false;
-        _this4.updateStatus();
+        _this3.isOpen = false;
+        _this3.updateStatus();
       });
       this.imageContainer.appendChild(mobileCloseButton);
     }
@@ -714,7 +714,7 @@ var TotemPole = /*#__PURE__*/function () {
   }, {
     key: "addPagination",
     value: function addPagination() {
-      var _this5 = this;
+      var _this4 = this;
       // Create the pagination elements.
       var pagination = document.createElement('div');
       pagination.classList.add('isp-pole__pagination');
@@ -735,7 +735,7 @@ var TotemPole = /*#__PURE__*/function () {
       // add the event listener to the previous button.
       this.pagination.previous.addEventListener('click', function (e) {
         e.preventDefault();
-        _this5.changeLevel(Math.max(_this5.currentLevel.index - 1, 1));
+        _this4.changeLevel(Math.max(_this4.currentLevel.index - 1, 1));
       });
 
       // Create the pagination next button.
@@ -746,7 +746,7 @@ var TotemPole = /*#__PURE__*/function () {
       // add the event listener to the next button.
       this.pagination.next.addEventListener('click', function (e) {
         e.preventDefault();
-        _this5.changeLevel(Math.min(_this5.currentLevel.index + 1, _this5.levels.length));
+        _this4.changeLevel(Math.min(_this4.currentLevel.index + 1, _this4.levels.length));
       });
 
       // Create the buttons for each page
@@ -760,7 +760,7 @@ var TotemPole = /*#__PURE__*/function () {
         // add the event listener to the pagination item.
         paginationItem.addEventListener('click', function (e) {
           e.preventDefault();
-          _this5.changeLevel(level);
+          _this4.changeLevel(level);
         });
 
         // Add the pagination item to the pagination pages.

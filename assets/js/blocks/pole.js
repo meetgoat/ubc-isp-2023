@@ -31,9 +31,7 @@ class TotemPole {
 		// Display Content.
 		this.displayContent = null;
 		// Explore/Open Button.
-		this.exploreButton = this.container.querySelector(
-			'.isp-pole__explore .wp-element-button'
-		);
+		this.exploreButton = this.container.querySelector( '.isp-pole__explore .wp-element-button' );
 		// TotemPole Image.
 		this.imageContainer = this.container.querySelector('.isp-pole__pole');
 		this.image = this.container.querySelector('.isp-pole__image img');
@@ -55,6 +53,9 @@ class TotemPole {
 		// Setup the watchers for the markers and explore button.
 		this.watchEvents();
 
+		// Adjust the positioning of the 'points' on the pole.
+		this.adjustPointPositioning();
+
 		// add a class to the container to show that the script is loaded.
 		this.container.classList.add('isp-pole--js');
 	}
@@ -75,9 +76,7 @@ class TotemPole {
 				level: levels[index],
 				position: {
 					px: markerItem.offsetTop,
-					percent:
-						(markerItem.offsetTop / this.container.offsetHeight) *
-						100,
+					percent: (markerItem.offsetTop / 590 ) * 100,
 				},
 			});
 		});
@@ -165,28 +164,12 @@ class TotemPole {
 		this.scrollImage();
 	}
 
-	updateScale() {
-		// Set the scaling to use for the pole image.
-		console.log(getComputedStyle(this.container).getPropertyValue('--isp-pole--scale'));
-
-		this.scale = getComputedStyle(this.container).getPropertyValue('--isp-pole--scale');
-	}
-
 	// scroll the pole to the desired spot for the current level.
 	scrollImage() {
-		this.updateScale();
-		console.log('test');
+		console.log(this);
 		if (this.isOpen) {
-			const markerOffset = parseInt(
-				(this.image.offsetHeight - this.currentLevel.position.px) *
-					this.scale
-			);
-			console.log(this);
-			console.log(this.image.offsetHeight);
-			console.log(this.currentLevel.position.px);
-			console.log(this.scale);
-			console.log(markerOffset);
-			this.image.style.translate = `0 calc( -62% + ${markerOffset}px)`;
+			const markerOffset = parseInt( this.image.offsetHeight * ( 100 - this.currentLevel.position.percent ) / 100 );
+			this.image.style.translate = `0 calc( -100% + ${ this.imageContainer.offsetHeight / 2 }px + ${ markerOffset }px)`;
 		} else {
 			this.image.style.translate = '0 0';
 		}
@@ -195,6 +178,15 @@ class TotemPole {
 	/**
 	 *  DOM Manipulation
 	 */
+
+	// Adjust the positioning for the points.
+	adjustPointPositioning() {
+		this.container.querySelectorAll('.isp-pole__point').forEach((point) => {
+			const percentage = ( parseInt(point.style.marginTop) / 590 ) * 100;
+			point.style.marginTop = 0;
+			point.style.top = `${percentage}%`;
+		});
+	}
 
 	// Add close button (and close functionality).
 	addCloseButton() {
