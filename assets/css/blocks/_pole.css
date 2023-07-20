@@ -373,8 +373,8 @@
 	}
 
 	&.is-active {
-        width: 32px;
-    }
+		width: 32px;
+	}
 }
 
 .isp-pole__pagination__previous,

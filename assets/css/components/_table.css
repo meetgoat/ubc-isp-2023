@@ -48,7 +48,7 @@
 
 			&.sorting {
 				padding-right: 50px;
-				
+
 				&::before,
 				&::after {
 					content: "";
@@ -57,18 +57,18 @@
 					margin: 0;
 					position: absolute;
 					display: block;
-					opacity: .125;
+					opacity: 0.125;
 					right: 24px;
 					padding: 0;
 				}
-				
+
 				&::before {
 					bottom: 50%;
 					rotate: 45deg;
 					border-top: solid 2px var(--ubc-primary);
 					border-left: solid 2px var(--ubc-primary);
 				}
-				
+
 				&::after {
 					top: 50%;
 					rotate: 45deg;
@@ -76,18 +76,22 @@
 					border-right: solid 2px var(--ubc-primary);
 				}
 
-				&:hover{
+				&:hover {
+
 					/* background: var(--sand-2); */
 					background: var(--sand-1);
 				}
 
-				&.sorting_asc{
-					&::after{
+				&.sorting_asc {
+
+					&::after {
 						opacity: 0.6;
 					}
 				}
-				&.sorting_desc{
-					&::before{
+
+				&.sorting_desc {
+
+					&::before {
 						opacity: 0.6;
 					}
 				}
@@ -116,7 +120,7 @@
 		& tr.odd {
 			background-color: var(--sand-3);
 		}
-		
+
 		& tbody tr:hover {
 			background-color: var(--sand-2);
 

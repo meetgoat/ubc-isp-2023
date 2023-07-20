@@ -986,7 +986,8 @@ __webpack_require__.r(__webpack_exports__);
 /* global jQuery */
 function initializeSubMenu() {
   jQuery('#ubc-isp-nav__menu').on('click', '.sub-menu__toggle', function (e) {
-    e.preventDefault().stopPropagation();
+    e.preventDefault();
+    e.stopPropagation();
     jQuery(this).closest('.menu-item').toggleClass('menu-item--open').children('.sub-menu').slideToggle();
   });
 }
@@ -1018,8 +1019,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* global DataTable */
-
 // Call the initializeAccordions function to initialize the accordions
 (0,_blocks_accordions_js__WEBPACK_IMPORTED_MODULE_0__.initializeAccordions)();
 (0,_blocks_teamMember_js__WEBPACK_IMPORTED_MODULE_1__.initializeTeamMembers)();
@@ -1029,9 +1028,6 @@ __webpack_require__.r(__webpack_exports__);
 (0,_blocks_postSlider_js__WEBPACK_IMPORTED_MODULE_5__.initializePostSliders)();
 (0,_blocks_faqs_js__WEBPACK_IMPORTED_MODULE_6__.initializeFAQs)();
 (0,_blocks_pole_js__WEBPACK_IMPORTED_MODULE_7__.initializePole)();
-document.addEventListener('DOMContentLoaded', function () {
-  new DataTable('.wp-block-table table');
-});
 
 /***/ }),
 

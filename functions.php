@@ -27,6 +27,3 @@ require_once get_stylesheet_directory() . '/inc/class-ubc-isp-page-header.php';
 
 // Functions related to gravity forms.
 require_once get_stylesheet_directory() . '/inc/class-ubc-isp-gravity-forms.php';
-
-// Functions related to gravity forms.
-require_once get_stylesheet_directory() . '/inc/class-ubc-isp-sub-menu-walker.php';

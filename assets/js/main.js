@@ -7,8 +7,6 @@ import { initializePostSliders } from './blocks/postSlider.js';
 import { initializeFAQs } from './blocks/faqs.js';
 import { initializePole } from './blocks/pole.js';
 
-/* global DataTable */
-
 // Call the initializeAccordions function to initialize the accordions
 initializeAccordions();
 initializeTeamMembers();
@@ -18,7 +16,3 @@ initializeGoals();
 initializePostSliders();
 initializeFAQs();
 initializePole();
-
-document.addEventListener( 'DOMContentLoaded', function() {
-	new DataTable( '.wp-block-table table' );
-} );

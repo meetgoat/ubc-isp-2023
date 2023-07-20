@@ -4,7 +4,8 @@ export function initializeSubMenu() {
 		'click',
 		'.sub-menu__toggle',
 		function( e ) {
-			e.preventDefault().stopPropagation();
+			e.preventDefault();
+			e.stopPropagation();
 			jQuery( this )
 				.closest( '.menu-item' )
 				.toggleClass( 'menu-item--open' )

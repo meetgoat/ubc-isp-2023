@@ -67,6 +67,20 @@ div [class*="wp-block"].isp-header {
 		top: 32px;
 		right: -20px;
 	}
+
+	.isp-header--1 {
+
+		.ubc-isp-nav__container {
+			display: none;
+		}
+	}
+
+	.isp-header--3 {
+
+		.isp-breadcrumbs--small {
+			background: var(--sand-2);
+		}
+	}
 }
 
 /* Featured Image */
