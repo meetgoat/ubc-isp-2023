@@ -38,9 +38,6 @@ class UBC_ISP_Theme_Functions {
 		$theme = wp_get_theme();
 		wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), $theme->parent()->get( 'Version' ) );
 
-		wp_enqueue_style( 'slick-style', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css', array(), CHILD_THEME_VERSION );
-		wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
-
 		wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/dist/css/main.css', array(), CHILD_THEME_VERSION );
 		wp_enqueue_script( 'child-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 	}
@@ -108,6 +105,6 @@ class UBC_ISP_Theme_Functions {
 			)
 		);
 	}
-	
+
 }
 UBC_ISP_Theme_Functions::init();

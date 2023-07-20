@@ -2472,52 +2472,6 @@ div .gform_wrapper.gravity-theme .validation_message {
 	position: relative;
 }
 
-.wp-block-post-template .slick-list {
-		overflow: visible;
-	}
-
-.wp-block-post-template .slick-list {
-		margin-top: 0;
-	}
-
-.wp-block-post-template .slick-arrow {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		width: 42px;
-		height: 42px;
-		background-color: #fff;
-		border-radius: 4px;
-		-webkit-appearance: none;
-		   -moz-appearance: none;
-		        appearance: none;
-		z-index: 10;
-		overflow: hidden;
-		text-indent: 999em;
-		outline: none;
-		box-shadow: none;
-		border: none;
-	}
-
-.wp-block-post-template .slick-arrow:hover,
-		.wp-block-post-template .slick-arrow:focus {
-			box-shadow: var(--shadow-1);
-			background-color: var(--sand-3);
-		}
-
-.wp-block-post-template .slick-arrow.slick-prev {
-			margin-right: 50px;
-			background-image: url(/wp-content/themes/ubc-isp/dist/images/slider-arrow.svg?abcc0677275e8d2a33aa934376f6c602);
-			background-repeat: no-repeat;
-			background-position: center center;
-		}
-
-.wp-block-post-template .slick-arrow.slick-next {
-			background-image: url(/wp-content/themes/ubc-isp/dist/images/slider-arrow-next.svg?0460cf0ea7de68d1c9a1be90774c2910);
-			background-repeat: no-repeat;
-			background-position: center center;
-		}
-
 .wp-block-post-template .wp-block-post {
 		margin-bottom: 0;
 	}
@@ -2561,6 +2515,67 @@ div .gform_wrapper.gravity-theme .validation_message {
 
 .isp-post-slider .wp-block-read-more {
 		margin-top: 64px;
+	}
+
+.isp-post-slider__slides {
+	display: grid;
+}
+
+.isp-post-slider__slides > .wp-block-post {
+		grid-column: 1 / 1;
+		grid-row: 1 / 1;
+		transition: var(--transition);
+		opacity: 0;
+		pointer-events: none;
+		margin: 0;
+	}
+
+.isp-post-slider__slides > .wp-block-post.isp-post-slider__slide--active {
+			opacity: 1;
+			pointer-events: all;
+		}
+
+.isp-post-slider__buttons {
+	position: absolute;
+	bottom: 16px;
+	right: 16px;
+	z-index: 50;
+	display: flex;
+	gap: 16px;
+}
+
+.isp-post-slider__button {
+	width: 42px;
+	height: 42px;
+	background-color: #fff;
+	border-radius: 4px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	z-index: 10;
+	overflow: hidden;
+	text-indent: 999em;
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+.isp-post-slider__button:hover,
+	.isp-post-slider__button:focus {
+		box-shadow: var(--shadow-1);
+		background-color: var(--sand-3);
+	}
+
+.isp-post-slider__button.isp-post-slider__button--previous {
+		background-image: url(/wp-content/themes/ubc-isp/dist/images/slider-arrow.svg?abcc0677275e8d2a33aa934376f6c602);
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+.isp-post-slider__button.isp-post-slider__button--next {
+		background-image: url(/wp-content/themes/ubc-isp/dist/images/slider-arrow-next.svg?0460cf0ea7de68d1c9a1be90774c2910);
+		background-repeat: no-repeat;
+		background-position: center center;
 	}
 
 
