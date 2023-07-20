@@ -2141,8 +2141,8 @@ div .gform_wrapper.gravity-theme .validation_message {
 @media (min-width: 782px) {
 
 	.ubc-isp-nav__container {
-		border-bottom: 1px solid #C3D0DB;
-		border-bottom: 1px solid var(--ubc-grey-4, #C3D0DB);
+		border-bottom: 1px solid #c3d0db;
+		border-bottom: 1px solid var(--ubc-grey-4, #c3d0db);
 	}
 
 		/*  Top Level Styling */
@@ -5477,15 +5477,15 @@ div [class*="wp-block"].isp-5050 {
 .isp-pole {
 	position: relative;
 	overflow: hidden;
-    --isp-pole--scale: 1.42;
+	--isp-pole--scale: 1.42;
 }
 
 @media (min-width: 980px) {
 
 .isp-pole {
-        --isp-pole--scale: 3.35;
+		--isp-pole--scale: 3.35;
 }
-    }
+	}
 
 .isp-pole__inner {
 	max-width: 1030px !important;
@@ -5510,18 +5510,13 @@ div [class*="wp-block"].isp-5050 {
 	height: 100%;
 	right: 0;
 	transition: var(--transition);
+
 	/* Width is 80% of the container + the right page gutter */
-	width: calc(
-		(min(1280px, 100vw) * 0.8) + (50vw - min(640px, 50vw))
-	);
-	width: calc(
-		(min(1280px, 100vw) * 0.8) + calc(50vw - min(640px, 50vw))
-	);
-	width: calc(
-		(var(--container-width) * var(--percent-width)) + var(--page-gutter)
-	);
+	width: calc((min(1280px, 100vw) * 0.8) + (50vw - min(640px, 50vw)));
+	width: calc((min(1280px, 100vw) * 0.8) + calc(50vw - min(640px, 50vw)));
+	width: calc((var(--container-width) * var(--percent-width)) + var(--page-gutter));
 	background: var(--sand-2);
-	border-radius: 40px 0px 0px 400px;
+	border-radius: 40px 0 0 400px;
 	z-index: 1;
 	margin: 0;
 }
@@ -5577,15 +5572,15 @@ div [class*="wp-block"].isp-5050 {
 	opacity: 0;
 	pointer-events: none;
 
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
 }
 
 .isp-pole__level.isp-pole__level--active:not(.block-editor-block-list__block) {
-        position: relative;
+		position: relative;
 		opacity: 1;
 		pointer-events: all;
 	}
@@ -5604,14 +5599,16 @@ div [class*="wp-block"].isp-5050 {
 	transition: var(--transition);
 	display: none;
 }
+
 .isp-pole__level__number {
 	margin: 0 !important;
 }
+
 .isp-pole__level__number {
 	width: 32px;
 	height: 32px;
 	background: var(--calcite);
-	color: white;
+	color: #fff;
 	-webkit-text-decoration: center;
 	        text-decoration: center;
 	border-radius: 50%;
@@ -5632,7 +5629,7 @@ div [class*="wp-block"].isp-5050 {
 	gap: 16px;
 }
 
-.isp-pole__level__top:after {
+.isp-pole__level__top::after {
 		content: "";
 		flex: auto;
 		display: block;
@@ -5690,12 +5687,12 @@ div [class*="wp-block"].isp-5050 {
 		width: 100%;
 		display: block;
 		pointer-events: none;
-        position: relative;
-        height: 590px;
+		position: relative;
+		height: 590px;
 	}
 
 .isp-pole__pole__inner .isp-pole__image img {
-            position: absolute !important;
+			position: absolute !important;
 		}
 
 .isp-pole__pole__inner .isp-pole__image img {
@@ -5703,19 +5700,18 @@ div [class*="wp-block"].isp-5050 {
 			width: auto;
 			right: 70px;
 			margin: 0 auto;
-			position: relative;
 			z-index: 10;
 			transition: var(--transition);
 			transform-origin: center bottom;
-            max-width: none;
+			max-width: none;
 		}
 
 .isp-pole__pole__inner .isp-pole__image .components-resizable-box__container {
 			margin-left: auto;
 		}
 
-/* 
-* Markers 
+/*
+* Markers
 */
 .isp-pole__markers {
 	position: absolute !important;
@@ -5741,7 +5737,6 @@ div [class*="wp-block"].isp-5050 {
 			align-items: center;
 			justify-content: flex-start;
 			gap: 8px;
-			width: 100%;
 			cursor: pointer;
 		}
 .isp-pole__markers .isp-pole__marker .wp-block-buttons::after {
@@ -5753,7 +5748,7 @@ div [class*="wp-block"].isp-5050 {
 			}
 .isp-pole__markers .isp-pole__marker .wp-block-buttons .wp-element-button {
 				border: none !important;
-				background: white !important;
+				background: #fff !important;
 				padding: 4px !important;
 				border-radius: 50% !important;
 				color: var(--calcite) !important;
@@ -5778,7 +5773,7 @@ div [class*="wp-block"].isp-5050 {
 					right: 0;
 					background: var(--calcite);
 					border-radius: 16px;
-					color: white;
+					color: #fff;
 					white-space: nowrap;
 					line-height: 32px;
 					padding: 0 16px;
@@ -5794,7 +5789,7 @@ div [class*="wp-block"].isp-5050 {
 .isp-pole__markers .isp-pole__marker .wp-block-buttons .wp-element-button:hover,
 				.isp-pole__markers .isp-pole__marker .wp-block-buttons .wp-element-button:focus,
 				.isp-pole__markers .isp-pole__marker .wp-block-buttons .wp-element-button:focus-within {
-					background: white !important;
+					background: #fff !important;
 					color: var(--calcite) !important;
 				}
 .isp-pole__markers .isp-pole__marker .wp-block-buttons .wp-element-button:hover::before, .isp-pole__markers .isp-pole__marker .wp-block-buttons .wp-element-button:focus::before, .isp-pole__markers .isp-pole__marker .wp-block-buttons .wp-element-button:focus-within::before {
@@ -5802,7 +5797,7 @@ div [class*="wp-block"].isp-5050 {
 						pointer-events: all;
 					}
 .isp-pole__markers .isp-pole__marker .wp-block-buttons:hover .wp-element-button, .isp-pole__markers .isp-pole__marker .wp-block-buttons:focus .wp-element-button, .isp-pole__markers .isp-pole__marker .wp-block-buttons:focus-within .wp-element-button {
-					background: white !important;
+					background: #fff !important;
 					color: var(--calcite) !important;
 				}
 .isp-pole__markers .isp-pole__marker .wp-block-buttons:hover .wp-element-button::before, .isp-pole__markers .isp-pole__marker .wp-block-buttons:focus .wp-element-button::before, .isp-pole__markers .isp-pole__marker .wp-block-buttons:focus-within .wp-element-button::before {
@@ -5810,7 +5805,7 @@ div [class*="wp-block"].isp-5050 {
 						pointer-events: all;
 					}
 
-/* 
+/*
  * Points
 */
 .isp-pole__points {
@@ -5824,6 +5819,7 @@ div [class*="wp-block"].isp-5050 {
 	width: 100%;
 	pointer-events: none;
 }
+
 .isp-pole__point {
 	position: absolute;
 	top: 0;
@@ -5847,8 +5843,9 @@ div [class*="wp-block"].isp-5050 {
 	bottom: 20px;
 	left: 0;
 	right: 0;
-    padding: 0 16px;
+	padding: 0 16px;
 }
+
 .isp-pole__pagination__inner,
 .isp-pole__pagination__pages {
 	display: flex;
@@ -5934,7 +5931,7 @@ div [class*="wp-block"].isp-5050 {
 
 .isp-pole--open .isp-pole__inner {
 		position: relative;
-        padding: 0;
+		padding: 0;
 	}
 
 .isp-pole--open .isp-pole__background {
@@ -5959,7 +5956,9 @@ div [class*="wp-block"].isp-5050 {
 	}
 
 .isp-pole--open .isp-pole__intro__container {
+
 		/* flex-grow: 0 !important; */
+
 		/* flex-basis: 51% !important; */
 	}
 
@@ -5985,15 +5984,16 @@ div [class*="wp-block"].isp-5050 {
 
 /* Pole  */
 
-.isp-pole--open .isp-pole__image { 
-        padding: 0 !important;
-    }
+.isp-pole--open .isp-pole__image {
+		padding: 0 !important;
+	}
 
 .isp-pole--open .isp-pole__image img {
-            /* scale: var(--isp-pole--scale, 3.35); */
-            height: 1977px;
-            right: -75px;
-        }
+
+			/* scale: var(--isp-pole--scale, 3.35); */
+			height: 1977px;
+			right: -75px;
+		}
 
 .isp-pole--open .isp-pole__markers,
 	.isp-pole--open .isp-pole__points {
@@ -6008,18 +6008,22 @@ div [class*="wp-block"].isp-5050 {
 	}
 
 .isp-pole__close__mobile {
-    display: none;
+	display: none;
 }
+
 @media (max-width: 781px) {
+
 	/*  MOBILE  */
+
 		.isp-pole .isp-pole__intro,
 		.isp-pole .isp-pole__intro__container {
 			display: contents;
 		}
 
-        .isp-pole .isp-pole__inner{
-            padding: 0;
-        }
+		.isp-pole .isp-pole__inner {
+			padding: 0;
+		}
+
 		.isp-pole .isp-pole__inner > .wp-block-columns {
 			width: 100%;
 			display: grid;
@@ -6027,138 +6031,146 @@ div [class*="wp-block"].isp-5050 {
 			gap: 0;
 		}
 
-        .isp-pole .isp-pole__close{
-            display: none;
-        }
+		.isp-pole .isp-pole__close {
+			display: none;
+		}
 
-        .isp-pole .isp-pole__intro__content{
-            margin-bottom: 26px !important;
-        }
+		.isp-pole .isp-pole__intro__content {
+			margin-bottom: 26px !important;
+		}
 
-        .isp-pole .isp-pole__intro__content{
-            transition: var(--transition);
-        }
+		.isp-pole .isp-pole__intro__content {
+			transition: var(--transition);
+		}
 
-            .isp-pole .isp-pole__intro__content p{
-                margin-top: 9px !important;
-            }
+			.isp-pole .isp-pole__intro__content p {
+				margin-top: 9px !important;
+			}
+
 		.isp-pole .isp-pole__intro__button {
 			order: 5;
 			width: 100%;
-            margin: 0;
-            padding: 16px;
-            border-radius: 0 0 16px 16px;
-            background: var(--sand-2);
-        }
+			margin: 0;
+			padding: 16px;
+			border-radius: 0 0 16px 16px;
+			background: var(--sand-2);
+		}
 
 
-            .isp-pole .isp-pole__intro__button .isp-pole__explore{
-                margin: 0 !important;
-             }
+			.isp-pole .isp-pole__intro__button .isp-pole__explore {
+				margin: 0 !important;
+			}
+
 		.isp-pole .isp-pole__background {
 			display: none;
 		}
-        .isp-pole .isp-pole__close__mobile {
-            margin: 0 !important;
-        }
-        .isp-pole .isp-pole__close__mobile {
-            font-family: var(--opensans);
-            background: none;
-            border: none;
-            outline: none;
-            -webkit-appearance: none;
-               -moz-appearance: none;
-                    appearance: none;
-            display: block;
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            display: inline-flex;
-            align-items: center;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 100%; /* 14px */
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            color: var(--primary);
-            opacity: 0;
-            transition: var(--transition);
-            pointer-events: none;
-        }
 
-            .isp-pole .isp-pole__close__mobile svg {
-                margin-left: 4px;
-            }
+		.isp-pole .isp-pole__close__mobile {
+			margin: 0 !important;
+		}
 
-            .isp-pole .isp-pole__close__mobile:hover{
-                color: var(--calcite);
-            }
+		.isp-pole .isp-pole__close__mobile {
+			font-family: var(--opensans);
+			background: none;
+			border: none;
+			outline: none;
+			-webkit-appearance: none;
+			   -moz-appearance: none;
+			        appearance: none;
+			position: absolute;
+			top: 16px;
+			left: 16px;
+			display: inline-flex;
+			align-items: center;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%; /* 14px */
+			letter-spacing: 1.4px;
+			text-transform: uppercase;
+			color: var(--primary);
+			opacity: 0;
+			transition: var(--transition);
+			pointer-events: none;
+		}
+
+			.isp-pole .isp-pole__close__mobile svg {
+				margin-left: 4px;
+			}
+
+			.isp-pole .isp-pole__close__mobile:hover {
+				color: var(--calcite);
+			}
+
 		.isp-pole .isp-pole__pole {
 			width: 100%;
 			background: var(--sand-2);
 			padding: 24px 16px;
-			border-raidus: 16px;
+			border-radius: 16px 16px 0 0;
 			max-width: 100%;
-            overflow: hidden;
+			overflow: hidden;
 
 		}
+
 		.isp-pole .isp-pole__pole__inner {
-            max-width: 230px !important;
+			max-width: 230px !important;
 
 		}
+
 		.isp-pole .isp-pole__pole__inner {
 			margin: 0 auto;
-            padding: 0;
+			padding: 0;
 
 		}
 
-            .isp-pole .isp-pole__pole__inner > .wp-block-columns {
-                gap: 0;
-            }
+			.isp-pole .isp-pole__pole__inner > .wp-block-columns {
+				gap: 0;
+			}
 
-            .isp-pole .isp-pole__pole__inner .isp-pole__point__inner {
-                margin: 0 !important;
-            }
+			.isp-pole .isp-pole__pole__inner .isp-pole__point__inner {
+				margin: 0 !important;
+			}
 
-            .isp-pole .isp-pole__pole__inner .isp-pole__point__inner {
-                text-align: left;
-            }
+			.isp-pole .isp-pole__pole__inner .isp-pole__point__inner {
+				text-align: left;
+			}
 
 
 		.isp-pole .isp-pole__pagination {
-            margin: 0 !important;
+			margin: 0 !important;
 		}
 
 
 		.isp-pole .isp-pole__pagination {
 			background: var(--sand-3);
-            position: relative;
-            bottom: 0;
-            z-index: 10;
-            padding: 16px;
-            border-radius: 0 0 16px 16px;
-            display: none;
-            transition: none;
+			position: relative;
+			bottom: 0;
+			z-index: 10;
+			padding: 16px;
+			border-radius: 0 0 16px 16px;
+			display: none;
+			transition: none;
 		}
 
-        .isp-pole .isp-pole__pagination__inner{
-            justify-content: space-between;
-        }
-        .isp-pole .isp-pole__pagination__pages{
-            gap: 8px;
-        }
-        .isp-pole .isp-pole__pagination__item {
-            width: 8px;
-        }
+		.isp-pole .isp-pole__pagination__inner {
+			justify-content: space-between;
+		}
 
-            .isp-pole .isp-pole__pagination__item.is-active{
-                width: 32px;
-            }
+		.isp-pole .isp-pole__pagination__pages {
+			gap: 8px;
+		}
+
+		.isp-pole .isp-pole__pagination__item {
+			width: 8px;
+		}
+
+			.isp-pole .isp-pole__pagination__item.is-active {
+				width: 32px;
+			}
 
 
 		.isp-pole .isp-pole__levels {
-            margin: 0 !important;
+			margin: 0 !important;
 		}
 
 
@@ -6167,105 +6179,107 @@ div [class*="wp-block"].isp-5050 {
 			position: relative;
 			top: 0;
 			transform: none;
-			background: white;
 			z-index: 20;
-            background: var(--sand-3);
-            text-align: center;
-            padding: 16px;
+			background: var(--sand-3);
+			text-align: center;
+			padding: 16px;
 		}
 
-        .isp-pole .isp-pole__level__top{
-            display: none;
-        }
-        .isp-pole .isp-pole__level {
-            margin: 0 !important
-        }
-    
-        .isp-pole .isp-pole__level__content {
-            margin: 0 auto;
-            padding: 0 24px;
-            width: 100%;
-            max-width: 100%;
-        }
-    
-        .isp-pole .isp-pole__image{
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            height: 390px;
-        }
+		.isp-pole .isp-pole__level__top {
+			display: none;
+		}
 
-            .isp-pole .isp-pole__image img {
-                height: 100%;
-                right: auto;
-                left: auto;
-            }
+		.isp-pole .isp-pole__level {
+			margin: 0 !important;
+		}
 
-        .isp-pole .isp-pole__markers {
-            opacity: 0;
-        }
+		.isp-pole .isp-pole__level__content {
+			margin: 0 auto;
+			padding: 0 24px;
+			width: 100%;
+			max-width: 100%;
+		}
 
-            .isp-pole .isp-pole__point > .wp-block-group {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-            }
+		.isp-pole .isp-pole__image {
+			display: flex;
+			justify-content: center;
+			padding: 0;
+			height: 390px;
+		}
 
-            .isp-pole .isp-pole__point > .wp-block-group {
-                padding-right: 20px;
-            }
-                .isp-pole.isp-pole--js .isp-pole__markers .isp-pole__marker {
-                    margin: 0 !important;
-                }
-                .isp-pole.isp-pole--js .isp-pole__markers .isp-pole__marker {
-                    top: 50%;
-                    left: 0;
-                    opacity: 0;
-                }
-    
-                    .isp-pole.isp-pole--js .isp-pole__markers .isp-pole__marker .wp-block-buttons::after {
-                        position: absolute;
-                        left: 40px;
-                        right: calc( 100% - 40px );
-                        top: 50%;
-                        transition: var(--transition);
-                    }
+			.isp-pole .isp-pole__image img {
+				height: 100%;
+				right: auto;
+				left: auto;
+			}
 
-            .isp-pole.isp-pole--open .isp-pole__markers {
-                opacity: 1;
-            }
-            
-            .isp-pole.isp-pole--open .isp-pole__close__mobile { 
-                opacity: 1;
-                pointer-events: all;
-            }
+		.isp-pole .isp-pole__markers {
+			opacity: 0;
+		}
 
-            .isp-pole.isp-pole--open .isp-pole__intro__content {
-                margin-bottom: -100% !important;
-            }
+			.isp-pole .isp-pole__point > .wp-block-group {
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
 
-            .isp-pole.isp-pole--open .isp-pole__intro__content {
-                translate: 0 -100%;
-            }
+			.isp-pole .isp-pole__point > .wp-block-group {
+				padding-right: 20px;
+			}
 
-            .isp-pole.isp-pole--open .isp-pole__marker.isp-pole__marker--active {
-                opacity: 1;
-            }
+				.isp-pole.isp-pole--js .isp-pole__markers .isp-pole__marker {
+					margin: 0 !important;
+				}
 
-                .isp-pole.isp-pole--open .isp-pole__marker.isp-pole__marker--active .wp-block-buttons::after {
-                    right: 0;
-                }
-            
-            .isp-pole.isp-pole--open .isp-pole__image img{
-                left: 35% !important;
-            }
-            
-            .isp-pole.isp-pole--open .isp-pole__image img{
-                height: 839px;
-            }
+				.isp-pole.isp-pole--js .isp-pole__markers .isp-pole__marker {
+					top: 50%;
+					left: 0;
+					opacity: 0;
+				}
 
-            .isp-pole.isp-pole--open .isp-pole__pagination {
-                display: block;
-            }
+					.isp-pole.isp-pole--js .isp-pole__markers .isp-pole__marker .wp-block-buttons::after {
+						position: absolute;
+						left: 40px;
+						right: calc(100% - 40px);
+						top: 50%;
+						transition: var(--transition);
+					}
+
+			.isp-pole.isp-pole--open .isp-pole__markers {
+				opacity: 1;
+			}
+
+			.isp-pole.isp-pole--open .isp-pole__close__mobile {
+				opacity: 1;
+				pointer-events: all;
+			}
+
+			.isp-pole.isp-pole--open .isp-pole__intro__content {
+				margin-bottom: -100% !important;
+			}
+
+			.isp-pole.isp-pole--open .isp-pole__intro__content {
+				translate: 0 -100%;
+			}
+
+			.isp-pole.isp-pole--open .isp-pole__marker.isp-pole__marker--active {
+				opacity: 1;
+			}
+
+				.isp-pole.isp-pole--open .isp-pole__marker.isp-pole__marker--active .wp-block-buttons::after {
+					right: 0;
+				}
+
+			.isp-pole.isp-pole--open .isp-pole__image img {
+				left: 35% !important;
+			}
+
+			.isp-pole.isp-pole--open .isp-pole__image img {
+				height: 839px;
+			}
+
+			.isp-pole.isp-pole--open .isp-pole__pagination {
+				display: block;
+			}
 
 }
 

@@ -25,9 +25,9 @@
 @media (--query-sm) {
 
 	.ubc-isp-nav__container {
-		border-bottom: 1px solid var(--ubc-grey-4, #C3D0DB);
+		border-bottom: 1px solid var(--ubc-grey-4, #c3d0db);
 	}
-	
+
 	.ubc-isp-nav {
 
 		/*  Top Level Styling */

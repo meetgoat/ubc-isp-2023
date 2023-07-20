@@ -661,7 +661,6 @@ var TotemPole = /*#__PURE__*/function () {
   }, {
     key: "scrollImage",
     value: function scrollImage() {
-      console.log(this);
       if (this.isOpen) {
         var markerOffset = parseInt(this.image.offsetHeight * (100 - this.currentLevel.position.percent) / 100);
         this.image.style.translate = "0 calc( -100% + ".concat(this.imageContainer.offsetHeight / 2, "px + ").concat(markerOffset, "px)");

@@ -3,14 +3,14 @@
  */
 export function initializePole() {
 	// Select all elements with class 'isp-pole'
-	const poles = document.querySelectorAll('.isp-pole');
-	if (poles.length === 0) {
+	const poles = document.querySelectorAll( '.isp-pole' );
+	if ( poles.length === 0 ) {
 		return null;
 	}
 	// Attach click event listener to each header element
-	poles.forEach(function (pole) {
-		new TotemPole(pole);
-	});
+	poles.forEach( function( pole ) {
+		new TotemPole( pole );
+	} );
 }
 
 // Classes used in block
@@ -19,7 +19,7 @@ const classNames = {
 };
 
 class TotemPole {
-	constructor(pole) {
+	constructor( pole ) {
 		// Get and set elements for the object.
 		this.container = pole;
 		// Introduction Container.
@@ -33,12 +33,12 @@ class TotemPole {
 		// Explore/Open Button.
 		this.exploreButton = this.container.querySelector( '.isp-pole__explore .wp-element-button' );
 		// TotemPole Image.
-		this.imageContainer = this.container.querySelector('.isp-pole__pole');
-		this.image = this.container.querySelector('.isp-pole__image img');
+		this.imageContainer = this.container.querySelector( '.isp-pole__pole' );
+		this.image = this.container.querySelector( '.isp-pole__image img' );
 		// Level Data.
 		this.levels = this.gatherLevels();
 		// Current Level Data.
-		this.currentLevel = this.levels[0];
+		this.currentLevel = this.levels[ 0 ];
 		// Open Status.
 		this.isOpen = false;
 		// pagination.
@@ -57,7 +57,7 @@ class TotemPole {
 		this.adjustPointPositioning();
 
 		// add a class to the container to show that the script is loaded.
-		this.container.classList.add('isp-pole--js');
+		this.container.classList.add( 'isp-pole--js' );
 	}
 
 	/**
@@ -66,42 +66,42 @@ class TotemPole {
 
 	// Gather all the level data for the pole.
 	gatherLevels() {
-		const markers = this.container.querySelectorAll('.isp-pole__marker');
-		const levels = this.container.querySelectorAll('.isp-pole__level');
+		const markers = this.container.querySelectorAll( '.isp-pole__marker' );
+		const levels = this.container.querySelectorAll( '.isp-pole__level' );
 		const levelData = [];
-		markers.forEach((markerItem, index) => {
-			levelData.push({
+		markers.forEach( ( markerItem, index ) => {
+			levelData.push( {
 				index: parseInt( markerItem.textContent.trim() ),
 				marker: markerItem,
-				level: levels[index],
+				level: levels[ index ],
 				position: {
 					px: markerItem.offsetTop,
-					percent: (markerItem.offsetTop / 590 ) * 100,
+					percent: ( markerItem.offsetTop / 590 ) * 100,
 				},
-			});
-		});
+			} );
+		} );
 		return levelData;
 	}
 
 	// Watches the explore button and opens the pole.
 	watchEvents() {
 		// Set the watcher for the explore button.
-		if (this.exploreButton) {
-			this.exploreButton.addEventListener('click', (e) => {
+		if ( this.exploreButton ) {
+			this.exploreButton.addEventListener( 'click', ( e ) => {
 				e.preventDefault();
 				// Open to the first level when using the exploe button.
-				this.changeLevel(this.levels[0]);
-			});
+				this.changeLevel( this.levels[ 0 ] );
+			} );
 		}
 
 		// Set the watcher for the markers.
-		if (this.levels) {
-			this.levels.forEach((level) => {
-				level.marker.addEventListener('click', (e) => {
+		if ( this.levels ) {
+			this.levels.forEach( ( level ) => {
+				level.marker.addEventListener( 'click', ( e ) => {
 					e.preventDefault();
-					this.changeLevel(level);
-				});
-			});
+					this.changeLevel( level );
+				} );
+			} );
 		}
 	}
 
@@ -118,10 +118,10 @@ class TotemPole {
 
 	// Updates the status of the block to open or closed and updates content.
 	updateStatus() {
-		if (this.isOpen) {
-			this.container.classList.add(classNames.open);
+		if ( this.isOpen ) {
+			this.container.classList.add( classNames.open );
 		} else {
-			this.container.classList.remove(classNames.open);
+			this.container.classList.remove( classNames.open );
 		}
 
 		// Update the level content.
@@ -166,8 +166,7 @@ class TotemPole {
 
 	// scroll the pole to the desired spot for the current level.
 	scrollImage() {
-		console.log(this);
-		if (this.isOpen) {
+		if ( this.isOpen ) {
 			const markerOffset = parseInt( this.image.offsetHeight * ( 100 - this.currentLevel.position.percent ) / 100 );
 			this.image.style.translate = `0 calc( -100% + ${ this.imageContainer.offsetHeight / 2 }px + ${ markerOffset }px)`;
 		} else {
@@ -181,58 +180,58 @@ class TotemPole {
 
 	// Adjust the positioning for the points.
 	adjustPointPositioning() {
-		this.container.querySelectorAll('.isp-pole__point').forEach((point) => {
-			const percentage = ( parseInt(point.style.marginTop) / 590 ) * 100;
+		this.container.querySelectorAll( '.isp-pole__point' ).forEach( ( point ) => {
+			const percentage = ( parseInt( point.style.marginTop ) / 590 ) * 100;
 			point.style.marginTop = 0;
-			point.style.top = `${percentage}%`;
-		});
+			point.style.top = `${ percentage }%`;
+		} );
 	}
 
 	// Add close button (and close functionality).
 	addCloseButton() {
-		const closeButton = document.createElement('button');
-		closeButton.classList.add('isp-pole__close');
+		const closeButton = document.createElement( 'button' );
+		closeButton.classList.add( 'isp-pole__close' );
 		closeButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
 			<path d="M15 24.5C20.2467 24.5 24.5 20.2467 24.5 15C24.5 9.75329 20.2467 5.5 15 5.5C9.75329 5.5 5.5 9.75329 5.5 15C5.5 20.2467 9.75329 24.5 15 24.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 			<path d="M18.5 15H11.5M22.5 22.5L28.5 28.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 			</svg>
 		`;
-		closeButton.addEventListener('click', () => {
+		closeButton.addEventListener( 'click', () => {
 			this.isOpen = false;
 			this.updateStatus();
-		});
-		this.container.appendChild(closeButton);
+		} );
+		this.container.appendChild( closeButton );
 
 		// Mobile Close Button
-		const mobileCloseButton = document.createElement('button');
-		mobileCloseButton.classList.add('isp-pole__close__mobile');
+		const mobileCloseButton = document.createElement( 'button' );
+		mobileCloseButton.classList.add( 'isp-pole__close__mobile' );
 		mobileCloseButton.innerHTML = `BACK <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M11.25 18.375C15.185 18.375 18.375 15.185 18.375 11.25C18.375 7.31497 15.185 4.125 11.25 4.125C7.31497 4.125 4.125 7.31497 4.125 11.25C4.125 15.185 7.31497 18.375 11.25 18.375Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 			<path d="M13.875 11.25H8.625M16.875 16.875L21.375 21.375" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 		</svg>`;
-		mobileCloseButton.addEventListener('click', () => {
+		mobileCloseButton.addEventListener( 'click', () => {
 			this.isOpen = false;
 			this.updateStatus();
-		});
-		this.imageContainer.appendChild(mobileCloseButton);
+		} );
+		this.imageContainer.appendChild( mobileCloseButton );
 	}
 
 	// Add pagination for the block and functionality.
 	addPagination() {
 		// Create the pagination elements.
-		const pagination = document.createElement('div');
-		pagination.classList.add('isp-pole__pagination');
+		const pagination = document.createElement( 'div' );
+		pagination.classList.add( 'isp-pole__pagination' );
 
 		// Create the pagination inner elements.
-		const paginationInner = document.createElement('div');
-		paginationInner.classList.add('isp-pole__pagination__inner');
+		const paginationInner = document.createElement( 'div' );
+		paginationInner.classList.add( 'isp-pole__pagination__inner' );
 
 		// Create the pagination pages container.
-		const paginationPages = document.createElement('div');
-		paginationPages.classList.add('isp-pole__pagination__pages');
+		const paginationPages = document.createElement( 'div' );
+		paginationPages.classList.add( 'isp-pole__pagination__pages' );
 
 		// Create the pagination previous button.
-		this.pagination.previous = document.createElement('button');
+		this.pagination.previous = document.createElement( 'button' );
 		this.pagination.previous.classList.add(
 			'isp-pole__pagination__previous'
 		);
@@ -241,54 +240,54 @@ class TotemPole {
 		</svg>`;
 
 		// add the event listener to the previous button.
-		this.pagination.previous.addEventListener('click', (e) => {
+		this.pagination.previous.addEventListener( 'click', ( e ) => {
 			e.preventDefault();
-			this.changeLevel(Math.max( this.currentLevel.index - 1, 1 ));
-		});
+			this.changeLevel( Math.max( this.currentLevel.index - 1, 1 ) );
+		} );
 
 		// Create the pagination next button.
-		this.pagination.next = document.createElement('button');
-		this.pagination.next.classList.add('isp-pole__pagination__next');
+		this.pagination.next = document.createElement( 'button' );
+		this.pagination.next.classList.add( 'isp-pole__pagination__next' );
 		this.pagination.next.innerHTML = `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M14.0003 19.3333L19.3337 14L14.0003 8.66663L12.1337 10.5333L14.267 12.6666H8.66699V15.3333H14.267L12.1337 17.4666L14.0003 19.3333ZM14.0003 27.3333C12.1559 27.3333 10.4225 26.9831 8.80033 26.2826C7.1781 25.5831 5.76699 24.6333 4.56699 23.4333C3.36699 22.2333 2.41721 20.8222 1.71766 19.2C1.01721 17.5777 0.666992 15.8444 0.666992 14C0.666992 12.1555 1.01721 10.4222 1.71766 8.79996C2.41721 7.17774 3.36699 5.76663 4.56699 4.56663C5.76699 3.36663 7.1781 2.4164 8.80033 1.71596C10.4225 1.0164 12.1559 0.666626 14.0003 0.666626C15.8448 0.666626 17.5781 1.0164 19.2003 1.71596C20.8225 2.4164 22.2337 3.36663 23.4337 4.56663C24.6337 5.76663 25.5834 7.17774 26.283 8.79996C26.9834 10.4222 27.3337 12.1555 27.3337 14C27.3337 15.8444 26.9834 17.5777 26.283 19.2C25.5834 20.8222 24.6337 22.2333 23.4337 23.4333C22.2337 24.6333 20.8225 25.5831 19.2003 26.2826C17.5781 26.9831 15.8448 27.3333 14.0003 27.3333Z" fill="currentColor"/>
 		</svg>`;
 
 		// add the event listener to the next button.
-		this.pagination.next.addEventListener('click', (e) => {
+		this.pagination.next.addEventListener( 'click', ( e ) => {
 			e.preventDefault();
-			this.changeLevel(Math.min( this.currentLevel.index + 1, this.levels.length ));
-		});
+			this.changeLevel( Math.min( this.currentLevel.index + 1, this.levels.length ) );
+		} );
 
 		// Create the buttons for each page
-		this.levels.forEach((level) => {
+		this.levels.forEach( ( level ) => {
 			// Create the pagination item.
-			const paginationItem = document.createElement('button');
-			paginationItem.classList.add('isp-pole__pagination__item');
-			paginationItem.setAttribute('data-level', level.index);
+			const paginationItem = document.createElement( 'button' );
+			paginationItem.classList.add( 'isp-pole__pagination__item' );
+			paginationItem.setAttribute( 'data-level', level.index );
 			paginationItem.textContent = level.index;
 
 			// add the event listener to the pagination item.
-			paginationItem.addEventListener('click', (e) => {
+			paginationItem.addEventListener( 'click', ( e ) => {
 				e.preventDefault();
-				this.changeLevel(level);
-			});
+				this.changeLevel( level );
+			} );
 
 			// Add the pagination item to the pagination pages.
-			paginationPages.appendChild(paginationItem);
-		});
+			paginationPages.appendChild( paginationItem );
+		} );
 
 		// Store the pagination pages in the class.
 		this.pagination.pages = paginationPages.children;
 
 		// Append the previous to the pagination container.
-		paginationInner.appendChild(this.pagination.previous);
+		paginationInner.appendChild( this.pagination.previous );
 		// Append the pagination pages to the pagination container.
-		paginationInner.appendChild(paginationPages);
+		paginationInner.appendChild( paginationPages );
 		// Append the next to the pagination container.
-		paginationInner.appendChild(this.pagination.next);
+		paginationInner.appendChild( this.pagination.next );
 		// Append the pagination container to the pagination.
-		pagination.appendChild(paginationInner);
+		pagination.appendChild( paginationInner );
 		// Append the pagination to the container.
-		this.container.appendChild(pagination);
+		this.container.appendChild( pagination );
 	}
 }
