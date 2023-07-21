@@ -12,12 +12,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initializeAccordions: () => (/* binding */ initializeAccordions)
 /* harmony export */ });
+/* harmony import */ var _utilities_slideToggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/slideToggle */ "./assets/js/utilities/slideToggle.js");
+
+
 /**
  * Initializes accordion functionality for elements with the class 'isp-accordion--header'.
  *
  */
-
-/* global jQuery */
 
 /**
  * Initializes the accordions by attaching event listeners to the headers.
@@ -37,7 +38,7 @@ function initializeAccordions() {
 // Function to toggle the 'isp-accordion--active' class
 function toggleAccordion() {
   this.classList.toggle('isp-accordion--active');
-  jQuery(this.nextElementSibling).slideToggle();
+  (0,_utilities_slideToggle__WEBPACK_IMPORTED_MODULE_0__.slideToggle)(this.nextElementSibling);
 }
 
 /***/ }),
@@ -348,7 +349,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initializeGoals: () => (/* binding */ initializeGoals)
 /* harmony export */ });
-/* global jQuery */
+/* harmony import */ var _utilities_slideToggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/slideToggle */ "./assets/js/utilities/slideToggle.js");
 
 function initializeGoals() {
   var goalsElements = document.querySelectorAll('.isp-goals');
@@ -364,27 +365,15 @@ var Goals = {
   container: null,
   slides: null,
   buttons: null,
-  buttonGroup: null,
   init: function init(containerElement) {
-    var _this = this;
     this.wrapper = containerElement;
     this.carousel = containerElement.querySelector('.isp-goals__slides');
     this.slides = containerElement.querySelectorAll('.isp-goals__slide');
+    this.setupContainer();
     this.getOnLoadSlide();
     this.setupButtons();
-    this.buttons = this.buttonGroup.querySelectorAll('.isp-goals__button');
-    this.setupContainer();
     this.setupAccordionToggle();
     this.setCurrentSlide();
-    jQuery(this.container).on('click', '.isp-goals__button', function (e) {
-      e.preventDefault();
-      var button = jQuery(e.currentTarget);
-      var buttonIndex = button.data('index');
-      if (buttonIndex !== _this.currentSlide) {
-        _this.currentSlide = buttonIndex;
-        _this.setCurrentSlide();
-      }
-    });
   },
   getOnLoadSlide: function getOnLoadSlide() {
     var loadHash = window.location.hash;
@@ -394,46 +383,84 @@ var Goals = {
         var slideHash = '#' + slide.getAttribute('id');
         if (slideHash === loadHash) {
           this.currentSlide = i;
-          jQuery('html, body').animate({
-            scrollTop: jQuery(this.wrapper).offset().top - 80
-          }, 500);
+          window.scrollTo({
+            top: this.wrapper.offsetTop - 80,
+            behavior: 'smooth'
+          });
         }
       }
     }
   },
+  // Add container element to wrap the carousel.
   setupContainer: function setupContainer() {
+    // Create the container.
     this.container = document.createElement('div');
     this.container.classList.add('isp-goals__container');
-    this.container.appendChild(this.buttonGroup);
+    // Move the carousel to the container.
     this.container.appendChild(this.carousel);
+    // Add the container to the wrapper.
     this.wrapper.appendChild(this.container);
   },
   setupButtons: function setupButtons() {
+    var _this = this;
     var buttonGroup = document.createElement('div');
     buttonGroup.classList.add('isp-goals__buttons');
-    for (var i = 0; i < this.slides.length; i++) {
-      var slide = this.slides[i];
+    var _loop = function _loop() {
+      var slide = _this.slides[i];
+
+      // Create the button for this goal.
       var button = document.createElement('button');
       button.classList.add('isp-goals__button');
       button.setAttribute('data-index', i);
+
+      // Add event listener to button
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        var buttonIndex = button.getAttribute('data-index');
+        if (buttonIndex !== _this.currentSlide) {
+          _this.currentSlide = parseInt(buttonIndex);
+          _this.setCurrentSlide();
+        }
+      });
+
+      // Get the eyebrow test.
       var eyebrowText = slide.querySelector('.isp-goals__header__eyebrow');
-      var titleText = slide.querySelector('.isp-goals__header__title');
+      // If the eyebrow text is set, add it to the button.
       if (eyebrowText) {
-        var eyebrow = document.createElement('h6');
-        eyebrow.classList.add('isp-goals__button__eyebrow');
-        eyebrow.textContent = eyebrowText ? eyebrowText.textContent : null;
-        button.appendChild(eyebrow);
+        // Create element.
+        var eyebrowElement = document.createElement('h6');
+        // Add class.
+        eyebrowElement.classList.add('isp-goals__button__eyebrow');
+        // Add content.
+        eyebrowElement.textContent = eyebrowText.textContent;
+        // Add to button.
+        button.appendChild(eyebrowElement);
       }
+
+      // Get the title text.
+      var titleText = slide.querySelector('.isp-goals__header__title');
+      // If the title text is set, add it to the button.
       if (titleText) {
-        var title = document.createElement('h3');
-        title.classList.add('isp-goals__button__title');
-        title.textContent = titleText ? titleText.textContent : null;
-        button.appendChild(title);
-        button.appendChild(title);
+        // Create element.
+        var titleElement = document.createElement('h3');
+        // Add class.
+        titleElement.classList.add('isp-goals__button__title');
+        // Add content.
+        titleElement.textContent = titleText.textContent;
+        // Add to button.
+        button.appendChild(titleElement);
       }
+      // Add button to button group.
       buttonGroup.appendChild(button);
+    };
+    for (var i = 0; i < this.slides.length; i++) {
+      _loop();
     }
-    this.buttonGroup = buttonGroup;
+    // Store the group of buttons.
+    this.buttons = buttonGroup.children;
+
+    // Add the button group to the container.
+    this.container.prepend(buttonGroup);
   },
   setCurrentSlide: function setCurrentSlide() {
     for (var i = 0; i < this.slides.length; i++) {
@@ -452,12 +479,24 @@ var Goals = {
         button.classList.remove('is-active');
       }
     }
-    // window.location.hash = this.slides[this.currentSlide].getAttribute("id");
   },
   setupAccordionToggle: function setupAccordionToggle() {
-    jQuery(this.container).find('.isp-goals__header').append('<button class="isp-goals__toggle"></button>');
-    jQuery(this.container).on('click', '.isp-goals__toggle', function (e) {
-      jQuery(e.target).closest('.isp-goals__slide').toggleClass('is-goal--open').find('.isp-goals__body').slideToggle();
+    var goalsToggleElement = document.createElement('button');
+    goalsToggleElement.classList.add('isp-goals__toggle');
+    goalsToggleElement.setAttribute('aria-label', 'Toggle Goal');
+    this.container.addEventListener('click', function (e) {
+      if (e.target.classList.contains('isp-goals__toggle')) {
+        e.preventDefault();
+        var slide = e.target.closest('.isp-goals__slide');
+        if (slide) {
+          slide.classList.toggle('is-goal--open');
+          var body = slide.querySelector('.isp-goals__body');
+          (0,_utilities_slideToggle__WEBPACK_IMPORTED_MODULE_0__.slideToggle)(body);
+        }
+      }
+    });
+    this.container.querySelectorAll('.isp-goals__header').forEach(function (element) {
+      element.appendChild(goalsToggleElement.cloneNode(true));
     });
   }
 };
@@ -1085,14 +1124,16 @@ function initializeSubMenu() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _blocks_accordions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/accordions.js */ "./assets/js/blocks/accordions.js");
-/* harmony import */ var _blocks_teamMember_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/teamMember.js */ "./assets/js/blocks/teamMember.js");
-/* harmony import */ var _blocks_timeline_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/timeline.js */ "./assets/js/blocks/timeline.js");
-/* harmony import */ var _blocks_goals_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/goals.js */ "./assets/js/blocks/goals.js");
-/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/menu.js */ "./assets/js/components/menu.js");
-/* harmony import */ var _blocks_postSlider_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/postSlider.js */ "./assets/js/blocks/postSlider.js");
-/* harmony import */ var _blocks_faqs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/faqs.js */ "./assets/js/blocks/faqs.js");
-/* harmony import */ var _blocks_pole_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/pole.js */ "./assets/js/blocks/pole.js");
+/* harmony import */ var _utilities_slideToggle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utilities/slideToggle.js */ "./assets/js/utilities/slideToggle.js");
+/* harmony import */ var _blocks_accordions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/accordions.js */ "./assets/js/blocks/accordions.js");
+/* harmony import */ var _blocks_teamMember_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/teamMember.js */ "./assets/js/blocks/teamMember.js");
+/* harmony import */ var _blocks_timeline_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/timeline.js */ "./assets/js/blocks/timeline.js");
+/* harmony import */ var _blocks_goals_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/goals.js */ "./assets/js/blocks/goals.js");
+/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/menu.js */ "./assets/js/components/menu.js");
+/* harmony import */ var _blocks_postSlider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/postSlider.js */ "./assets/js/blocks/postSlider.js");
+/* harmony import */ var _blocks_faqs_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/faqs.js */ "./assets/js/blocks/faqs.js");
+/* harmony import */ var _blocks_pole_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/pole.js */ "./assets/js/blocks/pole.js");
+
 
 
 
@@ -1103,14 +1144,110 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Call the initializeAccordions function to initialize the accordions
-(0,_blocks_accordions_js__WEBPACK_IMPORTED_MODULE_0__.initializeAccordions)();
-(0,_blocks_teamMember_js__WEBPACK_IMPORTED_MODULE_1__.initializeTeamMembers)();
-(0,_components_menu_js__WEBPACK_IMPORTED_MODULE_4__.initializeSubMenu)();
-(0,_blocks_timeline_js__WEBPACK_IMPORTED_MODULE_2__.initializeTimelines)();
-(0,_blocks_goals_js__WEBPACK_IMPORTED_MODULE_3__.initializeGoals)();
-(0,_blocks_postSlider_js__WEBPACK_IMPORTED_MODULE_5__.initializePostSliders)();
-(0,_blocks_faqs_js__WEBPACK_IMPORTED_MODULE_6__.initializeFAQs)();
-(0,_blocks_pole_js__WEBPACK_IMPORTED_MODULE_7__.initializePole)();
+(0,_blocks_accordions_js__WEBPACK_IMPORTED_MODULE_1__.initializeAccordions)();
+(0,_blocks_teamMember_js__WEBPACK_IMPORTED_MODULE_2__.initializeTeamMembers)();
+(0,_components_menu_js__WEBPACK_IMPORTED_MODULE_5__.initializeSubMenu)();
+(0,_blocks_timeline_js__WEBPACK_IMPORTED_MODULE_3__.initializeTimelines)();
+(0,_blocks_goals_js__WEBPACK_IMPORTED_MODULE_4__.initializeGoals)();
+(0,_blocks_postSlider_js__WEBPACK_IMPORTED_MODULE_6__.initializePostSliders)();
+(0,_blocks_faqs_js__WEBPACK_IMPORTED_MODULE_7__.initializeFAQs)();
+(0,_blocks_pole_js__WEBPACK_IMPORTED_MODULE_8__.initializePole)();
+
+/***/ }),
+
+/***/ "./assets/js/utilities/slideToggle.js":
+/*!********************************************!*\
+  !*** ./assets/js/utilities/slideToggle.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   slideDown: () => (/* binding */ slideDown),
+/* harmony export */   slideToggle: () => (/* binding */ slideToggle),
+/* harmony export */   slideUp: () => (/* binding */ slideUp)
+/* harmony export */ });
+// Slide Toggle Utility.
+function slideToggle(element, duration, callback) {
+  if (element.clientHeight === 0) {
+    slideElement(element, duration, callback, true);
+  } else {
+    slideElement(element, duration, callback);
+  }
+}
+
+// Slide Up Utility.
+function slideUp(element, duration, callback) {
+  slideElement(element, duration, callback);
+}
+
+// Slide Down Utility.
+function slideDown(element, duration, callback) {
+  slideElement(element, duration, callback, true);
+}
+
+// Slide Element Utility.
+function slideElement(el, duration, callback, isDown) {
+  if (typeof duration === 'undefined') {
+    duration = 400;
+  }
+  if (typeof isDown === 'undefined') {
+    isDown = false;
+  }
+  el.style.overflow = 'hidden';
+  if (isDown) {
+    el.style.display = 'block';
+  }
+  var elStyles = window.getComputedStyle(el);
+  var elHeight = parseFloat(elStyles.getPropertyValue('height'));
+  var elPaddingTop = parseFloat(elStyles.getPropertyValue('padding-top'));
+  var elPaddingBottom = parseFloat(elStyles.getPropertyValue('padding-bottom'));
+  var elMarginTop = parseFloat(elStyles.getPropertyValue('margin-top'));
+  var elMarginBottom = parseFloat(elStyles.getPropertyValue('margin-bottom'));
+  var stepHeight = elHeight / duration;
+  var stepPaddingTop = elPaddingTop / duration;
+  var stepPaddingBottom = elPaddingBottom / duration;
+  var stepMarginTop = elMarginTop / duration;
+  var stepMarginBottom = elMarginBottom / duration;
+  var start;
+  function step(timestamp) {
+    if (start === undefined) {
+      start = timestamp;
+    }
+    var elapsed = timestamp - start;
+    if (isDown) {
+      el.style.height = stepHeight * elapsed + 'px';
+      el.style.paddingTop = stepPaddingTop * elapsed + 'px';
+      el.style.paddingBottom = stepPaddingBottom * elapsed + 'px';
+      el.style.marginTop = stepMarginTop * elapsed + 'px';
+      el.style.marginBottom = stepMarginBottom * elapsed + 'px';
+    } else {
+      el.style.height = elHeight - stepHeight * elapsed + 'px';
+      el.style.paddingTop = elPaddingTop - stepPaddingTop * elapsed + 'px';
+      el.style.paddingBottom = elPaddingBottom - stepPaddingBottom * elapsed + 'px';
+      el.style.marginTop = elMarginTop - stepMarginTop * elapsed + 'px';
+      el.style.marginBottom = elMarginBottom - stepMarginBottom * elapsed + 'px';
+    }
+    if (elapsed >= duration) {
+      el.style.height = '';
+      el.style.paddingTop = '';
+      el.style.paddingBottom = '';
+      el.style.marginTop = '';
+      el.style.marginBottom = '';
+      el.style.overflow = '';
+      if (!isDown) {
+        el.style.display = 'none';
+      }
+      if (typeof callback === 'function') {
+        callback();
+      }
+    } else {
+      window.requestAnimationFrame(step);
+    }
+  }
+  window.requestAnimationFrame(step);
+}
 
 /***/ }),
 

@@ -1,3 +1,4 @@
+import './utilities/slideToggle.js';
 import { initializeAccordions } from './blocks/accordions.js';
 import { initializeTeamMembers } from './blocks/teamMember.js';
 import { initializeTimelines } from './blocks/timeline.js';
