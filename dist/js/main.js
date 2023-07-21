@@ -940,8 +940,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initializeTeamMembers: () => (/* binding */ initializeTeamMembers)
 /* harmony export */ });
 /* harmony import */ var simpleBar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! simpleBar */ "./node_modules/simpleBar/dist/index.mjs");
+/* harmony import */ var _utilities_slideToggle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/slideToggle */ "./assets/js/utilities/slideToggle.js");
 
-/* global jQuery */
 
 function initializeTeamMembers() {
   document.addEventListener('DOMContentLoaded', function () {
@@ -961,21 +961,23 @@ var TeamMember = {
   },
   initAccordion: function initAccordion(teamElement) {
     this.addToggleButton(teamElement);
-    var toggle = teamElement.querySelector('.isp-team__toggle');
-    var body = teamElement.querySelector('.isp-team__body');
-    var bodyScroll = teamElement.querySelector('.isp-team__body__inner');
-    new simpleBar__WEBPACK_IMPORTED_MODULE_0__["default"](bodyScroll, {
+    new simpleBar__WEBPACK_IMPORTED_MODULE_0__["default"](teamElement.querySelector('.isp-team__body__inner'), {
       scrollbarMaxSize: 80
-    });
-    toggle.addEventListener('click', function () {
-      toggle.classList.toggle('is_active');
-      jQuery(body).slideToggle();
     });
   },
   addToggleButton: function addToggleButton(teamElement) {
     var buttonContainer = teamElement.querySelector('.isp-team__button-column');
     if (buttonContainer) {
-      jQuery("<button class=\"isp-team__toggle button-tertiary\">\n\t\t\t<span class=\"isp-team__toggle__text\">\n\t\t\t\t<span class=\"isp-team__toggle--open\">Read More</span>\n\t\t\t\t<span class=\"isp-team__toggle--close\">Close</span>\n\t\t\t</span>\n\t\t\t<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t<path d=\"M19 12.9981H13V18.9981H11V12.9981H5V10.9981H11V4.99814H13V10.9981H19V12.9981Z\" fill=\"currentColor\" />\n\t\t\t</svg>\n\t\t\t</button>").appendTo(buttonContainer);
+      var buttonElement = document.createElement('button');
+      buttonElement.classList.add('isp-team__toggle', 'button-tertiary');
+      buttonElement.setAttribute('aria-label', 'Toggle Team Member');
+      buttonElement.innerHTML = "<span class=\"isp-team__toggle__text\">\n\t\t\t\t\t<span class=\"isp-team__toggle--open\">Read More</span>\n\t\t\t\t\t<span class=\"isp-team__toggle--close\">Close</span>\n\t\t\t\t</span>\n\t\t\t\t<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t<path d=\"M19 12.9981H13V18.9981H11V12.9981H5V10.9981H11V4.99814H13V10.9981H19V12.9981Z\" fill=\"currentColor\" />\n\t\t\t\t</svg>";
+      var teamBodyElement = teamElement.querySelector('.isp-team__body');
+      buttonElement.addEventListener('click', function () {
+        buttonElement.classList.toggle('is_active');
+        (0,_utilities_slideToggle__WEBPACK_IMPORTED_MODULE_1__.slideToggle)(teamBodyElement);
+      });
+      buttonContainer.appendChild(buttonElement);
     }
   }
 };
