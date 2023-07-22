@@ -4977,6 +4977,19 @@ div [class*="wp-block"].isp-5050 {
 	margin-bottom: 80px !important;
 }
 
+.isp-timeline__decade {
+	position: relative;
+}
+.isp-timeline__scroll-trigger{
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 10px;
+	opacity: 1;
+	background-color: red;
+	pointer-events: none;
+	z-index: 99;
+}
 .isp-timeline__buttons {
 	position: sticky;
 	z-index: 100;
@@ -5061,9 +5074,12 @@ div [class*="wp-block"].isp-5050 {
 	}
 
 .isp-timeline__decade__intro {
+	margin: 0 !important;
+}
+
+.isp-timeline__decade__intro {
 	border-radius: 0 8px 56px 0;
 	padding: 8px;
-	margin: 32px 0;
 }
 
 @media (max-width: 979px) {

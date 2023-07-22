@@ -995,101 +995,196 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initializeTimelines: () => (/* binding */ initializeTimelines)
 /* harmony export */ });
-/* global jQuery */
-
 function initializeTimelines() {
   document.addEventListener('DOMContentLoaded', function () {
-    jQuery('.isp-timeline').each(function () {
-      Timeline.init(jQuery(this));
+    document.querySelectorAll('.isp-timeline').forEach(function (timelineElement) {
+      Timeline.init(timelineElement);
     });
   });
 }
 var Timeline = {
+  navigationOffset: 81,
   timeline: null,
   decades: null,
   buttons: null,
+  scroll: {
+    oldPosition: null,
+    direction: false
+  },
+  // Setup the timeline.
   init: function init(timlineElement) {
     this.timeline = timlineElement;
-    this.decades = this.timeline.find('.isp-timeline__decade');
-    this.createButtons();
-    this.setupObserver();
+
+    // gather decades into an Array.
+    this.decades = Array.from(this.timeline.querySelectorAll('.isp-timeline__decade'));
+
+    // create the decade navigation at top.
+    this.createNavigation();
+
+    // Setup the observer to watch for decade changes.
+    this.setupObservers();
   },
-  createButtons: function createButtons() {
+  // Create buttons for each decade.
+  createNavigation: function createNavigation() {
+    // Create the buttons container.
+    var buttonsWrap = document.createElement('div');
+    buttonsWrap.classList.add('isp-timeline__buttons', 'alignfull');
+
+    // Create the buttons inner container.
+    var buttonsInner = document.createElement('div');
+    buttonsInner.classList.add('isp-timeline__buttons__inner');
+
+    // Create the buttons container.
+    var buttonsContainer = document.createElement('div');
+    buttonsContainer.classList.add('isp-timeline__button__container');
+
+    // Loop through the decades and create a button for each.
+    this.decades.forEach(function (decade, decadeIndex) {
+      //  Create the button.
+      var decadeButton = document.createElement('button');
+      // Add the button class.
+      decadeButton.classList.add('isp-timeline__button');
+      // Add the decade index to the button.
+      decadeButton.dataset.decade = decadeIndex;
+      // Add the decade title to the button.
+      decadeButton.textContent = decade.querySelector('.isp-timeline__decade__title').textContent;
+      // Add the click event to the button.
+      decadeButton.addEventListener('click', function () {
+        Timeline.scrollNavigationToDecade(decadeButton);
+        Timeline.scrollContentToDecade(decade);
+      });
+      // Add the button to the container.
+      buttonsContainer.appendChild(decadeButton);
+    });
+
+    // Store the buttons.
+    this.buttons = buttonsContainer.childNodes;
+    // Add the buttons to the container.
+    buttonsInner.appendChild(buttonsContainer);
+    buttonsWrap.appendChild(buttonsInner);
+
+    // Add to the timeline.
+    this.timeline.prepend(buttonsWrap);
+
+    // Set the navigationOffset to match the height of the buttons.
+    this.navigationOffset = buttonsWrap.offsetHeight;
+  },
+  // Scroll the decade navigation to the current decade
+  scrollNavigationToDecade: function scrollNavigationToDecade(destinationButton) {
+    // Loop through and add/remove decade active classes as needed.
+    this.buttons.forEach(function (button) {
+      // If this is the target button,
+      if (button === destinationButton) {
+        // Add the active class.
+        button.classList.add('is-active');
+        // Set the  button left position.
+        button.parentNode.style.left = -1 * button.offsetLeft + 'px';
+      } else {
+        // Otherwise, remove the active class.
+        button.classList.remove('is-active');
+      }
+    });
+  },
+  // Scroll the content area to a specific decade.
+  scrollContentToDecade: function scrollContentToDecade(decadeElement) {
+    window.scrollTo({
+      top: decadeElement.getBoundingClientRect().top + window.pageYOffset - 80,
+      behavior: 'smooth'
+    });
+  },
+  // Setup the observer to watch for decade changes.
+  setupObservers: function setupObservers() {
     var _this = this;
-    this.buttons = this.decades.map(function (index, element) {
-      return jQuery('<button/>', {
-        "class": 'isp-timeline__button',
-        'data-decade': index,
-        text: jQuery(element).find('.isp-timeline__decade__title').text(),
-        click: _this.handleButtonClick
-      })[0];
-    });
-    var buttonsWrap = jQuery('<div/>', {
-      "class": 'isp-timeline__buttons alignfull'
-    });
-    var buttonsInner = jQuery('<div/>', {
-      "class": 'isp-timeline__buttons__inner'
-    });
-    var buttonsContainer = jQuery('<div/>', {
-      "class": 'isp-timeline__button__container'
-    });
-    this.buttons.prependTo(buttonsContainer.prependTo(buttonsInner.prependTo(buttonsWrap.prependTo(this.timeline))));
-  },
-  handleButtonClick: function handleButtonClick(event) {
-    var button = jQuery(event.target);
-    Timeline.scrollToButton(button);
-    Timeline.scrollToDecade(button);
-  },
-  scrollToButton: function scrollToButton(button) {
-    jQuery('.isp-timeline__button').removeClass('is-active');
-    button.addClass('is-active');
-    var buttonOffset = button.position().left;
-    var buttonContainer = button.parent();
-    buttonContainer.css({
-      left: -buttonOffset - button.width() / 2 - 7
-    });
-  },
-  scrollToDecade: function scrollToDecade(button) {
-    var decade = button.data('decade');
-    var decadeElement = jQuery(Timeline.decades[decade]);
-    var offset = jQuery(decadeElement).offset().top;
-    jQuery('html, body').animate({
-      scrollTop: offset - 80
-    }, 500);
-  },
-  setupObserver: function setupObserver() {
-    var options = {
-      rootMargin: '-81px 0px 0px 0px ',
-      threshold: 1.0
+    // Observer Options.
+    var observerOptions = {
+      rootMargin: "".concat(this.navigationOffset * -1, "px"),
+      threshold: 1
     };
-    var downCallback = function downCallback(entries) {
-      entries.forEach(function (entry) {
-        if (entry.boundingClientRect.top < 81) {
-          if (entry.isIntersecting) {} else {
-            var timelineButton = jQuery('.isp-timeline__button[data-decade=' + jQuery(entry.target).index() + ']');
-            Timeline.scrollToButton(timelineButton);
-          }
-        }
-      });
-    };
-    var upCallback = function upCallback(entries) {
-      entries.forEach(function (entry) {
-        if (entry.boundingClientRect.top > 81 && entry.boundingClientRect.top < 500) {
-          if (entry.isIntersecting) {
-            var decade = jQuery(entry.target).closest('.isp-timeline__decade');
-            var timelineButton = jQuery('.isp-timeline__button[data-decade=' + decade.index() + ']');
-            Timeline.scrollToButton(timelineButton);
-          }
-        }
-      });
-    };
-    var downObserver = new IntersectionObserver(downCallback, options);
-    var upObserver = new IntersectionObserver(upCallback, options);
-    this.decades.each(function (index, element) {
-      downObserver.observe(element);
+
+    // Create the observer for scrolling the page.
+    var scrollObserver = new IntersectionObserver(function (targetDecades) {
+      _this.onIntersect(targetDecades);
+    }, observerOptions);
+
+    // Add the trigger elements to the decades.
+    this.decades.forEach(function (decade) {
+      // Observe the new scroll triggers.
+      scrollObserver.observe(decade);
     });
-    jQuery('.isp-timeline__year:last-child').each(function (index, element) {
-      upObserver.observe(element);
+  },
+  // Handle the decades intersecting the scroll trigger.
+  onIntersect: function onIntersect(decades) {
+    var _this2 = this;
+    console.log('test');
+    console.log(decades);
+    // Set scroll direction.
+    this.setScrollDirection();
+    // Loop through each decade.
+    decades.forEach(function (decade) {
+      // Check if the target decade is active.
+      if (_this2.isTriggerActive(decade)) {
+        // Get the target section.
+        _this2.setActiveDecade(_this2.getTargetDecade(decade));
+      }
+    });
+  },
+  // Set scroll direction.
+  setScrollDirection: function setScrollDirection() {
+    // Get the scroll direction.
+
+    console.log("Position ++");
+    console.log('old: ' + this.scroll.oldPosition);
+    console.log('new: ' + window.scrollY);
+    console.log('old direction: ' + this.scroll.direction);
+    this.scroll.direction = window.scrollY > this.scroll.oldPosition ? 'down' : 'up';
+    this.scroll.oldPosition = window.scrollY;
+    console.log('new direction: ' + this.scroll.direction);
+    console.log("Position --");
+  },
+  // Get the target decade.
+  getTargetDecade: function getTargetDecade(decade) {
+    // If the scroll direction is up, return the current decade.
+    if (this.scroll.direction === 'up') {
+      return decade.target;
+    }
+    // Get the next decade index unless it's the last decade.
+    var targetDecade = Math.min(this.decades.findIndex(function (section) {
+      return section === decade.target;
+    }) + 1, this.decades.length - 1);
+    // return the target decade.
+    return this.decades[targetDecade];
+  },
+  // Check if the trigger is active.
+  isTriggerActive: function isTriggerActive(decade) {
+    // When scrolling down the trigger is active when the decade is not intersecting.
+    if (this.scroll.direction === 'down' && !decade.isIntersecting) {
+      console.log('down');
+      console.log(decade);
+      return true;
+    }
+
+    // When scrolling up the trigger is active when the decade is intersecting.
+    if (this.scroll.direction === 'up' && decade.isIntersecting) {
+      console.log('up');
+      console.log(decade);
+      return true;
+    }
+
+    // Otherwise, the trigger is not active.
+    return false;
+  },
+  // Set the active decade.
+  setActiveDecade: function setActiveDecade(targetDecade) {
+    var _this3 = this;
+    // Loop through the decades and find the one that matches the target.
+    this.decades.forEach(function (decade, index) {
+      // If the target matches the decade, scroll the navigation to the decade.
+      if (targetDecade === decade) {
+        // Get the button for the decade.
+        var timelineButton = _this3.buttons[index];
+        // Scroll the navigation to the decade.
+        Timeline.scrollNavigationToDecade(timelineButton);
+      }
     });
   }
 };

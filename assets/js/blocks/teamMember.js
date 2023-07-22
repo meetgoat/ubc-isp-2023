@@ -28,9 +28,9 @@ const TeamMember = {
 	addToggleButton( teamElement ) {
 		const buttonContainer = teamElement.querySelector( '.isp-team__button-column' );
 		if ( buttonContainer ) {
-			const buttonElement = document.createElement('button');
-			buttonElement.classList.add('isp-team__toggle', 'button-tertiary');
-			buttonElement.setAttribute('aria-label', 'Toggle Team Member');
+			const buttonElement = document.createElement( 'button' );
+			buttonElement.classList.add( 'isp-team__toggle', 'button-tertiary' );
+			buttonElement.setAttribute( 'aria-label', 'Toggle Team Member' );
 			buttonElement.innerHTML =
 				`<span class="isp-team__toggle__text">
 					<span class="isp-team__toggle--open">Read More</span>
@@ -40,13 +40,13 @@ const TeamMember = {
 					<path d="M19 12.9981H13V18.9981H11V12.9981H5V10.9981H11V4.99814H13V10.9981H19V12.9981Z" fill="currentColor" />
 				</svg>`;
 
-			const teamBodyElement = teamElement.querySelector('.isp-team__body');
+			const teamBodyElement = teamElement.querySelector( '.isp-team__body' );
 			buttonElement.addEventListener( 'click', () => {
-				buttonElement.classList.toggle('is_active');
+				buttonElement.classList.toggle( 'is_active' );
 				slideToggle( teamBodyElement );
-			});
+			} );
 
-			buttonContainer.appendChild(buttonElement);
+			buttonContainer.appendChild( buttonElement );
 		}
 	},
 };

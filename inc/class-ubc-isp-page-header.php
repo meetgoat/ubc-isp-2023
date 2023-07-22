@@ -212,6 +212,7 @@ class UBC_ISP_Page_Header {
 		return $classes;
 	}
 
+
 	/**
 	 * Add a menu depth class to primary menu
 	 *

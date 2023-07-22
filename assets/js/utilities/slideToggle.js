@@ -1,5 +1,5 @@
 // Slide Toggle Utility.
-export function slideToggle(element, duration, callback) {
+export function slideToggle( element, duration, callback ) {
 	if ( element.clientHeight === 0 ) {
 		slideElement( element, duration, callback, true );
 	} else {
