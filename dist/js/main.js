@@ -1009,7 +1009,7 @@ var Timeline = {
   buttons: null,
   observer: null,
   scroll: {
-    oldPosition: null,
+    oldPosition: 0,
     direction: false
   },
   // Setup the timeline.
@@ -1102,7 +1102,7 @@ var Timeline = {
     this.observer = new IntersectionObserver(function (targetDecades) {
       _this3.onIntersect(targetDecades);
     }, {
-      rootMargin: "".concat((this.navigationOffset + 1) * -1, "px 0px 0px 0px"),
+      rootMargin: "".concat(this.navigationOffset * -1, "px 0px 0px 0px"),
       threshold: 0
     });
   },
@@ -1123,7 +1123,7 @@ var Timeline = {
   // Process the intersection.
   processIntersection: function processIntersection(scrollTrigger) {
     var ScrollTriggerElement = scrollTrigger.target;
-    if (ScrollTriggerElement.classList.contains("isp-timeline__scroll-trigger--".concat(this.scroll.direction)) && (this.scroll.direction === 'down' && ScrollTriggerElement.getBoundingClientRect().top <= this.navigationOffset || this.scroll.direction === 'up' && ScrollTriggerElement.getBoundingClientRect().top >= this.navigationOffset)) {
+    if (ScrollTriggerElement.classList.contains("isp-timeline__scroll-trigger--".concat(this.scroll.direction)) && (this.scroll.direction === 'down' && ScrollTriggerElement.getBoundingClientRect().top <= this.navigationOffset || this.scroll.direction === 'up' && ScrollTriggerElement.getBoundingClientRect().bottom < window.pageYOffset)) {
       this.setActiveDecade(ScrollTriggerElement.closest('.isp-timeline__decade'));
     }
   },
@@ -1151,12 +1151,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initializeSubMenu: () => (/* binding */ initializeSubMenu)
 /* harmony export */ });
-/* global jQuery */
 function initializeSubMenu() {
-  jQuery('#ubc-isp-nav__menu').on('click', '.sub-menu__toggle', function (e) {
+  document.querySelector('#ubc-isp-nav__menu .sub-menu__toggle').addEventListener('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
-    jQuery(this).closest('.menu-item').toggleClass('menu-item--open').children('.sub-menu').slideToggle();
+    var menuItem = e.target.closest('.menu-item');
+    menuItem.classList.toggle('menu-item--open');
+    var subMenu = menuItem.querySelector('.sub-menu');
+    subMenu.style.display =  true ? 'block' : 0;
   });
 }
 

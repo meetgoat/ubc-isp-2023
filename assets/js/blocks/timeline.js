@@ -13,7 +13,7 @@ const Timeline = {
 	buttons: null,
 	observer: null,
 	scroll: {
-		oldPosition: null,
+		oldPosition: 0,
 		direction: false,
 	},
 
@@ -114,7 +114,7 @@ const Timeline = {
 		this.observer = new IntersectionObserver( ( targetDecades ) => {
 			this.onIntersect( targetDecades );
 		}, {
-			rootMargin: `${ ( this.navigationOffset + 1 ) * -1 }px 0px 0px 0px`,
+			rootMargin: `${ ( this.navigationOffset ) * -1 }px 0px 0px 0px`,
 			threshold: 0,
 		} );
 	},
@@ -140,7 +140,7 @@ const Timeline = {
 		if (
 			ScrollTriggerElement.classList.contains( `isp-timeline__scroll-trigger--${ this.scroll.direction }` ) && (
 				( this.scroll.direction === 'down' && ScrollTriggerElement.getBoundingClientRect().top <= this.navigationOffset ) ||
-			( this.scroll.direction === 'up' && ScrollTriggerElement.getBoundingClientRect().top >= this.navigationOffset ) )
+			( this.scroll.direction === 'up' && ScrollTriggerElement.getBoundingClientRect().bottom < window.pageYOffset ) )
 		) {
 			this.setActiveDecade( ScrollTriggerElement.closest( '.isp-timeline__decade' ) );
 		}
