@@ -4980,16 +4980,26 @@ div [class*="wp-block"].isp-5050 {
 .isp-timeline__decade {
 	position: relative;
 }
-.isp-timeline__scroll-trigger{
+
+.isp-timeline__scroll-trigger {
+	margin: 0 !important;
+}
+
+.isp-timeline__scroll-trigger {
 	position: absolute;
 	left: 0;
 	right: 0;
-	height: 10px;
-	opacity: 1;
-	background-color: red;
+	top: 0;
+	height: 1px;
+	opacity: 0;
 	pointer-events: none;
-	z-index: 99;
 }
+
+.isp-timeline__scroll-trigger--bottom {
+	bottom: 0;
+	top: auto;
+}
+
 .isp-timeline__buttons {
 	position: sticky;
 	z-index: 100;
