@@ -3657,7 +3657,6 @@ div .gform_wrapper.gravity-theme .validation_message {
 	}
 
 @media (min-width: 782px) {
-
 			.isp-cta-f .isp-cta__image--background img {
 				border-radius: 8px 8px 8px 240px;
 			}
@@ -3970,6 +3969,26 @@ div .gform_wrapper.gravity-theme .validation_message {
 	position: relative;
 }
 
+
+
+/*
+*   Video Block
+*/
+
+.wp-block-video {
+	video {
+		border-radius: 8px;
+	}
+}
+
+@media (min-width: 980px) {
+
+.wp-block-video {
+	video {
+			border-radius: 16px;
+	}
+}
+		}
 .wp-block-spacer.is-style-pull-up-background {
 	height: 0 !important;
 }

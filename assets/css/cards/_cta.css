@@ -331,7 +331,6 @@
 	@media (--query-sm) {
 
 		.isp-cta__image--background {
-
 			& img {
 				border-radius: 8px 8px 8px 240px;
 			}

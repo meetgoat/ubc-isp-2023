@@ -148,3 +148,19 @@
 [class*="wp-block"] {
 	position: relative;
 }
+
+
+
+/*
+*   Video Block
+*/
+
+.wp-block-video {
+	video {
+		border-radius: 8px;
+		
+		@media (--query-md) {
+			border-radius: 16px;
+		}
+	}
+}
