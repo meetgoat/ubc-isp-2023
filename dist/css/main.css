@@ -3975,20 +3975,16 @@ div .gform_wrapper.gravity-theme .validation_message {
 *   Video Block
 */
 
-.wp-block-video {
-	video {
+.wp-block-video video {
 		border-radius: 8px;
+		
 	}
-}
 
 @media (min-width: 980px) {
-
-.wp-block-video {
-	video {
+		.wp-block-video video {
 			border-radius: 16px;
-	}
-}
 		}
+	}
 .wp-block-spacer.is-style-pull-up-background {
 	height: 0 !important;
 }

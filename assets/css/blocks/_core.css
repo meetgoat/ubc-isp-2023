@@ -156,10 +156,12 @@
 */
 
 .wp-block-video {
-	video {
+	& video {
 		border-radius: 8px;
 		
-		@media (--query-md) {
+	}
+	@media (--query-md) {
+		& video {
 			border-radius: 16px;
 		}
 	}
