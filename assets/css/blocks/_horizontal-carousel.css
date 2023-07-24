@@ -1,5 +1,9 @@
 [class*="wp-block"].isp-goals {
-	padding: 80px 16px !important;
+	padding: 24px 16px !important;
+
+	@media (--query-md) {
+		padding: 80px 16px !important;
+	}
 }
 
 /*  Container */
