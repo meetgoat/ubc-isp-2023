@@ -43,7 +43,7 @@
 				<!-- wp:buttons -->
 				<div class="wp-block-buttons"><!-- wp:button {"className":"isp-desktop-only"} -->
 					<div class="wp-block-button isp-desktop-only"><a class="wp-block-button__link wp-element-button"
-							href="http://ubcisp.local/timline/">See the action plan</a></div>
+							href="#">See the action plan</a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->
@@ -51,7 +51,7 @@
 				<!-- wp:buttons {"align":"full"} -->
 				<div class="wp-block-buttons alignfull"><!-- wp:button {"width":100,"className":"isp-mobile-only"} -->
 					<div class="wp-block-button has-custom-width wp-block-button__width-100 isp-mobile-only"><a
-							class="wp-block-button__link wp-element-button" href="http://ubcisp.local/timline/">See the
+							class="wp-block-button__link wp-element-button" href="#">See the
 							action plan</a></div>
 					<!-- /wp:button -->
 				</div>
