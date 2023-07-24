@@ -2607,9 +2607,9 @@ div .gform_wrapper.gravity-theme .validation_message {
 		background-position: center center;
 	}
 
-
-
-	.isp-card--tool .isp-card__inner {
+.isp-card--tool {
+	margin: 16px 0;
+}.isp-card--tool .isp-card__inner {
 		border-radius: 16px;
 	}.isp-card--tool .isp-card__inner .wp-block-group__inner-container {
 			padding: 0;
