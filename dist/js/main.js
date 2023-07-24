@@ -1152,14 +1152,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   initializeSubMenu: () => (/* binding */ initializeSubMenu)
 /* harmony export */ });
 function initializeSubMenu() {
-  document.querySelector('#ubc-isp-nav__menu .sub-menu__toggle').addEventListener('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var menuItem = e.target.closest('.menu-item');
-    menuItem.classList.toggle('menu-item--open');
-    var subMenu = menuItem.querySelector('.sub-menu');
-    subMenu.style.display =  true ? 'block' : 0;
-  });
+  var navMenu = document.querySelector('#ubc-isp-nav__menu');
+  if (navMenu) {
+    navMenu.addEventListener('click', function (e) {
+      if (e.target.matches('.sub-menu__toggle')) {
+        e.preventDefault();
+        e.stopPropagation();
+        var menuItem = e.target.closest('.menu-item');
+        menuItem.classList.toggle('menu-item--open');
+        var subMenu = menuItem.querySelector('.sub-menu');
+        subMenu.style.display =  true ? 'block' : 0;
+      }
+    });
+  }
 }
 
 /***/ }),
