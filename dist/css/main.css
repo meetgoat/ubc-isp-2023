@@ -5439,12 +5439,19 @@ div [class*="wp-block"].isp-5050 {
 
 @media (max-width: 979px) {
 
+	
+	.is-goal--open {
+		box-shadow: var(--shadow-2);
+	}
+	.isp-goals__slide {
+		margin-top: 8px !important;
+	}
 	.isp-goals__slide {
 		background: #fff;
 		padding: 24px;
 		border-radius: 8px;
+		transition: var(--transition);
 	}
-
 	.isp-goals__buttons {
 		display: none;
 	}
