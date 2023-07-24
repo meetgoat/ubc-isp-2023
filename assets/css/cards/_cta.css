@@ -320,7 +320,14 @@
 			border-radius: 8px 8px 80px 8px;
 		}
 	}
-
+	@media (--query-mx-sm) {
+		.isp-cta__content { 
+			padding: 8px 16px 24px;
+		}
+		.wp-block-heading.button-standard {
+			width: 100%;
+		}
+	}
 	@media (--query-sm) {
 
 		.isp-cta__image--background {

@@ -3647,6 +3647,15 @@ div .gform_wrapper.gravity-theme .validation_message {
 			border-radius: 8px 8px 80px 8px;
 		}
 
+@media (max-width: 781px) {
+		.isp-cta-f .isp-cta__content { 
+			padding: 8px 16px 24px;
+		}
+		.isp-cta-f .wp-block-heading.button-standard {
+			width: 100%;
+		}
+	}
+
 @media (min-width: 782px) {
 
 			.isp-cta-f .isp-cta__image--background img {
