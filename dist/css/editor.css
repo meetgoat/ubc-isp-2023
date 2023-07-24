@@ -3391,7 +3391,10 @@ div .gform_wrapper.gravity-theme .validation_message {
 			height: 100%;
 			display: block;
 		}
-
+.isp-cta__image--background img {
+		-o-object-fit: cover;
+		   object-fit: cover;
+	}
 .isp-cta__title {
 	margin: 0 0 16px;
 }
