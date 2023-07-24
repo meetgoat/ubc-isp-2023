@@ -5444,7 +5444,7 @@ div [class*="wp-block"].isp-5050 {
 		box-shadow: var(--shadow-2);
 	}
 	.isp-goals__slide {
-		margin-top: 8px !important;
+		margin-top: 0px !important;
 	}
 	.isp-goals__slide {
 		background: #fff;
@@ -5452,6 +5452,10 @@ div [class*="wp-block"].isp-5050 {
 		border-radius: 8px;
 		transition: var(--transition);
 	}
+
+		.isp-goals__slide + .isp-goals__slide {
+			margin-top: 8px !important;
+		}
 	.isp-goals__buttons {
 		display: none;
 	}

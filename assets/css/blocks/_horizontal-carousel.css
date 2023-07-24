@@ -203,8 +203,12 @@
 		background: #fff;
 		padding: 24px;
 		border-radius: 8px;
-		margin-block-start: 8px !important;
+		margin-block-start: 0px !important;
 		transition: var(--transition);
+
+		+ .isp-goals__slide {
+			margin-top: 8px !important;
+		}
 	}
 	.isp-goals__buttons {
 		display: none;
