@@ -44,8 +44,18 @@
 			}
 		}
 	}
-
+	
+	&.isp-background--desktop-only {
+		@media (--query-mx-md) {
+			background: transparent !important;
+		}
+	}
+	
 	&.isp-background--white {
+
+		@media (--query-mx-md) {
+			background: #fff;
+		}
 
 		@media (--query-md) {
 			background: none;
