@@ -4022,30 +4022,54 @@ div .gform_wrapper.gravity-theme .validation_message {
 			border-radius: 16px;
 		}
 	}
-.wp-block-spacer.is-style-pull-up-background:not([hidden]) {
+.wp-block-spacer.is-style-pull-up-background:not(.isp-desktop-hidden) {
 	height: 0 !important;
 }
 
-.wp-block-spacer.is-style-pull-up-background:not([hidden]) {
+.wp-block-spacer.is-style-pull-up-background:not(.isp-desktop-hidden) {
 	margin-bottom: -32px;
 }
 
-.wp-block-spacer.is-style-pull-up-background:not([hidden]) + [class*="wp-block"] {
+.wp-block-spacer.is-style-pull-up-background:not(.isp-desktop-hidden) + [class*="wp-block"] {
 		position: relative;
 		top: 32px;
 		margin-bottom: 32px;
 	}
 
-.wp-block-spacer.is-style-pull-up-next {
+.wp-block-spacer.is-style-pull-up-next:not(.isp-desktop-hidden) {
 	height: 0 !important;
 }
 
-.wp-block-spacer.is-style-pull-up-next:not([hidden]) + * {
+.wp-block-spacer.is-style-pull-up-next:not(.isp-desktop-hidden) + * {
 	margin: 0 0 -32px;
 	position: relative;
 	top: -32px;
 }
 
+@media (min-width: 980px){
+	.wp-block-spacer.is-style-pull-up-background {
+		height: 0 !important;
+	}
+	.wp-block-spacer.is-style-pull-up-background {
+		margin-bottom: -32px;
+	}
+	
+		.wp-block-spacer.is-style-pull-up-background + [class*="wp-block"] {
+			position: relative;
+			top: 32px;
+			margin-bottom: 32px;
+		}
+	
+	.wp-block-spacer.is-style-pull-up-next {
+		height: 0 !important;
+	}
+	
+	.wp-block-spacer.is-style-pull-up-next + * {
+		margin: 0 0 -32px;
+		position: relative;
+		top: -32px;
+	}
+}
 
 
 	@media (max-width: 781px) {
