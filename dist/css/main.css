@@ -1659,13 +1659,6 @@ div .wp-block-post-template {
 			}
 		}
 
-@media (max-width: 979px) {
-
-.isp-background--1.isp-background--white {
-			background: #fff;
-	}
-		}
-
 @media (min-width: 980px) {
 
 .isp-background--1.isp-background--white {

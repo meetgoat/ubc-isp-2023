@@ -47,10 +47,6 @@
 
 	&.isp-background--white {
 
-		@media (--query-mx-md) {
-			background: #fff;
-		}
-
 		@media (--query-md) {
 			background: none;
 
