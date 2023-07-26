@@ -6125,8 +6125,10 @@ div [class*="wp-block"].isp-5050 {
 
 /* pagination  */
 .isp-pole__pagination {
+	max-width: calc( var( --wp--style--global--content-size ) + 32px ) !important;
+}
+.isp-pole__pagination {
 	opacity: 0;
-	max-width: calc( var( --wp--style--global--content-size ) + 32px );
 	pointer-events: none;
 	transition: var(--transition);
 	position: absolute;
