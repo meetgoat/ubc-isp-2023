@@ -1619,6 +1619,7 @@ div .wp-block-post-template {
 
 .isp-background--1 {
 		background: var(--sand-3);
+	
 }
 	}
 
@@ -1626,6 +1627,7 @@ div .wp-block-post-template {
 
 .isp-background--1 {
 		background: none;
+	
 }
 	}
 
@@ -1683,6 +1685,17 @@ div .wp-block-post-template {
 					background: #fff;
 				}
 		}
+
+.isp-team-background{
+	background: var(--sand-3);
+}
+
+@media (min-width: 980px){
+
+.isp-team-background{
+		border-radius: 16px 16px 160px 16px;
+}
+	}
 
 .isp-background__content {
 	position: relative;
