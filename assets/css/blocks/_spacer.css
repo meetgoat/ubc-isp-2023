@@ -1,4 +1,4 @@
-.wp-block-spacer.is-style-pull-up-background:not(.isp-desktop-hidden) {
+.wp-block-spacer.is-style-pull-up-background:not(.isp-desktop-only) {
 	margin-bottom: -32px;
 	height: 0 !important;
 
@@ -9,11 +9,11 @@
 	}
 }
 
-.wp-block-spacer.is-style-pull-up-next:not(.isp-desktop-hidden) {
+.wp-block-spacer.is-style-pull-up-next:not(.isp-desktop-only) {
 	height: 0 !important;
 }
 
-.wp-block-spacer.is-style-pull-up-next:not(.isp-desktop-hidden) + * {
+.wp-block-spacer.is-style-pull-up-next:not(.isp-desktop-only) + * {
 	margin: 0 0 -32px;
 	position: relative;
 	top: -32px;
