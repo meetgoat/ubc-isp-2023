@@ -6534,6 +6534,10 @@ div [class*="wp-block"].isp-5050 {
 		flex-basis: calc(25% - 18px) !important;
 	}.isp-impact-stories .isp-impact-stories__posts {
 		height: 100%;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+	}.isp-impact-stories .wp-block-column {
+		scroll-snap-align: center;
 	}@media (max-width: 1099px) {
 
 		.isp-impact-stories .isp-impact-stories__share {

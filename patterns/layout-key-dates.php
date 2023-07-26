@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: KLey Dates
- * Slug: meetgoat/layouts-key-dates
+ * Slug: meetgoat/layout-key-dates
  * Categories: ubc-layouts
  * Viewport Width: 1280
  * Block Types: core/post-content
