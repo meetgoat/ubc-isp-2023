@@ -340,7 +340,7 @@
 /* pagination  */
 .isp-pole__pagination {
 	opacity: 0;
-	max-width: calc( var( --wp--style--global--content-size ) + 32px ) !important;
+	max-width: calc(var(--wp--style--global--content-size) + 32px) !important;
 	pointer-events: none;
 	transition: var(--transition);
 	position: absolute;

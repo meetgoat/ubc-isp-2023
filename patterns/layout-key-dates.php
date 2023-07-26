@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: KLey Dates
  * Slug: meetgoat/layout-key-dates

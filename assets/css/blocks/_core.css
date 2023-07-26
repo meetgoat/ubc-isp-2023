@@ -55,7 +55,7 @@
 		margin: 0;
 	}
 
-	.wp-block-button__link{
+	.wp-block-button__link {
 		white-space: nowrap;
 	}
 
@@ -150,17 +150,19 @@
 }
 
 
-
 /*
 *   Video Block
 */
 
 .wp-block-video {
+
 	& video {
 		border-radius: 8px;
-		
+
 	}
+
 	@media (--query-md) {
+
 		& video {
 			border-radius: 16px;
 		}

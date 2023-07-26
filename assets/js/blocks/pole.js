@@ -170,7 +170,7 @@ class TotemPole {
 		if ( this.isOpen ) {
 			const transition = this.image.style.transition;
 			this.image.style.transition = 'none';
-			const markerOffset = parseInt(this.image.offsetHeight * (100 - this.currentLevel.position.percent) / 100);
+			const markerOffset = parseInt( this.image.offsetHeight * ( 100 - this.currentLevel.position.percent ) / 100 );
 			this.image.style.transition = transition;
 
 			this.image.style.translate = `0 calc( -100% + ${ this.imageContainer.offsetHeight / 2 }px + ${ markerOffset }px)`;

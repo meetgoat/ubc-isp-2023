@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: Upcoming Events
  * Slug: meetgoat/layout-upcoming-events

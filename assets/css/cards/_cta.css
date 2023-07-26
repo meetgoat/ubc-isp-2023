@@ -5,7 +5,7 @@
 .isp-cta {
 	height: 100%;
 	border-radius: 46px;
-	
+
 	.isp-cta__container,
 	& > a {
 		position: relative;
@@ -36,11 +36,14 @@
 		}
 	}
 }
-.isp-cta__image--background{
+
+.isp-cta__image--background {
+
 	& img {
 		object-fit: cover;
 	}
 }
+
 .isp-cta__title {
 	margin: 0 0 16px;
 }
@@ -95,6 +98,7 @@
 
 /*  CTA -- B style CURVED */
 .isp-cta-b--curved {
+
 	.isp-cta__container,
 	& a {
 		border-radius: 16px 16px 80px 16px;
@@ -324,17 +328,22 @@
 			border-radius: 8px 8px 80px 8px;
 		}
 	}
+
 	@media (--query-mx-sm) {
-		.isp-cta__content { 
+
+		.isp-cta__content {
 			padding: 8px 16px 24px;
 		}
+
 		.wp-block-heading.button-standard {
 			width: 100%;
 		}
 	}
+
 	@media (--query-sm) {
 
 		.isp-cta__image--background {
+
 			& img {
 				border-radius: 8px 8px 8px 240px;
 			}

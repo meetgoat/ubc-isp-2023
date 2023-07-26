@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: Resources
  * Slug: meetgoat/layout-callout-resources

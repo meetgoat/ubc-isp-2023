@@ -116,7 +116,8 @@
 }
 
 .wp-block-search__button {
-	@media (--query-md){
+
+	@media (--query-md) {
 		min-width: 180px;
 	}
 }
