@@ -1,4 +1,4 @@
-.wp-block-spacer.is-style-pull-up-background {
+.wp-block-spacer.is-style-pull-up-background:not([hidden]) {
 	margin-bottom: -32px;
 	height: 0 !important;
 
@@ -13,7 +13,7 @@
 	height: 0 !important;
 }
 
-.wp-block-spacer.is-style-pull-up-next + * {
+.wp-block-spacer.is-style-pull-up-next:not([hidden]) + * {
 	margin: 0 0 -32px;
 	position: relative;
 	top: -32px;
