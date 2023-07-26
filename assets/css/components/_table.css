@@ -6,7 +6,12 @@
 		border-bottom-left-radius: 16px;
 		border-bottom-right-radius: 16px;
 	}
-
+	.tablepress-overflow{
+		width: 100%;
+		max-width: 100%;
+		overflow: auto;
+		position: relative;
+	}
 	.tablepress {
 		margin: 25px 0;
 		display: table;
