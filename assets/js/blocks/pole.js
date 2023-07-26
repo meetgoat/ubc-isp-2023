@@ -161,13 +161,18 @@ class TotemPole {
 				level.marker.classList.remove( 'isp-pole__marker--active' );
 			}
 		} );
+
 		this.scrollImage();
 	}
 
 	// scroll the pole to the desired spot for the current level.
 	scrollImage() {
 		if ( this.isOpen ) {
-			const markerOffset = parseInt( this.image.offsetHeight * ( 100 - this.currentLevel.position.percent ) / 100 );
+			const transition = this.image.style.transition;
+			this.image.style.transition = 'none';
+			const markerOffset = parseInt(this.image.offsetHeight * (100 - this.currentLevel.position.percent) / 100);
+			this.image.style.transition = transition;
+
 			this.image.style.translate = `0 calc( -100% + ${ this.imageContainer.offsetHeight / 2 }px + ${ markerOffset }px)`;
 		} else {
 			this.image.style.translate = '0 0';
