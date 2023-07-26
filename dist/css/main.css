@@ -639,9 +639,12 @@ p.has-small-font-size,
 	display: none;
 }
 
+@media (min-width: 980px){
+
 .wp-block-search__button {
-	min-width: 180px;
+		min-width: 180px;
 }
+	}
 
 @media (max-width: 979px) {
 
